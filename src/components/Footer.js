@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div className=''>
-            <footer className='container d-flex flex-wrap justify-content-between align-items-center pt-3  border-top'>
+            <footer className='container my-container d-flex flex-wrap justify-content-between align-items-center pt-3  '>
                 <div className='col-md-6   custom-col-footer'>
                     <ul className=' footer-ul mb-0'>
                         <li className='nav-item first-item-nav'>

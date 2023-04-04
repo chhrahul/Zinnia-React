@@ -143,16 +143,24 @@ ul.footer-ul.mb-0 {
   text-align: right;
   position: absolute;
   bottom: 0px;
-  width: inherit;
+  /* width: inherit; */
 }
 .left-col {
-  padding: 0px 20px !important;
+  /* padding: 0px 20px !important; */
 }
 .right-col-img {
-  background: url("http://localhost:3000/images/beach 2.jpg");
+  background: url("/public/images/beach-2.jpg");
   z-index: 9;
   min-height: 100vh !important;
 }
+label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+
 button.btn.btn-secondary {
   margin: 12px 24px;
 
@@ -194,14 +202,34 @@ Contained button (resting)
   display: none;
 }
 
-ul.footer-ul.mb-0 {
-  /* padding-left: 3rem; */
+.header-ui {
+  margin: 0;
+}
+.signup-li button {
+  padding: 0;
+  height: 36px;
+}
+.footer-ul p {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.header-ui svg {
+  vertical-align: -webkit-baseline-middle;
+}
+.right-col-img {
+  background-size: cover;
+  background-position: center;
+}
+.custom-container {
+  margin-left: 15%;
+}
+.hidden {
+  display: none;
 }
 
-/* For Desktop View */
-@media screen and (min-width: 1024px) {
-  .left-col {
-    padding: 0px 50px !important;
+@media screen and (max-width: 409px) {
+  .navbar-brand img {
+    width: 106px;
   }
 }
 
@@ -209,12 +237,13 @@ ul.footer-ul.mb-0 {
   .col-md-6.align-items-center {
     width: 100%;
   }
+
   .custom-col-footer {
     width: 100%;
   }
-  .col-md-5 {
+  /* .col-md-5 {
     display: none;
-  }
+  } */
   ul.footer-ul.mb-0 {
     display: list-item !important;
   }
@@ -234,7 +263,7 @@ ul.footer-ul.mb-0 {
     display: none;
   }
   .first-item-nav {
-    margin: 10px 0px;
+    margin: 10px 1px;
   }
   .footer-ul p {
     margin: 0;
@@ -244,15 +273,40 @@ ul.footer-ul.mb-0 {
   }
 }
 
+.row.custom-row {
+  min-height: 52rem !important;
+}
 @media screen and (max-width: 768px) {
   .custom-row .next-btn-bg {
     bottom: -63px !important;
-    position: unset;
+    /* position: unset; */
   }
+
+  footer.container.my-container.d-flex.flex-wrap.justify-content-between.align-items-center {
+    padding-top: 60px !important;
+  }
+
+  .custom-col-footer {
+    width: 100%;
+  }
+
   .hide-image-sm {
     display: block;
   }
   .hide-image-pc {
+    display: none;
+  }
+  .right-col-img {
+    height: 600px;
+  }
+
+  ul.footer-ul.mb-0 {
+    display: list-item !important;
+  }
+  .footer-ul-2 {
+    float: left !important;
+  }
+  .resposive-hide {
     display: none;
   }
 }
