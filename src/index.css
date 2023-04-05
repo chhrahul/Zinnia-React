@@ -12,43 +12,25 @@ code {
 }
 /* Layout page css */
 .signup-item {
-  /* Button/secondary/regular */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
   width: 100px;
   height: 36px;
-
-  /* White */
-
   background: #ffffff !important;
   border-radius: 8px;
   border: 1px solid #505267 !important;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
 }
-
 .main-nav {
-  position: absolute;
-  /* width: 1440px; */
+  display: block !important;
   height: 72px;
   left: 0px;
   top: 0px;
-
-  /* White */
-
   background: #ffffff;
-  /* Elevation/Light/2px
-
-Contained button (resting)
-*/
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
 }
@@ -93,24 +75,13 @@ ul.footer-ul.mb-0 {
 .select-account {
   width: 40px;
   height: 20px;
-
-  /* Subtitle/2 */
-
   font-family: "Libre Baskerville";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
-
   letter-spacing: 0.1px;
-
-  /* Black/100 */
-
   color: #000000;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -120,6 +91,15 @@ ul.footer-ul.mb-0 {
   padding: 0 !important;
   border: none !important;
   width: 100%;
+  border-radius: unset !important;
+  -webkit-border-radius: unset !important;
+  -moz-border-radius: unset !important;
+  -ms-border-radius: unset !important;
+  -o-border-radius: unset !important;
+}
+.my-thumbnail-ring {
+  margin-top: 5px;
+  border: none !important;
   border-radius: unset !important;
   -webkit-border-radius: unset !important;
   -moz-border-radius: unset !important;
@@ -143,10 +123,6 @@ ul.footer-ul.mb-0 {
   text-align: right;
   position: absolute;
   bottom: 0px;
-  /* width: inherit; */
-}
-.left-col {
-  /* padding: 0px 20px !important; */
 }
 .right-col-img {
   background: url("/public/images/beach-2.jpg");
@@ -162,7 +138,10 @@ label {
 }
 
 button.btn.btn-secondary {
-  margin: 12px 24px;
+  background: #505267;
+}
+.navigate-btn {
+  margin: 8px 8px;
 
   flex-direction: row;
   justify-content: center;
@@ -170,22 +149,12 @@ button.btn.btn-secondary {
   padding: 0px 4px;
   isolation: isolate;
 
-  width: 66px;
+  /* width: 66px; */
   height: 36px;
-
-  /* Black/60 */
-
   background: #bab8b8;
-  /* Elevation/Light/2px
-
-Contained button (resting)
-*/
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -226,10 +195,44 @@ Contained button (resting)
 .hidden {
   display: none;
 }
+.vender-opt {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 12px 12px;
+  gap: 156px;
+  background: #ffffff;
+  border: 1px solid #505267;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.vender-opt:hover {
+  border: 1px solid #00767c;
+}
+.ring-image {
+  margin-bottom: -100px;
+}
+
+.active-vender {
+  background: #00767c;
+  border: 1px solid #00767c;
+  color: #ffffff;
+}
+nav.navbar.navbar-expand-lg.main-nav {
+  padding-top: 17px;
+}
 
 @media screen and (max-width: 409px) {
   .navbar-brand img {
     width: 106px;
+  }
+  ul.footer-ul.mb-0.first {
+    margin-top: 69px;
   }
 }
 
@@ -238,12 +241,12 @@ Contained button (resting)
     width: 100%;
   }
 
+  ul.footer-ul.mb-0.first {
+    margin-top: 69px;
+  }
   .custom-col-footer {
     width: 100%;
   }
-  /* .col-md-5 {
-    display: none;
-  } */
   ul.footer-ul.mb-0 {
     display: list-item !important;
   }
@@ -274,22 +277,37 @@ Contained button (resting)
 }
 
 .row.custom-row {
-  min-height: 52rem !important;
+  /* min-height: 52rem !important; */
+}
+@media screen and (max-width: 778px) {
+  .nav-col-5 {
+    width: 50% !important;
+  }
+  .custom-col-1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .row.custom-row {
+    min-height: 52rem !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .custom-row .next-btn-bg {
     bottom: -63px !important;
-    /* position: unset; */
   }
-
+  .nav-col-5 {
+    width: 50% !important;
+  }
+  ul.footer-ul.mb-0.first {
+    margin-top: 69px;
+  }
   footer.container.my-container.d-flex.flex-wrap.justify-content-between.align-items-center {
     padding-top: 60px !important;
   }
-
   .custom-col-footer {
     width: 100%;
   }
-
   .hide-image-sm {
     display: block;
   }

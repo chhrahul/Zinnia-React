@@ -2,13 +2,13 @@ const Navigation = () => {
     return (
         <div >
             <nav className='navbar navbar-expand-lg  main-nav'>
-                <div className="container my-container">
-
-                    <a className='navbar-brand' href='/'>
+                <div className="row">
+                    <div className="col-md-1 col-sm-1 col-lg-1 custom-col-1"></div>
+                    <a className='navbar-brand- col-md-5 col-sm-5 col-lg-5 nav-col-5' href='/'>
                         <img src="images/Logo.png" alt=""></img>
                     </a>
-                    <div>
-                        <ul className='header-ui'>
+                    <div className="col-md-5 col-sm-5 col-lg-5 nav-col-5 float-right">
+                        <ul className='header-ui float-right'>
 
                             <li className='nav-item'>
                                 <a className='nav-link' href='/'>
@@ -26,6 +26,7 @@ const Navigation = () => {
                             </li>
                         </ul>
                     </div>
+                    <div className="col-md-1 col-sm-1 col-lg-1 custom-col-1"></div>
                 </div>
             </nav>
         </div>

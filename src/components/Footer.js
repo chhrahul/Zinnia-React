@@ -1,9 +1,10 @@
 const Footer = () => {
     return (
-        <div className=''>
-            <footer className='container my-container d-flex flex-wrap justify-content-between align-items-center pt-3  '>
-                <div className='col-md-6   custom-col-footer'>
-                    <ul className=' footer-ul mb-0'>
+        <div className='mt-3 footer-page border-top'>
+            <footer className='row mt-1'>
+                <div className='col-md-1   '></div>
+                <div className='col-md-5   custom-col-footer'>
+                    <ul className=' footer-ul mb-0 first'>
                         <li className='nav-item first-item-nav'>
                             <p>2022 Zinnia Inc.  </p>
                         </li>
@@ -20,7 +21,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className='col-md-6 custom-col-footer'>
+                <div className='col-md-5 custom-col-footer'>
                     <ul className=' footer-ul mb-0 footer-ul-2'>
                         <li className='nav-item first-item-nav-2'>
                             <p>United States  </p>
@@ -37,6 +38,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
+                <div className='col-md-1   '></div>
             </footer>
         </div>
     )

@@ -170,8 +170,8 @@ const Page1 = () => (
             <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
             <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
                 {/* <option value="2">Select</option> */}
-                <option selected value='0'>Getting married</option>
-                <option value="1">A vendor</option>
+                <option value='0'>Getting married</option>
+                <option selected value="1">A vendor</option>
             </select>
         </div>
         <div className="col-md-2 custom-2"></div>
@@ -189,8 +189,8 @@ const Page2 = () => (
             </p>
             <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
             <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
-                {/* <option value="2">Select</option> */}
-                <option selected value='0'>Getting married</option>
+                {/* <option selected value="">Select</option> */}
+                <option value='0' selected>Getting married</option>
                 <option value="1">A vendor</option>
             </select>
             <SecondForm />
