@@ -9,7 +9,6 @@ const Navigation = () => {
                     </a>
                     <div className="col-md-5 col-sm-5 col-lg-5 nav-col-5 float-right">
                         <ul className='header-ui float-right'>
-
                             <li className='nav-item'>
                                 <a className='nav-link' href='/'>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,11 +17,9 @@ const Navigation = () => {
                                 </a>
                             </li>
                             <li className='nav-item signup-li'>
-                                <button type="button" className="btn btn-light signup-item ">
+                                <a href="/sign-up" className="btn btn-light signup-item">
                                     Sign up
-                                </button>
-
-
+                                </a>
                             </li>
                         </ul>
                     </div>
