@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
 body {
   margin: 0;
   font-family: Libre Baskerville !important;
@@ -5,6 +6,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #505267 !important;
   min-height: 100vh !important;
+}
+input,
+textarea,
+select {
+  font-family: inherit !important;
+}
+
+.input {
+  padding: 5px;
+  font-size: 16px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -73,8 +84,8 @@ ul.footer-ul.mb-0 {
   margin-right: 13%;
 }
 .select-account {
-  width: 40px;
-  height: 20px;
+  /* width: 40px; */
+  /* height: 20px; */
   font-family: "Libre Baskerville";
   font-style: normal;
   font-weight: 700;
@@ -113,7 +124,7 @@ ul.footer-ul.mb-0 {
 
 .custom-row {
   position: relative;
-  min-height: 160vh;
+  /* min-height: 160vh; */
 }
 .container-custom {
   margin: 0px 15%;
@@ -121,13 +132,13 @@ ul.footer-ul.mb-0 {
 
 .custom-row .next-btn-bg {
   text-align: right;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0px;
 }
 .right-col-img {
   background: url("/public/images/beach-2.jpg");
   z-index: 9;
-  min-height: 100vh !important;
+  /* min-height: 100vh !important; */
 }
 label {
   font-weight: 700;
@@ -151,7 +162,7 @@ button.btn.btn-secondary {
 
   /* width: 66px; */
   height: 36px;
-  background: #bab8b8;
+  /* background: #bab8b8; */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -202,7 +213,7 @@ button.btn.btn-secondary {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px 12px 12px;
-  gap: 156px;
+  /* gap: 156px; */
   background: #ffffff;
   border: 1px solid #505267;
   backdrop-filter: blur(2px);
@@ -223,8 +234,21 @@ button.btn.btn-secondary {
   border: 1px solid #00767c;
   color: #ffffff;
 }
+
+.col-md-6.right-col-img.hide-image-pc {
+  min-height: 100vh !important;
+  margin-bottom: -52px;
+}
+
+.col-md-6.right-col-img.hide-image-sm {
+  height: 400px;
+}
+
 nav.navbar.navbar-expand-lg.main-nav {
   padding-top: 17px;
+}
+.mb-30vh {
+  margin-bottom: 30vh;
 }
 
 @media screen and (max-width: 409px) {
@@ -289,7 +313,7 @@ nav.navbar.navbar-expand-lg.main-nav {
 }
 @media screen and (min-width: 768px) {
   .row.custom-row {
-    min-height: 52rem !important;
+    /* min-height: 52rem !important; */
   }
 }
 @media screen and (max-width: 768px) {
@@ -313,9 +337,6 @@ nav.navbar.navbar-expand-lg.main-nav {
   }
   .hide-image-pc {
     display: none;
-  }
-  .right-col-img {
-    height: 600px;
   }
 
   ul.footer-ul.mb-0 {

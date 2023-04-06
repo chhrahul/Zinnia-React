@@ -2,7 +2,6 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import { Routes, Route, redirect } from 'react-router-dom'
 function Signup() {
-
   return (
     <Layout>
       <div className="container-fluid-">
@@ -38,7 +37,7 @@ function MobileImage() {
 
 function NextButton({ handleClickNext }) {
   return (
-    <button type="button" className="btn btn-secondary navigate-btn" disabled id="next-btn" >
+    <button type="button" className="btn btn-secondary navigate-btn" disabled id="next-btn" onClick={handleClickNext}>
       Next
     </button>
   )

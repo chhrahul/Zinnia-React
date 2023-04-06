@@ -74,14 +74,7 @@ function MobileImage() {
 function SecondForm() {
     return (
         <span className="hidden- second-form " id="second-form">
-            <div className="mb-3">
-                <label htmlFor="fname" className="form-label">First name</label>
-                <input type="text" className="form-control" id="fname" placeholder='Jane' />
-            </div>
-            <div className="mb-3">
-                <label htmlFor="lname" className="form-label">Last name</label>
-                <input type="text" className="form-control" id="lname" placeholder='Smith' />
-            </div>
+
             <div className="mb-3">
                 <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='jsmith@email.com' />
@@ -167,12 +160,14 @@ const Page1 = () => (
             <p>
                 Fill out a little information and start your wedding <br />planning today.
             </p>
-            <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
-            <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
-                {/* <option value="2">Select</option> */}
-                <option value='0'>Getting married</option>
-                <option selected value="1">A vendor</option>
-            </select>
+            <div className="mt-3 mb-3">
+                <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
+                <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
+                    {/* <option value="2">Select</option> */}
+                    <option value='0'>Getting married</option>
+                    <option selected value="1">A vendor</option>
+                </select>
+            </div>
         </div>
         <div className="col-md-2 custom-2"></div>
     </div>
@@ -187,12 +182,22 @@ const Page2 = () => (
             <p>
                 Fill out a little information and start your wedding <br />planning today.
             </p>
-            <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
-            <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
-                {/* <option selected value="">Select</option> */}
-                <option value='0' selected>Getting married</option>
-                <option value="1">A vendor</option>
-            </select>
+            <div className="mt-3 mb-3">
+                <label htmlFor="select-opt" className="form-label select-account">I'm...</label>
+                <select className="form-select mb-4" aria-label="Default select example" id="select-opt" onChange={handleChange} >
+                    <option value='0'>Getting married</option>
+                    <option selected value="1">A vendor</option>
+                </select>
+            </div>
+
+            <div className="mt-3 mb-3">
+                <label htmlFor="select-opt-type" className="form-label select-account">Vendor type</label>
+                <select className="form-select mb-4" aria-label="Default select example" id="select-opt-type" onChange="" >
+                    <option value='0'>Florist</option>
+                    <option selected value="1">Venue</option>
+                    <option value="3">Photographer</option>
+                </select>
+            </div>
             <SecondForm />
         </div>
         <div className="col-md-2 custom-2"></div>
@@ -200,7 +205,7 @@ const Page2 = () => (
 )
 
 const Page3 = () => (
-    <div className="col-md-7 col-sm-12 mt-3 ">
+    <div className="col-md-7 col-sm-12 mt-3 mb-30vh">
         <p>
             <span className="text-danger"> 1 of 2 </span> Tell us about your big day!
         </p>
@@ -247,7 +252,7 @@ const Page3 = () => (
 )
 
 const Page4 = () => (
-    <div className="col-md-6 mt-3 ">
+    <div className="col-md-6 mt-3 mb-30vh">
         <p>
             <span className="text-danger"> 2 of 2 </span> What do you need for your day?
         </p>
@@ -269,7 +274,7 @@ const Page4 = () => (
 )
 
 const Page5 = () => (
-    <div className="container text-center">
+    <div className="container text-center mb-30vh">
         <img src="images/ring.png" alt="" className="ring-image img-thumbnail my-thumbnail-ring" />
         <h2>Let’s start planning</h2>
     </div>

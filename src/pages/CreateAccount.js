@@ -2,9 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 function Signup() {
     const [step, setStep] = React.useState(1)
-
     const RenderCurrentForm = () => {
-
         switch (step) {
             case 1:
                 return <Page1 />;
@@ -179,7 +177,7 @@ const Page1 = () => (
 )
 
 const Page2 = () => (
-    <div className="col-md-5 mt-3 ">
+    <div className="col-md-5 mt-3 mb-30vh">
         <div className="col-md-10 custom-10">
             <h2>
                 Create an account
@@ -200,7 +198,7 @@ const Page2 = () => (
 )
 
 const Page3 = () => (
-    <div className="col-md-7 col-sm-12 mt-3 ">
+    <div className="col-md-7 col-sm-12 mt-3 mb-30vh">
         <p>
             <span className="text-danger"> 1 of 2 </span> Tell us about your big day!
         </p>
@@ -247,7 +245,7 @@ const Page3 = () => (
 )
 
 const Page4 = () => (
-    <div className="col-md-6 mt-3 ">
+    <div className="col-md-6 mt-3 mb-30vh">
         <p>
             <span className="text-danger"> 2 of 2 </span> What do you need for your day?
         </p>
@@ -255,13 +253,16 @@ const Page4 = () => (
             Vendors
         </h2>
         <div className="row mt-5">
-            <div className="col-md-6 mb-3 p-0">
+            <div className="col-md-6 mb-3">
                 <Photographer />
             </div>
             <div className="col-md-6 mb-3 ">
                 <Florist />
             </div>
-            <div className="col-md-6 mb-3 p-0">
+
+        </div>
+        <div className="row mt-5">
+            <div className="col-md-6 mb-3 ">
                 <Venue />
             </div>
         </div>
@@ -269,7 +270,7 @@ const Page4 = () => (
 )
 
 const Page5 = () => (
-    <div className="container text-center">
+    <div className="container text-center mb-30vh">
         <img src="images/ring.png" alt="" className="ring-image img-thumbnail my-thumbnail-ring" />
         <h2>Let’s start planning</h2>
     </div>
