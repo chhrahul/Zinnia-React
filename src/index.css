@@ -23,25 +23,26 @@ code {
 }
 /* Layout page css */
 .signup-item {
-  display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  width: 100px;
-  height: 36px;
-  background: #ffffff !important;
-  border-radius: 8px;
-  border: 1px solid #505267 !important;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  top: 0px;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  border: 1px solid rgb(80, 82, 103) !important;
+}
+
+.nav-bar-img {
+  width: 200px !important;
 }
 .main-nav {
-  display: block !important;
   height: 72px;
-  left: 0px;
-  top: 0px;
+
   background: #ffffff;
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
 }
@@ -79,6 +80,10 @@ ul.footer-ul.mb-0 {
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+.container-.position-absolute-.h-100- {
+  min-height: 100vh;
 }
 .custom-75 {
   margin-right: 13%;
@@ -146,6 +151,35 @@ label {
   line-height: 20px;
   letter-spacing: 0.1px;
   color: #000000;
+}
+
+.custom-label-input {
+  height: 24px;
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+.offering-box {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+input[type="checkbox"] {
+  accent-color: #00767c !important;
+}
+.form-check-input:checked {
+  background-color: #00767c !important;
+  border-color: #00767c !important;
 }
 
 button.btn.btn-secondary {
@@ -243,12 +277,41 @@ button.btn.btn-secondary {
 .col-md-6.right-col-img.hide-image-sm {
   height: 400px;
 }
-
-nav.navbar.navbar-expand-lg.main-nav {
-  padding-top: 17px;
+.text-cyan {
+  background: #00767c;
+  color: #00767c;
 }
+
+.hr-devider {
+  height: 2px;
+}
+.custom-muted {
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #505267;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #00767c !important;
+  box-shadow: unset !important;
+}
+
 .mb-30vh {
   margin-bottom: 30vh;
+}
+.aprtment-p {
+  font-weight: 700;
+  font-size: 14px;
+
+  letter-spacing: 0.5px;
+  text-decoration-line: underline;
+  color: #00767c;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 }
 
 @media screen and (max-width: 409px) {
@@ -303,12 +366,18 @@ nav.navbar.navbar-expand-lg.main-nav {
 .row.custom-row {
   /* min-height: 52rem !important; */
 }
+.m-b-custom {
+  margin-bottom: 31rem;
+}
 @media screen and (max-width: 778px) {
   .nav-col-5 {
     width: 50% !important;
   }
   .custom-col-1 {
     display: none;
+  }
+  .m-b-custom {
+    margin-bottom: 1rem !important;
   }
 }
 @media screen and (min-width: 768px) {

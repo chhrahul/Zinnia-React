@@ -1,14 +1,18 @@
 const Navigation = () => {
     return (
-        <div >
-            <nav className='navbar navbar-expand-lg  main-nav'>
+        < >
+
+            <div class="container-fluid main-nav" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
                 <div className="row">
-                    <div className="col-md-1 col-sm-1 col-lg-1 custom-col-1"></div>
-                    <a className='navbar-brand- col-md-5 col-sm-5 col-lg-5 nav-col-5' href='/'>
-                        <img src="images/Logo.png" alt=""></img>
-                    </a>
-                    <div className="col-md-5 col-sm-5 col-lg-5 nav-col-5 float-right">
-                        <ul className='header-ui float-right'>
+                    <div className="col-md-6 col-sm-6 w-50 ">
+                        <div className="container-">
+                            <div className="row px-md-5 mt-3">
+                                <img src="images/Logo.png" alt="" className="nav-bar-img" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-6 w-50 ">
+                        <ul className='header-ui float-right mt-3 px-md-5'>
                             <li className='nav-item'>
                                 <a className='nav-link' href='/'>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,10 +27,9 @@ const Navigation = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-1 col-sm-1 col-lg-1 custom-col-1"></div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </>
     )
 }
 
