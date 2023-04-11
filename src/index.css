@@ -83,7 +83,7 @@ ul.footer-ul.mb-0 {
 }
 
 .container-.position-absolute-.h-100- {
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .custom-75 {
   margin-right: 13%;
@@ -303,15 +303,38 @@ button.btn.btn-secondary {
   margin-bottom: 30vh;
 }
 .aprtment-p {
-  font-weight: 700;
-  font-size: 14px;
+  font-weight: 700 !important;
+  font-size: 14px !important;
 
   letter-spacing: 0.5px;
   text-decoration-line: underline;
-  color: #00767c;
+  color: #00767c !important;
   flex: none;
   order: 2;
   flex-grow: 0;
+}
+
+h1 {
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  letter-spacing: 0.25px !important;
+}
+p {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #505267 !important;
+}
+
+.btn-grp button {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.5px !important;
+  /* color: #ffffff; */
 }
 
 @media screen and (max-width: 409px) {
@@ -369,6 +392,19 @@ button.btn.btn-secondary {
 .m-b-custom {
   margin-bottom: 31rem;
 }
+
+.col-md-6.order-md-0.order-1.position-relative-.p-0- {
+  padding: 0;
+}
+
+.second-form {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.1018 8C5.02785 8 4.45387 9.2649 5.16108 10.0731L10.6829 16.3838C11.3801 17.1806 12.6197 17.1806 13.3169 16.3838L18.8388 10.0731C19.5459 9.2649 18.972 8 17.898 8H6.1018Z' fill='%23212121'/%3E%3C/svg%3E") !important;
+}
 @media screen and (max-width: 778px) {
   .nav-col-5 {
     width: 50% !important;
@@ -380,12 +416,15 @@ button.btn.btn-secondary {
     margin-bottom: 1rem !important;
   }
 }
-@media screen and (min-width: 768px) {
-  .row.custom-row {
-    /* min-height: 52rem !important; */
+/* @media screen and (min-width: 1380px) {
+  .container-.position-absolute-.h-100- {
+    min-height: 120vh;
   }
-}
+} */
 @media screen and (max-width: 768px) {
+  ul.header-ui.float-right.mt-3.px-md-5 {
+    padding-left: 0;
+  }
   .custom-row .next-btn-bg {
     bottom: -63px !important;
   }
@@ -417,4 +456,107 @@ button.btn.btn-secondary {
   .resposive-hide {
     display: none;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .container-.position-absolute-.h-100- {
+    min-height: 100vh;
+  }
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-file-upload {
+  height: 16rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#input-file-upload {
+  display: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+#label-file-upload.drag-active {
+  background-color: #ffffff;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  background-color: transparent;
+}
+
+.upload-button:hover {
+  text-decoration-line: underline;
+}
+
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.custom-progress {
+  height: 6px !important;
+}
+.custom-progress .bg-danger {
+  background-color: #ed474a !important;
+}
+.custom-progress .bg-warning {
+  background-color: #ee8434 !important;
+}
+
+.custom-progress .bg-success {
+  background-color: #abdf75 !important;
+}
+.form-error {
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #b00000;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.form-error img {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.error-input {
+  border: 1px solid #b00000 !important;
+}
+
+.error-form-label {
+  color: #b00000 !important;
 }
