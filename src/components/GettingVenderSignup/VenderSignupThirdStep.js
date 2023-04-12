@@ -33,38 +33,36 @@ function Florist(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik } = props
     const formik = useFormik({
         initialValues: {
-            packageType: gettingVenderSignupDetails.venderType,
-            dayWeek: gettingVenderSignupDetails.email,
-            password: gettingVenderSignupDetails.password,
-            confirmPassword: gettingVenderSignupDetails.confirmPassword,
-            check: gettingVenderSignupDetails.check,
-
+            package_type: gettingVenderSignupDetails.package_type,
+            day_week: gettingVenderSignupDetails.day_week,
+            price: gettingVenderSignupDetails.price,
+            bridalBouquets: gettingVenderSignupDetails.bridalBouquets,
+            flowerGirlPetals: gettingVenderSignupDetails.flowerGirlPetals,
+            bridesmaidBouquet: gettingVenderSignupDetails.bridesmaidBouquet,
+            bouttonieres: gettingVenderSignupDetails.bouttonieres,
+            flowerCrown: gettingVenderSignupDetails.flowerCrown,
+            corsages: gettingVenderSignupDetails.corsages,
         },
         validationSchema: Yup.object(
             {
-                venderType: Yup.string()
-                    .max(15, 'Must be 15 characters or less')
-                    .required('This field is required'),
-                email: Yup.string().email('Invalid email address').required('This field is required'),
-                password: Yup.string()
-                    .required('This field is required').matches(
-
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{6,})/,
-                        "Please enter valid password"
-                    ),
-                confirmPassword: Yup.string().when('password', (password, field) =>
-                    password ? field.required('This field is required').oneOf([Yup.ref('password')], 'Confirm password not matched') : field
-                ),
-                check: Yup.boolean().default(false).oneOf([true], 'You must accept the terms and conditions'),
+                package_type: Yup.string().required('This field is required'),
+                day_week: Yup.string().required('This field is required'),
+                price: Yup.string().required('This field is required'),
 
             }),
         onSubmit: values => {
             const newValue = {
-                'venderType': values.venderType,
-                'email': values.email,
-                'password': values.password,
-                'confirmPassword': values.confirmPassword,
-                'check': values.check,
+                'offering': values.offering,
+                'package_type': values.package_type,
+                'day_week': values.day_week,
+                'price': values.price,
+                'bridalBouquets': values.bridalBouquets,
+                'flowerGirlPetals': values.flowerGirlPetals,
+                'bridesmaidBouquet': values.bridesmaidBouquet,
+                'bouttonieres': values.bouttonieres,
+                'flowerCrown': values.flowerCrown,
+                'corsages': values.corsages,
+
             }
             SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
             if (step >= 8) return
@@ -72,117 +70,194 @@ function Florist(props) {
         },
 
     });
+
     return (
         <>
-            <p>
-                <span className="text-danger"> 2 of 4 </span> What are you selling?!
-            </p>
-            <h1>
-                Tell us about your flower shop offerings
-            </h1>
-            <p>
-                Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
-            </p>
-
-            <div className="mb-3">
-                <label htmlFor="select-opt-type" className="form-label select-account">How far are you willing to travel from your business address?</label>
-                <select className="form-select mb-4" aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
-                    onChange={handleInputGettingVender('offering')}
-                >
-                    <option
-                        value='ceremony-decor'
-                        selected={gettingVenderSignupDetails.offering === 'ceremony-decor' ? true : false}
-                    >Ceremony decor</option>
-                    <option
-                        value='bridal-party-flowers'
-                        selected={gettingVenderSignupDetails.offering === 'bridal-party-flowers' ? true : false}
-                    >Bridal party flowers</option>
-
-                </select>
-            </div>
-            <div className="row mb-3">
-                <p className="offering-box">
-                    What’s included?
+            <form onSubmit={formik.handleSubmit} id="form-data">
+                <p>
+                    <span className="text-danger"> 2 of 4 </span> What are you selling?
                 </p>
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="" id="bridal_bouquets" />
-                        <label class="form-check-label custom-label-input" htmlFor="bridal_bouquets">
-                            Bridal bouquets
-                        </label>
-                    </div>
+                <h1>
+                    Tell us about your flower shop offerings
+                </h1>
+                <p>
+                    Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
+                </p>
+
+                <div className="mb-3">
+                    <label htmlFor="select-opt-type" className={formik.touched.offering && formik.errors.offering ? 'error-form-label form-label select-account' : 'form-label select-account'} >How far are you willing to travel from your business address?</label>
+                    <select className={formik.touched.offering && formik.errors.offering ? 'error-input form-select mb-4 ' : 'form-select mb-4'} aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
+                        onChange={handleInputGettingVender('offering')}
+
+                    >
+                        <option
+                            value='ceremony-decor'
+                            selected={gettingVenderSignupDetails.offering === 'ceremony-decor' ? true : false}
+                        >Ceremony decor</option>
+                        <option
+                            value='bridal-party-flowers'
+                            selected={gettingVenderSignupDetails.offering === 'bridal-party-flowers' ? true : false}
+                        >Bridal party flowers</option>
+
+                    </select>
                 </div>
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="" id="petals_basket" />
-                        <label class="form-check-label custom-label-input" htmlFor="petals_basket">
-                            Flower girl petals / basket
-                        </label>
+                <div className="row mb-3">
+                    <p className="offering-box">
+                        What’s included?
+                    </p>
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="bridal_bouquets"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.bridalBouquets}
+                                name="bridalBouquets"
+                                checked={formik.values.bridalBouquets ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="bridal_bouquets">
+                                Bridal bouquets
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="" id="bridesmaid_bouquet" />
-                        <label class="form-check-label custom-label-input" htmlFor="bridesmaid_bouquet">
-                            Bridesmaid bouquet
-                        </label>
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="petals_basket"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.flowerGirlPetals}
+                                name="flowerGirlPetals"
+                                checked={formik.values.flowerGirlPetals ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="petals_basket" >
+                                Flower girl petals / basket
+                            </label>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="bridesmaid_bouquet"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.bridesmaidBouquet}
+                                name="bridesmaidBouquet"
+                                checked={formik.values.bridesmaidBouquet ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="bridesmaid_bouquet">
+                                Bridesmaid bouquet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="bouttonieres"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.bouttonieres}
+                                name="bouttonieres"
+                                checked={formik.values.bouttonieres ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="bouttonieres">
+                                Bouttonieres
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" id="flower_crown"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.flowerCrown}
+                                name="flowerCrown"
+                                checked={formik.values.flowerCrown ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="flower_crown">
+                                Flower crown
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6">
+                        <div class="form-check mt-2">
+                            <input class="form-check-input custom-check-input" type="checkbox" id="corsages"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.corsages}
+                                name="corsages"
+                                checked={formik.values.corsages ? true : false}
+                            />
+                            <label class="form-check-label custom-label-input" htmlFor="corsages">
+                                Corsages
+                            </label>
+                        </div>
                     </div>
                 </div>
 
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="" id="bouttonieres" />
-                        <label class="form-check-label custom-label-input" htmlFor="bouttonieres">
-                            Bouttonieres
-                        </label>
+                <div className="mb-3  ">
+                    <label htmlFor="price" className={formik.touched.price && formik.errors.price ? 'error-form-label form-label' : 'form-label'}>Price per piece</label>
+                    <input type="number" className={formik.touched.price && formik.errors.price ? 'error-input form-control ' : 'form-control'} id="price" aria-describedby="emailHelp" placeholder=''
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.price}
+                        name="price"
+                    />
+                    {formik.touched.price && formik.errors.price ? (
+                        <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.price}</div>
+                    ) : null}
+                </div>
+
+                <div className="mb-3  ">
+                    <label htmlFor="flowers" className="form-label">Flowers used</label>
+                    <input type="number" className="form-control" id="flowers" aria-describedby="emailHelp" placeholder=''
+                        value={gettingVenderSignupDetails.flowersUsed}
+                        onChange={handleInputGettingVender('flowersUsed')}
+                    />
+                </div>
+                <div className="row ">
+                    <div className="mt-3">
+                        <p className="aprtment-p">+ Add another offering</p>
                     </div>
                 </div>
-
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="" id="flower_crown" />
-                        <label class="form-check-label custom-label-input" htmlFor="flower_crown">
-                            Flower crown
-                        </label>
-                    </div>
-                </div>
-
-                <div className="col-md-6">
-                    <div class="form-check mt-2">
-                        <input class="form-check-input custom-check-input" type="checkbox" value="" id="corsages" />
-                        <label class="form-check-label custom-label-input" htmlFor="corsages">
-                            Corsages
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div className="mb-3  ">
-                <label htmlFor="price" className="form-label">Price per piece</label>
-                <input type="number" className="form-control" id="price" aria-describedby="emailHelp" placeholder=''
-                    value={gettingVenderSignupDetails.price}
-                    onChange={handleInputGettingVender('price')}
-                />
-            </div>
-
-            <div className="mb-3  ">
-                <label htmlFor="flowers" className="form-label">Flowers used</label>
-                <input type="number" className="form-control" id="flowers" aria-describedby="emailHelp" placeholder=''
-                    value={gettingVenderSignupDetails.flowersUsed}
-                    onChange={handleInputGettingVender('flowersUsed')}
-                />
-            </div>
-            <div className="row ">
-                <div className="mt-3">
-                    <p className="aprtment-p">+ Add another offering</p>
-                </div>
-            </div>
+            </form>
         </>
     )
 }
 
 function Venue(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik } = props
+    const formik = useFormik({
+        initialValues: {
+            offering: gettingVenderSignupDetails.offering,
+            package_type: gettingVenderSignupDetails.package_type,
+            day_week: gettingVenderSignupDetails.day_week,
+            price: gettingVenderSignupDetails.price,
+
+
+        },
+        validationSchema: Yup.object(
+            {
+                package_type: Yup.string().required('This field is required'),
+                day_week: Yup.string().required('This field is required'),
+                price: Yup.string().required('This field is required'),
+
+            }),
+        onSubmit: values => {
+            const newValue = {
+                'offering': values.offering,
+                'package_type': values.package_type,
+                'day_week': values.day_week,
+                'price': values.price,
+
+
+
+            }
+            SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
+            if (step >= 8) return
+            setStep(step + 1)
+        },
+
+    });
     return (
         <>
             <p>
@@ -265,20 +340,19 @@ function Venue(props) {
             </div>
 
             <div className="mb-3  ">
-                <label htmlFor="price" className="form-label">Price per piece</label>
-                <input type="number" className="form-control" id="price" aria-describedby="emailHelp" placeholder=''
-                    value={gettingVenderSignupDetails.price}
-                    onChange={handleInputGettingVender('price')}
+                <label htmlFor="price" className={formik.touched.price && formik.errors.price ? 'error-form-label form-label' : 'form-label'}>Price per piece</label>
+                <input type="number" className={formik.touched.price && formik.errors.price ? 'error-input form-control ' : 'form-control'} id="price" aria-describedby="emailHelp" placeholder=''
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.price}
+                    name="price"
                 />
+                {formik.touched.price && formik.errors.price ? (
+                    <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.price}</div>
+                ) : null}
             </div>
 
-            <div className="mb-3  ">
-                <label htmlFor="flowers" className="form-label">Flowers used</label>
-                <input type="number" className="form-control" id="flowers" aria-describedby="emailHelp" placeholder=''
-                    value={gettingVenderSignupDetails.flowersUsed}
-                    onChange={handleInputGettingVender('flowersUsed')}
-                />
-            </div>
+
             <div className="row ">
                 <div className="mt-3">
                     <p className="aprtment-p">+ Add another offering</p>

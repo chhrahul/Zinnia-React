@@ -30,7 +30,7 @@ function SignupFirstStep(props) {
                         "Please enter valid password"
                     ),
                 confirmPassword: Yup.string().when('password', (password, field) =>
-                    password ? field.required('This field is required').oneOf([Yup.ref('password')], 'Confirm password not matched') : field
+                    password ? field.required('This field is required').oneOf([Yup.ref('password')], 'Password not matched') : field
                 ),
                 check: Yup.boolean().default(false).oneOf([true], 'You must accept the terms and conditions'),
 
@@ -163,12 +163,12 @@ function SignupFirstStep(props) {
 
 
                     <div id="password" className="form-text">
-                        Passwords must have at least 6
+                        Passwords must have at least 6 characters and include:
                     </div>
                     <div id="password" className="form-text" >
                         <ul>
-                            <li>characters. Uppercase and lowercase</li>
-                            <li>letters A symbol ($%#)</li>
+                            <li>A mix of upper and lowercase letters</li>
+                            <li>A symbol ($%#)</li>
                         </ul>
                     </div>
                 </div>
@@ -184,20 +184,23 @@ function SignupFirstStep(props) {
                         <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.confirmPassword}</div>
                     ) : null}
                 </div>
-                <div className="mb-3 form-check ustom-col-2 ">
-                    <input type="checkbox" className={formik.touched.check && formik.errors.check ? 'error-input form-check-input ' : 'form-check-input'} id="exampleCheck1"
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.check}
-                        name="check"
-                        checked={formik.values.check ? true : false}
-                    />
-                    <p className="form-check-label" htmlFor="exampleCheck1">I agree to the <a href="/">terms and conditions</a></p>
+                <div className="mb-3 ">
+                    <div className="form-check ustom-col-2 ">
+                        <input type="checkbox" className={formik.touched.check && formik.errors.check ? 'error-input form-check-input ' : 'form-check-input'} id="exampleCheck1"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.check}
+                            name="check"
+                            checked={formik.values.check ? true : false}
+                        />
+                        <p className="form-check-label" htmlFor="exampleCheck1">I agree to the <a href="/">terms and conditions</a></p>
+                    </div>
 
+                    {formik.touched.check && formik.errors.check ? (
+                        <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.check}</div>
+                    ) : null}
                 </div>
-                {formik.touched.check && formik.errors.check ? (
-                    <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.check}</div>
-                ) : null}
+
             </form>
         </span>
     )

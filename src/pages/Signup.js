@@ -23,6 +23,7 @@ function Signup() {
     });
 
     const [step, setStep] = React.useState(1)
+    const [clickedApart, setClickedApart] = React.useState('hidden')
     const [selectedSignupType, SetSelectedSignupType] = React.useState("")
     const [gettingMarriedSignupDetails, SetGettingMarriedSignupDetails] = React.useState({
         "firstName": "",
@@ -66,13 +67,21 @@ function Signup() {
         "amount_of_hours": "",
         "package_type": "ceremony-only",
         "day_week": "friday",
+        "bridalBouquets": "",
+        "flowerGirlPetals": "",
+        "bridesmaidBouquet": "",
+        "bouttonieres": "",
+        "flowerCrown": "",
+        "corsages": "",
         "term_and_conditions": '',
+        "apartment": '',
+
     })
 
     const handleSelectSignupType = (e) => {
         const { value } = e.target
         SetSelectedSignupType(value)
-        setStep(1)
+        setStep(2)
     }
 
     const handleInputGettingMarried = (keyName) => (e) => {
@@ -115,7 +124,9 @@ function Signup() {
         selectedSignupType,
         handleSelectSignupType,
         step,
-        setStep
+        setStep,
+        clickedApart,
+        setClickedApart,
 
     }
 
@@ -206,8 +217,7 @@ function Signup() {
                     </div>
                     {step <= 2 &&
                         <div className="col-md-6 order-md-1 order-0 px-0">
-
-                            <img src='/images/beach-2.jpg' className='w-100 h-100' alt="" />
+                            <img src='/images/beach-pc.jpg' className='w-100 h-100' alt="" />
                         </div>
                     }
                 </div>

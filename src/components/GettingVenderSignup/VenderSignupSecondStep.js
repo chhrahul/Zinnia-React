@@ -1,9 +1,12 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 function VenderSignupSecondStep(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, clickedApart,
+        setClickedApart } = props
     const formik = useFormik({
         initialValues: {
             businessName: gettingVenderSignupDetails.businessName,
@@ -23,6 +26,7 @@ function VenderSignupSecondStep(props) {
             amount_of_hours: gettingVenderSignupDetails.amount_of_hours,
             package_type: gettingVenderSignupDetails.package_type,
             day_week: gettingVenderSignupDetails.day_week,
+            apartment: gettingVenderSignupDetails.apartment,
 
         },
         validationSchema: Yup.object(
@@ -30,7 +34,10 @@ function VenderSignupSecondStep(props) {
 
 
                 businessName: Yup.string().required('This field is required'),
-                website: Yup.string().required('This field is required').url('Invalid url'),
+                website: Yup.string().required('This field is required').matches(
+                    /^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/gm,
+                    "Url is not valid"
+                ),
                 phone: Yup.string().required('This field is required').matches(
                     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
                     "Phone number is not valid"
@@ -49,6 +56,7 @@ function VenderSignupSecondStep(props) {
                 // photo_offering: Yup.string().required('This field is required'),
                 package_type: Yup.string().required('This field is required'),
                 day_week: Yup.string().required('This field is required'),
+                apartment: Yup.string(),
 
 
             }),
@@ -71,6 +79,7 @@ function VenderSignupSecondStep(props) {
                 'amount_of_hours': values.amount_of_hours,
                 'package_type': values.package_type,
                 'day_week': values.day_week,
+                'apartment': values.apartment,
 
             }
             SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
@@ -80,17 +89,21 @@ function VenderSignupSecondStep(props) {
         },
 
     });
+    const handleClickApartment = () => {
+        setClickedApart('active-apartment')
+    }
 
     return (
         <span className='px-0-'>
             <form onSubmit={formik.handleSubmit} id="form-data">
                 <p>
-                    <span className="text-danger"> 1 of 2 </span> Tell us about your big day!
+                    <span className="text-danger"> 1 of 4 </span> Tell us about your business
                 </p>
                 <h1>
                     We want to know more about you!
                 </h1>
-                <div className="row ">
+                <p>Add your information to get started. </p>
+                <div className="row second-step">
                     <div className="mb-3">
                         <label htmlFor="bussiness" className={formik.touched.businessName && formik.errors.businessName ? 'error-form-label form-label' : 'form-label'}>Your business name<span className="text-danger">*</span></label>
                         <input type="text" className={formik.touched.businessName && formik.errors.businessName ? 'error-input form-control ' : 'form-control'} id="bussiness" placeholder='Flowers & Friends'
@@ -105,10 +118,10 @@ function VenderSignupSecondStep(props) {
                         ) : null}
                     </div>
                 </div>
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="url" className={formik.touched.website && formik.errors.website ? 'error-form-label form-label' : 'form-label'}>Website<span className="text-danger">*</span></label>
-                        <input type="text" className={formik.touched.website && formik.errors.website ? 'error-input form-control ' : 'form-control'} id="url" placeholder='http://www.example.com'
+                        <input type="text" className={formik.touched.website && formik.errors.website ? 'error-input form-control ' : 'form-control'} id="url" placeholder='www.example.com'
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.website}
@@ -119,7 +132,7 @@ function VenderSignupSecondStep(props) {
                         ) : null}
                     </div>
                 </div>
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="phone" className={formik.touched.phone && formik.errors.phone ? 'error-form-label form-label' : 'form-label'}>Phone Number<span className="text-danger">*</span></label>
                         <input type="text" className={formik.touched.phone && formik.errors.phone ? 'error-input form-control ' : 'form-control'} id="phone" placeholder=''
@@ -134,9 +147,9 @@ function VenderSignupSecondStep(props) {
                     </div>
                 </div>
 
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
-                        <label htmlFor="ein" className={formik.touched.ein && formik.errors.ein ? 'error-form-label form-label' : 'form-label'}>EIN/ SSN<span className="text-danger">*</span> </label>
+                        <label htmlFor="ein" className={formik.touched.ein && formik.errors.ein ? 'error-form-label form-label' : 'form-label'}>EIN/ SSN <span className="text-danger">*</span>  <DisabledExample /></label>
                         <input type="number" className={formik.touched.ein && formik.errors.ein ? 'error-input form-control ' : 'form-control'} id="ein" placeholder=''
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -150,16 +163,16 @@ function VenderSignupSecondStep(props) {
                 </div>
 
 
-                <div className="row ">
+                <div className="">
                     <hr className="mt-3 text-cyan hr-devider" />
                 </div>
-                <div className="row ">
+                <div className=" ">
                     <p className="custom-muted">
                         Address
                     </p>
                 </div>
 
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="street" className={formik.touched.streetAddress && formik.errors.streetAddress ? 'error-form-label form-label' : 'form-label'}>Street Address<span className="text-danger">*</span> </label>
                         <input type="text" className={formik.touched.streetAddress && formik.errors.streetAddress ? 'error-input form-control ' : 'form-control'} id="street" placeholder=''
@@ -174,13 +187,18 @@ function VenderSignupSecondStep(props) {
                     </div>
                 </div>
 
-                <div className="row ">
-                    <div className="mt-3">
-                        <p className="aprtment-p">+ Add Apartment#, Floor, etc</p>
-                    </div>
-                </div>
+                <div className="">
+                    {clickedApart === 'hidden' ?
+                        <div className="mt-3">
+                            <p className="aprtment-p" onClick={handleClickApartment}>+ Add Apartment#, Floor, etc</p>
+                        </div>
+                        : null
+                    }
 
-                <div className="row ">
+                </div>
+                <Apartment formik={formik} clickedApart={clickedApart} />
+
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="city" className={formik.touched.city && formik.errors.city ? 'error-form-label form-label' : 'form-label'}>City<span className="text-danger">*</span> </label>
                         <input type="text" className={formik.touched.city && formik.errors.city ? 'error-input form-control ' : 'form-control'} id="city" placeholder=''
@@ -195,7 +213,7 @@ function VenderSignupSecondStep(props) {
                     </div>
                 </div>
 
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="state" className={formik.touched.state && formik.errors.state ? 'error-form-label form-label' : 'form-label'}>State<span className="text-danger">*</span> </label>
                         <input type="text" className={formik.touched.state && formik.errors.state ? 'error-input form-control ' : 'form-control'} id="state" placeholder=''
@@ -210,7 +228,7 @@ function VenderSignupSecondStep(props) {
                     </div>
                 </div>
 
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="zip" className={formik.touched.zipCode && formik.errors.zipCode ? 'error-form-label form-label' : 'form-label'}>Zipcode<span className="text-danger">*</span> </label>
                         <input type="text" className={formik.touched.zipCode && formik.errors.zipCode ? 'error-input form-control ' : 'form-control'} id="zip" placeholder=''
@@ -225,7 +243,7 @@ function VenderSignupSecondStep(props) {
                     </div>
                 </div>
 
-                <div className="row ">
+                <div className="">
                     <div className="mb-3">
                         <label htmlFor="select-opt-type" className={formik.touched.distance && formik.errors.distance ? 'error-form-label form-label select-account' : 'form-label select-account'} >How far are you willing to travel from your business address?</label>
                         <select className={formik.touched.distance && formik.errors.distance ? 'error-input form-select mb-4 ' : 'form-select mb-4'} aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
@@ -272,16 +290,16 @@ function VenderSignupSecondStep(props) {
                         ) : null}
                     </div>
                 </div>
-                <div className="row ">
+                <div className="">
                     <hr className=" text-cyan hr-devider" />
                 </div>
-                <div className="row ">
+                <div className="">
                     <p className="custom-muted">
                         Tell us about your business
                     </p>
                 </div>
 
-                <div className="row mb-3">
+                <div className="mb-3">
                     <div className="">
                         <label htmlFor="zip" className={formik.touched.about && formik.errors.about ? 'error-form-label form-label' : 'form-label'} >Information about your business<span className="text-danger">*</span> </label>
                         <textarea className={formik.touched.about && formik.errors.about ? 'error-input form-control ' : 'form-control'} id="exampleFormControlTextarea1" rows="5"
@@ -300,3 +318,33 @@ function VenderSignupSecondStep(props) {
 }
 
 export default VenderSignupSecondStep
+
+function DisabledExample() {
+    return (
+        <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">We need either your EIN or SSN for tax reasons. </Tooltip>} >
+            <span className="d-inline-block">
+                <span disabled style={{ pointerEvents: 'none' }} className="i-icon">
+                    i
+                </span>
+            </span>
+        </OverlayTrigger>
+    );
+}
+
+function Apartment(props) {
+    const { formik, clickedApart } = props
+    return (
+        <div className={`mb-3 ${clickedApart}`}>
+            <label htmlFor="city" className={formik.touched.city && formik.errors.apartment ? 'error-form-label form-label' : 'form-label'}>Apartment #, Floor, etc</label>
+            <input type="text" className={formik.touched.apartment && formik.errors.apartment ? 'error-input form-control ' : 'form-control'} id="apartment" placeholder=''
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.apartment}
+                name="apartment"
+            />
+            {formik.touched.apartment && formik.errors.apartment ? (
+                <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.apartment}</div>
+            ) : null}
+        </div>
+    )
+}
