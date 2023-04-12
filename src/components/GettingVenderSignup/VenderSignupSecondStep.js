@@ -194,10 +194,8 @@ function VenderSignupSecondStep(props) {
                         </div>
                         : null
                     }
-
                 </div>
                 <Apartment formik={formik} clickedApart={clickedApart} />
-
                 <div className="">
                     <div className="mb-3">
                         <label htmlFor="city" className={formik.touched.city && formik.errors.city ? 'error-form-label form-label' : 'form-label'}>City<span className="text-danger">*</span> </label>
