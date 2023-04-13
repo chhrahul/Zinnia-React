@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { SignupFirstStep, SignupSecondStep, SignupThirdStep, SignupFourthStep } from "../components/GettingMarriedSignup";
-import { VenderSignupFirstStep, VenderSignupSecondStep, VenderSignupThirdStep, VenderSignupFourthStep } from "../components/GettingVenderSignup";
+import { VenderSignupFirstStep, VenderSignupSecondStep, VenderSignupThirdStep, VenderSignupFourthStep, VenderSignupFifthStep } from "../components/GettingVenderSignup";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+
 
 function Signup() {
 
@@ -15,13 +16,16 @@ function Signup() {
             if (selectedSignupType === 'gettingMarried') {
                 if (step >= 5) return
                 setStep(step + 1)
-            } else {
+            }
+
+            else {
                 if (step >= 8) return
                 setStep(step + 1)
             }
         },
     });
-
+    const [files, setFiles] = React.useState([]);
+    console.log('files', files)
     const [step, setStep] = React.useState(1)
     const [clickedApart, setClickedApart] = React.useState('hidden')
     const [selectedSignupType, SetSelectedSignupType] = React.useState("")
@@ -63,8 +67,8 @@ function Signup() {
         "offering": "",
         "price": "",
         "flowersUsed": "",
-        "photo_offering": "",
-        "amount_of_hours": "",
+        "photoOffering": "",
+        "amountOfHours": "",
         "package_type": "ceremony-only",
         "day_week": "friday",
         "bridalBouquets": "",
@@ -75,9 +79,26 @@ function Signup() {
         "corsages": "",
         "term_and_conditions": '',
         "apartment": '',
+        'groomRoom': '',
+        'bridalSuite': '',
+        'chairs': '',
+        'bridalPortraits': '',
+        'firstLook': '',
+        'ceremony': '',
+        'photoAlbum': '',
+        'highlightFilm': '',
+        'rawPhotos': '',
+        'onlineGallery': '',
+        'sameDayPrints': '',
+        'otherDelivery': '',
+        'facebook': '',
+        'instagram': '',
+        'youtube': '',
+        'tiktok': '',
+        'twitter': '',
+        'pinterest': '',
 
     })
-
     const handleSelectSignupType = (e) => {
         const { value } = e.target
         SetSelectedSignupType(value)
@@ -127,6 +148,8 @@ function Signup() {
         setStep,
         clickedApart,
         setClickedApart,
+        files,
+        setFiles
 
     }
 
@@ -134,7 +157,8 @@ function Signup() {
         <div className="container-fluid-" >
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>
                 <div className='row'>
-                    <div className="col-md-6 order-md-0 order-1 position-relative- p-0-">
+
+                    <div className={step === 5 ? 'col-md-12 order-md-0 order-1 position-relative- p-0-' : 'col-md-6 order-md-0 order-1 position-relative- p-0-'} >
                         <div className="container- position-absolute- h-100-">
                             <div className='row px-md-5 mt-5'>
                                 {step === 1 &&
@@ -179,7 +203,7 @@ function Signup() {
                                         {step === 3 && <VenderSignupSecondStep {...gettingVenderProps} />}
                                         {step === 4 && <VenderSignupThirdStep  {...gettingVenderProps} />}
                                         {step === 5 && <VenderSignupFourthStep {...gettingVenderProps} />}
-                                        {step === 6 && 'test'}
+                                        {step === 6 && <VenderSignupFifthStep {...gettingVenderProps} />}
                                     </>
                                 }
                             </div>
