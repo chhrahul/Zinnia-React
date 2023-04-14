@@ -68,7 +68,7 @@ function Signup() {
 
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-7 pl-0'>
-                        <img src="/images/map-rage.jpg w-100" alt="" />
+                        <img src="/images/map-rage.jpg" alt="" className='w-100' />
                     </div>
                 </div>
             </div>
