@@ -1,4 +1,4 @@
-import { Signup, Login } from "./pages";
+import { Signup, Login, Listings } from "./pages";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
 
@@ -10,6 +10,7 @@ function App() {
           <Route exact path="/" element={< Signup />} />
           <Route exact path="/sign-up" element={< Signup />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/listings" element={<Listings />} />
         </Routes >
       </div>
     </Layout>

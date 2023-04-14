@@ -417,6 +417,97 @@ p {
 .radio-custom-parant {
   background: rgba(120, 122, 143, 0.15) !important;
 }
+.alert-files {
+  display: none;
+}
+.rating-p {
+  margin-right: 15px;
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 16px !important;
+  text-align: center !important;
+  letter-spacing: 1.5px !important;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+.paddin-lr {
+  padding-left: 0px !important ;
+  padding-right: 0px !important ;
+}
+.price-text {
+  font-size: 10px;
+  line-height: 16px;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #000000 !important;
+}
+.theme-colo {
+  color: #505267 !important;
+}
+.color-cyan {
+  color: #00767c !important;
+}
+.p-bottom-margin {
+  margin-bottom: 4px;
+}
+.price-amount {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #000000 !important;
+}
+.price-amount-box {
+  padding: 0px 8px;
+  gap: 10px;
+  width: 135px;
+  height: 24px;
+  background: #ffd8e1;
+}
+.contact-icon {
+  margin-right: 10px;
+}
+.listing-page input {
+  height: unset !important;
+  border: none;
+  width: 20px;
+  text-align: center !important;
+}
+.quantity-add-box {
+  margin-left: 1px;
+}
+
+.listing-page .input-group {
+  border: 1px solid #00767c !important;
+  border-radius: 8px;
+
+  color: #00767c !important;
+}
+.listing-page span.input-group-text {
+  background-color: unset !important;
+  color: #00767c !important;
+  font-size: 23px;
+  font-weight: bold;
+  border: unset !important;
+}
+.add-to-cart-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 4px;
+  isolation: isolate;
+  color: white !important;
+  background: #505267 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 5px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
 .radio-custom-img {
   font-style: normal;
   font-weight: 400;
@@ -456,6 +547,19 @@ p {
 
 .social-group input {
   padding-left: 32px !important;
+}
+
+.cutBtn {
+  text-align: right;
+  position: relative;
+  top: -2px;
+  height: 0;
+  color: white;
+  margin-right: 10px;
+  font-size: 23px;
+  font-family: monospace;
+  top: -3px;
+  cursor: pointer !important;
 }
 
 @media screen and (max-width: 409px) {
@@ -540,6 +644,7 @@ select {
     padding-right: 0px !important;
   }
 }
+
 /* @media screen and (min-width: 1380px) {
   .container-.position-absolute-.h-100- {
     min-height: 120vh;

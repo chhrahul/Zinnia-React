@@ -16,7 +16,6 @@ function VenderSignupFourthStep(props) {
         step,
         setStep,
         useFormik
-
     }
 
     const formik = useFormik({
@@ -24,8 +23,10 @@ function VenderSignupFourthStep(props) {
 
         },
         onSubmit: values => {
-            if (step >= 8) return
-            setStep(step + 1)
+            if (files.length >= 3) {
+                if (step >= 8) return
+                setStep(step + 1)
+            }
         },
     });
     const handleImages = {
@@ -45,7 +46,10 @@ function VenderSignupFourthStep(props) {
                 <p>
                     Get people excited to see your work! You’ll need to add at least 3 photos to continue.
                 </p>
+
                 <MyDropzone {...handleImages} />
+
+
             </form>
 
         </span>
@@ -54,15 +58,13 @@ function VenderSignupFourthStep(props) {
 }
 export default VenderSignupFourthStep
 
-
 function MyDropzone(props) {
-
     const { files, setFiles } = props
     const img = {
         width: '100%',
         height: '100%'
     };
-
+    let filesArray = files
     const baseStyle = {
         flex: 1,
         display: 'flex',
@@ -91,7 +93,46 @@ function MyDropzone(props) {
         borderColor: '#ff1744'
     };
 
+    const encodeImageFileAsURL = async (file) => {
+        let response = ""
+        var reader = new FileReader();
+        reader.onloadend = async () => {
+            response = reader.result
+        }
+        reader.readAsDataURL(file);
+        await new Promise((resolve) => setTimeout(resolve, 1000))
+        return response
 
+    }
+
+    const removeImage = (index) => {
+
+        setFiles([
+            ...files.slice(0, index),
+            ...files.slice(index + 1)
+        ]);
+
+
+
+
+    };
+
+    const setMainImage = (index, value) => {
+        const newArray = [...files];
+
+        console.log('value', value)
+        files.map((file, indx) => {
+            if (indx === index) {
+                file['checked'] = true
+            } else {
+                file['checked'] = false
+            }
+        }
+        )
+        // Call `changeHandler` with the new array and `dataArray` gets updated
+        setFiles(newArray)
+
+    };
     const { getRootProps,
         getInputProps,
         isFocused,
@@ -100,28 +141,33 @@ function MyDropzone(props) {
             accept: {
                 'image/*': []
             },
-            onDrop: acceptedFiles => {
-                setFiles(acceptedFiles.map(file => Object.assign(file, {
-                    preview: URL.createObjectURL(file)
-                })));
+            onDrop: async (acceptedFiles) => {
+
+                await Promise.all(acceptedFiles.map(async (file) => {
+                    const newFile = [await encodeImageFileAsURL(file)]
+                    filesArray = [...filesArray, newFile]
+                }))
+                setFiles([...filesArray])
+
             }
         });
 
-    const thumbs = files.map(file => (
-        <div className="col-md-3 px-0 mt-2 ">
+    const thumbs = files.map((file, index) => (
+        <div className="col-md-3 px-0 mt-2 file-box">
             <div className="m-2 card radio-custom-parant h-100">
+                <span className="cutBtn float-right" onClick={() => removeImage(index)}>x</span>
                 <img
-                    src={file.preview}
+                    src={file[0]}
                     style={img}
                     // Revoke data uri after image is loaded
-                    onLoad={() => { URL.revokeObjectURL(file.preview) }}
+                    // onLoad={() => { URL.revokeObjectURL(file.preview) }}
                     className="h-100 w-100"
                     alt="" />
                 <div className="radio-custom-parant mt-1">
                     <div class="form-check m-2">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={file['checked']} checked={file['checked'] ? true : null} onChange={() => setMainImage(index, file['checked'])} />
                         <label class="form-check-label radio-custom-img" for="exampleRadios1">
-                            Mark as main photo
+                            {file['checked'] ? 'Main photo' : 'Mark as main photo'}
                         </label>
                     </div>
                 </div>
@@ -129,6 +175,7 @@ function MyDropzone(props) {
 
         </div >
     ));
+
 
     const style = React.useMemo(() => ({
         ...baseStyle,
@@ -156,6 +203,8 @@ function MyDropzone(props) {
                 <p>JPG, PNG, or TIFF. 2:3 ratio recommended</p>
 
             </div>
+
+            <div className="alert alert-danger alert-files mt-3" style={files.length < 3 ? { display: 'block' } : { display: 'none' }}> You’ll need to add at least 3 photos to continue. </div>
             <div className="row mt-2 mb-5">
                 {thumbs.length > 0 ? <p className="uploaded-text mt-2 mb-0">Uploaded photos</p> : ""}
                 {thumbs}

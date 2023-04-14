@@ -3,7 +3,7 @@ const Navigation = () => {
         < >
 
             {/* <div class="container-fluid main-nav" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} > */}
-            <div class="container-fluid main-nav position-relative" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
+            <div className="container-fluid main-nav position-relative" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
                 <div className="row ">
                     <div className="col-md-6 col-sm-6 w-50 ">
                         <div className="container-">

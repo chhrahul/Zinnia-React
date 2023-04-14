@@ -15,12 +15,12 @@ function VenderSignupSecondStep(props) {
         },
         validationSchema: Yup.object(
             {
-                facebook: Yup.string().required('This field is required'),
-                instagram: Yup.string().required('This field is required'),
-                youtube: Yup.string().required('This field is required'),
-                tiktok: Yup.string().required('This field is required'),
-                twitter: Yup.string().required('This field is required'),
-                pinterest: Yup.string().required('This field is required'),
+                facebook: Yup.string().max(255, 'Must not be greater than 255 characters'),
+                instagram: Yup.string().max(255, 'Must not be greater than 255 characters'),
+                youtube: Yup.string().max(255, 'Must not be greater than 255 characters'),
+                tiktok: Yup.string().max(255, 'Must not be greater than 255 characters'),
+                twitter: Yup.string().max(255, 'Must not be greater than 255 characters'),
+                pinterest: Yup.string().max(255, 'Must not be greater than 255 characters'),
 
             }),
         onSubmit: values => {

@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 
-function Signup() {
+function Listings() {
 
     const formik = useFormik({
         initialValues: {
@@ -158,7 +158,7 @@ function Signup() {
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>
                 <div className='row'>
 
-                    <div className={step === 5 ? 'col-md-12 order-md-0 order-1 position-relative- p-0-' : 'col-md-6 order-md-0 order-1 position-relative- p-0-'} >
+                    <div className={step === 5 || step === 7 ? 'col-md-12 order-md-0 order-1 position-relative- p-0-' : 'col-md-6 order-md-0 order-1 position-relative- p-0-'} >
                         <div className="container- position-absolute- h-100-">
                             <div className='row px-md-5 mt-5'>
                                 {step === 1 &&
@@ -204,6 +204,7 @@ function Signup() {
                                         {step === 4 && <VenderSignupThirdStep  {...gettingVenderProps} />}
                                         {step === 5 && <VenderSignupFourthStep {...gettingVenderProps} />}
                                         {step === 6 && <VenderSignupFifthStep {...gettingVenderProps} />}
+                                        {step === 7 && <SignupFourthStep />}
                                     </>
                                 }
                             </div>
@@ -280,7 +281,7 @@ function Signup() {
     )
 }
 
-export default Signup
+export default Listings
 
 function NextButton(props) {
     const { handleClickNext, selectedSignupType } = props
