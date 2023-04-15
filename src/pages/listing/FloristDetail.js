@@ -1,14 +1,16 @@
 
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import  CustomSlider from "../../components/CustomSlider";
 
-function Signup() {
+function FloristDetail() {
     return (
 
 
-        <div className="container-fluid px-md-5 listing-page" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
-            <div className="row paddin-lr">
-                <ControlledCarousel />
+        <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
+          <CustomSlider/>  
+          <div className="row paddin-lr">
+            
                 <div className='row paddin-lr mt-3'>
                     <h1>Big Day Florists</h1>
                 </div>
@@ -30,7 +32,7 @@ function Signup() {
                         <p className=''><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> 301-593-2392 </span> </p>
                     </div>
 
-                    <div className='col-md-3 pl-0'>
+                    <div className='col pl-0'>
                         <p className=''><img src="/images/icons/social/instagram.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> instagram.com/bigdayflorist </span> </p>
                         <p className=''><img src="/images/icons/social/facebook.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> facebook.com/bigdayfloriststwitte/ </span> </p>
                         <p className=''><img src="/images/icons/social/twitter.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> twitter.com/@big_day_florists </span> </p>
@@ -76,7 +78,7 @@ function Signup() {
 
     )
 }
-export default Signup
+export default FloristDetail
 
 
 function ControlledCarousel() {
@@ -139,7 +141,7 @@ function AddQuantity(props) {
                         <div class="input-group-prepend">
                             <span class="input-group-text">-</span>
                         </div>
-                        <input type="text" class="form-control" value="0" />
+                        <input type="text" class="form-control"  />
                         <div class="input-group-append">
                             <span class="input-group-text">+</span>
                         </div>

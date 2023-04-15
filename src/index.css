@@ -474,6 +474,16 @@ p {
   border: none;
   width: 20px;
   text-align: center !important;
+  padding:0px !important;
+}
+
+.listing-page .input-group {
+
+  flex-wrap: initial !important;
+
+}
+.listing-page .input-group.col{
+  padding: 0px !important;
 }
 .quantity-add-box {
   margin-left: 1px;
@@ -611,6 +621,17 @@ p {
   }
 }
 
+.slick-next:before {
+  /* content: '>'; */
+  color: #00767c !important;
+  
+}
+
+.slick-prev:before {
+  content: '<';
+  color: #00767c !important;
+  
+}
 .row.custom-row {
   /* min-height: 52rem !important; */
 }
