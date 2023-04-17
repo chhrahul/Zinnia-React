@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import  CustomSlider from "../../components/CustomSlider";
+import CustomSlider from "../../components/CustomSlider";
 
 function VenueDetail() {
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
-          <CustomSlider/>  
-          <div className="row paddin-lr">
-            
+            <CustomSlider />
+            <div className="row paddin-lr">
+
                 <div className='row paddin-lr mt-3'>
-                    <h1>Lakeside Hotel</h1>
+                    <h1>Lakeside Hotel-</h1>
                 </div>
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-3 pl-0'>
@@ -40,8 +40,8 @@ function VenueDetail() {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Ceremony'}  />
-                            <AddQuantity title={'Reception'}  />
+                            <AddQuantity title={'Ceremony'} />
+                            <AddQuantity title={'Reception'} />
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ function AddQuantity(props) {
         <div className='col-md-12 paddin-lr '>
 
             {/* <span className='quantity-add-box'> */}
-                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
+            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
             {/* </span> */}
         </div>
 
