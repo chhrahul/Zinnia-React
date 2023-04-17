@@ -46,10 +46,7 @@ function VenderSignupFourthStep(props) {
                 <p>
                     Get people excited to see your work! You’ll need to add at least 3 photos to continue.
                 </p>
-
                 <MyDropzone {...handleImages} />
-
-
             </form>
 
         </span>
@@ -111,10 +108,6 @@ function MyDropzone(props) {
             ...files.slice(0, index),
             ...files.slice(index + 1)
         ]);
-
-
-
-
     };
 
     const setMainImage = (index, value) => {

@@ -4,8 +4,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import CustomSlider from "../../components/CustomSlider";
 
 function VenueDetail() {
+    const handleAddToCart = (e) => {
+        console.log(e)
+
+    }
     return (
-        <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
+        <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} id="1">
             <div>
                 <img src="/images/listing/venue.jpg" alt="" className="w-100" />
             </div>
@@ -28,7 +32,6 @@ function VenueDetail() {
                         <p className=''><img src="/images/icons/web.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> Bigdayflorists.com </span> </p>
                         <p className=''><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> 301-593-2392 </span> </p>
                     </div>
-
                     <div className='col pl-0'>
                         <p className=''><img src="/images/icons/social/instagram.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> instagram.com/bigdayflorist </span> </p>
                         <p className=''><img src="/images/icons/social/facebook.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> facebook.com/bigdayfloriststwitte/ </span> </p>
@@ -37,7 +40,6 @@ function VenueDetail() {
                         <p className=''><img src="/images/icons/social/tiktok.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> tiktok.com/@bigday florists/ </span> </p>
                     </div>
                 </div>
-
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
@@ -49,10 +51,9 @@ function VenueDetail() {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-2 pl-0'>
-                        <button className='add-to-cart-btn btn'>Add to cart</button>
+                        <button className='add-to-cart-btn btn' onClick={handleAddToCart}>Add to cart</button>
                     </div>
                 </div>
-
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-6 pl-0'>
                         <p>Flower and Friends is a unique florist located in Monterrey’s West Town that brings the timeless beauty of roses right to your doorstep. If you value simple, classic beauty and an original design aesthetic, Flower and Friends is the ideal flower shop for you. Many flower arrangements sold today focus on fleeting trends. We concentrate on timeless elegance, and the rose typifies our traditional design values. Who needs frills — we let our flowers say it all.
@@ -60,7 +61,6 @@ function VenueDetail() {
                         </p><p>No matter the occasion, a flower arrangement from Flower and Friends says volumes with one simple gesture. We ensure our flowers stay fresh by packaging and delivering them in water, so the person receiving the bouquet will be able to enjoy them for some time. We're excited to bring our beautiful arrangements to those living in Chicago and throughout Cook County. With same-day delivery, someone you care about could have a gorgeous surprise waiting for them today.</p>
                     </div>
                 </div>
-
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-7 pl-0'>
                         <img src="/images/map-rage.jpg" alt="" className='w-100' />

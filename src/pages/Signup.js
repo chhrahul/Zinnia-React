@@ -25,7 +25,6 @@ function Listings() {
         },
     });
     const [files, setFiles] = React.useState([]);
-    console.log('files', files)
     const [step, setStep] = React.useState(1)
     const [clickedApart, setClickedApart] = React.useState('hidden')
     const [selectedSignupType, SetSelectedSignupType] = React.useState("")

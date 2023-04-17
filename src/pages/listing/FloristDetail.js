@@ -4,6 +4,27 @@ import Carousel from 'react-bootstrap/Carousel';
 import CustomSlider from "../../components/CustomSlider";
 
 function FloristDetail() {
+    const [cart, setCart] = useState({});
+    const AddQuantityBox = [
+        {
+            'title': 'Bridal bouquet', 'price': '300.00'
+        },
+        {
+            'title': 'Flower crown', 'price': '150.00'
+        },
+        {
+            'title': 'Bridesmaids bouquets', 'price': '50.00'
+        },
+        {
+            'title': 'Flower girl petals/basket', 'price': '50.00'
+        },
+        {
+            'title': 'Boutonnieres', 'price': '50.00'
+        },
+        {
+            'title': 'Corsages', 'price': '50.00'
+        },
+    ]
     return (
 
 
@@ -45,12 +66,7 @@ function FloristDetail() {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Bridal bouquet'} priceEach={'300.00'} />
-                            <AddQuantity title={'Flower crown'} priceEach={'150.00'} />
-                            <AddQuantity title={'Bridesmaids bouquets'} priceEach={'50.00'} />
-                            <AddQuantity title={'Flower girl petals/basket'} priceEach={'50.00'} />
-                            <AddQuantity title={'Boutonnieres'} priceEach={'50.00'} />
-                            <AddQuantity title={'Corsages'} priceEach={'50.00'} />
+                            <AddQuantity AddQuantityBox={AddQuantityBox} />
                         </div>
                     </div>
                 </div>
@@ -127,29 +143,51 @@ function ControlledCarousel() {
 
 
 function AddQuantity(props) {
-    const { title, priceEach } = props
+    const { AddQuantityBox } = props
+    const [qty, setQty] = React.useState([])
+
     return (
-        <div className='col-md-6 paddin-lr '>
-
-            <span className='quantity-add-box'>
-                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
-                <p className='px-md-4'>${priceEach} each</p>
-                <div className='row px-md-4'>
-
-                    <div class="input-group col">
-
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" onclick="decreaseQty('cartQty')">-</span>
+        <>
+            {
+                AddQuantityBox.map((box, index) => {
+                    const id = 'cartQty_' + index
+                    const addQty = (e) => {
+                        var location = document.getElementById(id);
+                        var currentQty = location.value;
+                        var qty = Number(currentQty) + 1;
+                        location.value = qty;
+                    }
+                    const decreaseQty = (e) => {
+                        var location = document.getElementById(id);
+                        var currentQty = location.value;
+                        if (currentQty > 0) {
+                            var qty = Number(currentQty) - 1;
+                            location.value = qty;
+                        }
+                    }
+                    return (
+                        <div className='col-md-6 paddin-lr '>
+                            <span className='quantity-add-box'>
+                                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {box.title} </p>
+                                <p className='px-md-4'>$ {box.price} each</p>
+                                <div className='row px-md-4'>
+                                    <div class="input-group col">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" onClick={decreaseQty}>-</span>
+                                        </div>
+                                        <input type="number" class="form-control" value='0' min="1" size="1" id={id} />
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" onClick={addQty}>+</span>
+                                        </div>
+                                    </div>
+                                    <div class=" col-6"></div>
+                                </div>
+                            </span>
                         </div>
-                        <input type="number" class="form-control" value="1" min="1" size="1" />
-                        <div class="input-group-append">
-                            <span class="input-group-text" onclick="increaseQty('cartQty')">+</span>
-                        </div>
-                    </div>
-                    <div class=" col-6"></div>
-                </div>
-            </span>
-        </div>
-
+                    );
+                })}
+        </>
     );
 }
+
+
