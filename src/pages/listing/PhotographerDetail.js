@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import  CustomSlider from "../../components/CustomSlider";
+import CustomSlider from "../../components/CustomSlider";
 
 function PhotographerDetail() {
     return (
 
 
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
-          <CustomSlider/>  
-          <div className="row paddin-lr">
-            
+            <CustomSlider type={'photographer'} />
+            <div className="row paddin-lr">
+
                 <div className='row paddin-lr mt-3'>
                     <h1>Best Photographer</h1>
                 </div>
@@ -45,10 +45,10 @@ function PhotographerDetail() {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Video coverage'}  />
-                            <AddQuantity title={'Photo album'}  />
+                            <AddQuantity title={'Video coverage'} />
+                            <AddQuantity title={'Photo album'} />
                             <AddQuantity title={'Raw, unedited photos'} />
-                            <AddQuantity title={'Same day print'}  />
+                            <AddQuantity title={'Same day print'} />
                             <AddQuantity title={'Highlight film'} />
                             <AddQuantity title={'Online gallery'} />
                         </div>
@@ -132,7 +132,7 @@ function AddQuantity(props) {
         <div className='col-md-12 paddin-lr '>
 
             {/* <span className='quantity-add-box'> */}
-                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
+            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
             {/* </span> */}
         </div>
 

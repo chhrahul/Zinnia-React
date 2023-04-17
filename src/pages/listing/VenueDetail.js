@@ -6,11 +6,13 @@ import CustomSlider from "../../components/CustomSlider";
 function VenueDetail() {
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
-            <CustomSlider />
+            <div>
+                <img src="/images/listing/venue.jpg" alt="" className="w-100" />
+            </div>
             <div className="row paddin-lr">
 
                 <div className='row paddin-lr mt-3'>
-                    <h1>Lakeside Hotel-</h1>
+                    <h1>Lakeside Hotel</h1>
                 </div>
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-3 pl-0'>

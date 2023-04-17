@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import CustomSlider from "../../components/CustomSlider";
 
-function FloristDetail() {
+function MainSearch() {
     return (
 
 
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
-            <CustomSlider type={'florist'} />
+       
             <div className="row paddin-lr">
 
                 <div className='row paddin-lr mt-3'>
@@ -45,12 +45,7 @@ function FloristDetail() {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Bridal bouquet'} priceEach={'300.00'} />
-                            <AddQuantity title={'Flower crown'} priceEach={'150.00'} />
-                            <AddQuantity title={'Bridesmaids bouquets'} priceEach={'50.00'} />
-                            <AddQuantity title={'Flower girl petals/basket'} priceEach={'50.00'} />
-                            <AddQuantity title={'Boutonnieres'} priceEach={'50.00'} />
-                            <AddQuantity title={'Corsages'} priceEach={'50.00'} />
+                     
                         </div>
                     </div>
                 </div>
@@ -78,78 +73,5 @@ function FloristDetail() {
 
     )
 }
-export default FloristDetail
+export default MainSearch
 
-
-function ControlledCarousel() {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-
-    return (
-        <>
-            <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-
-            </div>  <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-
-            </div>  <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-            </div>
-        </>
-
-    );
-}
-
-
-function AddQuantity(props) {
-    const { title, priceEach } = props
-    return (
-        <div className='col-md-6 paddin-lr '>
-
-            <span className='quantity-add-box'>
-                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
-                <p className='px-md-4'>${priceEach} each</p>
-                <div className='row px-md-4'>
-
-                    <div class="input-group col">
-
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" onclick="decreaseQty('cartQty')">-</span>
-                        </div>
-                        <input type="number" class="form-control" value="1" min="1" size="1" />
-                        <div class="input-group-append">
-                            <span class="input-group-text" onclick="increaseQty('cartQty')">+</span>
-                        </div>
-                    </div>
-                    <div class=" col-6"></div>
-                </div>
-            </span>
-        </div>
-
-    );
-}
