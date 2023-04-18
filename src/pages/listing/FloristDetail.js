@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import CustomSlider from "../../components/CustomSlider";
 
-function FloristDetail() {
-    const [cart, setCart] = useState({});
+function FloristDetail(props) {
+    const { addToCart, cart } = props
     const AddQuantityBox = [
         {
             'title': 'Bridal bouquet', 'price': '300.00'
@@ -25,6 +25,11 @@ function FloristDetail() {
             'title': 'Corsages', 'price': '50.00'
         },
     ]
+
+    const prodid = 1
+
+    var added = cart.filter(item => item.id === prodid)
+
     return (
 
 
@@ -72,7 +77,12 @@ function FloristDetail() {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-2 pl-0'>
-                        <button className='add-to-cart-btn btn'>Add to cart</button>
+                        {added.length > 0 ?
+                            <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
+                            :
+                            <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
+                        }
+
                     </div>
                 </div>
 
@@ -144,7 +154,10 @@ function ControlledCarousel() {
 
 function AddQuantity(props) {
     const { AddQuantityBox } = props
-    const [qty, setQty] = React.useState([])
+    const [quantity, setQty] = React.useState({
+        'id': '',
+        'quantity': '',
+    })
 
     return (
         <>
@@ -156,6 +169,8 @@ function AddQuantity(props) {
                         var currentQty = location.value;
                         var qty = Number(currentQty) + 1;
                         location.value = qty;
+                        // const newQty = { 'id': id, 'quantity': qty }
+                        // setQty({ ...quantity, newQty })
                     }
                     const decreaseQty = (e) => {
                         var location = document.getElementById(id);

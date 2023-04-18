@@ -1,10 +1,11 @@
 import Navigation from './Navigation'
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+    const { children, cart } = props
     return (
         <>
-            <Navigation />
+            <Navigation cart={cart} />
             <main className=''>{children}</main>
             <Footer />
         </>

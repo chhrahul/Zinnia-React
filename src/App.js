@@ -1,40 +1,46 @@
+import * as React from 'react'
 import { Signup, Login, Listings } from "./pages";
-import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
-import { MainSearch } from "./pages/new";
+import {
+  FloristDetail, PhotographerDetail, VenueDetail
+} from "./pages/listing";
+import {
+  MainSearchFlorist, MainSearchPhotographer, MainSearchVenue
+} from "./pages/new";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
 
 function App() {
-  // const [cart, setCart] = useState()
-  // const addToCart = (productId, variantInfo) => {
+  const [cart, setCart] = React.useState([])
+  const [addedToCart, setaddedToCart] = React.useState(0)
+  const addToCart = (productId, variantInfo) => {
+    const newCart = {
+      'id': productId,
+      'variants': variantInfo
+    }
+    setCart([...cart, newCart])
 
-  //   if (variantInfo) {
-  //     commerce.cart.add(productId, 1, variantInfo)
-  //       .then(res => {
-  //         setCart(res.cart)
-  //       })
-  //   } else {
-  //     window.alert('Please Select a Shirt Size')
-  //   }
-  // }
+    setaddedToCart(productId)
+  }
+  const gettingCartProps = {
+    addToCart,
+    cart,
+    addedToCart,
+    setCart
+  }
 
-  // useEffect(() => {
-  //   commerce.cart.retrieve()
-  //     .then(res => {
-  //       setCart(res)
-  //     })
-  // }, [])
   return (
-    <Layout>
+    <Layout {...gettingCartProps}>
       <div className="">
         <Routes>
           <Route exact path="/" element={< Signup />} />
           <Route exact path="/sign-up" element={< Signup />} />
           <Route exact path="/login" element={<Login />} />
-          <Route exact path="/florist" element={<FloristDetail />} />
-          <Route exact path="/photographer" element={<PhotographerDetail />} />
-          <Route exact path="/venue" element={<VenueDetail />} />
-          <Route exact path="/main-search" element={<MainSearch />} />
+          <Route exact path="/florist" element={<FloristDetail {...gettingCartProps} />} />
+          <Route exact path="/photographer" element={<PhotographerDetail {...gettingCartProps} />} />
+          <Route exact path="/venue" element={<VenueDetail {...gettingCartProps} />} />
+          <Route exact path="/main-search-florist" element={<MainSearchFlorist />} />
+          <Route exact path="/main-search-photographer" element={<MainSearchPhotographer />} />
+          <Route exact path="/main-search-venue" element={<MainSearchVenue />} />
         </Routes >
       </div>
     </Layout>

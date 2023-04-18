@@ -3,10 +3,21 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import CustomSlider from "../../components/CustomSlider";
 
-function PhotographerDetail() {
+function PhotographerDetail(props) {
+    const { addToCart, cart, setCart } = props
+
+    const prodid = 2
+    // setCart(JSON.parse(localStorage.items))
+    var added = cart.filter(item => item.id === prodid)
+    // setCart(JSON.parse(localStorage.items));
+    React.useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(cart));
+
+    }, [cart]);
+
+
+
     return (
-
-
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
             <CustomSlider type={'photographer'} />
             <div className="row paddin-lr">
@@ -14,9 +25,6 @@ function PhotographerDetail() {
                 <div className='row paddin-lr mt-3'>
                     <h1>Best Photographer</h1>
                 </div>
-
-
-
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-3 pl-0'>
                         <p className='theme-color'>FLORIST</p>
@@ -40,7 +48,6 @@ function PhotographerDetail() {
                         <p className=''><img src="/images/icons/social/tiktok.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> tiktok.com/@bigday florists/ </span> </p>
                     </div>
                 </div>
-
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
@@ -56,7 +63,11 @@ function PhotographerDetail() {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-2 pl-0'>
-                        <button className='add-to-cart-btn btn'>Add to cart</button>
+                        {added.length > 0 ?
+                            <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
+                            :
+                            <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
+                        }
                     </div>
                 </div>
 
