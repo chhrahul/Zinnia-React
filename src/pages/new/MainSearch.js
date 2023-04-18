@@ -7,7 +7,7 @@ function MainSearch() {
     return (
 
 
-        <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
+        <div className="container-fluid px-md-5  mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
 
             <div className="row paddin-lr">
                 <div className='row paddin-lr mt-2'>
@@ -23,7 +23,7 @@ function MainSearch() {
                     </ul>
                 </div>
             </div>
-            <div className="row paddin-lr mt-4 search-div">
+            {/* <div className="row paddin-lr mt-4 search-div">
                 <div className="col-md-10 first_column">
                     <div className="row paddin-lr ">
                         <div className="col-md-2 lower_content">
@@ -78,6 +78,63 @@ function MainSearch() {
                     </div>
                 </div>
 
+            </div> */}
+
+            <div className='row'>
+                <div className='col-md-10'>
+                    <div className='row border px-1'>
+
+                        <div className='col-md-3 mt-1'>
+                            <span className='d-flex'>
+                                <img src="/images/icons/location-2.svg" alt="location" />
+                                <select class="form-select country_part" aria-label="Default select example">
+                                    <option selected>Anywhere</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div className='col-md-2 border mt-1'>
+                            <span className='d-flex'>
+                                <input type="date" class="form-control" data-bs-toggle="datepicker" data-bs-target="#datepicker" />
+                                <label for="time">AnyDate</label>
+                            </span>
+                        </div>
+                        <div className='col-md-2 border mt-1'>
+                            < span className='d-flex'>
+                                <input type="time" class="form-control" data-bs-toggle="datepicker" data-bs-target="#datepicker" />
+                                <label for="time">Any time</label>
+                            </span>
+                        </div>
+                        <div className='col-md-2 border mt-1'>
+                            <span className='d-flex'>
+                                <select class="form-select country_part" aria-label="Default select example">
+                                    <option selected>Any Guest</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div className='col-md-3 border mt-1'>
+                            <span className='d-flex'>
+                                <img src="/images/icons/budget.png" alt="budget" />
+                                <select class="form-select country_part" aria-label="Default select example">
+                                    <option selected>Any Budget</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div className='col-md-2'>
+                    <button type="button" class="btn btn-secondary btn-lg search_btn float-right"><img src="/images/icons/search.png" alt="search" />Search</button>
+                </div>
             </div>
         </div>
 
