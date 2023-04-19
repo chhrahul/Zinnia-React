@@ -64,14 +64,14 @@ function VenueDetail(props) {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-6 pl-0'>
-                        <p>Flower and Friends is a unique florist located in Monterrey’s West Town that brings the timeless beauty of roses right to your doorstep. If you value simple, classic beauty and an original design aesthetic, Flower and Friends is the ideal flower shop for you. Many flower arrangements sold today focus on fleeting trends. We concentrate on timeless elegance, and the rose typifies our traditional design values. Who needs frills — we let our flowers say it all.
+                        <p>Flower and Friends is a unique florist located in Monterrey’s West Town that brings the timeless beauty of roses right to your doorstep. If you value simple, classic beauty and an original design aesthetic, Flower and Friends is the ideal flower shop for you. Many flower arrangements sold today focus on fleeting trends. We concentrate on timeless elegance, and the rose typifies our traditional design values. Who needs frills  — we let our flowers say it all.
 
                         </p><p>No matter the occasion, a flower arrangement from Flower and Friends says volumes with one simple gesture. We ensure our flowers stay fresh by packaging and delivering them in water, so the person receiving the bouquet will be able to enjoy them for some time. We're excited to bring our beautiful arrangements to those living in Chicago and throughout Cook County. With same-day delivery, someone you care about could have a gorgeous surprise waiting for them today.</p>
                     </div>
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-7 pl-0'>
-                        <img src="/images/map-rage.jpg" alt="" className='w-100' />
+                        <img src="/images/map-rage.jpg" alt="map" className='w-100' />
                     </div>
                 </div>
             </div>
