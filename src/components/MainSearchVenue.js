@@ -48,7 +48,7 @@ function MainSearchVenue(props) {
                         </div>
                         <div className='col-lg-2 col-md-12 col-sm-12 mt-1 below_border_style'>
                             <span className='d-flex'>
-                                <img src="/images/icons/calendar_today.svg" alt="date" style={{ 'margin-top': 16, 'margin-right': 10 }} />
+                                <img src="/images/icons/calendar_today.svg" alt="date-img" style={{ 'margin-top': 16, 'margin-right': 10 }} />
                                 <label for="date" className="content_after">AnyDate</label>
                                 <span class="resposive-hide mt-3 hide_symbol custom-space">|</span>
                             </span>
