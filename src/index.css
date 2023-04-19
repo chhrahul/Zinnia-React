@@ -844,6 +844,9 @@ select {
     width: 268px !important;
     font-size: 30px;
   }
+  a.btn.btn-light.signup-item {
+    font-size: 12px;
+}
   .list_info {
     text-align: center;
   }
