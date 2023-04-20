@@ -90,7 +90,7 @@ function MainSearchResultFlorist() {
                         <li class="list_info active"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>
                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#505267" />
                         </svg>Map</li>
-                        <li class="list_info"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>>
+                        <li class="list_info"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>
                             <path d="M0.5 6H2.5V4H0.5V6ZM0.5 10H2.5V8H0.5V10ZM0.5 2H2.5V0H0.5V2ZM4.5 6H18.5V4H4.5V6ZM4.5 10H18.5V8H4.5V10ZM4.5 0V2H18.5V0H4.5Z" fill="#505267" />
                         </svg>List View</li>
                     </ul>
@@ -114,7 +114,7 @@ function MainSearchResultFlorist() {
                                         <p className="rating">4.8</p>
                                     </li>
                                     <li className="special-link">
-                                        <a href="#">100 Reviews</a>
+                                        <a href="/">100 Reviews</a>
                                     </li>
                                 </ul>
                             </div>
@@ -125,7 +125,7 @@ function MainSearchResultFlorist() {
                             <div className="location">
                                 <ul className="p-0" style={{ 'marginRight': 5, 'list-style-type': "none" }}>
                                     <li className="d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>
                                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
                                         </svg>
                                         <p className="venue-address">4701 Lincoln avenue, Chicago, IL 60021</p>
@@ -162,14 +162,14 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
-                                                <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
-                                                <p className="per-hour bouquet">Bridesmaids bouquets $50.00 each</p>
-                                            </li>
-                                            <div className='col-lg-4 paddin-lr '>
-                                            <span>
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
+                                        <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
+                                        <p className="per-hour bouquet">Bridesmaids bouquets $50.00 each</p>
+                                    </li>
+                                    <div className='col-lg-4 paddin-lr '>
+                                        <span>
                                             <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
@@ -179,14 +179,14 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
                                         <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
                                         <p className="per-hour bouquet">Bridal bouquet $50.00 each</p>
                                     </li>
                                     <div className='col-lg-4 paddin-lr '>
-                                    <span>
+                                        <span>
                                             <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
@@ -196,13 +196,13 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
-                                                <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
-                                                <p className="per-hour bouquet">Bridesmaids bouquets $50.00 each</p>
-                                            </li>
-                                            <div className='col-lg-4 paddin-lr '>
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
+                                        <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
+                                        <p className="per-hour bouquet">Bridesmaids bouquets $50.00 each</p>
+                                    </li>
+                                    <div className='col-lg-4 paddin-lr '>
                                         <span className='quantity-add-box'>
                                             <div class="input-group col">
                                                 <div class="input-group-prepend">
@@ -213,9 +213,9 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
                                         <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
                                         <p className="per-hour bouquet">Flower crown $150.00 each</p>
                                     </li>
@@ -230,9 +230,9 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
                                         <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
                                         <p className="per-hour bouquet">Flower girl petals/basket $50.00 each</p>
                                     </li>
@@ -247,9 +247,9 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                            <li className="d-flex">
+                                        </span>
+                                    </div>
+                                    <li className="d-flex">
                                         <img src="/images/icons/Tick.svg" alt="tick" style={{ 'marginRight': 5, 'padding-bottom': 15 }} />
                                         <p className="per-hour bouquet">Corsages $50.00 each</p>
                                     </li>
@@ -264,26 +264,26 @@ function MainSearchResultFlorist() {
                                                     <span class="input-group-text"> + </span>
                                                 </div>
                                             </div>
-                                            </span>
-                                            </div>
-                                        </ul>
+                                        </span>
                                     </div>
-                                    <button type="button" class="btn btn-outline-secondary"><img src="/images/icons/Green-tick.svg" alt="phone" style={{ 'marginRight': 5, 'padding-bottom': 4, 'width': 20 }} />Added to cart</button>
-                                    <div className="site-link mt-2">
-                                        <a href="#">View listing</a>
-                                    </div>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary"><img src="/images/icons/Green-tick.svg" alt="phone" style={{ 'marginRight': 5, 'padding-bottom': 4, 'width': 20 }} />Added to cart</button>
+                            <div className="site-link mt-2">
+                                <a href="#">View listing</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-8 col-md-12 col-sm-12 ">
-                        <img src="/images/Maps.png" alt="map" className='w-100' />
-                    </div>
-
+                </div>
+                <div className="col-lg-8 col-md-12 col-sm-12 ">
+                    <img src="/images/Maps.png" alt="map" className='w-100' />
                 </div>
 
-
             </div>
-            )
+
+
+        </div>
+    )
 }
-            export default MainSearchResultFlorist
+export default MainSearchResultFlorist
 
