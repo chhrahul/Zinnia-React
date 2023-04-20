@@ -46,7 +46,7 @@ function FloristDetail(props) {
                 <div className='row paddin-lr mt-3'>
                     <div className='col-md-3 pl-0'>
                         <p className='theme-color'>FLORIST</p>
-                        <p className='d-flex rating-p'><p className='d-flex rating rating-p'><img src="/images/icons/star.svg" alt="" />4.8</p><p className=' rating-p color-cyan m-0 '> 100 reviews</p></p>
+                        <p className='d-flex rating-p'><p className='d-flex rating rating-p'><img src="/images/icons/star.svg" alt="star" />4.8</p><p className=' rating-p color-cyan m-0 '> 100 reviews</p></p>
                         <p className='price-text p-bottom-margin'>Price</p>
                         <p className='p-bottom-margin price-amount-box'>Total<span className="price-amount"> $650</span></p>
                         <p className='p-bottom-margin'>Depends on selections</p>

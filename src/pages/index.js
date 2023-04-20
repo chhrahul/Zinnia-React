@@ -1,4 +1,6 @@
 export { default as Signup } from './Signup'
 export { default as Login } from './Login'
 export { default as MainSearch } from './MainSearch/MainSearch'
-
+export { default as MainSearchResult } from './MainSearchResult'
+export { default as MainSearchResultPhotographer } from './MainSearchResultPhotographer'
+export { default as MainSearchResultFlorist } from './MainSearchResultFlorist'

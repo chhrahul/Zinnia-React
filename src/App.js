@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, MainSearchResultPhotographer, MainSearchResultFlorist } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
 
 function App() {
   const [cart, setCart] = React.useState([])
-
   const gettingCartProps = {
     cart,
     setCart
@@ -23,6 +22,9 @@ function App() {
           <Route exact path="/photographer" element={<PhotographerDetail {...gettingCartProps} />} />
           <Route exact path="/venue" element={<VenueDetail {...gettingCartProps} />} />
           <Route exact path="/main-search" element={<MainSearch />} />
+          <Route exact path="/search-result-venue" element={<MainSearchResult />} />
+          <Route exact path="/search-result-photographer" element={<MainSearchResultPhotographer />} />
+          <Route exact path="/search-result-florist" element={<MainSearchResultFlorist />} />
         </Routes >
       </div>
     </Layout>
