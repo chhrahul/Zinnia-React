@@ -87,7 +87,7 @@ function MainSearchResultFlorist() {
             <div className="row mb-3">
                 <div className="col-lg-12 col-md-12 col-sm-12 venue-top">
                     <ul className="d-flex p-0">
-                        <li class="list_info active"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>>
+                        <li class="list_info active"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>
                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#505267" />
                         </svg>Map</li>
                         <li class="list_info"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none" style={{ 'marginRight': 5, 'width': 20, 'height': 20 }}>>

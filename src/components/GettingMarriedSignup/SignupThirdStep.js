@@ -18,18 +18,10 @@ function SignupThirdStep(props) {
                 'photographer': values.photographer,
                 'florist': values.florist,
                 'venue': values.venue,
-
             }
             SetGettingMarriedSignupDetails({ ...gettingMarriedSignupDetails, ...newValue })
-            // if (selectedSignupType === 'gettingMarried') {
-
-            // } else {
-            //     if (step >= 8) return
-            //     setStep(step + 1)
-            // }
             if (step >= 5) return
             setStep(step + 1)
-
         },
 
     });

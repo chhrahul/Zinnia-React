@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import { BsInstagram } from 'react-icons/bs';
 
 function VenderSignupSecondStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, clickedApart,
@@ -74,10 +75,7 @@ function VenderSignupSecondStep(props) {
                     <div className="mb-2">
                         <label htmlFor="budget" className={formik.touched.instagram && formik.errors.instagram ? 'error-form-label form-label ' : 'form-label'}>Instagram</label>
                         <div class="input-group social-group">
-                            {/* <div class="input-group-prepend">
-                               
-                            </div> */}
-                            <span class="input-group-text budget-icon social-icon text-muted" id="basic-addon1"><img src="/images/icons/social/instagram.svg" alt="" /></span>
+                            <span class="input-group-text budget-icon social-icon text-muted" id="basic-addon1"><BsInstagram size={20} /></span>
                             <input type="text" className={formik.touched.instagram && formik.errors.instagram ? 'error-input form-control ' : 'form-control'} id="budgett" placeholder='Instagram'
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}

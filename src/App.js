@@ -3,6 +3,8 @@ import { Signup, Login, Listings, MainSearch, MainSearchResult, MainSearchResult
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
+import { FiArrowLeftCircle } from "react-icons/fi";
+import { WiDayThunderstorm } from "react-icons/wi";
 
 function App() {
   const [cart, setCart] = React.useState([])
@@ -10,7 +12,6 @@ function App() {
     cart,
     setCart
   }
-
   return (
     <Layout {...gettingCartProps}>
       <div className="">

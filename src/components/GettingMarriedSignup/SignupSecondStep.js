@@ -15,7 +15,6 @@ function SignupSecondStep(props) {
         },
         validationSchema: Yup.object(
             {
-
                 // date: Yup.string().required('This field is required'),
                 stime: Yup.string().required('This field is required'),
                 etime: Yup.string().required('This field is required'),
@@ -30,23 +29,12 @@ function SignupSecondStep(props) {
                 'etime': values.etime,
                 'location': values.location,
                 'budget': values.budget,
-
             }
             SetGettingMarriedSignupDetails({ ...gettingMarriedSignupDetails, ...newValue })
-
-            // if (selectedSignupType === 'gettingMarried') {
-            //     if (step >= 5) return
-            //     setStep(step + 1)
-            // } else {
-            //     if (step >= 8) return
-            //     setStep(step + 1)
-            // }
-
             if (step >= 5) return
             setStep(step + 1)
 
         },
-
     });
     return (
         <span className='px-0- '>
@@ -82,7 +70,6 @@ function SignupSecondStep(props) {
                             <p className="form-check-label" htmlFor="exampleCheck1">I don’t have a date yet</p>
                         </div>
                     </div>
-
                 </div>
                 <div className="row second-step">
                     <div className="col-md-6 col-sm-6 mb-3 pl-0 pr-0">
@@ -128,9 +115,6 @@ function SignupSecondStep(props) {
                     <div className="mb-5">
                         <label htmlFor="budget" className={formik.touched.budget && formik.errors.budget ? 'error-form-label form-label ' : 'form-label'}>Budget</label>
                         <div class="input-group">
-                            {/* <div class="input-group-prepend">
-                               
-                            </div> */}
                             <span class="input-group-text budget-icon text-muted" id="basic-addon1">$</span>
                             <input type="number" className={formik.touched.budget && formik.errors.budget ? 'error-input form-control ' : 'form-control'} id="budget" placeholder=''
                                 onChange={formik.handleChange}

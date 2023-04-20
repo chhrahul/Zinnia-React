@@ -1,16 +1,30 @@
 
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import CustomSlider from "../../components/CustomSlider";
+import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
+import { BsClock } from 'react-icons/bs';
 
 function VenueDetail(props) {
-
     const { addToCart, cart, setCart } = props
-
     const prodid = 2
-
     var added = cart.filter(item => item.id === prodid)
+    const handles = [
+        {
+            'type': 'instagram', 'url': 'instagram.com/bigdayflorist'
+        },
+        {
+            'type': 'facebook', 'url': 'facebook.com/bigdayfloriststwitte'
+        },
 
+        {
+            'type': 'twitter', 'url': 'twitter.com/big_day_florists'
+        },
+        {
+            'type': 'pinterest', 'url': 'pinterest.com/bigdayflorists'
+        },
+        {
+            'type': 'tiktok', 'url': 'tiktok.com/florists'
+        },
+    ]
 
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} id="1">
@@ -31,17 +45,13 @@ function VenueDetail(props) {
                         <p className='p-bottom-margin'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                        <p className=''><img src="/images/icons/location.svg" alt="" className='contact-icon' /> 4701 Lincoln avenue,Chicago, IL 60021</p>
-                        <p className=''><img src="/images/icons/clock.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> Open  .</span> Closes 10 PM</p>
-                        <p className=''><img src="/images/icons/web.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> Bigdayflorists.com </span> </p>
-                        <p className=''><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> 301-593-2392 </span> </p>
+                        <p className='d-flex'><img src="/images/icons/location.svg" alt="" className='contact-icon' ml-5 /> <span>4701 Lincoln avenue,Chicago, IL 60021</span></p>
+                        <p className='d-flex'><BsClock size={27} className='contact-icon color-cyan' /> <span><span className='color-cyan  ml-5'> Open  .</span> Closes 10 PM</span></p>
+                        <p className='d-flex'><img src="/images/icons/web.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> Bigdayflorists.com </span> </span></p>
+                        <p className='d-flex'><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> 301-593-2392 </span> </span></p>
                     </div>
                     <div className='col pl-0'>
-                        <p className=''><img src="/images/icons/social/instagram.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> instagram.com/bigdayflorist </span> </p>
-                        <p className=''><img src="/images/icons/social/facebook.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> facebook.com/bigdayfloriststwitte/ </span> </p>
-                        <p className=''><img src="/images/icons/social/twitter.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> twitter.com/@big_day_florists </span> </p>
-                        <p className=''><img src="/images/icons/social/pinterest.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> pinterest.com/bigdayflorists/ </span> </p>
-                        <p className=''><img src="/images/icons/social/tiktok.svg" alt="" className='contact-icon' /> <span className='color-cyan  ml-5'> tiktok.com/@bigday florists/ </span> </p>
+                        <SocialMediaHandle handles={handles} />
                     </div>
                 </div>
                 <div className='row paddin-lr mt-3'>
@@ -82,60 +92,11 @@ function VenueDetail(props) {
 export default VenueDetail
 
 
-function ControlledCarousel() {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-
-    return (
-        <>
-            <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-
-            </div>  <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-
-            </div>  <div className="col-md-4 col-sm-4">
-
-                <div className="row mt-3 paddin-lr">
-                    <img
-                        className="d-block p-0"
-                        src="https://placehold.co/600x400"
-                        alt="First slide"
-                    />
-                </div>
-            </div>
-        </>
-
-    );
-}
-
-
 function AddQuantity(props) {
     const { title, priceEach } = props
     return (
         <div className='col-md-12 paddin-lr '>
-
-            {/* <span className='quantity-add-box'> */}
             <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
-            {/* </span> */}
         </div>
-
     );
 }

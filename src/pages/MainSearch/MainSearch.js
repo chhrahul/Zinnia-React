@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { MainSearchFlorist, MainSearchPhotographer, MainSearchVenue } from "../../components";
-
 function MainSearch() {
     const [activePage, setActivePage] = React.useState('venue')
     const getOfferProps = {
