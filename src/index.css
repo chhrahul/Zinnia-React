@@ -831,147 +831,143 @@ li.list_info.active path {
 
 /* ++++ */
 
-
 /* ++++ */
 /* new csss Venue Searched CSS*/
-.venue-top{
-  margin-top:52px !important;
+.venue-top {
+  margin-top: 52px !important;
 }
-.review{
-  display:flex;
+.review {
+  display: flex;
 }
-.photo-head{
+.photo-head {
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.25px;
-  color: #787A8F;
+  color: #787a8f;
   width: 340px;
   height: 36px;
   margin-top: 10px;
 }
-.photo-below{
-  font-weight: 400!important;
-  font-size: 10px!important;
-  line-height: 16px!important;
+.photo-below {
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 16px !important;
   letter-spacing: 1.5px !important;
   text-transform: uppercase;
-  color: #787A8F !important;
+  color: #787a8f !important;
 }
-.rating{
-margin-right:5px !important;
-font-weight: 400 !important;
-font-size: 10px !important;
-line-height: 16px !important;
+.rating {
+  margin-right: 5px !important;
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 16px !important;
 }
-li.special-link a{
+li.special-link a {
   font-style: normal;
-  font-weight: 400 !important;;
-  font-size: 10px !important;;
+  font-weight: 400 !important;
+  font-size: 10px !important;
   line-height: 18px !important;
-  text-align: center!important;
+  text-align: center !important;
   letter-spacing: 1.5px !important;
   text-decoration-line: underline !important;
-  text-transform: uppercase!important;
+  text-transform: uppercase !important;
   margin-left: 20px;
   color: rgb(49, 167, 173) !important;
 }
-.price-below{
-  font-weight: 400!important;
-  font-size: 10px!important;
-  line-height: 16px!important;
+.price-below {
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 16px !important;
   letter-spacing: 1.5px !important;
   text-transform: uppercase;
   color: black !important;
 }
-.per-hour{
-font-weight: 400!important;
-font-size: 16px!important;
-line-height: 24px!important;
-letter-spacing: 0.5px!important;
-color: #505267 !important;
+.per-hour {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #505267 !important;
 }
-.bouquet{
-  width:143px!important;
+.bouquet {
+  width: 143px !important;
 }
-.per-hour-price{
-  font-weight: 400!important;
-  font-size: 16px!important;
-  line-height: 24px!important;
-  letter-spacing: 0.5px!important;
+.per-hour-price {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
   color: #505267 !important;
   padding: 0px 8px;
   width: 200px;
   height: 24px;
   background: #ffd8e1;
 }
-.special-link{
+.special-link {
   color: rgb(49, 167, 173) !important;
-  font-weight: 400 !important;;
-  font-size: 10px !important;;
+  font-weight: 400 !important;
+  font-size: 10px !important;
   line-height: 18px !important;
   letter-spacing: 1.5px !important;
-  text-transform: uppercase!important;
+  text-transform: uppercase !important;
 }
-.include-link{
+.include-link {
   color: #505267;
   font-style: normal;
-  font-weight: 400 !important;;
-  font-size: 10px !important;;
+  font-weight: 400 !important;
+  font-size: 10px !important;
   line-height: 18px !important;
   letter-spacing: 1.5px !important;
-  text-transform: uppercase!important;
+  text-transform: uppercase !important;
 }
-.venue-address{
-  font-weight: 400!important;
-  font-size: 14px!important;
-  line-height: 24px!important;
-  letter-spacing: 0.5px!important;
+.venue-address {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
   color: #505267 !important;
-  width: 212px!important;
-}
-li.site-link a{
-  font-weight: 400!important;
-  font-size: 14px!important;
-  line-height: 24px!important;
-  letter-spacing: 0.5px!important;
-  color: rgb(49, 167, 173)!important;
   width: 212px !important;
 }
-div.site-link a{
-  font-weight: 400!important;
-  font-size: 14px!important;
-  line-height: 24px!important;
-  letter-spacing: 0.5px!important;
-  color: rgb(49, 167, 173)!important;
+li.site-link a {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: rgb(49, 167, 173) !important;
+  width: 212px !important;
 }
-.card-custom{
+div.site-link a {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: rgb(49, 167, 173) !important;
+}
+.card-custom {
   padding: 0 !important;
 }
-.card-content{
-  border:none !important;
+.card-content {
+  border: none !important;
 }
-.venue-search-btn{
+.venue-search-btn {
   display: flex !important;
   flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
   isolation: isolate !important;
-  height: 36px !important;;
-  background: #BAB8B8 !important;;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2) !important;;
-  border-radius: 4px !important;;
-  border: 1px solid #BAB8B8 !important;;
-  margin-top: 10px !important; 
+  height: 36px !important;
+  background: #bab8b8 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 5px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  border: 1px solid #bab8b8 !important;
+  margin-top: 10px !important;
   font-size: 16px !important;
   letter-spacing: 0.5px !important;
   line-height: 20px !important;
-  font-family: 'Libre Baskerville' !important;;
+  font-family: "Libre Baskerville" !important;
 }
-
-
-
-
 
 /* ++++ */
 select {
@@ -989,7 +985,7 @@ select {
   }
   a.btn.btn-light.signup-item {
     font-size: 12px;
-}
+  }
   .list_info {
     text-align: center;
   }
@@ -1325,4 +1321,10 @@ select {
     margin-top: 10px;
     margin-bottom: 50px;
   }
+}
+
+img.contact-icon.contact-icon-2 {
+  position: relative;
+  left: -29 !important;
+  right: 24px;
 }

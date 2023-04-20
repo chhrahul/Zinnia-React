@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Datepicker from '../Datepicker.js';
 function MainSearchFlorist(props) {
     const { activePage, setActivePage } = props
     const handleClickActivePage = (data) => {
@@ -10,6 +11,7 @@ function MainSearchFlorist(props) {
             <div className="row paddin-lr">
                 <div className='row paddin-lr mt-2'>
                     <h2 className='heading_first newClass'>Let's plan your dream wedding</h2>
+
                 </div>
             </div>
             <div className="row paddin-lr hover-div mb-3">
@@ -48,6 +50,7 @@ function MainSearchFlorist(props) {
                             <span className='d-flex'>
                                 <img src="/images/icons/calendar_today.svg" alt="date" style={{ 'margin-top': 16, 'margin-right': 10 }} />
                                 <label for="date" className="content_after">AnyDate</label>
+
                                 <span class="resposive-hide mt-3 hide_symbol custom-space">|</span>
                             </span>
 

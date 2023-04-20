@@ -7,7 +7,7 @@ function MainSearch() {
     const [activePage, setActivePage] = React.useState('venue')
     const getOfferProps = {
         activePage,
-        setActivePage
+        setActivePage,
     }
 
     return (
@@ -21,7 +21,6 @@ function MainSearch() {
             {activePage === 'venue' &&
                 <MainSearchVenue {...getOfferProps} />
             }
-
         </>
 
     )
