@@ -532,7 +532,7 @@ p {
   margin-right: 10px;
 }
 
-.listing-page input {
+.listing-page input, .include-custom input {
   height: unset !important;
   border: none;
   width: 20px;
@@ -552,14 +552,13 @@ p {
   margin-left: 1px;
 }
 
-.listing-page .input-group {
+.listing-page .input-group, .include-custom .input-group {
   border: 1px solid #00767c !important;
   border-radius: 8px;
-
   color: #00767c !important;
 }
 
-.listing-page span.input-group-text {
+.listing-page span.input-group-text, .include-custom span.input-group-text{
   background-color: unset !important;
   color: #00767c !important;
   font-size: 23px;
