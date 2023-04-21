@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
-import { BsClock } from 'react-icons/bs';
+import ContactDetail from '../../components/Listing/ContactDetail';
 
 function VenueDetail(props) {
     const { addToCart, cart, setCart } = props
@@ -26,6 +26,25 @@ function VenueDetail(props) {
         },
     ]
 
+    const contactFields = [
+        {
+            'type': 'streetAddress', 'field': '4701 Lincoln avenue,Chicago, IL 60021'
+        },
+        {
+            'type': 'timing', 'field': 'Closes 10 PM'
+        },
+
+        {
+            'type': 'webswebsitete', 'field': 'Bigdayflorists.com'
+        },
+        {
+            'type': 'phone', 'field': '301-593-2392'
+        },
+
+    ]
+
+
+
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} id="1">
             <div>
@@ -45,10 +64,7 @@ function VenueDetail(props) {
                         <p className='p-bottom-margin'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                        <p className='d-flex'><img src="/images/icons/location.svg" alt="" className='contact-icon' ml-5 /> <span>4701 Lincoln avenue,Chicago, IL 60021</span></p>
-                        <p className='d-flex'><BsClock size={27} className='contact-icon color-cyan' /> <span><span className='color-cyan  ml-5'> Open  .</span> Closes 10 PM</span></p>
-                        <p className='d-flex'><img src="/images/icons/web.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> Bigdayflorists.com </span> </span></p>
-                        <p className='d-flex'><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> 301-593-2392 </span> </span></p>
+                        <ContactDetail contactFields={contactFields} />
                     </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />
@@ -74,7 +90,7 @@ function VenueDetail(props) {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-6 pl-0'>
-                        <p>hFlower and Friends is a unique florist located in Monterrey’s West Town that brings the timeless beauty of roses right to your doorstep. If you value simple, classic beauty and an original design aesthetic, Flower and Friends is the ideal flower shop for you. Many flower arrangements sold today focus on fleeting trends. We concentrate on timeless elegance, and the rose typifies our traditional design values. Who needs frills  — we let our flowers say it all.
+                        <p>Flower and Friends is a unique florist located in Monterrey’s West Town that brings the timeless beauty of roses right to your doorstep. If you value simple, classic beauty and an original design aesthetic, Flower and Friends is the ideal flower shop for you. Many flower arrangements sold today focus on fleeting trends. We concentrate on timeless elegance, and the rose typifies our traditional design values. Who needs frills  — we let our flowers say it all.
 
                         </p><p>No matter the occasion, a flower arrangement from Flower and Friends says volumes with one simple gesture. We ensure our flowers stay fresh by packaging and delivering them in water, so the person receiving the bouquet will be able to enjoy them for some time. We're excited to bring our beautiful arrangements to those living in Chicago and throughout Cook County. With same-day delivery, someone you care about could have a gorgeous surprise waiting for them today.</p>
                     </div>

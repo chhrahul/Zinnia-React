@@ -15,7 +15,6 @@ function SignupFirstStep(props) {
         },
         validationSchema: Yup.object(
             {
-
                 firstName: Yup.string()
                     .max(15, 'Must be 15 characters or less')
                     .required('This field is required'),
@@ -25,7 +24,6 @@ function SignupFirstStep(props) {
                 email: Yup.string().email('Invalid email address').required('This field is required'),
                 password: Yup.string()
                     .required('This field is required').matches(
-
                         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*])(?=.{6,})/,
                         "Please enter valid password"
                     ),
@@ -33,7 +31,6 @@ function SignupFirstStep(props) {
                     password ? field.required('This field is required').oneOf([Yup.ref('password')], 'Password not matched') : field
                 ),
                 check: Yup.boolean().default(false).oneOf([true], 'You must accept the terms and conditions'),
-
             }),
         onSubmit: values => {
             const newValue = {

@@ -1434,3 +1434,27 @@ img.contact-icon.contact-icon-2 {
 span.resposive-hide.hide_symbol {
     margin-right: 10px;
 }
+.time-picker-search{
+  border: unset !important;
+  height: unset !important;
+}
+
+input[type="time"] {
+    background: #fff;
+    height:30px;
+    min-width: 150px;
+}
+
+input[type="time"]:before {
+    content: 'Any Time';
+    color: black;
+    position: absolute;
+    background: #fff;
+    height: 18px;
+}
+
+input[type="time"]:hover:before {
+    content: '';
+}
+/* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
+

@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import CustomSlider from "../../components/CustomSlider";
 import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
 import { BsClock } from 'react-icons/bs';
+import ContactDetail from '../../components/Listing/ContactDetail';
 
 function FloristDetail(props) {
     const { addToCart, cart } = props
+    const prodid = 1
+    var added = cart.filter(item => item.id === prodid)
     const AddQuantityBox = [
         {
             'title': 'Bridal bouquet', 'price': '300.00'
@@ -45,9 +48,25 @@ function FloristDetail(props) {
         },
     ]
 
-    const prodid = 1
+    const contactFields = [
+        {
+            'type': 'streetAddress', 'field': '4701 Lincoln avenue,Chicago, IL 60021'
+        },
+        {
+            'type': 'timing', 'field': 'Closes 10 PM'
+        },
 
-    var added = cart.filter(item => item.id === prodid)
+        {
+            'type': 'webswebsitete', 'field': 'Bigdayflorists.com'
+        },
+        {
+            'type': 'phone', 'field': '301-593-2392'
+        },
+
+    ]
+
+
+
 
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
@@ -65,10 +84,7 @@ function FloristDetail(props) {
                         <p className='p-bottom-margin'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                        <p className='d-flex'><img src="/images/icons/location.svg" alt="" className='contact-icon' ml-5 /> <span>4701 Lincoln avenue,Chicago, IL 60021</span></p>
-                        <p className='d-flex'><BsClock size={27} className='contact-icon color-cyan' /> <span><span className='color-cyan  ml-5'> Open  .</span> Closes 10 PM</span></p>
-                        <p className='d-flex'><img src="/images/icons/web.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> Bigdayflorists.com </span> </span></p>
-                        <p className='d-flex'><img src="/images/icons/phone.svg" alt="" className='contact-icon' /> <span><span className='color-cyan  ml-5'> 301-593-2392 </span> </span></p>
+                        < ContactDetail contactFields={contactFields} />
                     </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />
