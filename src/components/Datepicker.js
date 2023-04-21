@@ -28,7 +28,10 @@ class App extends Component {
    
   render() {  
     return (  
-      
+      <>
+      <label htmlFor="myDatePicker">
+                                    <img src="/images/icons/calendar_today.svg" alt="date" style={{'margin-right': 10 }} />
+                                </label>
    <DatePicker  
  selected={ this.state.startDate }  
  onChange={ this.handleChange }  
@@ -39,7 +42,7 @@ class App extends Component {
  placeholderText={'Any date'}
  minDate={new Date()}
 />
- 
+ </>
     
     );  
   }  

@@ -415,6 +415,9 @@ input#budget {
 .mb-30vh {
   margin-bottom: 30vh;
 }
+.col-lg.col-sm-12.col-md-12.mt-1.below_border_style.form-control {
+  border:none !important;
+}
 
 select,
 .form-control {
@@ -761,8 +764,8 @@ li.list_info.active path {
 
 .custom-search {
   min-height: 100vh !important;
-  padding-left: 0;
-  padding-right:0;
+  padding-left: 0px !important;
+  padding-right:0 !important;
 }
 .list_info svg{
   margin-right: 5px !important;
@@ -808,15 +811,21 @@ li.list_info.active path {
 
 .search_btn {
   height: -webkit-fill-available;
+  width: 100% !important;
+  font-size: 16px;
+  font-size: 16px !important;
+  background-color: #505267 !important;
+  font-family: 'Libre Baskerville' !important;
+  line-height: 24px !important;
+}
+.top-section-custom select {
+  height: unset !important;
 }
 
 .search_btn:hover {
   background-color: #00767c !important;
   color: white;
-}
-
-.custom-space {
-  margin-left: 25px !important;
+  width: 100% !important;
 }
 
 .search-div {
@@ -824,11 +833,13 @@ li.list_info.active path {
 }
 
 .content_after {
-  margin-top: 17px !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
+}
+.partition-symbol{
+  margin-top:7px !important;
 }
 
 .border_style {
@@ -840,13 +851,23 @@ li.list_info.active path {
 .cancel_custom {
   display: none !important;
 }
-
+ 
 /* ++++ */
 
 /* ++++ */
 /* new csss Venue Searched CSS*/
+.lowest_price img{
+  margin-right:10px;
+  padding-bottom:15px;
+}
+
 .venue-top {
   margin-top: 52px !important;
+}
+.venue-top svg{
+  margin-right:5px !important;
+  width:20px !important;
+  height:20px !important;
 }
 .review {
   display: flex;
@@ -898,12 +919,15 @@ li.special-link a {
 .per-hour {
   font-weight: 400 !important;
   font-size: 16px !important;
-  line-height: 24px !important;
+  line-height: 10px !important;
   letter-spacing: 0.5px !important;
   color: #505267 !important;
 }
-.bouquet {
-  width: 143px !important;
+.per-hour-florist {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: 0.5px !important;
+  color: #505267 !important;
 }
 .per-hour-price {
   font-weight: 400 !important;
@@ -948,6 +972,7 @@ li.site-link a {
   letter-spacing: 0.5px !important;
   color: rgb(49, 167, 173) !important;
   width: 212px !important;
+  text-decoration: none !important;
 }
 div.site-link a {
   font-weight: 400 !important;
@@ -962,6 +987,41 @@ div.site-link a {
 .card-content {
   border: none !important;
 }
+.upper-section img{
+height: 233px !important;
+border-radius: 10px !important;
+}
+.review ul{
+  margin-right:5px;
+  list-style-type: none;
+}
+.review li img{
+  margin-right:5px;
+  padding-bottom:15px;
+}
+.include-custom ul{
+  margin-right:5px;
+  list-style-type: none;
+}
+.include-custom li img{
+  margin-right:5px;
+  padding-bottom:15px;
+}
+.location ul{
+  margin-right:5px;
+  list-style-type: none;
+}
+.location svg{
+  margin-right:5px !important;
+  width:20px !important;
+  height:20px !important;
+}
+.location li img{
+  margin-right:5px;
+  padding-bottom:15px;
+  width:20px;
+}
+
 .venue-search-btn {
   display: flex !important;
   flex-direction: row !important;
@@ -1271,14 +1331,14 @@ select {
     margin-top: 10px;
     float: right;
     margin-bottom: 50px;
+    width: auto !important;
   }
 
   .cancel_custom {
     display: inline-block !important;
-    margin-top: 13px;
-    margin-left: 62px;
-    width: 90px;
-  }
+   
+}
+
 }
 
 @media screen and (max-width: 640px) {
@@ -1324,6 +1384,7 @@ select {
     margin-top: 35px;
     margin-bottom: 50px;
     float: right;
+    width:auto !important;
   }
 }
 
@@ -1347,6 +1408,7 @@ select {
   .search_btn {
     margin-top: 10px;
     margin-bottom: 50px;
+    width: 100% !important;
   }
 }
 
@@ -1363,8 +1425,12 @@ img.contact-icon.contact-icon-2 {
 }
 .my-date-picker-parent .my-date-picker {
   border: none !important;
-  margin-top: 16px;
   width: 80px;
+}
+
+.my-date-picker-parent {
+  border: none !important;
+  height: unset !important;
 }
 .my-date-picker::placeholder {
   color: black !important;
