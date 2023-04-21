@@ -602,7 +602,10 @@ p {
 
   color: #000000;
 }
-
+.custom-border{
+  border: 2px solid #00767C !important;
+  border-radius: 8px;
+}
 .uploaded-text {
   font-family: "Libre Baskerville";
   font-style: normal;
@@ -1338,6 +1341,7 @@ select {
     display: inline-block !important;
    
 }
+
 
 }
 
