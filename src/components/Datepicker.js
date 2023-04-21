@@ -8,7 +8,6 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    console.log(props)
     this.state = {
       startDate: null
     };
@@ -29,16 +28,22 @@ class App extends Component {
 
   render() {
     return (
-      <DatePicker
-        selected={this.state.startDate}
-        onChange={this.handleChange}
-        name="startDate"
-        dateFormat="MM/dd/yyyy"
-        className='my-date-picker'
-        id="myDatePicker"
-        placeholderText={'Any date'}
-        minDate={new Date()}
-      />
+      <>
+        <label htmlFor="myDatePicker">
+          <img src="/images/icons/calendar_today.svg" alt="date" style={{ 'margin-right': 10 }} />
+        </label>
+        <DatePicker
+          selected={this.state.startDate}
+          onChange={this.handleChange}
+          name="startDate"
+          dateFormat="MM/dd/yyyy"
+          className='my-date-picker'
+          id="myDatePicker"
+          placeholderText={'Any date'}
+          minDate={new Date()}
+        />
+      </>
+
     );
   }
 

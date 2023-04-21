@@ -2,14 +2,12 @@
 import React from 'react';
 
 import { MainSearchFlorist, MainSearchPhotographer, MainSearchVenue } from "../../components";
-import SearchResultVenueMap from '../../components/MainSearch/SearchResultVenueMap';
-function MainSearch() {
+function SearchResultMap() {
     const [activePage, setActivePage] = React.useState('venue')
     const getOfferProps = {
         activePage,
         setActivePage,
     }
-
     return (
         <>
             {activePage === 'florist' &&
@@ -21,10 +19,9 @@ function MainSearch() {
             {activePage === 'venue' &&
                 <MainSearchVenue {...getOfferProps} />
             }
-            {/* <SearchResultVenueMap /> */}
         </>
 
     )
 }
-export default MainSearch
+export default SearchResultMap
 
