@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch, MainSearchResult, MainSearchResultPhotographer, MainSearchResultFlorist } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, MainSearchResultPhotographer, MainSearchResultFlorist, SearchResultListing } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
@@ -26,6 +26,7 @@ function App() {
           <Route exact path="/search-result-venue" element={<MainSearchResult />} />
           <Route exact path="/search-result-photographer" element={<MainSearchResultPhotographer />} />
           <Route exact path="/search-result-florist" element={<MainSearchResultFlorist />} />
+          <Route exact path="/search-result-listing" element={<SearchResultListing />} />
         </Routes >
       </div>
     </Layout>
