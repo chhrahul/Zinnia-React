@@ -2,8 +2,6 @@ const Navigation = (props) => {
     const { cart } = props
     return (
         < >
-
-            {/* <div class="container-fluid main-nav" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} > */}
             <div className="container-fluid main-nav position-relative" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
                 <div className="row ">
                     <div className="col-md-6 col-sm-6 w-50 ">

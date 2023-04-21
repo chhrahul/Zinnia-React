@@ -9,7 +9,7 @@ class App extends Component {
   constructor (props) {  
     super(props)  
     this.state = {  
-      startDate: new Date()  
+      startDate: null  
     };  
     this.handleChange = this.handleChange.bind(this);  
     this.onFormSubmit = this.onFormSubmit.bind(this);  
@@ -28,16 +28,19 @@ class App extends Component {
    
   render() {  
     return (  
-      <form onSubmit={ this.onFormSubmit }>  
-        <div className="form-group">  
-          <DatePicker  
-              selected={ this.state.startDate }  
-              onChange={ this.handleChange }  
-              name="startDate"  
-              dateFormat="MM/dd/yyyy"  
-          />  
-        </div>  
-      </form>  
+      
+   <DatePicker  
+ selected={ this.state.startDate }  
+ onChange={ this.handleChange }  
+ name="startDate"  
+ dateFormat="MM/dd/yyyy" 
+ className='my-date-picker' 
+ id="myDatePicker"
+ placeholderText={'Any date'}
+ minDate={new Date()}
+/>
+ 
+    
     );  
   }  
     

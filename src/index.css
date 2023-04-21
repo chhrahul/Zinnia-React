@@ -122,7 +122,7 @@ ul.footer-ul.mb-0 {
   margin-bottom: 0;
 }
 
-.second-step > * {
+.second-step>* {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
@@ -532,7 +532,8 @@ p {
   margin-right: 10px;
 }
 
-.listing-page input, .include-custom input {
+.listing-page input,
+.include-custom input {
   height: unset !important;
   border: none;
   width: 20px;
@@ -552,13 +553,15 @@ p {
   margin-left: 1px;
 }
 
-.listing-page .input-group, .include-custom .input-group {
+.listing-page .input-group,
+.include-custom .input-group {
   border: 1px solid #00767c !important;
   border-radius: 8px;
   color: #00767c !important;
 }
 
-.listing-page span.input-group-text, .include-custom span.input-group-text{
+.listing-page span.input-group-text,
+.include-custom span.input-group-text {
   background-color: unset !important;
   color: #00767c !important;
   font-size: 23px;
@@ -612,10 +615,7 @@ p {
   border-bottom-left-radius: 0.375rem !important;
 }
 
-.input-group
-  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
-    .valid-feedback
-  ):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   border-top-left-radius: 0.375rem !important;
   border-bottom-left-radius: 0.375rem !important;
 }
@@ -742,6 +742,7 @@ li.list_info {
 li.list_info.active path {
   fill: #00767c;
 }
+
 .list_info:hover {
   color: #00767c;
 }
@@ -749,15 +750,22 @@ li.list_info.active path {
 .list_info:hover svg path {
   fill: #00767c;
 }
+
 .list_info.active {
   fill: #00767c;
 }
+
 .hover-div ul {
   text-align: center;
 }
 
 .custom-search {
   min-height: 100vh !important;
+  padding-left: 0;
+  padding-right:0;
+}
+.list_info svg{
+  margin-right: 5px !important;
 }
 
 .heading_first {
@@ -797,19 +805,24 @@ li.list_info.active path {
   display: flex;
   align-items: center;
 }
+
 .search_btn {
   height: -webkit-fill-available;
 }
+
 .search_btn:hover {
   background-color: #00767c !important;
   color: white;
 }
+
 .custom-space {
   margin-left: 25px !important;
 }
+
 .search-div {
   margin-bottom: 300px;
 }
+
 .content_after {
   margin-top: 17px !important;
   font-size: 1rem;
@@ -969,6 +982,7 @@ div.site-link a {
 }
 
 /* ++++ */
+
 select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.1018 8C5.02785 8 4.45387 9.2649 5.16108 10.0731L10.6829 16.3838C11.3801 17.1806 12.6197 17.1806 13.3169 16.3838L18.8388 10.0731C19.5459 9.2649 18.972 8 17.898 8H6.1018Z' fill='%23212121'/%3E%3C/svg%3E") !important;
 }
@@ -982,46 +996,56 @@ select {
     width: 268px !important;
     font-size: 30px;
   }
+
   a.btn.btn-light.signup-item {
     font-size: 12px;
   }
   .list_info {
     text-align: center;
   }
+
   .last_part {
     margin-top: 20px !important;
     text-align: end !important;
   }
+
   .first_column {
     border: none;
   }
+
   .lower_content {
     border: 1px solid #505267;
     border-radius: 10px;
     margin-bottom: 10px;
   }
 }
+
 @media screen and (max-width: 640px) {
   .heading_first {
     font-size: 48px;
     margin-top: 100px !important;
   }
+
   .list_info {
     margin-top: 50px !important;
   }
+
   .first_column {
     border: none;
   }
+
   .lower_content {
     border: 1px solid #505267;
     border-radius: 10px;
     margin-bottom: 10px;
   }
+
   .last_part {
     margin-top: 20px !important;
     text-align: end !important;
   }
 }
+
 @media screen and (max-width: 778px) {
   .nav-col-5 {
     width: 50% !important;
@@ -1197,6 +1221,7 @@ select {
 .error-form-label {
   color: #b00000 !important;
 }
+
 .added-to-cart-btn {
   border: 1px solid !important;
   margin-bottom: 0px;
@@ -1307,15 +1332,18 @@ select {
     border: none !important;
     background-color: transparent !important;
   }
+
   .below_border_style {
     border: 1px solid #505267;
     border-radius: 10px;
     margin-bottom: 5px !important;
     background-color: white !important;
   }
+
   .hide_symbol {
     display: none !important;
   }
+
   .search_btn {
     margin-top: 10px;
     margin-bottom: 50px;
@@ -1326,4 +1354,83 @@ img.contact-icon.contact-icon-2 {
   position: relative;
   left: -29 !important;
   right: 24px;
+}
+
+.custom-calendar {
+  padding: 0 !important;
+  background-color: white !important;
+  border: none !important;
+}
+.my-date-picker-parent .my-date-picker {
+  border: none !important;
+  margin-top: 16px;
+  width: 80px;
+}
+.my-date-picker::placeholder {
+  color: black !important;
+}
+.my-date-picker-parent .react-datepicker__current-month {
+  margin-top: 0;
+  font-weight: 400 !important;
+  ;
+  font-size: 0.944rem !important;
+  ;
+  color: #787A8F !important;
+  font-family: 'Libre Baskerville' !important;
+  ;
+  font-style: normal !important;
+  ;
+  font-size: 20px !important;
+  ;
+  line-height: 28px !important;
+  ;
+  letter-spacing: 0.15px !important;
+  ;
+  text-align: center !important;
+  ;
+}
+.my-date-picker-parent .react-datepicker {
+  font-family: 'Libre Baskerville';
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.my-date-picker-parent .react-datepicker__header {
+  text-align: center;
+  padding: 8px 0;
+  border: none;
+  background-color: white;
+}
+.my-date-picker-parent .react-datepicker__day-names {
+  margin-bottom: -8px;
+  color: #31A7AD !important;
+  font-weight: 400;
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+}
+.my-date-picker-parent .react-datepicker__day-name {
+  display: inline-block;
+  text-align: center;
+  line-height: 28px;
+}
+.my-date-picker-parent .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+  display: none !important;
+}
+.my-date-picker-parent .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle {
+  display: none !important;
+}
+.react-datepicker__day-name{
+  display: inline-block !important;
+  /* width: 3.7rem !important; */
+  line-height: 1.7rem !important;
+  text-align: center !important;
+  margin: 0.166rem !important;
+  color:#31A7AD !important
+}
+
+span.resposive-hide.hide_symbol {
+    margin-right: 10px;
 }

@@ -203,8 +203,8 @@ function MainSearchResultFlorist() {
                                         <p className="per-hour bouquet">Bridesmaids bouquets $50.00 each</p>
                                     </li>
                                     <div className='col-lg-4 paddin-lr '>
-                                        <span className='quantity-add-box'>
-                                            <div class="input-group col">
+                                        <span>
+                                            <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
                                                 </div>
@@ -220,8 +220,8 @@ function MainSearchResultFlorist() {
                                         <p className="per-hour bouquet">Flower crown $150.00 each</p>
                                     </li>
                                     <div className='col-lg-4 paddin-lr '>
-                                        <span className='quantity-add-box'>
-                                            <div class="input-group col">
+                                        <span>
+                                            <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
                                                 </div>
@@ -237,8 +237,8 @@ function MainSearchResultFlorist() {
                                         <p className="per-hour bouquet">Flower girl petals/basket $50.00 each</p>
                                     </li>
                                     <div className='col-lg-4 paddin-lr '>
-                                        <span className='quantity-add-box'>
-                                            <div class="input-group col">
+                                        <span>
+                                            <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
                                                 </div>
@@ -254,8 +254,8 @@ function MainSearchResultFlorist() {
                                         <p className="per-hour bouquet">Corsages $50.00 each</p>
                                     </li>
                                     <div className='col-lg-4 paddin-lr '>
-                                        <span className='quantity-add-box'>
-                                            <div class="input-group col">
+                                        <span>
+                                            <div class="input-group col mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"> - </span>
                                                 </div>
