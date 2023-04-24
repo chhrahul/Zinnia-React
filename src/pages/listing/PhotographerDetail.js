@@ -4,6 +4,7 @@ import CustomSlider from "../../components/CustomSlider";
 import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
 import { BsClock } from 'react-icons/bs';
 import ContactDetail from '../../components/Listing/ContactDetail';
+import OfferIncludeList from '../../components/Listing/OfferIncludeList';
 
 function PhotographerDetail(props) {
     const { addToCart, cart, setCart } = props
@@ -50,6 +51,25 @@ function PhotographerDetail(props) {
 
     ]
 
+    const includeOffering = [
+        {
+            'title': 'Video coverage'
+        }, {
+            'title': 'Photo album'
+        }, {
+            'title': 'Raw, unedited photos'
+        }, {
+            'title': 'Same day print'
+        },
+        {
+            'title': 'Highlight film'
+        }, {
+            'title': 'Online gallery'
+        },
+
+
+    ]
+
 
     return (
         <div className="container-fluid px-md-5 listing-page mt-3" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
@@ -68,7 +88,7 @@ function PhotographerDetail(props) {
                     </div>
                     <div className='col-md-3 pl-0'>
                         < ContactDetail contactFields={contactFields} />
-                     </div>
+                    </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />
                     </div>
@@ -77,12 +97,7 @@ function PhotographerDetail(props) {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Video coverage'} />
-                            <AddQuantity title={'Photo album'} />
-                            <AddQuantity title={'Raw, unedited photos'} />
-                            <AddQuantity title={'Same day print'} />
-                            <AddQuantity title={'Highlight film'} />
-                            <AddQuantity title={'Online gallery'} />
+                            <OfferIncludeList includeOffering={includeOffering} />
                         </div>
                     </div>
                 </div>
@@ -115,13 +130,3 @@ function PhotographerDetail(props) {
 }
 export default PhotographerDetail
 
-function AddQuantity(props) {
-    const { title, priceEach } = props
-
-    return (
-        <div className='col-md-12 paddin-lr '>
-            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
-        </div>
-
-    );
-}

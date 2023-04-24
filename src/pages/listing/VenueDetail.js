@@ -2,11 +2,21 @@
 import React, { useState } from 'react';
 import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
 import ContactDetail from '../../components/Listing/ContactDetail';
+import OfferIncludeList from '../../components/Listing/OfferIncludeList';
 
 function VenueDetail(props) {
     const { addToCart, cart, setCart } = props
     const prodid = 2
     var added = cart.filter(item => item.id === prodid)
+    const includeOffering = [
+        {
+            'title': 'Ceremony'
+        },
+        {
+            'title': 'Reception'
+        }
+
+    ]
     const handles = [
         {
             'type': 'instagram', 'url': 'instagram.com/bigdayflorist'
@@ -74,8 +84,7 @@ function VenueDetail(props) {
                     <div className='col-md-6 pl-0'>
                         <p className='color-cyan  ml-5'> INCLUDED </p>
                         <div className='row paddin-lr'>
-                            <AddQuantity title={'Ceremony'} />
-                            <AddQuantity title={'Reception'} />
+                            <OfferIncludeList includeOffering={includeOffering} />
                         </div>
                     </div>
                 </div>
@@ -108,11 +117,3 @@ function VenueDetail(props) {
 export default VenueDetail
 
 
-function AddQuantity(props) {
-    const { title, priceEach } = props
-    return (
-        <div className='col-md-12 paddin-lr '>
-            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {title} </p>
-        </div>
-    );
-}

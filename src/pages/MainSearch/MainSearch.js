@@ -5,9 +5,15 @@ import { MainSearchFlorist, MainSearchPhotographer, MainSearchVenue } from "../.
 import SearchResultVenueMap from '../../components/MainSearch/SearchResultVenueMap';
 function MainSearch() {
     const [activePage, setActivePage] = React.useState('venue')
+    const [searchType, setSearchType] = React.useState(false);
+    const [resultType, setResultType] = React.useState('map');
     const getOfferProps = {
         activePage,
         setActivePage,
+        searchType,
+        setSearchType,
+        resultType,
+        setResultType
     }
 
     return (

@@ -993,7 +993,7 @@ div.site-link a {
   border: none !important;
 }
 .upper-section img{
-height: 233px !important;
+/* height: 233px !important; */
 border-radius: 10px !important;
 }
 .review ul{
@@ -1527,6 +1527,10 @@ input[type="time"]:before {
 
 input[type="time"]:hover:before {
     content: '';
+}
+
+input#myDatePicker {
+    outline: none;
 }
 /* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
 

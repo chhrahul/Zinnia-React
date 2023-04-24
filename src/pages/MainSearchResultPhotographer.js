@@ -5,7 +5,7 @@ import SearchFilter from "../components/MainSearch/SearchFilter"
 function MainSearchResultPhotographer() {
 
     return (
-        <div className="container-fluid px-md-5  mt-3 custom-search">
+        <div className="container-fluid px-md-5   custom-search">
             <div className="row paddin-lr hover-div mb-3">
                 <div className="col-lg-12 col-md-12 col-sm-12 venue-top">
                     <ul className="d-flex p-0">
@@ -45,7 +45,7 @@ function MainSearchResultPhotographer() {
                         <div className="review">
                             <ul className="d-flex p-0">
                                 <li>
-                                    <img src="/images/icons/star.svg" alt="star"/>
+                                    <img src="/images/icons/star.svg" alt="star" />
                                 </li>
                                 <li>
                                     <p className="rating">4.8</p>
@@ -63,27 +63,27 @@ function MainSearchResultPhotographer() {
                             <p className="special-link">INCLUDED</p>
                             <ul className="p-0">
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour">Video coverage</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour"> Photo album</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour">Raw,unedited photos</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour">Same day prints</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour">Highlight film</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Tick.svg" alt="tick"/>
+                                    <img src="/images/icons/Tick.svg" alt="tick" />
                                     <p className="per-hour">Online gallery</p>
                                 </li>
 
@@ -99,7 +99,7 @@ function MainSearchResultPhotographer() {
                                     <p className="venue-address">4701 Lincoln avenue, Chicago, IL 60021</p>
                                 </li>
                                 <li className="d-flex">
-                                    <img src="/images/icons/Time_access.svg" alt="time"/>
+                                    <img src="/images/icons/Time_access.svg" alt="time" />
                                     <span class="color-cyan  ml-5"> Open  .</span> Closes 10 PM
                                 </li>
                                 <li className="d-flex site-link">
@@ -118,11 +118,11 @@ function MainSearchResultPhotographer() {
                         </div>
                     </div>
                 </div>
-            
-            <div className="col-lg-8 col-md-12 col-sm-12 ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.5577198195256!2d-87.69167392271156!3d41.966833996289225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd21ab75c2d73%3A0xc77f3bbadef7b3a8!2s4701%20N%20Lincoln%20Ave%2C%20Chicago%2C%20IL%2060625%2C%20USA!5e0!3m2!1sen!2sin!4v1681993856968!5m2!1sen!2sin" width="100%" height="700px" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+
+                <div className="col-lg-8 col-md-12 col-sm-12 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.5577198195256!2d-87.69167392271156!3d41.966833996289225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd21ab75c2d73%3A0xc77f3bbadef7b3a8!2s4701%20N%20Lincoln%20Ave%2C%20Chicago%2C%20IL%2060625%2C%20USA!5e0!3m2!1sen!2sin!4v1681993856968!5m2!1sen!2sin" width="100%" height="700px" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+                </div>
             </div>
-</div>
         </div>
 
     )

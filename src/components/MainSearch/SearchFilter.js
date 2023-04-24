@@ -1,14 +1,20 @@
 
 
+import React from 'react'
 import DatePicker from '../Datepicker.js'
 import { useFormik } from 'formik';
 import FloristIcon from '../Icons/FloristIcon.js';
 import VenueIcon from '../Icons/VenueIcon.js';
 import PhotographerIcon from '../Icons/PhotographerIcon.js';
+import SearchResultVenueMap from './SearchResultVenueMap.js';
+import SearchResultPhotographerMap from './SearchResultPhotographerMap.js';
+import SearchResultFloristMap from './SearchResultFloristMap.js';
+import { BsClock } from 'react-icons/bs';
 
 const SearchFilter = (props) => {
+
     const { type } = props
-    const { activePage, setActivePage } = props
+    const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
     const formik = useFormik({
         initialValues: {
 
@@ -20,7 +26,7 @@ const SearchFilter = (props) => {
                 'location': values.location,
                 'startDate': values.startDate,
             }
-            console.log(newValue)
+            setSearchType(true)
         },
     });
 
@@ -28,14 +34,18 @@ const SearchFilter = (props) => {
         setActivePage(data)
     }
 
+    const getOfferProps = {
+        activePage,
+        setActivePage,
+        searchType,
+        setSearchType,
+        resultType,
+        setResultType
+    }
+
     return (
         <>
-            <div className="row paddin-lr">
-                <div className='row paddin-lr mt-2'>
-                    <h2 className='heading_first newClass'>Let's plan your dream wedding</h2>
-                </div>
-            </div>
-            <div className="row paddin-lr hover-div mb-3">
+            <div className="row paddin-lr hover-div mb-3 mt-4">
                 <div className="col-lg-12 col-md-12 col-sm-12">
                     <ul className="d-flex p-0">
                         <li className={activePage === 'venue' ? 'list_info active' : 'list_info'} onClick={() => handleClickActivePage('venue')}><VenueIcon />Venue</li>
@@ -46,7 +56,7 @@ const SearchFilter = (props) => {
             </div>
             <form onSubmit={formik.handleSubmit}>
                 <div className='row top-section-custom'>
-                    <div className='col-md-10'>
+                    <div className='col-md-11'>
                         <div className='row px-1 py-1 border_style'>
                             <div className='col-lg  col-md-12 col-sm-12  below_border_style'>
                                 <span className='d-flex'>
@@ -79,7 +89,6 @@ const SearchFilter = (props) => {
                                     </select>
                                 </span>
                             </div>
-
                             {type === 'venue' &&
                                 <div className='col-lg col-sm-12 col-md-12 mt-1 below_border_style'>
                                     <span className='d-flex'>
@@ -94,7 +103,6 @@ const SearchFilter = (props) => {
                                     </span>
                                 </div>
                             }
-
                             <div className='col-lg  col-sm-12 col-md-12 mt-1 below_border_style'>
                                 <span className='d-flex'>
                                     <span class="resposive-hide hide_symbol partition-symbol mr-2">|</span>
@@ -108,20 +116,30 @@ const SearchFilter = (props) => {
                                 </span>
                             </div>
                         </div>
-
                     </div>
-                    <div className='col-md-12 col-lg-2'>
-                        <div class="row py-1 float-lg-right">
-                            <span className='col cancel_custom text-end'>
+                    <div className='col-md-12 col-lg-1 p-lg-0'>
+                        <div class="row  float-lg-right  h-100">
+                            <span className='col cancel_custom text-end '>
                                 <button type="button" class="btn btn-outline-secondary   ">Cancel</button>
                             </span>
-                            <span className='col-lg-12  text-sm-end- '>
-                                <button type="submit" class="btn btn-secondary"><img src="/images/icons/search.png" alt="search" />Search</button>
+                            <span className='col-lg-12  p-0 '>
+                                <button type="submit" className="btn btn-secondary h-100 p-1"><img src="/images/icons/search.png" alt="search" />Search</button>
                             </span>
                         </div>
                     </div>
                 </div>
             </form>
+
+
+            {searchType && activePage === 'venue' &&
+                <SearchResultVenueMap {...getOfferProps} />
+            }
+            {searchType && activePage === 'photographer' &&
+                <SearchResultPhotographerMap {...getOfferProps} />
+            }
+            {searchType && activePage === 'florist' &&
+                <SearchResultFloristMap {...getOfferProps} />
+            }
         </>
     )
 }
