@@ -415,8 +415,9 @@ input#budget {
 .mb-30vh {
   margin-bottom: 30vh;
 }
+
 .col-lg.col-sm-12.col-md-12.mt-1.below_border_style.form-control {
-  border:none !important;
+  border: none !important;
 }
 
 select,
@@ -602,10 +603,12 @@ p {
 
   color: #000000;
 }
-.custom-border{
+
+.custom-border {
   border: 2px solid #00767C !important;
   border-radius: 8px;
 }
+
 .uploaded-text {
   font-family: "Libre Baskerville";
   font-style: normal;
@@ -734,6 +737,31 @@ p {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
+/* Checkout CSS*/
+.custom-availabilty{
+  background: rgba(237, 71, 74, 0.05) !important;
+    width: 190px !important;
+    border-radius: 4px !important;
+}
+.custom-availabilty img{
+  margin-right:5px !important;
+}
+.checkout-text-custom{
+  font-size: 20px !important;
+  color: #000000 !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  letter-spacing: 0.15px !important;
+}
+.left-section {
+  border: 1px solid #31A7AD;
+  border-left: none;
+  border-radius: 1px 4px 4px 1px !important;
+}
+.col-6.delete-custom {
+  text-align: center !important;
+}
+/*Checkout CSS finish*/
 /* new csss */
 li.list_info.active {
   padding-bottom: 7px;
@@ -741,6 +769,97 @@ li.list_info.active {
   color: #00767c;
 }
 
+.checkout-custom img {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.checkout-heading {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+  color: #505267 !important;
+  padding: 16px 1px 8px 16px;
+  margin-bottom:0px !important;
+
+}
+.venue-address-custom{
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 24px !important;
+  letter-spacing: 1.5px !important;
+  color: #505267 !important;
+  width: 212px !important;
+  text-transform: uppercase !important;
+}
+p.venue-address-custom.text-black-50 {
+  color: black !important;
+  text-transform: uppercase !important;
+}
+.custom-search a{
+color: #31A7AD;
+}
+.checkout-list,.checkout-list-custom li{
+  line-height:36px !important;
+  
+}
+
+.pay-custom {
+  padding: 12px 16px !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  font-family: helvetica !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+}
+.pay-custom-checkout{
+  padding: 12px 16px !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  font-family:'Libre Baskerville'!important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+
+
+}
+button.btn.btn-warning.btn-lg.mt-2.pay-custom.text-blue-50 {
+  color: #253B80 !important;
+}
+
+
+button.btn.btn-secondary.btn-lg.mt-2.pay-custom-checkout {
+  background: #BAB8B8 !important;
+  border: 1px solid #BAB8B8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 600 !important;
+  line-height: 20px!important;
+  letter-spacing: 1.5px !important;
+  font-size: 16px !important;
+  font-style: normal;
+}
+
+.checkout-box-border{
+  border: 1px solid #31A7AD;
+  border-radius: 4px 4px;
+}
+.venue-address-custom svg{
+  margin-right:5px;
+}
+.venue-address-custom img{
+  margin-right:5px;
+}
+
+
+.checkout-list{
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+.checkout-list-custom{
+  padding: 0;
+  float: right;
+  list-style: none;
+}
 li.list_info {
   /* padding: 8px 19px; */
 }
@@ -768,9 +887,10 @@ li.list_info.active path {
 .custom-search {
   min-height: 100vh !important;
   padding-left: 0px !important;
-  padding-right:0 !important;
+  padding-right: 0 !important;
 }
-.list_info svg{
+
+.list_info svg {
   margin-right: 5px !important;
 }
 
@@ -784,7 +904,7 @@ li.list_info.active path {
 .img-bg {
   background-image: url("/public/images/beach.png");
   background-repeat: no-repeat;
-    background-size: 100%;
+  background-size: 100%;
 }
 
 .list_info {
@@ -823,6 +943,7 @@ li.list_info.active path {
   font-family: 'Libre Baskerville' !important;
   line-height: 24px !important;
 }
+
 .top-section-custom select {
   height: unset !important;
 }
@@ -843,8 +964,9 @@ li.list_info.active path {
   line-height: 1.5;
   color: #212529;
 }
-.partition-symbol{
-  margin-top:7px !important;
+
+.partition-symbol {
+  margin-top: 7px !important;
 }
 
 .border_style {
@@ -856,27 +978,30 @@ li.list_info.active path {
 .cancel_custom {
   display: none !important;
 }
- 
+
 /* ++++ */
 
 /* ++++ */
 /* new csss Venue Searched CSS*/
-.lowest_price img{
-  margin-right:10px;
-  padding-bottom:15px;
+.lowest_price img {
+  margin-right: 10px;
+  padding-bottom: 15px;
 }
 
 .venue-top {
   margin-top: 52px !important;
 }
-.venue-top svg{
-  margin-right:5px !important;
-  width:20px !important;
-  height:20px !important;
+
+.venue-top svg {
+  margin-right: 5px !important;
+  width: 20px !important;
+  height: 20px !important;
 }
+
 .review {
   display: flex;
 }
+
 .photo-head {
   font-weight: 700;
   font-size: 32px;
@@ -887,6 +1012,7 @@ li.list_info.active path {
   height: 36px;
   margin-top: 10px;
 }
+
 .photo-below {
   font-weight: 400 !important;
   font-size: 10px !important;
@@ -895,12 +1021,14 @@ li.list_info.active path {
   text-transform: uppercase;
   color: #787a8f !important;
 }
+
 .rating {
   margin-right: 5px !important;
   font-weight: 400 !important;
   font-size: 10px !important;
   line-height: 16px !important;
 }
+
 li.special-link a {
   font-style: normal;
   font-weight: 400 !important;
@@ -913,6 +1041,7 @@ li.special-link a {
   margin-left: 20px;
   color: rgb(49, 167, 173) !important;
 }
+
 .price-below {
   font-weight: 400 !important;
   font-size: 10px !important;
@@ -921,6 +1050,7 @@ li.special-link a {
   text-transform: uppercase;
   color: black !important;
 }
+
 .per-hour {
   font-weight: 400 !important;
   font-size: 16px !important;
@@ -928,12 +1058,14 @@ li.special-link a {
   letter-spacing: 0.5px !important;
   color: #505267 !important;
 }
+
 .per-hour-florist {
   font-weight: 400 !important;
   font-size: 16px !important;
   letter-spacing: 0.5px !important;
   color: #505267 !important;
 }
+
 .per-hour-price {
   font-weight: 400 !important;
   font-size: 16px !important;
@@ -945,6 +1077,7 @@ li.special-link a {
   height: 24px;
   background: #ffd8e1;
 }
+
 .special-link {
   color: rgb(49, 167, 173) !important;
   font-weight: 400 !important;
@@ -953,6 +1086,7 @@ li.special-link a {
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
 }
+
 .include-link {
   color: #505267;
   font-style: normal;
@@ -962,6 +1096,7 @@ li.special-link a {
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
 }
+
 .venue-address {
   font-weight: 400 !important;
   font-size: 14px !important;
@@ -970,6 +1105,7 @@ li.special-link a {
   color: #505267 !important;
   width: 212px !important;
 }
+
 li.site-link a {
   font-weight: 400 !important;
   font-size: 14px !important;
@@ -979,6 +1115,7 @@ li.site-link a {
   width: 212px !important;
   text-decoration: none !important;
 }
+
 div.site-link a {
   font-weight: 400 !important;
   font-size: 14px !important;
@@ -986,45 +1123,55 @@ div.site-link a {
   letter-spacing: 0.5px !important;
   color: rgb(49, 167, 173) !important;
 }
+
 .card-custom {
   padding: 0 !important;
 }
+
 .card-content {
   border: none !important;
 }
-.upper-section img{
-/* height: 233px !important; */
-border-radius: 10px !important;
+
+.upper-section img {
+  /* height: 233px !important; */
+  border-radius: 10px !important;
 }
-.review ul{
-  margin-right:5px;
+
+.review ul {
+  margin-right: 5px;
   list-style-type: none;
 }
-.review li img{
-  margin-right:5px;
-  padding-bottom:15px;
+
+.review li img {
+  margin-right: 5px;
+  padding-bottom: 15px;
 }
-.include-custom ul{
-  margin-right:5px;
+
+.include-custom ul {
+  margin-right: 5px;
   list-style-type: none;
 }
-.include-custom li img{
-  margin-right:5px;
-  padding-bottom:15px;
+
+.include-custom li img {
+  margin-right: 5px;
+  padding-bottom: 15px;
 }
-.location ul{
-  margin-right:5px;
+
+.location ul {
+  margin-right: 5px;
   list-style-type: none;
 }
-.location svg{
-  margin-right:5px !important;
-  width:20px !important;
-  height:20px !important;
+
+.location svg {
+  margin-right: 5px !important;
+  width: 20px !important;
+  height: 20px !important;
 }
-.location li img{
-  margin-right:5px;
-  padding-bottom:15px;
-  width:20px;
+
+.location li img {
+  margin-right: 5px;
+  padding-bottom: 15px;
+  width: 20px;
 }
 
 .venue-search-btn {
@@ -1046,6 +1193,7 @@ border-radius: 10px !important;
   font-family: "Libre Baskerville" !important;
 }
 
+
 /* ++++ */
 
 select {
@@ -1053,6 +1201,18 @@ select {
 }
 
 @media screen and (max-width: 320px) {
+  p.float-right {
+    float: left !important;
+  }
+
+  .checkout-list-custom {
+    float: left!important;
+    text-align: left !important;
+}
+  .delete-custom img{
+    float: right !important;
+      }
+
   .heading_first {
     font-weight: 400;
     line-height: 40px;
@@ -1065,6 +1225,7 @@ select {
   a.btn.btn-light.signup-item {
     font-size: 12px;
   }
+
   .list_info {
     text-align: center;
   }
@@ -1086,6 +1247,11 @@ select {
 }
 
 @media screen and (max-width: 640px) {
+
+  .delete-custom img{
+    float: right !important;
+      }
+
   .heading_first {
     font-size: 48px;
     margin-top: 100px !important;
@@ -1112,6 +1278,10 @@ select {
 }
 
 @media screen and (max-width: 778px) {
+
+  .delete-custom img{
+float: right !important;
+  }
   .nav-col-5 {
     width: 50% !important;
   }
@@ -1135,6 +1305,11 @@ select {
   }
 } */
 @media screen and (max-width: 768px) {
+  p.float-right {
+    float: left !important;
+  }
+
+
   ul.header-ui.float-right.mt-3.px-md-5 {
     padding-left: 0;
   }
@@ -1341,8 +1516,8 @@ select {
 
   .cancel_custom {
     display: inline-block !important;
-   
-}
+
+  }
 
 
 }
@@ -1390,11 +1565,20 @@ select {
     margin-top: 35px;
     margin-bottom: 50px;
     float: right;
-    width:auto !important;
+    width: auto !important;
   }
 }
 
 @media screen and (max-width: 991px) {
+  .col-6.delete-custom {
+    text-align: center!important;
+  }
+
+  .checkout-list-custom {
+  float:left!important;
+  text-align: left !important;
+
+}
   .border_style {
     border: none !important;
     background-color: transparent !important;
@@ -1429,6 +1613,7 @@ img.contact-icon.contact-icon-2 {
   background-color: white !important;
   border: none !important;
 }
+
 .my-date-picker-parent .my-date-picker {
   border: none !important;
   width: 80px;
@@ -1438,9 +1623,11 @@ img.contact-icon.contact-icon-2 {
   border: none !important;
   height: unset !important;
 }
+
 .my-date-picker::placeholder {
   color: black !important;
 }
+
 .my-date-picker-parent .react-datepicker__current-month {
   margin-top: 0;
   font-weight: 400 !important;
@@ -1461,6 +1648,7 @@ img.contact-icon.contact-icon-2 {
   text-align: center !important;
   ;
 }
+
 .my-date-picker-parent .react-datepicker {
   font-family: 'Libre Baskerville';
   font-size: 0.8rem;
@@ -1470,12 +1658,14 @@ img.contact-icon.contact-icon-2 {
   position: relative;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
+
 .my-date-picker-parent .react-datepicker__header {
   text-align: center;
   padding: 8px 0;
   border: none;
   background-color: white;
 }
+
 .my-date-picker-parent .react-datepicker__day-names {
   margin-bottom: -8px;
   color: #31A7AD !important;
@@ -1483,54 +1673,59 @@ img.contact-icon.contact-icon-2 {
   font-family: 'Libre Baskerville';
   font-style: normal;
 }
+
 .my-date-picker-parent .react-datepicker__day-name {
   display: inline-block;
   text-align: center;
   line-height: 28px;
 }
+
 .my-date-picker-parent .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
   display: none !important;
 }
+
 .my-date-picker-parent .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle {
   display: none !important;
 }
-.react-datepicker__day-name{
+
+.react-datepicker__day-name {
   display: inline-block !important;
   /* width: 3.7rem !important; */
   line-height: 1.7rem !important;
   text-align: center !important;
   margin: 0.166rem !important;
-  color:#31A7AD !important
+  color: #31A7AD !important
 }
 
 span.resposive-hide.hide_symbol {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-.time-picker-search{
+
+.time-picker-search {
   border: unset !important;
   height: unset !important;
 }
 
 input[type="time"] {
-    background: #fff;
-    height:30px;
-    min-width: 150px;
+  background: #fff;
+  height: 30px;
+  min-width: 150px;
 }
 
 input[type="time"]:before {
-    content: 'Any Time';
-    color: black;
-    position: absolute;
-    background: #fff;
-    height: 18px;
+  content: 'Any Time';
+  color: black;
+  position: absolute;
+  background: #fff;
+  height: 18px;
 }
 
 input[type="time"]:hover:before {
-    content: '';
+  content: '';
 }
 
 input#myDatePicker {
-    outline: none;
+  outline: none;
 }
-/* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
 
+/* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
