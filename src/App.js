@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest, Checkout, CheckoutAvailability } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
@@ -22,6 +22,8 @@ function App() {
           <Route exact path="/venue" element={<VenueDetail {...gettingCartProps} />} />
           <Route exact path="/main-search" element={<MainSearch />} />
           <Route exact path="/booking-request" element={<BookingRequest />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/checkout-availability" element={<CheckoutAvailability />} />
         </Routes >
       </div>
     </Layout>

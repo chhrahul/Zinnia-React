@@ -608,12 +608,8 @@ p {
 }
 
 .custom-border {
-  border: 2px solid #505267 !important;
-  border-radius: 8px;
-}
-
-.custom-border:hover {
   border: 2px solid #00767C !important;
+  border-radius: 8px;
 }
 
 .uploaded-text {
@@ -748,6 +744,31 @@ p {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
+/* Checkout CSS*/
+.custom-availabilty{
+  background: rgba(237, 71, 74, 0.05) !important;
+    width: 190px !important;
+    border-radius: 4px !important;
+}
+.custom-availabilty img{
+  margin-right:5px !important;
+}
+.checkout-text-custom{
+  font-size: 20px !important;
+  color: #000000 !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  letter-spacing: 0.15px !important;
+}
+.left-section {
+  border: 1px solid #31A7AD;
+  border-left: none;
+  border-radius: 1px 4px 4px 1px !important;
+}
+.col-6.delete-custom {
+  text-align: center !important;
+}
+/*Checkout CSS finish*/
 /* new csss */
 li.list_info.active {
   padding-bottom: 7px;
@@ -755,6 +776,97 @@ li.list_info.active {
   color: #00767c;
 }
 
+.checkout-custom img {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.checkout-heading {
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+  color: #505267 !important;
+  padding: 16px 1px 8px 16px;
+  margin-bottom:0px !important;
+
+}
+.venue-address-custom{
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  line-height: 24px !important;
+  letter-spacing: 1.5px !important;
+  color: #505267 !important;
+  width: 212px !important;
+  text-transform: uppercase !important;
+}
+p.venue-address-custom.text-black-50 {
+  color: black !important;
+  text-transform: uppercase !important;
+}
+.custom-search a{
+color: #31A7AD;
+}
+.checkout-list,.checkout-list-custom li{
+  line-height:36px !important;
+  
+}
+
+.pay-custom {
+  padding: 12px 16px !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  font-family: helvetica !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+}
+.pay-custom-checkout{
+  padding: 12px 16px !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  font-family:'Libre Baskerville'!important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+
+
+}
+button.btn.btn-warning.btn-lg.mt-2.pay-custom.text-blue-50 {
+  color: #253B80 !important;
+}
+
+
+button.btn.btn-secondary.btn-lg.mt-2.pay-custom-checkout {
+  background: #BAB8B8 !important;
+  border: 1px solid #BAB8B8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 600 !important;
+  line-height: 20px!important;
+  letter-spacing: 1.5px !important;
+  font-size: 16px !important;
+  font-style: normal;
+}
+
+.checkout-box-border{
+  border: 1px solid #31A7AD;
+  border-radius: 4px 4px;
+}
+.venue-address-custom svg{
+  margin-right:5px;
+}
+.venue-address-custom img{
+  margin-right:5px;
+}
+
+
+.checkout-list{
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+.checkout-list-custom{
+  padding: 0;
+  float: right;
+  list-style: none;
+}
 li.list_info {
   /* padding: 8px 19px; */
 }
@@ -799,7 +911,7 @@ li.list_info.active path {
 .img-bg {
   background-image: url("/public/images/beach.png");
   background-repeat: no-repeat;
-    background-size: 100%;
+  background-size: 100%;
 }
 
 .list_info {
@@ -1029,9 +1141,10 @@ div.site-link a {
 .card-content {
   border: none !important;
 }
-.upper-section img{
-/* height: 233px !important; */
-border-radius: 10px !important;
+
+.upper-section img {
+  /* height: 233px !important; */
+  border-radius: 10px !important;
 }
 
 .review ul {
@@ -1090,6 +1203,7 @@ border-radius: 10px !important;
   font-family: "Libre Baskerville" !important;
 }
 
+
 /* ++++ */
 
 select {
@@ -1097,6 +1211,18 @@ select {
 }
 
 @media screen and (max-width: 320px) {
+  p.float-right {
+    float: left !important;
+  }
+
+  .checkout-list-custom {
+    float: left!important;
+    text-align: left !important;
+}
+  .delete-custom img{
+    float: right !important;
+      }
+
   .heading_first {
     font-weight: 400;
     line-height: 40px;
@@ -1134,6 +1260,11 @@ select {
 }
 
 @media screen and (max-width: 640px) {
+
+  .delete-custom img{
+    float: right !important;
+      }
+
   .heading_first {
     font-size: 48px;
     margin-top: 100px !important;
@@ -1160,6 +1291,10 @@ select {
 }
 
 @media screen and (max-width: 778px) {
+
+  .delete-custom img{
+float: right !important;
+  }
   .nav-col-5 {
     width: 50% !important;
   }
@@ -1183,6 +1318,11 @@ select {
   }
 } */
 @media screen and (max-width: 768px) {
+  p.float-right {
+    float: left !important;
+  }
+
+
   ul.header-ui.float-right.mt-3.px-md-5 {
     padding-left: 0;
   }
@@ -1446,6 +1586,15 @@ min-height: 100vh !important;
 }
 
 @media screen and (max-width: 991px) {
+  .col-6.delete-custom {
+    text-align: center!important;
+  }
+
+  .checkout-list-custom {
+  float:left!important;
+  text-align: left !important;
+
+}
   .border_style {
     border: none !important;
     background-color: transparent !important;
@@ -1565,33 +1714,34 @@ img.contact-icon.contact-icon-2 {
 }
 
 span.resposive-hide.hide_symbol {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-.time-picker-search{
+
+.time-picker-search {
   border: unset !important;
   height: unset !important;
 }
 
 input[type="time"] {
-    background: #fff;
-    height:30px;
-    min-width: 150px;
+  background: #fff;
+  height: 30px;
+  min-width: 150px;
 }
 
 input[type="time"]:before {
-    content: 'Any Time';
-    color: black;
-    position: absolute;
-    background: #fff;
-    height: 18px;
+  content: 'Any Time';
+  color: black;
+  position: absolute;
+  background: #fff;
+  height: 18px;
 }
 
 input[type="time"]:hover:before {
-    content: '';
+  content: '';
 }
 
 input#myDatePicker {
-    outline: none;
+  outline: none;
 }
 .padding-lr-0{
   padding-left:0px !important ;
@@ -1627,3 +1777,4 @@ padding: 8px 18px !important;
   -o-border-radius: 10px;
 }
 
+/* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
