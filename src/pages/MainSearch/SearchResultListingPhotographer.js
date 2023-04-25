@@ -1,13 +1,12 @@
 import FloristIcon from "../../components/Icons/FloristIcon"
 import SearchFilter from "../../components/MainSearch/SearchFilter"
 
-function SearchResultListing() {
+function SearchResultListingPhotographer() {
 
     return (
         <div className="container-fluid px-md-5  mt-3 custom-search">
 
-
-            <SearchFilter type={'venue'} />
+            <SearchFilter type={'photographer'} />
             <div className="row mb-3">
                 <div className="col-lg-12 col-md-12 col-sm-12 venue-top">
                     <ul className="d-flex p-0">
@@ -20,7 +19,7 @@ function SearchResultListing() {
                     </ul>
                 </div>
             </div>
-            <div className="row paddin-lr">
+            <div className="row">
                 <div>
                     <span className="d-flex lowest_price"><img src="/images/icons/down-arrow.svg" alt="arrow" /><p>Lowest to highest price</p></span>
                 </div>
@@ -29,14 +28,14 @@ function SearchResultListing() {
                 <div class="row  custom-border pt-4">
                     <div className="col-lg-3 col-md-12 col-sm-12" >
                         <div className="upper-section">
-                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100' />
+                            <img src="/images/wedding-girl.jpg" alt="wedding-girl" className='w-100' />
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-12 col-sm-12" >
-                        <h1>Lakeside Hotel</h1>
-                        <div className="row">
+                        <h1>Best Photography</h1>
+                        <div className="row p-0">
                             <div className="col-lg-4 col-md-12 col-sm-12" >
-                                <p class="card-text photo-below">Venue</p>
+                                <p class="card-text photo-below">Photographer</p>
                                 <div className="review">
                                     <ul className="d-flex p-0">
                                         <li>
@@ -55,16 +54,33 @@ function SearchResultListing() {
                                     <p className="per-hour-price">$3,000 for 5 hours</p>
                                 </div>
                                 <div className="include-custom">
-                                    <p className="include-link">INCLUDED</p>
+                                    <p className="special-link">INCLUDED</p>
                                     <ul className="p-0">
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Ceremony</p>
+                                            <p className="per-hour">Video coverage</p>
                                         </li>
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Reception</p>
+                                            <p className="per-hour"> Photo album</p>
                                         </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Raw,unedited photos</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Same day prints</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Highlight film</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Online gallery</p>
+                                        </li>
+
                                     </ul>
 
                                 </div>
@@ -103,20 +119,19 @@ function SearchResultListing() {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="row paddin-lr p-2 ">
                 <div class="row  custom-border pt-4">
                     <div className="col-lg-3 col-md-12 col-sm-12" >
                         <div className="upper-section">
-                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100' />
+                            <img src="/images/wedding-girl.jpg" alt="wedding-girl" className='w-100' />
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-12 col-sm-12" >
-                        <h1>Lakeside Hotel</h1>
-                        <div className="row">
+                        <h1>Best Photography</h1>
+                        <div className="row p-0">
                             <div className="col-lg-4 col-md-12 col-sm-12" >
-                                <p class="card-text photo-below">Venue</p>
+                                <p class="card-text photo-below">Photographer</p>
                                 <div className="review">
                                     <ul className="d-flex p-0">
                                         <li>
@@ -135,16 +150,33 @@ function SearchResultListing() {
                                     <p className="per-hour-price">$3,000 for 5 hours</p>
                                 </div>
                                 <div className="include-custom">
-                                    <p className="include-link">INCLUDED</p>
+                                    <p className="special-link">INCLUDED</p>
                                     <ul className="p-0">
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Ceremony</p>
+                                            <p className="per-hour">Video coverage</p>
                                         </li>
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Reception</p>
+                                            <p className="per-hour"> Photo album</p>
                                         </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Raw,unedited photos</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Same day prints</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Highlight film</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Online gallery</p>
+                                        </li>
+
                                     </ul>
 
                                 </div>
@@ -183,20 +215,19 @@ function SearchResultListing() {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="row paddin-lr p-2 ">
-                <div class="row custom-border pt-4">
+                <div class="row  custom-border pt-4">
                     <div className="col-lg-3 col-md-12 col-sm-12" >
                         <div className="upper-section">
-                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100' />
+                            <img src="/images/wedding-girl.jpg" alt="wedding-girl" className='w-100' />
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-12 col-sm-12" >
-                        <h1>Lakeside Hotel</h1>
-                        <div className="row">
+                        <h1>Best Photography</h1>
+                        <div className="row p-0">
                             <div className="col-lg-4 col-md-12 col-sm-12" >
-                                <p class="card-text photo-below">Venue</p>
+                                <p class="card-text photo-below">Photographer</p>
                                 <div className="review">
                                     <ul className="d-flex p-0">
                                         <li>
@@ -215,16 +246,33 @@ function SearchResultListing() {
                                     <p className="per-hour-price">$3,000 for 5 hours</p>
                                 </div>
                                 <div className="include-custom">
-                                    <p className="include-link">INCLUDED</p>
+                                    <p className="special-link">INCLUDED</p>
                                     <ul className="p-0">
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Ceremony</p>
+                                            <p className="per-hour">Video coverage</p>
                                         </li>
                                         <li className="d-flex">
                                             <img src="/images/icons/Tick.svg" alt="tick" />
-                                            <p className="per-hour">Reception</p>
+                                            <p className="per-hour"> Photo album</p>
                                         </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Raw,unedited photos</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Same day prints</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Highlight film</p>
+                                        </li>
+                                        <li className="d-flex">
+                                            <img src="/images/icons/Tick.svg" alt="tick" />
+                                            <p className="per-hour">Online gallery</p>
+                                        </li>
+
                                     </ul>
 
                                 </div>
@@ -263,12 +311,10 @@ function SearchResultListing() {
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div>
 
     )
 }
-export default SearchResultListing
-
+export default SearchResultListingPhotographer

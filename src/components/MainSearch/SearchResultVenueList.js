@@ -1,25 +1,23 @@
-import FloristIcon from "../../components/Icons/FloristIcon"
-import SearchFilter from "../../components/MainSearch/SearchFilter"
 
-function SearchResultListing() {
 
+import React from 'react';
+import SearchFilter from './SearchFilter';
+import ResultTab from './ResultTab';
+function SearchResultVenueList(props) {
+    const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
+    const getOfferProps = {
+        activePage,
+        setActivePage,
+        searchType,
+        setSearchType,
+        resultType,
+        setResultType
+    }
     return (
-        <div className="container-fluid px-md-5  mt-3 custom-search">
+        <>
+            <ResultTab {...getOfferProps} />
 
 
-            <SearchFilter type={'venue'} />
-            <div className="row mb-3">
-                <div className="col-lg-12 col-md-12 col-sm-12 venue-top">
-                    <ul className="d-flex p-0">
-                        <li class="list_info"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
-                            <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#505267" />
-                        </svg><span className="map-custom">Map</span></li>
-                        <li class="list_info active"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
-                            <path d="M0.5 6H2.5V4H0.5V6ZM0.5 10H2.5V8H0.5V10ZM0.5 2H2.5V0H0.5V2ZM4.5 6H18.5V4H4.5V6ZM4.5 10H18.5V8H4.5V10ZM4.5 0V2H18.5V0H4.5Z" fill="#505267" />
-                        </svg><span className="map-custom">List View</span></li>
-                    </ul>
-                </div>
-            </div>
             <div className="row paddin-lr">
                 <div>
                     <span className="d-flex lowest_price"><img src="/images/icons/down-arrow.svg" alt="arrow" /><p>Lowest to highest price</p></span>
@@ -172,7 +170,6 @@ function SearchResultListing() {
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 p-0 text-end" >
                                 <button type="button" class="btn btn-outline-secondary">Add to cart</button>
@@ -263,12 +260,10 @@ function SearchResultListing() {
                         </div>
                     </div>
                 </div>
-
             </div>
-
-        </div>
+        </>
 
     )
 }
-export default SearchResultListing
+export default SearchResultVenueList
 

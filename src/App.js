@@ -1,10 +1,8 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch, MainSearchResult, MainSearchResultPhotographer, MainSearchResultFlorist, SearchResultListing } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
-import { FiArrowLeftCircle } from "react-icons/fi";
-import { WiDayThunderstorm } from "react-icons/wi";
 
 function App() {
   const [cart, setCart] = React.useState([])
@@ -23,10 +21,7 @@ function App() {
           <Route exact path="/photographer" element={<PhotographerDetail {...gettingCartProps} />} />
           <Route exact path="/venue" element={<VenueDetail {...gettingCartProps} />} />
           <Route exact path="/main-search" element={<MainSearch />} />
-          <Route exact path="/search-result-venue" element={<MainSearchResult />} />
-          <Route exact path="/search-result-photographer" element={<MainSearchResultPhotographer />} />
-          <Route exact path="/search-result-florist" element={<MainSearchResultFlorist />} />
-          <Route exact path="/search-result-listing" element={<SearchResultListing />} />
+          <Route exact path="/booking-request" element={<BookingRequest />} />
         </Routes >
       </div>
     </Layout>

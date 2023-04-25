@@ -10,6 +10,11 @@ import SearchResultVenueMap from './SearchResultVenueMap.js';
 import SearchResultPhotographerMap from './SearchResultPhotographerMap.js';
 import SearchResultFloristMap from './SearchResultFloristMap.js';
 import { BsClock } from 'react-icons/bs';
+import MainSearchResult from '../../pages/MainSearchResult.js';
+import TimePicker from 'react-time-picker';
+import 'react-time-picker/dist/TimePicker.css'
+import 'react-clock/dist/Clock.css'
+import 'react-clock/dist/Clock.css'
 
 const SearchFilter = (props) => {
 
@@ -74,6 +79,7 @@ const SearchFilter = (props) => {
                                     <span className='d-flex date-pick-custom'>
                                         <span class="resposive-hide hide_symbol">|</span>
                                         <DatePicker />
+
                                     </span>
                                 </div>
                             </div>
@@ -130,16 +136,8 @@ const SearchFilter = (props) => {
                 </div>
             </form>
 
+            <MainSearchResult {...getOfferProps} />
 
-            {searchType && activePage === 'venue' &&
-                <SearchResultVenueMap {...getOfferProps} />
-            }
-            {searchType && activePage === 'photographer' &&
-                <SearchResultPhotographerMap {...getOfferProps} />
-            }
-            {searchType && activePage === 'florist' &&
-                <SearchResultFloristMap {...getOfferProps} />
-            }
         </>
     )
 }
