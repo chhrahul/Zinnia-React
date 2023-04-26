@@ -727,9 +727,6 @@ p {
   color: #00767c !important;
 }
 
-.row.custom-row {
-  /* min-height: 52rem !important; */
-}
 
 .m-b-custom {
   margin-bottom: 31rem;
@@ -743,6 +740,46 @@ p {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
+
+/* Payment  CSS*/
+.custom-payment{
+  width:95% !important;
+}
+.custom-payment-below{
+  width:75% !important;
+}
+.upper-text-custom{
+  font-size:14px !important;
+}
+.check-custom{
+  padding: 0px 0px 0px 30px !important;
+}
+.custom-afterpay{
+  padding: 0px 0px 0px 15px !important;
+}
+.modal-custom.modal-footer{
+  border:none !important;
+}
+.modal-custom.modal-header{
+  border:none !important;
+}
+.modal-custom a{
+  color: #00767C!important;
+}
+.account-button{
+  width:87% !important;
+  padding: 0px 4px !important;
+  height: 36px !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  border-radius: 4px !important;
+}
+.custom-right-content{
+margin-top:50px !important;
+}
+
+
+/* Payment closed CSS*/
 
 /* Checkout CSS*/
 .custom-availabilty{
@@ -1211,6 +1248,10 @@ select {
 }
 
 @media screen and (max-width: 320px) {
+
+  .custom-payment-below {
+    width: 95% !important;
+}
   p.float-right {
     float: left !important;
   }
@@ -1586,6 +1627,10 @@ min-height: 100vh !important;
 }
 
 @media screen and (max-width: 991px) {
+
+  .custom-payment-below {
+    width: 95% !important;
+}
   .col-6.delete-custom {
     text-align: center!important;
   }

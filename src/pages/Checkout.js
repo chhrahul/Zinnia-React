@@ -10,7 +10,7 @@ function Checkout() {
                     </p>
                     <div className="row paddin-lr-0 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100' />
+                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
@@ -36,7 +36,7 @@ function Checkout() {
                     </div>
                     <div className="row paddin-lr-0 mt-2 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100' />
+                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
@@ -61,7 +61,7 @@ function Checkout() {
                     </div>
                     <div className="row mt-2 paddin-lr-0 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/florist-cutting.jpg" alt="flower-cutting" className='w-100' />
+                            <img src="/images/florist-cutting.jpg" alt="flower-cutting" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
