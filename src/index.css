@@ -40,11 +40,11 @@ code {
 }
 
 .nav-bar-img {
-  width: 200px !important;
+  max-width: 200px !important;
 }
 
 .main-nav {
-  height: 72px;
+  /* height: 72px; */
 
   background: #ffffff;
 
@@ -394,6 +394,9 @@ input#budget {
   color: #00767c;
 }
 .text-cyan-color{
+  color: #00767c !important;
+}
+.text-cyan-color #navbarScrollingDropdown{
   color: #00767c !important;
 }
 
@@ -1775,6 +1778,17 @@ padding: 8px 18px !important;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+.cart-icon{
+  margin-right: 10px !important;
+}
+.navbar-collapse {
+
+    flex-grow: 0 !important;
+
+}
+span.color-cyan {
+    overflow-wrap: anywhere;
 }
 
 /* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */

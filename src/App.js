@@ -6,9 +6,12 @@ import Layout from "./components/Layout";
 
 function App() {
   const [cart, setCart] = React.useState([])
+  const [activeNav, setActiveNav] = React.useState('dashboard')
   const gettingCartProps = {
     cart,
-    setCart
+    setCart,
+    activeNav,
+    setActiveNav
   }
   return (
     <Layout {...gettingCartProps}>
