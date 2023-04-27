@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
+import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 export default function CustomSlider(props) {
   const { type } = props
   console.log(type)
@@ -11,6 +12,8 @@ export default function CustomSlider(props) {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <MdArrowForwardIos color={'black'} />,
+    prevArrow: <MdArrowBackIosNew color={'black'} />,
     responsive: [
       {
         breakpoint: 1024,
@@ -73,3 +76,5 @@ export default function CustomSlider(props) {
     </Slider>
   );
 }
+
+

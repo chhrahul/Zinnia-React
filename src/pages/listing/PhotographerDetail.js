@@ -7,13 +7,17 @@ import ContactDetail from '../../components/Listing/ContactDetail';
 import OfferIncludeList from '../../components/Listing/OfferIncludeList';
 
 function PhotographerDetail(props) {
-    const { addToCart, cart, setCart } = props
-    const prodid = 2
-    var added = cart.filter(item => item.id === prodid)
-    React.useEffect(() => {
-        localStorage.setItem('items', JSON.stringify(cart));
+    const { addToCart, cart, setCart, type } = props
+    console.log('type', type)
 
-    }, [cart]);
+    const prodid = 2
+    var added = ''
+    // var added = cart.filter(item => item.id === prodid)
+    // React.useEffect(() => {
+    //     localStorage.setItem('items', JSON.stringify(cart));
+
+    // }, [cart]);
+
 
     const handles = [
         {
@@ -101,15 +105,19 @@ function PhotographerDetail(props) {
                         </div>
                     </div>
                 </div>
-                <div className='row paddin-lr mt-5'>
-                    <div className='col-md-2 pl-0'>
-                        {added.length > 0 ?
-                            <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
-                            :
-                            <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
-                        }
+                {type !== 'vender' ?
+                    <div className='row paddin-lr mt-5'>
+                        <div className='col-md-2 pl-0'>
+
+                            {added.length > 0 ?
+                                <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
+                                :
+                                <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
+                            }
+
+                        </div>
                     </div>
-                </div>
+                    : ""}
 
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-6 pl-0'>

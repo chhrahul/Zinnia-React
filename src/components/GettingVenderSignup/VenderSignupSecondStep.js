@@ -6,7 +6,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
 function VenderSignupSecondStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, clickedApart,
-        setClickedApart } = props
+        setClickedApart, type } = props
     const formik = useFormik({
         initialValues: {
             businessName: gettingVenderSignupDetails.businessName,
@@ -83,6 +83,7 @@ function VenderSignupSecondStep(props) {
 
             }
             SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
+            console.log(gettingVenderSignupDetails)
             if (step >= 8) return
             setStep(step + 1)
 
@@ -96,13 +97,15 @@ function VenderSignupSecondStep(props) {
     return (
         <span className='px-0-'>
             <form onSubmit={formik.handleSubmit} id="form-data">
-                <p>
-                    <span className="text-danger"> 1 of 4 </span> Tell us about your business
-                </p>
-                <h1>
-                    We want to know more about you!
-                </h1>
-                <p>Add your information to get started. </p>
+                {type !== 'edit' && <>
+                    <p>
+                        <span className="text-danger"> 1 of 4 </span> Tell us about your business
+                    </p>
+                    <h1>
+                        We want to know more about you!
+                    </h1>
+                    <p>Add your information to get started. </p>
+                </>}
                 <div className="row second-step">
                     <div className="mb-3">
                         <label htmlFor="bussiness" className={formik.touched.businessName && formik.errors.businessName ? 'error-form-label form-label' : 'form-label'}>Your business name<span className="text-danger">*</span></label>

@@ -2,10 +2,11 @@ import * as React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDropzone } from 'react-dropzone'
+import { BsInfoCircle } from 'react-icons/bs';
 
 function VenderSignupFourthStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, files,
-        setFiles } = props
+        setFiles, type } = props
 
     const gettingVenderProps = {
         handleInputGettingVender,
@@ -36,16 +37,20 @@ function VenderSignupFourthStep(props) {
 
     return (
         <span className='px-0'>
-            <form onSubmit={formik.handleSubmit} id="form-data">
-                <p>
-                    <span className="text-danger"> 3 of 4 </span> Show customers your work!
-                </p>
-                <h1>
-                    Let’s add some photos!
-                </h1>
-                <p>
-                    Get people excited to see your work! You’ll need to add at least 3 photos to continue.
-                </p>
+            <form onSubmit={formik.handleSubmit} id="form-datad">
+                {type !== 'edit' &&
+                    <>
+                        <p>
+                            <span className="text-danger"> 3 of 4 </span> Show customers your work!
+                        </p>
+                        <h1>
+                            Let’s add some photos!
+                        </h1>
+                        <p>
+                            Get people excited to see your work! You’ll need to add at least 3 photos to continue.
+                        </p>
+                    </>
+                }
                 <MyDropzone {...handleImages} />
             </form>
 
@@ -188,7 +193,7 @@ function MyDropzone(props) {
 
     return (
         <>
-            <div {...getRootProps({ className: 'dropzone', style })} className='mt-5'>
+            <div {...getRootProps({ className: 'dropzone', style })} >
                 <input {...getInputProps()} />
                 <img src="/images/icons/img-place.svg" alt="" className="mb-3" />
                 <img src="/images/icons/button.svg" alt="" className="mb-3" />
@@ -196,8 +201,8 @@ function MyDropzone(props) {
                 <p>JPG, PNG, or TIFF. 2:3 ratio recommended</p>
 
             </div>
-
-            <div className="alert alert-danger alert-files mt-3" style={files.length < 3 ? { display: 'block' } : { display: 'none' }}> You’ll need to add at least 3 photos to continue. </div>
+            {isDragReject && <p className='mt-3 text-danger'><BsInfoCircle /> Invalid file format</p>}
+            <div className="alert alert-danger alert-files mt-3" style={files.length && files.length < 3 ? { display: 'block' } : { display: 'none' }}> You’ll need to add at least 3 photos to continue. </div>
             <div className="row mt-2 mb-5">
                 {thumbs.length > 0 ? <p className="uploaded-text mt-2 mb-0">Uploaded photos</p> : ""}
                 {thumbs}

@@ -13,7 +13,7 @@ function CheckoutAvailability() {
                     <p>Delete this from your order to continue or <a class="" href="#">start a new search.</a></p>
                     <div className="row paddin-lr-0 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100' />
+                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
@@ -42,7 +42,7 @@ function CheckoutAvailability() {
                     </p>
                     <div className="row paddin-lr-0 mt-2 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100' />
+                            <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
@@ -67,7 +67,7 @@ function CheckoutAvailability() {
                     </div>
                     <div className="row mt-2 paddin-lr-0 checkout-box-border">
                         <div className="col-md-4 p-0">
-                            <img src="/images/florist-cutting.jpg" alt="flower-cutting" className='w-100' />
+                            <img src="/images/florist-cutting.jpg" alt="flower-cutting" className='w-100 h-100' />
                         </div>
                         <div className="col-md-8">
                             <div class="row">
@@ -117,10 +117,10 @@ function CheckoutAvailability() {
                             <p className="float-right m-0">$9,650.00</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Total</p>
+                            <p class="m-0 text-black">Total</p>
                         </div>
                         <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
+                            <p className="text-black float-right m-0">$9,650.00</p>
                         </div>
                     </div>
                     <div className="row">

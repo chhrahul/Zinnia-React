@@ -11,7 +11,9 @@ function SearchResultVenueMap(props) {
         searchType,
         setSearchType,
         resultType,
-        setResultType
+        setResultType,
+        'first': 'Map',
+        'second': 'Listing',
     }
     return (
         <>

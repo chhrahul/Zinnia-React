@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 function VenderSignupThirdStep(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, type } = props
 
     const gettingVenderProps = {
         handleInputGettingVender,
@@ -13,7 +13,8 @@ function VenderSignupThirdStep(props) {
         handleSelectSignupType,
         step,
         setStep,
-        useFormik
+        useFormik,
+        type
 
     }
     return (
@@ -30,7 +31,7 @@ function VenderSignupThirdStep(props) {
 
 
 function Florist(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik, type } = props
     const formik = useFormik({
         initialValues: {
             offering: gettingVenderSignupDetails.offering,
@@ -71,16 +72,17 @@ function Florist(props) {
     return (
         <>
             <form onSubmit={formik.handleSubmit} id="form-data">
-                <p>
-                    <span className="text-danger"> 2 of 4 </span> What are you selling?
-                </p>
-                <h1>
-                    Tell us about your flower shop offerings
-                </h1>
-                <p>
-                    Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
-                </p>
-
+                {type !== 'edit' && <>
+                    <p>
+                        <span className="text-danger"> 2 of 4 </span> What are you selling?
+                    </p>
+                    <h1>
+                        Tell us about your flower shop offerings
+                    </h1>
+                    <p>
+                        Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
+                    </p>
+                </>}
                 <div className="mb-3">
                     <label htmlFor="select-opt-type" className={formik.touched.offering && formik.errors.offering ? 'error-form-label form-label select-account' : 'form-label select-account'} >How far are you willing to travel from your business address?</label>
                     <select className={formik.touched.offering && formik.errors.offering ? 'error-input form-select mb-4 ' : 'form-select mb-4'} aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
@@ -224,7 +226,7 @@ function Florist(props) {
 }
 
 function Venue(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik, type } = props
     const formik = useFormik({
         initialValues: {
             package_type: gettingVenderSignupDetails.package_type,
@@ -261,16 +263,17 @@ function Venue(props) {
     return (
         <>
             <form onSubmit={formik.handleSubmit} id="form-data">
-                <p>
-                    <span className="text-danger"> 2 of 4 </span> What are you selling?!
-                </p>
-                <h1>
-                    Tell us about your venue
-                </h1>
-                <p>
-                    Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
-                </p>
-
+                {type !== 'edit' && <>
+                    <p>
+                        <span className="text-danger"> 2 of 4 </span> What are you selling?!
+                    </p>
+                    <h1>
+                        Tell us about your venue
+                    </h1>
+                    <p>
+                        Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
+                    </p>
+                </>}
                 <div className="mb-3">
                     <label htmlFor="select-opt-type" className="form-label select-account">Package type</label>
                     <select className="form-select mb-4" aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
@@ -385,7 +388,7 @@ function Venue(props) {
 }
 
 function Photographer(props) {
-    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik } = props
+    const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, useFormik, type } = props
     const formik = useFormik({
         initialValues: {
             photoOffering: gettingVenderSignupDetails.photoOffering,
@@ -425,9 +428,10 @@ function Photographer(props) {
                 'sameDayPrints': values.sameDayPrints,
                 'otherDelivery': values.otherDelivery,
 
-
             }
+
             SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
+            console.log(gettingVenderSignupDetails)
             if (step >= 8) return
             setStep(step + 1)
         },
@@ -436,16 +440,17 @@ function Photographer(props) {
     return (
         <>
             <form onSubmit={formik.handleSubmit} id="form-data">
-                <p>
-                    <span className="text-danger"> 2 of 4 </span> What are you selling?!
-                </p>
-                <h1>
-                    Tell us about your photography
-                </h1>
-                <p>
-                    Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
-                </p>
-
+                {type !== 'edit' && <>
+                    <p>
+                        <span className="text-danger"> 2 of 4 </span> What are you selling?!
+                    </p>
+                    <h1>
+                        Tell us about your photography
+                    </h1>
+                    <p>
+                        Tell us about your superpower! Don’t worry you’ll be able to add photos in the next step
+                    </p>
+                </>}
                 <div className="mb-3">
                     <label htmlFor="select-opt-type" className="form-label select-account">Photoshoot type <span className='text-danger'>*</span> </label>
                     <select className="form-select mb-4" aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
