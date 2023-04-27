@@ -23,6 +23,7 @@ const MyModal = (props) => {
         </Modal.Header>
         <Modal.Body className='mx-5'> 
           <h5>Have we seen you here before?</h5>
+          <form id="loginForm"> 
           <div class="mb-3">
           <label for="Email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" placeholder="Csmith@gmail.com" />
@@ -30,10 +31,11 @@ const MyModal = (props) => {
           <div>
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" placeholder="******" />
-          </div></Modal.Body>
+          </div>
+          </form></Modal.Body>
         <Modal.Footer className='modal-custom mx-5'>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+          <Button variant="secondary"  type="submit" form="LoginForm">
+            Login
           </Button>
         </Modal.Footer>
         <div class="mb-3 modal-custom mx-5">

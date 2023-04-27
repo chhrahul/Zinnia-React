@@ -1,7 +1,14 @@
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import DatePicker from '../components/Datepicker.js'
+
+
 function Checkout() {
 
     return (
         <div className="container-fluid px-md-5  mt-3 custom-search">
+
             <div className="row paddin-lr">
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <h1 className="mt-4">Woohoo, booking time!</h1>
@@ -118,7 +125,7 @@ function Checkout() {
                         </div>
                     </div>
                     <div className="row">
-                     
+
                         <div className="p-0">
                             <p className="p-0">
                                 Or 4 payments of $2520.70 with <img src="/images/icons/afterpay.png" alt="payafter" />
@@ -126,7 +133,8 @@ function Checkout() {
                             </p>
                         </div>
                         <div className="row p-0">
-                            <button type="button" class="btn btn-secondary btn-lg mt-2 pay-custom-checkout">Checkout</button>
+                            <ChangeDateModal title={'Checkout'} />
+                            {/* <button type="button" class="btn btn-secondary btn-lg mt-2 pay-custom-checkout">Checkout</button> */}
                         </div>
                         <div class="form-check py-4">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
@@ -146,3 +154,41 @@ function Checkout() {
     )
 }
 export default Checkout
+
+const ChangeDateModal = (props) => {
+
+    const { title } = props
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <>
+            <Button variant="secondary" onClick={handleShow}>
+                {title}
+            </Button>
+            <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Header closeButton className='modal-custom'>
+                    <Modal.Title></Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='mx-5'>
+                    <h5>Change the date? </h5>
+                    <p className="upper-text-custom">By changing the date you might lose some vendors, based on availability. We’ll do the best we can to see if all vendors are available on your new date. </p>
+                    <form id="changedateForm">
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <DatePicker />
+                        </div>
+                    </form></Modal.Body>
+                <Modal.Footer className='modal-custom mx-5'>
+                    <Button variant="btn btn-outline-secondary" type="submit" form="changedateForm">
+                        Cancel
+                    </Button>
+                    <Button variant="secondary" type="submit" form="changedateForm">
+                        Change Date
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    )
+}
