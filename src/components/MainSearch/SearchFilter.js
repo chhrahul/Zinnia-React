@@ -74,7 +74,7 @@ const SearchFilter = (props) => {
                                     </select>
                                 </span>
                             </div>
-                            <div className='col-lg col-sm-12 col-md-12 mt-1 below_border_style'>
+                            <div className='col-lg col-sm-12 col-md-12 mt-1 below_border_style outer-datepick'>
                                 <div class="input-group my-date-picker-parent form-control">
                                     <span className='d-flex date-pick-custom'>
                                         <span class="resposive-hide hide_symbol">|</span>

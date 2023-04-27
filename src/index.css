@@ -393,7 +393,8 @@ input#budget {
   background: #00767c;
   color: #00767c;
 }
-.text-cyan-color{
+
+.text-cyan-color {
   color: #00767c !important;
 }
 
@@ -652,7 +653,8 @@ p {
   top: -3px;
   cursor: pointer !important;
 }
-.last-section{
+
+.last-section {
   background-color: #ACD9DC;
 
 }
@@ -741,70 +743,166 @@ p {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
+/* Invoices CSS*/
+.upper-part-custom h3 {
+  margin-top: 50px !important;
+  margin-bottom: 14px !important;
+}
+
+.download-btn {
+  color: #BAB8B8 !important;
+  background-color: white !important;
+  border-radius: 8px !important;
+  border: 1px solid #BAB8B8 !important;
+  letter-spacing: 0.5px !important;
+  line-height: 20px !important;
+}
+
+.invoice-custom {
+  margin-top: 50px !important;
+}
+
+.invoice-custom th {
+  font-size: 14px !important;
+  font-family: 'Libre Baskerville' !important;
+  line-height: 20px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+}
+
+.invoice-custom td {
+  font-size: 14px !important;
+  font-family: 'Libre Baskerville' !important;
+  line-height: 20px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.25px !important;
+}
+
+.invoice-top-custom p {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 20px ! important;
+  letter-spacing: 0.5px !important;
+  margin-top: 50px !important;
+  margin-right: 5px;
+}
+
+.invoice-second-custom p {
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  line-height: 32px ! important;
+  letter-spacing: 0.5px !important;
+}
+
+.account-link-custom {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 20px ! important;
+  letter-spacing: 0.25px !important;
+  text-decoration: none;
+  color: #505267 !important;
+}
+button.btn.btn-btn.text-cyan-color.btn-lg.mb-0.p-0.fs-6 {
+  outline: none !important;
+}
+
+.email-border-custom {
+  border-top: 1px solid #00767C !important;
+}
+.cancel-btn{
+  height: 36px !important;
+  margin-top: 10px!important;
+  background: white !important;
+}
+
+
+
+/* Invoices  CSS */
+
 /* Payment  CSS*/
-.custom-payment{
-  width:95% !important;
+.routing-custom {
+  height: 40px !important;
 }
-.custom-payment-below{
-  width:75% !important;
+
+.custom-payment {
+  width: 95% !important;
 }
-.upper-text-custom{
-  font-size:14px !important;
+
+.custom-payment-below {
+  width: 75% !important;
 }
-.check-custom{
+
+.upper-text-custom {
+  font-size: 14px !important;
+}
+
+.check-custom {
   padding: 0px 0px 0px 30px !important;
 }
-.custom-afterpay{
+
+.custom-afterpay {
   padding: 0px 0px 0px 15px !important;
 }
-.modal-custom.modal-footer{
-  border:none !important;
+
+.modal-custom.modal-footer {
+  border: none !important;
 }
-.modal-custom.modal-header{
-  border:none !important;
+
+.modal-custom.modal-header {
+  border: none !important;
 }
-.modal-custom a{
-  color: #00767C!important;
+
+.modal-custom a {
+  color: #00767C !important;
 }
-.account-button{
-  width:87% !important;
+
+.account-button {
+  width: 87% !important;
   padding: 0px 4px !important;
   height: 36px !important;
   font-size: 16px !important;
   font-weight: normal !important;
   border-radius: 4px !important;
 }
-.custom-right-content{
-margin-top:50px !important;
+
+.custom-right-content {
+  margin-top: 50px !important;
 }
 
 
 /* Payment closed CSS*/
 
 /* Checkout CSS*/
-.custom-availabilty{
+.custom-availabilty {
   background: rgba(237, 71, 74, 0.05) !important;
-    width: 190px !important;
-    border-radius: 4px !important;
+  width: 190px !important;
+  border-radius: 4px !important;
 }
-.custom-availabilty img{
-  margin-right:5px !important;
+
+.custom-availabilty img {
+  margin-right: 5px !important;
 }
-.checkout-text-custom{
+
+.checkout-text-custom {
   font-size: 20px !important;
   color: #000000 !important;
   font-weight: 400 !important;
   line-height: 24px !important;
   letter-spacing: 0.15px !important;
 }
+
 .left-section {
   border: 1px solid #31A7AD;
   border-left: none;
   border-radius: 1px 4px 4px 1px !important;
 }
+
 .col-6.delete-custom {
   text-align: center !important;
 }
+
 /*Checkout CSS finish*/
 /* new csss */
 li.list_info.active {
@@ -824,10 +922,11 @@ li.list_info.active {
   letter-spacing: 0.1px !important;
   color: #505267 !important;
   padding: 16px 1px 8px 16px;
-  margin-bottom:0px !important;
+  margin-bottom: 0px !important;
 
 }
-.venue-address-custom{
+
+.venue-address-custom {
   font-weight: 400 !important;
   font-size: 10px !important;
   line-height: 24px !important;
@@ -836,16 +935,20 @@ li.list_info.active {
   width: 212px !important;
   text-transform: uppercase !important;
 }
+
 p.venue-address-custom.text-black-50 {
   color: black !important;
   text-transform: uppercase !important;
 }
-.custom-search a{
-color: #31A7AD;
+
+.custom-search a {
+  color: #31A7AD;
 }
-.checkout-list,.checkout-list-custom li{
-  line-height:36px !important;
-  
+
+.checkout-list,
+.checkout-list-custom li {
+  line-height: 36px !important;
+
 }
 
 .pay-custom {
@@ -856,16 +959,18 @@ color: #31A7AD;
   font-weight: 400 !important;
   line-height: 16px !important;
 }
-.pay-custom-checkout{
+
+.pay-custom-checkout {
   padding: 12px 16px !important;
   border-radius: 4px !important;
   font-size: 16px !important;
-  font-family:'Libre Baskerville'!important;
+  font-family: 'Libre Baskerville' !important;
   font-weight: 400 !important;
   line-height: 16px !important;
 
 
 }
+
 button.btn.btn-warning.btn-lg.mt-2.pay-custom.text-blue-50 {
   color: #253B80 !important;
 }
@@ -876,34 +981,38 @@ button.btn.btn-secondary.btn-lg.mt-2.pay-custom-checkout {
   border: 1px solid #BAB8B8;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
   font-weight: 600 !important;
-  line-height: 20px!important;
+  line-height: 20px !important;
   letter-spacing: 1.5px !important;
   font-size: 16px !important;
   font-style: normal;
 }
 
-.checkout-box-border{
+.checkout-box-border {
   border: 1px solid #31A7AD;
   border-radius: 4px 4px;
 }
-.venue-address-custom svg{
-  margin-right:5px;
+
+.venue-address-custom svg {
+  margin-right: 5px;
 }
-.venue-address-custom img{
-  margin-right:5px;
+
+.venue-address-custom img {
+  margin-right: 5px;
 }
 
 
-.checkout-list{
+.checkout-list {
   list-style: none;
   text-align: left;
   padding: 0;
 }
-.checkout-list-custom{
+
+.checkout-list-custom {
   padding: 0;
   float: right;
   list-style: none;
 }
+
 li.list_info {
   /* padding: 8px 19px; */
 }
@@ -960,8 +1069,9 @@ li.list_info.active path {
   font-size: 16px;
   line-height: 24px;
 }
-.include-custom-link{
-  column-count: 2!important;
+
+.include-custom-link {
+  column-count: 2 !important;
 }
 
 .country_part {
@@ -1251,18 +1361,20 @@ select {
 
   .custom-payment-below {
     width: 95% !important;
-}
+  }
+
   p.float-right {
     float: left !important;
   }
 
   .checkout-list-custom {
-    float: left!important;
+    float: left !important;
     text-align: left !important;
-}
-  .delete-custom img{
+  }
+
+  .delete-custom img {
     float: right !important;
-      }
+  }
 
   .heading_first {
     font-weight: 400;
@@ -1295,16 +1407,17 @@ select {
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  .map-custom{
-    display:none!important;
+
+  .map-custom {
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 640px) {
 
-  .delete-custom img{
+  .delete-custom img {
     float: right !important;
-      }
+  }
 
   .heading_first {
     font-size: 48px;
@@ -1333,9 +1446,10 @@ select {
 
 @media screen and (max-width: 778px) {
 
-  .delete-custom img{
-float: right !important;
+  .delete-custom img {
+    float: right !important;
   }
+
   .nav-col-5 {
     width: 50% !important;
   }
@@ -1359,6 +1473,18 @@ float: right !important;
   }
 } */
 @media screen and (max-width: 768px) {
+  input#Business-name {
+    width: 100% !important;
+  }
+
+  input#Ein-number {
+    width: 100% !important;
+  }
+
+  .payment-card {
+    margin-top: 10px !important;
+  }
+
   p.float-right {
     float: left !important;
   }
@@ -1422,8 +1548,9 @@ float: right !important;
   justify-content: center;
   align-items: center;
 }
-.mh-100{
-min-height: 100vh !important;
+
+.mh-100 {
+  min-height: 100vh !important;
 }
 
 #form-file-upload {
@@ -1627,19 +1754,28 @@ min-height: 100vh !important;
 }
 
 @media screen and (max-width: 991px) {
+  input#Business-name {
+    width: 100% !important;
+  }
+
+  input#Ein-number {
+    width: 100% !important;
+  }
 
   .custom-payment-below {
     width: 95% !important;
-}
+  }
+
   .col-6.delete-custom {
-    text-align: center!important;
+    text-align: center !important;
   }
 
   .checkout-list-custom {
-  float:left!important;
-  text-align: left !important;
+    float: left !important;
+    text-align: left !important;
 
-}
+  }
+
   .border_style {
     border: none !important;
     background-color: transparent !important;
@@ -1675,21 +1811,21 @@ img.contact-icon.contact-icon-2 {
   border: none !important;
 }
 
-.my-date-picker-parent .my-date-picker {
+.outer-datepick .my-date-picker-parent .my-date-picker {
   border: none !important;
   width: 80px;
 }
 
-.my-date-picker-parent {
+.outer-datepick .my-date-picker-parent {
   border: none !important;
   height: unset !important;
 }
 
-.my-date-picker::placeholder {
+.outer-datepick .my-date-picker::placeholder {
   color: black !important;
 }
 
-.my-date-picker-parent .react-datepicker__current-month {
+.outer-datepick .my-date-picker-parent .react-datepicker__current-month {
   margin-top: 0;
   font-weight: 400 !important;
   ;
@@ -1710,7 +1846,7 @@ img.contact-icon.contact-icon-2 {
   ;
 }
 
-.my-date-picker-parent .react-datepicker {
+.outer-datepick .my-date-picker-parent .react-datepicker {
   font-family: 'Libre Baskerville';
   font-size: 0.8rem;
   background-color: #fff;
@@ -1720,14 +1856,14 @@ img.contact-icon.contact-icon-2 {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.my-date-picker-parent .react-datepicker__header {
+.outer-datepick .my-date-picker-parent .react-datepicker__header {
   text-align: center;
   padding: 8px 0;
   border: none;
   background-color: white;
 }
 
-.my-date-picker-parent .react-datepicker__day-names {
+.outer-datepick .my-date-picker-parent .react-datepicker__day-names {
   margin-bottom: -8px;
   color: #31A7AD !important;
   font-weight: 400;
@@ -1735,21 +1871,21 @@ img.contact-icon.contact-icon-2 {
   font-style: normal;
 }
 
-.my-date-picker-parent .react-datepicker__day-name {
+.outer-datepick .my-date-picker-parent .react-datepicker__day-name {
   display: inline-block;
   text-align: center;
   line-height: 28px;
 }
 
-.my-date-picker-parent .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
+.outer-datepick .my-date-picker-parent .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
   display: none !important;
 }
 
-.my-date-picker-parent .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle {
+.outer-datepick .my-date-picker-parent .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle {
   display: none !important;
 }
 
-.react-datepicker__day-name {
+.outer-datepick .react-datepicker__day-name {
   display: inline-block !important;
   /* width: 3.7rem !important; */
   line-height: 1.7rem !important;
@@ -1785,35 +1921,54 @@ input[type="time"]:hover:before {
   content: '';
 }
 
-input#myDatePicker {
+#changedateForm input#myDatePicker {
+  width: 100% !important;
+  padding: 4px 4px;
+  border: 2px solid whitesmoke;
+  border-radius: 4px !important;
+  outline: none !important;
+}
+
+.outer-datepick input#myDatePicker {
   outline: none;
 }
-.padding-lr-0{
-  padding-left:0px !important ;
-  padding-right:0px !important ;
-}
-.row-p-0 *{
-   padding-left:0px !important ;
-  padding-right:0px !important ;
-}
-.bold-p{
 
-font-weight: 400 !important;
-  font-size: 16px !important;
-/* line-height: 24px !important; */
-color: #000000 !important;
+#changedateForm img {
+  display: none !important;
 }
-.font-14{
+
+
+.padding-lr-0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.row-p-0 * {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.bold-p {
+
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  /* line-height: 24px !important; */
+  color: #000000 !important;
+}
+
+.font-14 {
   font-size: 14px !important;
 }
-.confirm-btn{
-background: #505267 !important;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2) !important;
-border-radius: 4px !important;
-padding: 8px 18px !important;
+
+.confirm-btn {
+  background: #505267 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+  padding: 8px 18px !important;
 
 }
-.bordered-box{
+
+.bordered-box {
   border: 2px solid #00767C !important;
   border-radius: 10px;
   -webkit-border-radius: 10px;
