@@ -1868,5 +1868,21 @@ span.color-cyan {
 color:#FFFFFF !important;
 background-color: #00767C !important;
 }
+.TimeInput-header-1 {
+  background-color: #00767C !important;
+}
+
+.MuiInput-underline-7:before {
+  border:none !important;
+  
+  
+}
+
+.MuiInput-underline-7:before {
+    font-size: 1rem !important;
+  
+}
+
+
 
 /* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */

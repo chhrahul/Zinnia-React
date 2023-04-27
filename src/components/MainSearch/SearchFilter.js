@@ -15,6 +15,7 @@ import TimePicker from 'react-time-picker';
 import 'react-time-picker/dist/TimePicker.css'
 import 'react-clock/dist/Clock.css'
 import 'react-clock/dist/Clock.css'
+import TimeInput from 'material-ui-time-picker/lib/TimeInput.js';
 
 const SearchFilter = (props) => {
 
@@ -87,12 +88,7 @@ const SearchFilter = (props) => {
                                 <span className='d-flex'>
                                     <span class="resposive-hide hide_symbol custom-space partition-symbol">|</span>
                                     <img src="/images/icons/Access_time.svg" alt="time" style={{ 'margin-right': 10 }} />
-                                    <select class="form-select country_part" aria-label="Default select example">
-                                        <option selected>Any time</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
+                                    <TimeInput mode='12h' selectColor="red" />
                                 </span>
                             </div>
                             {type === 'venue' &&
@@ -129,7 +125,7 @@ const SearchFilter = (props) => {
                                 <button type="button" class="btn btn-outline-secondary   ">Cancel</button>
                             </span>
                             <span className='col-lg-12  p-0 '>
-                                <button type="submit" className="btn btn-secondary h-100 p-1 search-btn-filter"><img src="/images/icons/search.png" alt="search" />Search</button>
+                                <button type="submit" className="btn btn-secondary h-100 p-1"><img src="/images/icons/search.png" alt="search" />Search</button>
                             </span>
                         </div>
                     </div>
