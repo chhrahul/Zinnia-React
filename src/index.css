@@ -399,7 +399,8 @@ input#budget {
 .text-cyan-color {
   color: #00767c !important;
 }
-.text-cyan-color #navbarScrollingDropdown{
+
+.text-cyan-color #navbarScrollingDropdown {
   color: #00767c !important;
 }
 
@@ -723,14 +724,17 @@ p {
     margin-top: 10px;
   }
 }
+
 .slick-prev {
-    left: -25px !important;
-    z-index: 99 !important;
+  left: -25px !important;
+  z-index: 99 !important;
 }
+
 .slick-next {
-    right: -25px !important;
-    z-index: 99 !important;
+  right: -25px !important;
+  z-index: 99 !important;
 }
+
 .slick-next:before {
 
   color: #00767c !important;
@@ -755,7 +759,90 @@ p {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
+/* Couple Dashboard CSS*/
+.custom-ptext{
+  font-size:10px !important;
+  line-height:16px !important;
+}
+.card-save-custom {
+  padding: 12px 16px !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  font-family: 'Libre Baskerville' !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+}
+.modal-custom.modal-footer.card-detail {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.border-custom {
+  border-right: none !important;
+}
+.couple-card-custom h5{
+  font-size:14px !important;
+  font-weight:700 !important;
+  font-style:normal;
+  letter-spacing:0.1px !important;
+}
+.couple-card-custom {
+  padding-top: 10px !important;
+  border: 1px solid #00767C !important;
+}
+
+.couple-card-custom img {
+  border-radius: 16px !important;
+}
+
+.cancel-danger-btn {
+  text-decoration: underline !important;
+  outline: none !important;
+}
+
+.cance-modal-footer {
+  text-align: left !important;
+  justify-content: left !important;
+}
+
+.custom-info {
+  font-size: 14px !important;
+  font-weight: 400;
+  color: black !important;
+  margin-right: 10px;
+}
+
+.custom-below-info {
+  margin-bottom: 28px !important;
+}
+
+input#wedding-guest {
+  padding-left: 28px !important;
+}
+
+input#wedding-location {
+  padding-left: 28px !important;
+}
+
+input#wedding-date {
+  padding-left: 28px !important;
+}
+
+span#basic-addon6 {
+  background-color: white !important;
+  border-left: none !important;
+  border-top-left-radius: unset !important;
+  border-bottom-left-radius: unset !important;
+}
+span.d-flex.wedding-day-custom-top img{
+  margin-top: 30px !important;
+  margin-left: 10px !important;
+}
+/* Couple Dashboard CSS*/
 /* Invoices CSS*/
+.wedding-day-custom{
+  margin-top:50px !important;
+}
 .upper-part-custom h3 {
   margin-top: 50px !important;
   margin-bottom: 14px !important;
@@ -816,6 +903,7 @@ p {
   text-decoration: none;
   color: #505267 !important;
 }
+
 button.btn.btn-btn.text-cyan-color.btn-lg.mb-0.p-0.fs-6 {
   outline: none !important;
 }
@@ -823,9 +911,10 @@ button.btn.btn-btn.text-cyan-color.btn-lg.mb-0.p-0.fs-6 {
 .email-border-custom {
   border-top: 1px solid #00767C !important;
 }
-.cancel-btn{
+
+.cancel-btn {
   height: 36px !important;
-  margin-top: 10px!important;
+  margin-top: 10px !important;
   background: white !important;
 }
 
@@ -979,8 +1068,6 @@ p.venue-address-custom.text-black-50 {
   font-family: 'Libre Baskerville' !important;
   font-weight: 400 !important;
   line-height: 16px !important;
-
-
 }
 
 button.btn.btn-warning.btn-lg.mt-2.pay-custom.text-blue-50 {
@@ -1370,6 +1457,9 @@ select {
 }
 
 @media screen and (max-width: 320px) {
+  .below-card-size{
+    margin-top:10px !important;
+  }
 
   .custom-payment-below {
     width: 95% !important;
@@ -1426,6 +1516,9 @@ select {
 }
 
 @media screen and (max-width: 640px) {
+  .below-card-size{
+    margin-top:10px !important;
+  }
 
   .delete-custom img {
     float: right !important;
@@ -1457,18 +1550,20 @@ select {
 }
 
 @media screen and (max-width: 778px) {
-.slick-prev {
+  .slick-prev {
     left: 0px !important;
     z-index: 99 !important;
-    
-}
-.slick-next {
+
+  }
+
+  .slick-next {
     right: 0px !important;
     z-index: 99 !important;
-  
-}
-  .delete-custom img{
-float: right !important;
+
+  }
+
+  .delete-custom img {
+    float: right !important;
   }
 
   .nav-col-5 {
@@ -1494,6 +1589,9 @@ float: right !important;
   }
 } */
 @media screen and (max-width: 768px) {
+  .below-card-size{
+    margin-top:10px !important;
+  }
   input#Business-name {
     width: 100% !important;
   }
@@ -1731,13 +1829,15 @@ float: right !important;
   .slick-prev {
     left: 10px !important;
     z-index: 99 !important;
-    
-}
-.slick-next {
+
+  }
+
+  .slick-next {
     right: 10px !important;
     z-index: 99 !important;
-  
-}
+
+  }
+
   .heading_first {
     font-size: 48px;
     margin-top: 100px !important;
@@ -2007,35 +2107,39 @@ input[type="time"]:hover:before {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.cart-icon{
+
+.cart-icon {
   margin-right: 10px !important;
 }
+
 .navbar-collapse {
 
-    flex-grow: 0 !important;
+  flex-grow: 0 !important;
 
 }
+
 span.color-cyan {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
-.search-btn-filter:hover{
-color:#FFFFFF !important;
-background-color: #00767C !important;
+.search-btn-filter:hover {
+  color: #FFFFFF !important;
+  background-color: #00767C !important;
 }
+
 .TimeInput-header-1 {
   background-color: #00767C !important;
 }
 
 .MuiInput-underline-7:before {
-  border:none !important;
-  
-  
+  border: none !important;
+
+
 }
 
 .MuiInput-underline-7:before {
-    font-size: 1rem !important;
-  
+  font-size: 1rem !important;
+
 }
 
 

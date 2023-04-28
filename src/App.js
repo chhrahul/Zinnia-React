@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest, Checkout, CheckoutAvailability, BillingDetail, BillingConfirmation, Invoices, VenderAccountDetail, VenderBusinessDetail, PaymentInfo, PaymentDetail, Listing } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest, Checkout, CheckoutAvailability, BillingDetail, BillingConfirmation, Invoices, VenderAccountDetail, VenderBusinessDetail, PaymentInfo, PaymentDetail, Listing, CoupleDashboard, Account, LoginInfo, PersonalInfo, WeddingInfo, WeddingPayment } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
 import { Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
@@ -35,6 +35,12 @@ function App() {
           <Route exact path="/vender-business-detail" element={<VenderBusinessDetail />} />
           <Route exact path="/payment-info" element={<PaymentInfo />} />
           <Route exact path="/payment-detail" element={<PaymentDetail />} />
+          <Route exact path="/couple-dashboard" element={<CoupleDashboard />} />
+          <Route exact path="/account" element={<Account />} />
+          <Route exact path="/login-info" element={<LoginInfo />} />
+          <Route exact path="/personal-info" element={<PersonalInfo />} />
+          <Route exact path="/wedding-info" element={<WeddingInfo />} />
+          <Route exact path="/wedding-payment" element={<WeddingPayment />} />
         </Routes >
       </div>
     </Layout>
