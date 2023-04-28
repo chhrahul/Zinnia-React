@@ -88,7 +88,9 @@ const SearchFilter = (props) => {
                                 <span className='d-flex'>
                                     <span class="resposive-hide hide_symbol custom-space partition-symbol">|</span>
                                     <img src="/images/icons/Access_time.svg" alt="time" style={{ 'margin-right': 10 }} />
-                                    <TimeInput mode='12h' selectColor="red" />
+                                    <TimeInput mode='12h' colors={
+                                        { primary: 'red' }
+                                    } theme={'light'} />
                                 </span>
                             </div>
                             {type === 'venue' &&
@@ -124,7 +126,7 @@ const SearchFilter = (props) => {
                             <span className='col cancel_custom text-end '>
                                 <button type="button" class="btn btn-outline-secondary   ">Cancel</button>
                             </span>
-                            <span className='col-lg-12  p-0 '>
+                            <span className='col  p-0 mx-auto'>
                                 <button type="submit" className="btn btn-secondary h-100 p-1"><img src="/images/icons/search.png" alt="search" />Search</button>
                             </span>
                         </div>
@@ -139,3 +141,4 @@ const SearchFilter = (props) => {
 }
 
 export default SearchFilter
+

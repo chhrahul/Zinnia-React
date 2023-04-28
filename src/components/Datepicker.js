@@ -41,6 +41,7 @@ class App extends Component {
           id="myDatePicker"
           placeholderText={'Any date'}
           minDate={new Date()}
+          autoComplete='off'
         />
       </>
 

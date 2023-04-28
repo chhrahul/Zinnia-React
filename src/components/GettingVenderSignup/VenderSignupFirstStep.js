@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Modal from 'react-bootstrap/Modal';
+import { Button } from 'react-bootstrap';
+import { MdTimelapse } from 'react-icons/md';
+import { RxCross1 } from 'react-icons/rx';
+
 
 function VenderSignupFirstStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails } = props
@@ -185,7 +190,7 @@ function VenderSignupFirstStep(props) {
                             name="check"
                             checked={formik.values.check ? true : false}
                         />
-                        <p className="form-check-label" htmlFor="exampleCheck1">I agree to the <a href="/">terms and conditions</a></p>
+                        <p className="form-check-label" htmlFor="exampleCheck1">I agree to the <TermAndConditionModal /></p>
 
                     </div>
                     {formik.touched.check && formik.errors.check ? (
@@ -198,3 +203,43 @@ function VenderSignupFirstStep(props) {
     )
 }
 export default VenderSignupFirstStep
+
+const TermAndConditionModal = () => {
+
+
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <>
+
+            <a href="javascript:void(0)" onClick={handleShow}>terms and conditions</a>
+            <Modal
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+                show={show}
+                onHide={handleClose}
+            >
+
+                <Modal.Title id="contained-modal-title-vcenter" className='text-center p-3'>
+                    Terms and conditions <span onClick={handleClose} className='float-right mx-2'><RxCross1 /></span>
+                </Modal.Title>
+
+                <Modal.Body>
+                    <p >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut enim ultricies, sagittis lacus in, dictum dolor. In egestas neque sed mi tempus feugiat. Ut vestibulum orci ut ante bibendum, eu elementum elit interdum. Pellentesque ultricies, ante vitae vulputate accumsan, diam risus accumsan magna, eget ullamcorper tortor nunc vitae metus. Duis ut porttitor nisi. Vivamus scelerisque arcu eget eros feugiat, vel facilisis mi faucibus. Ut porta gravida turpis eu pharetra. Vivamus quis sagittis neque, at ultricies tortor. Sed sed purus vitae velit dignissim posuere. Vestibulum ullamcorper neque volutpat, pellentesque tellus vitae, venenatis metus. Integer erat nibh, dignissim nec ultricies ac, sollicitudin vitae metus.
+                    </p>
+                    <p>
+                        Praesent at consectetur urna. Nam et lobortis justo. Curabitur fermentum mi nec cursus maximus. Sed tempor sit amet urna et pharetra. Praesent tempor elit sed commodo maximus. Phasellus ac diam nec arcu tempus sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ligula libero, interdum non augue vel, consequat ultricies magna. Pellentesque non purus malesuada, semper arcu non, sodales dui. Fusce vitae sem eu magna fermentum aliquam nec ut orci. Curabitur vestibulum tempus arcu, viverra blandit lacus sodales quis. Nunc non faucibus orci. Praesent in efficitur nisl. Vestibulum elementum accumsan tellus eget vulputate. Donec lobortis, lectus non molestie condimentum, lorem eros tempus nulla, et maximus nibh quam non leo.
+                    </p>
+                    <p>
+                        Quisque nibh magna, pretium id odio gravida, pellentesque porta ante. Sed suscipit consectetur euismod. Integer consectetur urna a eros facilisis, non porttitor turpis faucibus. In blandit, dui eu accumsan pharetra, augue metus posuere elit, id pellentesque nisi lorem quis quam. Nam ut lorem ut erat mattis sagittis sed lobortis ex. Cras ipsum dolor, pulvinar ut justo eget, accumsan sodales leo. Fusce eu magna nunc. Etiam viverra orci in erat finibus mollis. Sed ut ante facilisis, facilisis est non, fringilla est. Sed sed lorem eleifend, pellentesque nisl eu, venenatis sapien. Donec tincidunt ex convallis orci tincidunt, tempus imperdiet ligula interdum. Curabitur vel felis nec neque varius suscipit. Suspendisse potenti. Curabitur lobortis et arcu eget eleifend. Aliquam sed metus a nunc porttitor tempor.
+                    </p>
+                </Modal.Body>
+                <Button onClick={handleClose} variant="outline-secondary" className='m-3 text-center mx-auto'>Close</Button>
+            </Modal>
+        </>
+    )
+}

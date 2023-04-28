@@ -123,6 +123,18 @@ function Listings() {
     }
 
     const handleClickSubmit = () => {
+        localStorage.setItem("selectedSignupType", selectedSignupType);
+        localStorage.setItem("auth", 'auth');
+        if (selectedSignupType === 'vendor') {
+
+            console.log(gettingVenderSignupDetails);
+            window.location.href = '/booking-request';
+        } else {
+            console.log(gettingMarriedSignupDetails);
+            window.location.href = '/couple-dashboard';
+        }
+
+
         setStep(step + 1)
     }
 
@@ -151,7 +163,7 @@ function Listings() {
         setFiles
 
     }
-
+    console.log(step);
     return (
         <div className="container-fluid-" >
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>

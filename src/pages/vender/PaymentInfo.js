@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 
 function PaymentInfo() {
-
+    const auth = localStorage.getItem("auth");
     return (
         <div className="container-fluid px-md-5  mt-3 custom-search">
             <div className="row paddin-lr upper-part-custom">
@@ -30,7 +30,12 @@ function PaymentInfo() {
                                 </div>
 
                                 <div className='col-md-2'>
-                                    <UpDateModal title={'Update'} />
+                                    {auth !== 'auth' ?
+                                        <UpDateModal title={'Update'} />
+                                        :
+                                        <Button variant="btn text-cyan-color btn-lg mb-0 p-0 fs-6" href='payment-detail'>
+                                            Update
+                                        </Button>}
                                 </div>
                             </div>
 
@@ -48,15 +53,17 @@ function PaymentInfo() {
                                 </div>
 
                                 <div className='col-md-2'>
-                                    <UpDateModal title={'Update'} />
+                                    {auth !== 'auth' ?
+                                        <UpDateModal title={'Update'} />
+                                        :
+                                        <Button variant="btn text-cyan-color btn-lg mb-0 p-0 fs-6" href='payment-detail'>
+                                            Update
+                                        </Button>}
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
 

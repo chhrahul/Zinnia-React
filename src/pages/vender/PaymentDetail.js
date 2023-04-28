@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap"
 
 function PaymentDetail() {
 
@@ -39,11 +40,11 @@ function PaymentDetail() {
 
             <div className="row next-btn-bg position-absolute- w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
                 <div className="col-md-12 d-flex justify-content-end">
-                    <button type="submit" className="btn btn-light navigate-btn" id="next-btn" form="form-data">
-                        Cancel
-                    </button>
+
+                    <Button className="btn btn-light navigate-btn" href="payment-info">Cancel
+                    </Button >
                     <button type="submit" className="btn btn-secondary navigate-btn" id="next-btn" form="form-data">
-                        Next
+                        Save
                     </button>
                 </div>
             </div>

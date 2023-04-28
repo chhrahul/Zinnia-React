@@ -7,7 +7,7 @@ import { BsInfoCircle } from 'react-icons/bs';
 function VenderSignupFourthStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, files,
         setFiles, type } = props
-
+    const [fileCheck, setFileCheck] = React.useState(0)
     const gettingVenderProps = {
         handleInputGettingVender,
         gettingVenderSignupDetails,
@@ -25,19 +25,24 @@ function VenderSignupFourthStep(props) {
         },
         onSubmit: values => {
             if (files.length >= 3) {
+                setFileCheck(0)
                 if (step >= 8) return
                 setStep(step + 1)
+            } else {
+                setFileCheck(1)
             }
         },
     });
     const handleImages = {
         files,
         setFiles,
+        fileCheck,
+        setFileCheck
     }
 
     return (
         <span className='px-0'>
-            <form onSubmit={formik.handleSubmit} id="form-datad">
+            <form onSubmit={formik.handleSubmit} id={type !== 'edit' && 'form-data'}>
                 {type !== 'edit' &&
                     <>
                         <p>
@@ -61,7 +66,7 @@ function VenderSignupFourthStep(props) {
 export default VenderSignupFourthStep
 
 function MyDropzone(props) {
-    const { files, setFiles } = props
+    const { files, setFiles, fileCheck, setFileCheck } = props
     const img = {
         width: '100%',
         height: '100%'
@@ -117,8 +122,6 @@ function MyDropzone(props) {
 
     const setMainImage = (index, value) => {
         const newArray = [...files];
-
-        console.log('value', value)
         files.map((file, indx) => {
             if (indx === index) {
                 file['checked'] = true
@@ -146,6 +149,7 @@ function MyDropzone(props) {
                     filesArray = [...filesArray, newFile]
                 }))
                 setFiles([...filesArray])
+                setFileCheck(0)
 
             }
         });
@@ -202,7 +206,9 @@ function MyDropzone(props) {
 
             </div>
             {isDragReject && <p className='mt-3 text-danger'><BsInfoCircle /> Invalid file format</p>}
-            <div className="alert alert-danger alert-files mt-3" style={files.length && files.length < 3 ? { display: 'block' } : { display: 'none' }}> You’ll need to add at least 3 photos to continue. </div>
+            {fileCheck > 0 && <p className='mt-3 text-danger'><BsInfoCircle /> You’ll need to add at least 3 photos to continue.</p>}
+            {files.length > 0 && files.length < 3 && <p className='mt-3 text-danger'><BsInfoCircle /> You’ll need to add at least 3 photos to continue.</p>}
+            {/* <div className="alert alert-danger alert-files mt-3" style={files.length && files.length < 3 ? { display: 'block' } : { display: 'none' }}> You’ll need to add at least 3 photos to continue. </div> */}
             <div className="row mt-2 mb-5">
                 {thumbs.length > 0 ? <p className="uploaded-text mt-2 mb-0">Uploaded photos</p> : ""}
                 {thumbs}
