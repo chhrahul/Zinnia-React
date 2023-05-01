@@ -57,7 +57,7 @@ function FloristDetail(props) {
         },
 
         {
-            'type': 'webswebsitete', 'field': 'Bigdayflorists.com'
+            'type': 'website', 'field': 'Bigdayflorists.com'
         },
         {
             'type': 'phone', 'field': '301-593-2392'
@@ -78,11 +78,11 @@ function FloristDetail(props) {
                     </div>
                     <div className='row paddin-lr mt-3'>
                         <div className='col-md-3 pl-0'>
-                            <p className='theme-color'>FLORIST</p>
-                            <p className='d-flex rating-p'><p className='d-flex rating rating-p'><img src="/images/icons/star.svg" alt="star" />4.8</p><p className=' rating-p color-cyan m-0 '> 100 reviews</p></p>
-                            <p className='price-text p-bottom-margin'>Price</p>
+                            <p className='theme-color listing-custom-para'>FLORIST</p>
+                            <p className='d-flex rating-p'><p className='d-flex rating rating-p'><img src="/images/icons/star.svg" alt="star" />4.8</p><p className=' rating-p color-cyan m-0 fs-h6 text-decoration-underline'> 100 reviews</p></p>
+                            <p className='price-text p-bottom-margin  listing-custom-para'>Price</p>
                             <p className='p-bottom-margin price-amount-box'>Total<span className="price-amount"> $650</span></p>
-                            <p className='p-bottom-margin'>Depends on selections</p>
+                            <p className='p-bottom-margin depend-listing-custom-para'>Depends on selections</p>
                         </div>
                         <div className='col-md-3 pl-0'>
                             < ContactDetail contactFields={contactFields} />
@@ -94,14 +94,14 @@ function FloristDetail(props) {
 
                     <div className='row paddin-lr mt-3'>
                         <div className='col-md-6 pl-0'>
-                            <p className='color-cyan  ml-5'> INCLUDED </p>
+                            <p className='color-cyan  ml-5 listing-custom-para'> INCLUDED </p>
                             <div className='row paddin-lr'>
                                 <AddQuantity AddQuantityBox={AddQuantityBox} />
                             </div>
                         </div>
                     </div>
                     <div className='row paddin-lr mt-5'>
-                        <div className='col-md-2 pl-0'>
+                        <div className='col-md-3 pl-0'>
                             {added.length > 0 ?
                                 <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
                                 :

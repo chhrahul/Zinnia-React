@@ -2,11 +2,10 @@ const Footer = () => {
     return (
         <>
 
-            <div class="container-fluid footer-custom" >
+            <div class="container-fluid footer-custom px-md-5  " >
                 <div className="row">
-                    <div className="col-md-6  custom-col-footer ">
-                        <div className="container-">
-                            <ul className=' footer-ul mb-0 first px-md-5 mt-3'>
+                    <div className="col-md-6 custom-col-footer ">
+                            <ul className='footer-ul mb-0 first mt-3'>
                                 <li className='nav-item first-item-nav'>
                                     <p>2022 Zinnia Inc.  </p>
                                 </li>
@@ -21,10 +20,9 @@ const Footer = () => {
                                     </a>
                                 </li>
                             </ul>
-                        </div>
                     </div>
-                    <div className="col-md-6  custom-col-footer">
-                        <ul className=' footer-ul mb-0 footer-ul-2 px-md-5 mt-3'>
+                    <div className="col-md-6 custom-col-footer">
+                        <ul className='footer-ul mb-0 footer-ul-2 mt-3'>
                             <li className='nav-item first-item-nav-2'>
                                 <p>United States  </p>
                             </li>
