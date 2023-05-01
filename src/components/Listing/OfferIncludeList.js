@@ -7,8 +7,8 @@ function OfferIncludeList(props) {
             {
                 includeOffering.map((box, index) => {
                     return (
-                        <span className='quantity-add-box m-0'>
-                            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className=' mx-1' /> {box.title} </p>
+                        <span className='quantity-add-box m-0 p-0'>
+                            <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt=""  /> {box.title} </p>
                         </span>
                     );
                 })}

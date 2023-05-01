@@ -12,7 +12,7 @@ function ContactDetail(props) {
         else if (type === "timing") {
             return <BsClock size={27} className='contact-icon color-cyan' />
         }
-        else if (type === "webswebsitete") {
+        else if (type === "website") {
             return <img src="/images/icons/web.svg" alt="" className='contact-icon' />
         } else if (type === "phone") {
             return <img src="/images/icons/phone.svg" alt="" className='contact-icon' />
@@ -21,7 +21,7 @@ function ContactDetail(props) {
     const Fields = ({ type, fieldVal }) => {
         return (
             <>
-                {type === "timing" ? <p className='d-flex'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5'> Open .</span> Closes 10 PM</span></p> : type === "webswebsitete" ? <p className='d-flex'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5'> Bigdayflorists.com </span> </span></p> : <p className='d-flex'><FieldsIcon type={type} /> <span>{fieldVal}</span></p>}
+                {type === "timing" ? <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> Open <span className="dot-custom">&bull;</span></span> Closes 10 PM</span></p> : type === "website" ? <p className='d-flex'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> Bigdayflorists.com </span> </span></p> : <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span>{fieldVal}</span></p>}
             </>
         )
     }

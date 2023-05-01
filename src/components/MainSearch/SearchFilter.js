@@ -124,10 +124,10 @@ const SearchFilter = (props) => {
                     <div className='col-md-12 col-lg-1 p-lg-0'>
                         <div class="row  float-lg-right  h-100">
                             <span className='col cancel_custom text-end '>
-                                <button type="button" class="btn btn-outline-secondary   ">Cancel</button>
+                                <button type="button" class="btn btn-outline-secondary">Cancel</button>
                             </span>
                             <span className='col  p-0 mx-auto'>
-                                <button type="submit" className="btn btn-secondary h-100 p-1"><img src="/images/icons/search.png" alt="search" />Search</button>
+                                <button type="submit" className="btn btn-secondary h-100 p-1 search-btn-main-custom d-flex align-items-center"><img src="/images/icons/search.png" alt="search" />Search</button>
                             </span>
                         </div>
                     </div>

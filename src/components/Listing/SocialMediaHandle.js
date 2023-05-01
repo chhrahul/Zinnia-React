@@ -23,7 +23,7 @@ function SocialMediaHandle(props) {
 
     const MediaList = ({ type, src }) => {
         return (
-            <p className='mr-2'>
+            <p className='mr-2 social-media-custom-para'>
                 <SocialMediaIcon type={type} />
                 <span className='color-cyan' style={{ paddingLeft: '10px' }}>
                     {src}
