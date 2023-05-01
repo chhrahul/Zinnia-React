@@ -3,4 +3,7 @@ export { default as MainSearchPhotographer } from './MainSearch/MainSearchPhotog
 export { default as MainSearchVenue } from './MainSearch/MainSearchVenue'
 export { default as SearchFilter } from './MainSearch/SearchFilter'
 export { default as Datepicker } from './Datepicker'
+export { default as GeoAutoComplete } from './GeoAutoComplete'
+
+
 

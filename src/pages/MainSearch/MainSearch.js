@@ -18,6 +18,7 @@ function MainSearch() {
 
     return (
         <>
+
             {activePage === 'florist' &&
                 <MainSearchFlorist {...getOfferProps} />
             }

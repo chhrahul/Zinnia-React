@@ -82,9 +82,16 @@ const Navigation = (props) => {
                                         :
                                         <>
                                             <NavDropdown title={<RxAvatar size={28} />} id="navbarScrollingDropdown" className={activeNav === 'venue' || splitLocation[1] === "venue" || splitLocation[1] === "photographer" || splitLocation[1] === "florist" ? 'text-cyan-color' : ""} >
-                                                <NavDropdown.Item href="/about">
-                                                    About
-                                                </NavDropdown.Item>
+                                                {userType === 'gettingMarried' ?
+                                                    <NavDropdown.Item href="/account">
+                                                        About
+                                                    </NavDropdown.Item>
+                                                    :
+                                                    <NavDropdown.Item href="/about">
+                                                        About
+                                                    </NavDropdown.Item>
+                                                }
+
                                                 <NavDropdown.Divider />
                                                 <NavDropdown.Item onClick={logout}>Logout
                                                 </NavDropdown.Item>
