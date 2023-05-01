@@ -51,6 +51,11 @@ code {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
 }
+.footer-custom{
+  padding-right:0px !important;
+  padding-left:0px !important;
+  background: rgba(120, 122, 143, 0.04) !important;
+}
 
 .footer-ul,
 .header-ui {
@@ -86,6 +91,13 @@ ul.footer-ul.mb-0 {
 /* layout page css */
 
 /* createAccount page */
+button#next-btn[disabled] {
+  background-color: #BAB8B8 !important;
+  border:1px solid  #BAB8B8;
+  color: white !important;
+}
+
+
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -1589,6 +1601,8 @@ select {
   }
 } */
 @media screen and (max-width: 768px) {
+  
+
   .below-card-size{
     margin-top:10px !important;
   }
@@ -1655,6 +1669,24 @@ select {
 }
 
 @media screen and (min-width: 768px) {
+
+  .navbar-expand-md .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto !important;;
+    font-size: 12px !important;
+}
+
+  ul.footer-ul.mb-0.first.px-md-5.mt-3 {
+    padding-left: 3rem!important;
+    padding-right: 0px !important;
+  }
+  ul.footer-ul.mb-0.footer-ul-2.px-md-5.mt-3{
+    padding-left: 3rem!important;
+    padding-right: 0px !important;
+  }
+
+
+
   .container-.position-absolute-.h-100- {
     min-height: 105vh;
   }
