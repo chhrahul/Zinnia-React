@@ -567,6 +567,7 @@ p {
   padding: 0px !important;
 }
 
+
 .listing-page .input-group {
   flex-wrap: initial !important;
 }
@@ -2201,7 +2202,45 @@ input.MuiInput-input-11 {
   background-color: #00767C !important;
     border: 16px solid #00767C;
 } 
+.avialability-checkbox{
+  width: 18px !important;
+  height: 18px !important;
+}
 
 
+.avialability-box{
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    padding: 20px 0px;
+ 
+}
+
+.fc-scrollgrid-liquid *{
+   font-family: Libre Baskerville !important;
+}
+
+.fc-col-header-cell-cushion{
+  text-transform:uppercase !important;
+  text-decoration:none !important;
+  font-weight: 700 !important;
+font-size: 16px !important;
+line-height: 20px !important;
+letter-spacing: 0.5px !important;
+color: #505267 !important;
+}
+.fc-daygrid-day-number {
+  display:unset  !important;
+  font-weight: 700 !important;
+font-size: 14px !important;
+line-height: 20px !important;
+letter-spacing: 0.1px !important;
+color: #000000 !important;
+  text-decoration:none !important;
+}
+.fc-daygrid-day-top {
+  display:unset  !important;
+
+
+}
 
 /* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */

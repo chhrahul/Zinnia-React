@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 const GeoAutoComplete = () => {
   const autoCompleteRef = useRef();
+
   const inputRef = useRef();
   const options = {
     componentRestrictions: { country: "ng" },
@@ -17,7 +18,8 @@ const GeoAutoComplete = () => {
     <>
       <div>
         <label>enter address :</label>
-        <input ref={inputRef} />
+        {console.log(inputRef)}
+        <input ref={inputRef} className="form-control" />
       </div>
     </>
   )

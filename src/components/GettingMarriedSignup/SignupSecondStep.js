@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import GeoAutoComplete from '../GeoAutoComplete';
 
 function SignupSecondStep(props) {
     const { handleInputGettingMarried, gettingMarriedSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingMarriedSignupDetails } = props
@@ -106,6 +107,7 @@ function SignupSecondStep(props) {
                             value={formik.values.location}
                             name="location"
                         />
+                        {/* <GeoAutoComplete /> */}
                         {formik.touched.location && formik.errors.location ? (
                             <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.location}</div>
                         ) : null}
