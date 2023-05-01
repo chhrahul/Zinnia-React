@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <>
 
-            <div class="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }} >
+            <div class="container-fluid footer-custom" >
                 <div className="row">
                     <div className="col-md-6  custom-col-footer ">
                         <div className="container-">

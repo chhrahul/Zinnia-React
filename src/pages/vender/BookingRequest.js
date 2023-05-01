@@ -19,7 +19,7 @@ function MainSearch() {
                             <p className='bold-p mb-0'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic '>You have no bookings this day.  </p>
-                            <button className="btn btn-secondary confirm-btn" >Cinfirm</button>
+                            <button className="btn btn-secondary confirm-btn" >Confirm</button>
                             <p className='mb-0 mt-2 text-cyan-color'> Don't confirm</p>
                         </div>
 
@@ -30,7 +30,7 @@ function MainSearch() {
                             <p className='bold-p mb-0'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic '>You have no bookings this day.  </p>
-                            <button className="btn btn-secondary confirm-btn" >Cinfirm</button>
+                            <button className="btn btn-secondary confirm-btn" >Confirm</button>
                             <p className='mb-0 mt-2 text-cyan-color'> Don't confirm</p></div>
 
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
@@ -40,7 +40,7 @@ function MainSearch() {
                             <p className='bold-p mb-0'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic '>You have no bookings this day.  </p>
-                            <button className="btn btn-secondary confirm-btn" >Cinfirm</button>
+                            <button className="btn btn-secondary confirm-btn" >Confirm</button>
                             <p className='mb-0 mt-2 text-cyan-color'> Don't confirm</p> </div>
 
                         {/* if no bookings */}
