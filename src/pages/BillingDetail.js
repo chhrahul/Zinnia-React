@@ -228,7 +228,11 @@ function MyCollapse(props) {
 
     return (
         <>
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id={id}
+            <input
+                className="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id={id}
                 onClick={() => setOpen(!open)}
                 aria-controls={id}
                 aria-expanded={open}
@@ -237,7 +241,8 @@ function MyCollapse(props) {
             <label class="form-check-label fs-6 fw-normal" htmlFor={id}>
                 {label}
             </label>
-            {id === 'flexRadioDefault3' &&
+            {
+                id === 'flexRadioDefault3' &&
                 <Collapse in={open}>
                     <div id={id}>
                         <div className=" row mb-3 w-75 custom-afterpay">
@@ -247,7 +252,8 @@ function MyCollapse(props) {
                     </div>
                 </Collapse>
             }
-            {id === 'flexRadioDefault4' &&
+            {
+                id === 'flexRadioDefault4' &&
                 <Collapse in={open}>
                     <div id={id}>
                         <div class="mb-3">

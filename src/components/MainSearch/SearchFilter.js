@@ -6,12 +6,7 @@ import { useFormik } from 'formik';
 import FloristIcon from '../Icons/FloristIcon.js';
 import VenueIcon from '../Icons/VenueIcon.js';
 import PhotographerIcon from '../Icons/PhotographerIcon.js';
-import SearchResultVenueMap from './SearchResultVenueMap.js';
-import SearchResultPhotographerMap from './SearchResultPhotographerMap.js';
-import SearchResultFloristMap from './SearchResultFloristMap.js';
-import { BsClock } from 'react-icons/bs';
 import MainSearchResult from '../../pages/MainSearchResult.js';
-import TimePicker from 'react-time-picker';
 import 'react-time-picker/dist/TimePicker.css'
 import 'react-clock/dist/Clock.css'
 import 'react-clock/dist/Clock.css'

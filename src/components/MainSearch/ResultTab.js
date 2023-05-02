@@ -27,7 +27,6 @@ const ResultTab = (props) => {
                                     <path d="M0.5 6H2.5V4H0.5V6ZM0.5 10H2.5V8H0.5V10ZM0.5 2H2.5V0H0.5V2ZM4.5 6H18.5V4H4.5V6ZM4.5 10H18.5V8H4.5V10ZM4.5 0V2H18.5V0H4.5Z" fill="#505267" />
                                 </svg>
                             }
-
                             {second}</li>
                     </ul>
                 </div>

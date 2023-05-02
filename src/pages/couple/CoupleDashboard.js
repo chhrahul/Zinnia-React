@@ -1,6 +1,6 @@
 import React from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import { Modal, Button } from 'react-bootstrap';
+
 
 function CoupleDashboard() {
 
@@ -9,8 +9,8 @@ function CoupleDashboard() {
             <div className="container-fluid px-md-5  mt-3 custom-search">
                 <div className="row paddin-lr upper-part-custom">
                     <div className="col-lg-8 col-md-6 col-sm-12">
-                       <span className="d-flex wedding-day-custom-top"><p class="wedding-day-custom">Wedding day 6/4/23, 3:30pm, 6 hours</p>
-                       <img src="/images/icons/Edit.svg" alt="edit"/></span>
+                        <span className="d-flex wedding-day-custom-top"><p class="wedding-day-custom">Wedding day 6/4/23, 3:30pm, 6 hours</p>
+                            <img src="/images/icons/Edit.svg" alt="edit" /></span>
                         <h4>20 days to go!</h4>
                     </div>
                     <div className="row paddin-lr">
@@ -118,7 +118,8 @@ const CancelModal = (props) => {
                             <label for="cancel-reason" class="form-label">Reason</label>
                             <input type="text" class="form-control" id="cancel-reason" placeholder="The wedding is off" />
                         </div>
-                    </form></Modal.Body>
+                    </form>
+                </Modal.Body>
                 <Modal.Footer className='modal-custom mx-5 cance-modal-footer'>
                     <Button variant="btn btn-outline-secondary" type="submit" form="cancelForm">
                         Don’t cancel

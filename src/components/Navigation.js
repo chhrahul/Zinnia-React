@@ -1,27 +1,16 @@
 import * as React from 'react'
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { useLocation } from "react-router-dom";
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Nav, Navbar, Form, Container, NavDropdown } from 'react-bootstrap/';
+import { useLocation, useNavigate } from "react-router-dom";
 import { RxAvatar } from "react-icons/rx";
 const Navigation = (props) => {
     const [activeNav, setActiveNav] = React.useState('')
-    //assigning location variable
     const location = useLocation();
-
-    //destructuring pathname from location
     const { pathname } = location;
-
-    //Javascript split method to get the name of the path in array
     const splitLocation = pathname.split("/");
     const { cart } = props
     const handleClickNav = (name) => {
         setActiveNav(name)
     }
-
-
 
     const logout = () => {
         localStorage.setItem("auth", '');
@@ -29,10 +18,8 @@ const Navigation = (props) => {
         window.location.href = '/sign-up';
     }
 
-
     const userType = localStorage.getItem("selectedSignupType")
     const auth = localStorage.getItem("auth");
-
 
     return (
         < >

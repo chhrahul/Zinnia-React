@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-import SearchFilter from './SearchFilter';
 import ResultTab from './ResultTab';
 function SearchResultVenueList(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
@@ -18,8 +17,6 @@ function SearchResultVenueList(props) {
     return (
         <>
             <ResultTab {...getOfferProps} />
-
-
             <div className="row paddin-lr">
                 <div>
                     <span className="d-flex lowest_price"><img src="/images/icons/down-arrow.svg" alt="arrow" /><p>Lowest to highest price</p></span>

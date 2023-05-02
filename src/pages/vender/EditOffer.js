@@ -1,7 +1,6 @@
 
-import React, { useState } from 'react';
-
-import { VenderSignupFourthStep, VenderSignupSecondStep, VenderSignupThirdStep } from '../../components/GettingVenderSignup';
+import React from 'react';
+import { VenderSignupThirdStep } from '../../components/GettingVenderSignup';
 function EditOffer(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails } = props
     const [files, setFiles] = React.useState([]);

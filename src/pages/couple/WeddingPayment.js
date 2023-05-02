@@ -8,7 +8,7 @@ function WeddingPayment() {
             <div className="row paddin-lr">
                 <div className="col-lg-7 col-md-12 col-sm-12">
                     <p className="d-flex invoice-top-custom mb-0">
-                        <p class="color-cyan" >Account</p> <p> > Wedding info</p>
+                        <p class="color-cyan" >Account</p> <p> Wedding info</p>
                     </p>
                     <h5 className="text-dark">Payments</h5>
                     <p className='mb-3 mt-3 padding-lr-0 text-uppercase custom-ptext'>My Cards </p>
@@ -109,8 +109,8 @@ const CardDetailModal = (props) => {
                 <Modal.Footer className='modal-custom card-detail'>
                     <div class="row p-0">
                         <Button variant="btn btn-secondary btn-lg mt-2 pay-custom-checkout py-2 mb-4" type="submit" form="carddetailForm">
-                      Save
-                    </Button>
+                            Save
+                        </Button>
                     </div>
                 </Modal.Footer>
             </Modal>

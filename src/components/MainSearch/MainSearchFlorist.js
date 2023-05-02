@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import SearchFilter from './SearchFilter';
 function MainSearchFlorist(props) {

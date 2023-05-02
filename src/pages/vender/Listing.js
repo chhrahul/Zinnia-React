@@ -80,13 +80,10 @@ function Listing(props) {
 
     }
     const includeOffering = [
+        { 'title': 'Video coverage' },
+        { 'title': 'Photo album' },
+        { 'title': 'Raw, unedited photos' },
         {
-            'title': 'Video coverage'
-        }, {
-            'title': 'Photo album'
-        }, {
-            'title': 'Raw, unedited photos'
-        }, {
             'title': 'Same day print'
         },
         {

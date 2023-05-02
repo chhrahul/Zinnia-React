@@ -163,7 +163,7 @@ function Listings() {
         setFiles
 
     }
-    console.log(step);
+
     return (
         <div className="container-fluid-" >
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>

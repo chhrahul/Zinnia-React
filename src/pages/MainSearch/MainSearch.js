@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { MainSearchFlorist, MainSearchPhotographer, MainSearchVenue } from "../../components";
-import SearchResultVenueMap from '../../components/MainSearch/SearchResultVenueMap';
 function MainSearch() {
     const [activePage, setActivePage] = React.useState('venue')
     const [searchType, setSearchType] = React.useState(false);
@@ -27,7 +26,6 @@ function MainSearch() {
             {activePage === 'venue' &&
                 <MainSearchVenue {...getOfferProps} />
             }
-            {/* <SearchResultVenueMap /> */}
         </>
 
     )

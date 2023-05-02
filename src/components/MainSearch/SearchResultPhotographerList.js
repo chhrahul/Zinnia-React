@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-import SearchFilter from './SearchFilter';
 import ResultTab from './ResultTab';
 function SearchResultPhotographerList(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props

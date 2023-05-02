@@ -1,8 +1,5 @@
-import FloristIcon from "../../components/Icons/FloristIcon"
 import SearchFilter from "../../components/MainSearch/SearchFilter"
-
 function SearchResultListing() {
-
     return (
         <div className="container-fluid px-md-5  mt-3 custom-search">
 

@@ -6,7 +6,7 @@ function SocialMediaHandle(props) {
     const { handles } = props
 
     const SocialMediaIcon = ({ type }) => {
-        if (type == "instagram") {
+        if (type === "instagram") {
             return <BsInstagram size={22} />
         }
         else if (type === "facebook") {

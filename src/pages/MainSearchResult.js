@@ -18,29 +18,33 @@ function MainSearchResult(props) {
     }
     return (
         <>
-            {searchType && activePage === 'venue' && resultType === 'map' &&
-
+            {
+                searchType && activePage === 'venue' && resultType === 'map' &&
                 <SearchResultVenueMap {...getOfferProps} />
             }
 
-            {searchType && activePage === 'venue' && resultType === 'list' &&
-
+            {
+                searchType && activePage === 'venue' && resultType === 'list' &&
                 <SearchResultVenueList {...getOfferProps} />
             }
 
-            {searchType && activePage === 'photographer' && resultType === 'map' &&
+            {
+                searchType && activePage === 'photographer' && resultType === 'map' &&
                 <SearchResultPhotographerMap {...getOfferProps} />
             }
 
-            {searchType && activePage === 'photographer' && resultType === 'list' &&
+            {
+                searchType && activePage === 'photographer' && resultType === 'list' &&
                 <SearchResultPhotographerList {...getOfferProps} />
             }
 
-            {searchType && activePage === 'florist' && resultType === 'map' &&
+            {
+                searchType && activePage === 'florist' && resultType === 'map' &&
                 <SearchResultFloristMap {...getOfferProps} />
             }
 
-            {searchType && activePage === 'florist' && resultType === 'list' &&
+            {
+                searchType && activePage === 'florist' && resultType === 'list' &&
                 <SearchResultFloristList {...getOfferProps} />
             }
         </>

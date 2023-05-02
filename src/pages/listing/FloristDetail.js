@@ -1,34 +1,20 @@
 
 import React, { useState } from 'react';
-import CustomSlider from "../../components/CustomSlider";
-import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
-import { BsClock } from 'react-icons/bs';
-import ContactDetail from '../../components/Listing/ContactDetail';
+import { SocialMediaHandle, ContactDetail, CustomSlider, AddQuantity } from '../../components';
+
 
 function FloristDetail(props) {
     const { addToCart, cart } = props
     const prodid = 1
     var added = cart.filter(item => item.id === prodid)
-    const AddQuantityBox = [
-        {
-            'title': 'Bridal bouquet', 'price': '300.00'
-        },
-        {
-            'title': 'Flower crown', 'price': '150.00'
-        },
-        {
-            'title': 'Bridesmaids bouquets', 'price': '50.00'
-        },
-        {
-            'title': 'Flower girl petals/basket', 'price': '50.00'
-        },
-        {
-            'title': 'Boutonnieres', 'price': '50.00'
-        },
-        {
-            'title': 'Corsages', 'price': '50.00'
-        },
-    ]
+    const [floirstListing, setFloirstListing] = React.useState([
+        { 'title': 'Bridal bouquet', 'price': '300.00', 'quantity': 0 },
+        { 'title': 'Flower crown', 'price': '150.00', 'quantity': 0 },
+        { 'title': 'Bridesmaids bouquets', 'price': '50.00', 'quantity': 0 },
+        { 'title': 'Flower girl petals/basket', 'price': '50.00', 'quantity': 0 },
+        { 'title': 'Boutonnieres', 'price': '50.00', 'quantity': 0 },
+        { 'title': 'Corsages', 'price': '50.00', 'quantity': 0 },
+    ])
 
     const handles = [
         {
@@ -65,6 +51,24 @@ function FloristDetail(props) {
 
     ]
 
+    const increaseDecreaseQuantity = (listing, isAdd) => () => {
+        const tmpLisiting = floirstListing.find((item) => item.title == listing.title)
+        if (!tmpLisiting) return
+        const { quantity } = tmpLisiting
+        if (quantity === 0 && !isAdd) return
+        tmpLisiting.quantity = isAdd ? (parseFloat(quantity) + 1) : (quantity - 1);
+        setFloirstListing([...floirstListing])
+    }
+
+    const handleOnChange = (listing) => (e) => {
+
+        const tmpLisiting = floirstListing.find((item) => item.title == listing.title)
+        tmpLisiting.quantity = e.target.value
+        if (tmpLisiting.quantity < 0) {
+            tmpLisiting.quantity = 0
+        }
+        setFloirstListing([...floirstListing])
+    }
 
 
 
@@ -85,7 +89,7 @@ function FloristDetail(props) {
                             <p className='p-bottom-margin depend-listing-custom-para'>Depends on selections</p>
                         </div>
                         <div className='col-md-3 pl-0'>
-                            < ContactDetail contactFields={contactFields} />
+                            <ContactDetail contactFields={contactFields} />
                         </div>
                         <div className='col pl-0'>
                             <SocialMediaHandle handles={handles} />
@@ -96,7 +100,15 @@ function FloristDetail(props) {
                         <div className='col-md-6 pl-0'>
                             <p className='color-cyan  ml-5 listing-custom-para'> INCLUDED </p>
                             <div className='row paddin-lr'>
-                                <AddQuantity AddQuantityBox={AddQuantityBox} />
+
+                                {
+                                    floirstListing.map((listing) => (
+                                        <div className='col-md-6 paddin-lr '>
+                                            <AddQuantity increaseDecreaseQuantity={increaseDecreaseQuantity} listing={listing} handleOnChange={handleOnChange} />
+                                        </div>
+                                    ))
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -128,57 +140,6 @@ function FloristDetail(props) {
 }
 export default FloristDetail
 
-function AddQuantity(props) {
-    const { AddQuantityBox } = props
-    const [quantity, setQty] = React.useState({
-        'id': '',
-        'quantity': '',
-    })
 
-    return (
-        <>
-            {
-                AddQuantityBox.map((box, index) => {
-                    const id = 'cartQty_' + index
-                    const addQty = (e) => {
-                        var location = document.getElementById(id);
-                        var currentQty = location.value;
-                        var qty = Number(currentQty) + 1;
-                        location.value = qty;
-                        // const newQty = { 'id': id, 'quantity': qty }
-                        // setQty({ ...quantity, newQty })
-                    }
-                    const decreaseQty = (e) => {
-                        var location = document.getElementById(id);
-                        var currentQty = location.value;
-                        if (currentQty > 0) {
-                            var qty = Number(currentQty) - 1;
-                            location.value = qty;
-                        }
-                    }
-                    return (
-                        <div className='col-md-6 paddin-lr '>
-                            <span className='quantity-add-box'>
-                                <p className='paddin-lr p-bottom-margin'><img src="/images/icons/checked-gray.svg" alt="" className='p-bottom-margin mx-1' /> {box.title} </p>
-                                <p className='px-md-4'>$ {box.price} each</p>
-                                <div className='row px-md-4'>
-                                    <div class="input-group col">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" onClick={decreaseQty}>-</span>
-                                        </div>
-                                        <input type="number" class="form-control" value='0' min="1" size="1" id={id} />
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" onClick={addQty}>+</span>
-                                        </div>
-                                    </div>
-                                    <div class=" col-6"></div>
-                                </div>
-                            </span>
-                        </div>
-                    );
-                })}
-        </>
-    );
-}
 
 

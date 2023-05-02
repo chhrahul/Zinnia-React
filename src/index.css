@@ -1502,7 +1502,7 @@ div.site-link a {
 /* ++++ */
 
 select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.1018 8C5.02785 8 4.45387 9.2649 5.16108 10.0731L10.6829 16.3838C11.3801 17.1806 12.6197 17.1806 13.3169 16.3838L18.8388 10.0731C19.5459 9.2649 18.972 8 17.898 8H6.1018Z' fill='%23212121'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.1018 8C5.02785 8 4.45387 9.2649 5.16108 10.0731L10.6829 16.3838C11.3801 17.1806 12.6197 17.1806 13.3169 16.3838L18.8388 10.0731C19.5459 9.2649 18.972 8 17.898 8H6.1018Z' fill='%23212121'/%3E%3C/svg%3E") ;
 }
 
 @media screen and (max-width: 320px) {
@@ -2316,5 +2316,88 @@ color: #000000 !important;
 
 
 }
+.fc .fc-daygrid-day.fc-day-today {
+background: none !important;
+}
+.fc-daygrid-event p{
+font-family: 'Libre Baskerville' !important;
+font-weight: 400 !important;
+font-size: 12px !important;
+color: #505267 !important;
+}
 
-/* input[type="time"]::-webkit-calendar-picker-indicator { float: left; } */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.text-fc{
+      white-space: pre-wrap !important;
+   
+}
+.icon-canlender:hover{
+color:#00767C;
+}
+.tz-fc{
+  border: none !important;
+  color: #00767C !important;
+height: 30px !important;
+}
+
+.tz-fc-label{
+  font-weight: 400 !important;
+font-size: 10px !important;
+line-height: 16px !important;
+letter-spacing: 1.5px !important;
+text-transform: uppercase !important;
+color: #505267 !important;
+}
+
+.fc-toolbar-chunk{
+  display: flex !important;
+}
+
+.fc-daygrid-dot-event {
+  
+    display: unset !important;
+ 
+    text-align: center !important;
+}
+.fc-list .day-name{
+  color: #000000 !important;
+}
+.fc-list .unavilable-text{
+  color: #505267 !important;
+}
+.fc-list .hr-row{
+  border-bottom: 2px solid;
+}
+.fc-list .plus-icon{
+  margin-right: 16px;
+}
+.add-override{
+  font-size: 14px !important;
+line-height: 20px !important;
+letter-spacing: 0.25px !important;
+color: #505267 !important;
+}
+.icons-action{
+  cursor: pointer ;
+
+}
+.icons-action:hover{
+  color:#00767C;
+  
+}
+.unavilable-text select{
+height: unset !important;
+}
+.delete-icon-fc{
+      vertical-align: -webkit-baseline-middle;
+}

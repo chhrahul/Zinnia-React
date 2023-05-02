@@ -1,4 +1,3 @@
-import DatePicker from '../../components/Datepicker.js'
 function WeddingInfo() {
 
     return (
@@ -6,29 +5,30 @@ function WeddingInfo() {
             <div className="row paddin-lr upper-part-custom">
                 <div className="col-lg-7 col-md-6 col-sm-12 ">
                     <p className="d-flex invoice-top-custom mb-0">
-                        <p class="color-cyan" >Account</p> <p> > Wedding info</p>
+                        <p class="color-cyan" >Account</p>
+                        <p> Wedding info</p>
                     </p>
                     <h5>Wedding info</h5>
                     <div className="col-lg-6">
                         <label for="wedding-date" class="form-label mb-3">Wedding Date</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text budget-icon text-muted" id="basic-addon1"><img src="/images/icons/calendar_today.svg" alt="date" /></span>
-                            <input type="date" class="form-control" id="wedding-date" placeholder="" name="budget" value=""/>
+                            <input type="date" class="form-control" id="wedding-date" placeholder="" name="budget" value="" />
                         </div>
                         <label for="budget" class="form-label">Wedding Budget</label>
                         <div class="input-group mb-3">
-                        <span class="input-group-text budget-icon text-muted" id="basic-addon2">$</span>
-                        <input type="number" class="form-control" id="budget" placeholder="10,000" name="budget" value=""/>
+                            <span class="input-group-text budget-icon text-muted" id="basic-addon2">$</span>
+                            <input type="number" class="form-control" id="budget" placeholder="10,000" name="budget" value="" />
                         </div>
                         <label for="wedding-guest" class="form-label">No. of guests</label>
                         <div class="input-group mb-3">
-                        <span class="input-group-text budget-icon text-muted" id="basic-addon3"><img src="/images/icons/Guest.svg" alt="guest" /></span>
+                            <span class="input-group-text budget-icon text-muted" id="basic-addon3"><img src="/images/icons/Guest.svg" alt="guest" /></span>
                             <input type="number" class="form-control" id="wedding-guest" placeholder="150" />
                         </div>
                         <label for="wedding-location" class="form-label">Location</label>
                         <div class="input-group mb-3">
-                        <span class="input-group-text budget-icon text-muted" id="basic-addon4"><img src="/images/icons/location-2.svg" alt="location" /></span>
-                            <input type="text" class="form-control" id="wedding-location" placeholder="" aria-label="10,000" placeholder="Seattle, Washington" />
+                            <span class="input-group-text budget-icon text-muted" id="basic-addon4"><img src="/images/icons/location-2.svg" alt="location" /></span>
+                            <input type="text" class="form-control" id="wedding-location" aria-label="10,000" placeholder="Seattle, Washington" />
                         </div>
                     </div>
                     <div className="row paddin-lr email-border-custom mt-3">
@@ -114,7 +114,7 @@ function WeddingInfo() {
                             </div>
                         </div>
                         <div>
-                        <button type="button" class="btn btn-secondary btn-lg mt-2 pay-custom-checkout px-2 py-2">Save updates</button> 
+                            <button type="button" class="btn btn-secondary btn-lg mt-2 pay-custom-checkout px-2 py-2">Save updates</button>
                         </div>
                     </div>
                 </div>

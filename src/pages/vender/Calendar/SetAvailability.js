@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap"
 import { BsFillInfoCircleFill, BsInfoCircle } from "react-icons/bs"
-import { CalendarGrid } from "../components/CalendarGrid"
+import { CalendarGrid } from "../../../components/CalendarGrid"
 
 
 function SetAvailability() {

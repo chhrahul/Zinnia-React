@@ -1,4 +1,3 @@
-import FloristIcon from "../../components/Icons/FloristIcon"
 import SearchFilter from "../../components/MainSearch/SearchFilter"
 
 function SearchResultListingFlorist() {

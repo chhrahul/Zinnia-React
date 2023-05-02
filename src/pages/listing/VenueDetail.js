@@ -1,8 +1,6 @@
 
-import React, { useState } from 'react';
-import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
-import ContactDetail from '../../components/Listing/ContactDetail';
-import OfferIncludeList from '../../components/Listing/OfferIncludeList';
+import React from 'react';
+import { SocialMediaHandle, ContactDetail, OfferIncludeList } from '../../components';
 
 function VenueDetail(props) {
     const { addToCart, cart, setCart } = props

@@ -1,8 +1,5 @@
 
 import React from 'react';
-import FloristIcon from '../Icons/FloristIcon';
-import VenueIcon from '../Icons/VenueIcon';
-import PhotographerIcon from '../Icons/PhotographerIcon';
 import SearchFilter from './SearchFilter';
 
 function MainSearchVenue(props) {

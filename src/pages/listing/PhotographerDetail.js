@@ -1,10 +1,9 @@
 
 import React, { useState } from 'react';
-import CustomSlider from "../../components/CustomSlider";
-import SocialMediaHandle from '../../components/Listing/SocialMediaHandle';
-import { BsClock } from 'react-icons/bs';
-import ContactDetail from '../../components/Listing/ContactDetail';
-import OfferIncludeList from '../../components/Listing/OfferIncludeList';
+import {
+    CustomSlider, SocialMediaHandle, ContactDetail, OfferIncludeList,
+} from "../../components";
+
 
 function PhotographerDetail(props) {
     const { addToCart, cart, setCart, type } = props
@@ -105,19 +104,20 @@ function PhotographerDetail(props) {
                         </div>
                     </div>
                 </div>
-                {type !== 'vender' ?
-                    <div className='row paddin-lr mt-5'>
-                        <div className='col-md-3 pl-0'>
+                {
+                    type !== 'vender' ?
+                        <div className='row paddin-lr mt-5'>
+                            <div className='col-md-3 pl-0'>
 
-                            {added.length > 0 ?
-                                <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
-                                :
-                                <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
-                            }
+                                {added.length > 0 ?
+                                    <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
+                                    :
+                                    <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
+                                }
 
+                            </div>
                         </div>
-                    </div>
-                    : ""}
+                        : ""}
 
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-6 pl-0'>

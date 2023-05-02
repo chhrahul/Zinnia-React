@@ -1,8 +1,6 @@
 import React from 'react';
 import { BsInfoCircle, BsEyeSlash, BsCalendar } from 'react-icons/bs';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-
+import { Modal, Button } from 'react-bootstrap';
 
 function PaymentInfo() {
     const auth = localStorage.getItem("auth");

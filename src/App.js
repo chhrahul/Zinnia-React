@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest, Checkout, CheckoutAvailability, BillingDetail, BillingConfirmation, Invoices, VenderAccountDetail, VenderBusinessDetail, PaymentInfo, PaymentDetail, Listing, CoupleDashboard, Account, LoginInfo, PersonalInfo, WeddingInfo, WeddingPayment, Calendar, SetAvailability } from "./pages";
+import { Signup, Login, Listings, MainSearch, MainSearchResult, BookingRequest, Checkout, CheckoutAvailability, BillingDetail, BillingConfirmation, Invoices, VenderAccountDetail, VenderBusinessDetail, PaymentInfo, PaymentDetail, Listing, CoupleDashboard, Account, LoginInfo, PersonalInfo, WeddingInfo, WeddingPayment, Calendar, SetAvailability, WeekDaysList } from "./pages";
 import { FloristDetail, PhotographerDetail, VenueDetail } from "./pages/listing";
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Layout from "./components/Layout";
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
           <Route exact path="/wedding-payment" element={<WeddingPayment />} />
           <Route exact path="/calendar" element={<Calendar />} />
           <Route exact path="/set-availability" element={<SetAvailability />} />
+          <Route exact path="/week-days-list" element={<WeekDaysList />} />
         </Routes >
       </div>
     </Layout>

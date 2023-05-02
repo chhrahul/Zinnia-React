@@ -1,6 +1,5 @@
 
 import React from 'react';
-
 import { MainSearchFlorist, MainSearchPhotographer, MainSearchVenue } from "../../components";
 function SearchResultMap() {
     const [activePage, setActivePage] = React.useState('venue')

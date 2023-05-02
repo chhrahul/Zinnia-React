@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import { Modal, Button } from 'react-bootstrap';
 import DatePicker from '../components/Datepicker.js'
 import { Link } from 'react-router-dom';
 import { RxCross1 } from 'react-icons/rx';

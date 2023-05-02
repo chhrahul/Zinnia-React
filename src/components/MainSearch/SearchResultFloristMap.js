@@ -1,8 +1,8 @@
 
 
 import React from 'react';
-import SearchFilter from './SearchFilter';
 import ResultTab from './ResultTab';
+import AddQuantity from '../Listing/AddQuantity';
 function SearchResultVenueMap(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
     const getOfferProps = {
@@ -16,6 +16,36 @@ function SearchResultVenueMap(props) {
         'second': 'Listing',
     }
 
+
+    const [floirstListing, setFloirstListing] = React.useState([
+        { 'title': 'Bridal bouquet', 'price': '300.00', 'quantity': 0 },
+        { 'title': 'Flower crown', 'price': '150.00', 'quantity': 0 },
+        { 'title': 'Bridesmaids bouquets', 'price': '50.00', 'quantity': 0 },
+        // { 'title': 'Flower girl petals/basket', 'price': '50.00', 'quantity': 0 },
+        // { 'title': 'Boutonnieres', 'price': '50.00', 'quantity': 0 },
+        // { 'title': 'Corsages', 'price': '50.00', 'quantity': 0 },
+    ])
+
+    const increaseDecreaseQuantity = (listing, isAdd) => () => {
+        const tmpLisiting = floirstListing.find((item) => item.title === listing.title)
+
+        if (!tmpLisiting) return
+        const { quantity } = tmpLisiting
+        if (quantity === 0 && !isAdd) return
+        tmpLisiting.quantity = isAdd ? quantity + 1 : quantity - 1
+        setFloirstListing([...floirstListing])
+    }
+
+
+    const handleOnChange = (listing) => (e) => {
+
+        const tmpLisiting = floirstListing.find((item) => item.title === listing.title)
+        tmpLisiting.quantity = e.target.value
+        if (tmpLisiting.quantity < 0) {
+            tmpLisiting.quantity = 0
+        }
+        setFloirstListing([...floirstListing])
+    }
     return (
         <>
             <ResultTab {...getOfferProps} />
@@ -71,127 +101,14 @@ function SearchResultVenueMap(props) {
                             </div>
                             <div className="include-custom">
                                 <p className="include-link">INCLUDED</p>
-                                <ul className="p-0">
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Bridal bouquet <br></br> $300.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Bridesmaids bouquets <br></br> $50.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Bridal bouquet <br></br> $50.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Bridesmaids bouquets <br></br> $50.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Flower crown <br></br> $150.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Flower girl petals/basket <br></br> $50.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <li className="d-flex">
-                                        <img src="/images/icons/Tick.svg" alt="tick" />
-                                        <p className="per-hour-florist bouquet">Corsages <br></br> $50.00 each</p>
-                                    </li>
-                                    <div className='col-lg-4 paddin-lr '>
-                                        <span>
-                                            <div class="input-group col mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"> - </span>
-                                                </div>
-                                                <input type="number" class="form-control" value='0' min="1" size="1" />
-                                                <div class="input-group-append">
-                                                    <span class="input-group-text"> + </span>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                </ul>
+
+                                <div className='col-md-9 paddin-lr mb-3'>
+                                    {
+                                        floirstListing.map((listing) => (
+                                            <AddQuantity increaseDecreaseQuantity={increaseDecreaseQuantity} listing={listing} handleOnChange={handleOnChange} />
+                                        ))
+                                    }
+                                </div>
                             </div>
                             <button type="button" class="btn btn-outline-secondary"><img src="/images/icons/Green-tick.svg" alt="phone" />Added to cart</button>
                             <div className="site-link mt-2">
