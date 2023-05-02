@@ -130,9 +130,9 @@ function Listing(props) {
                                     <h1 >Your offerings</h1>
                                     <p className='p-bottom-margin'>These are your current offerings.</p>
                                     <p className='theme-color font-14'>PHOTOGRAPHER</p>
-                                    <p className='price-text p-bottom-margin'>Price</p>
-                                    <p className='p-bottom-margin price-amount-box'><span className="price-amount"> $3000 for 5 hours</span></p>
-                                    <p className='color-cyan  ml-5 mt-4'> INCLUDED </p>
+                                    <p className='price-text p-bottom-margin font-10'>Price</p>
+                                    <p className='p-bottom-margin price-amount-box'><span className="price-amount text-secondary"> $3000 for 5 hours</span></p>
+                                    <p className='color-cyan  ml-5 mt-4 font-10 mb-0'> INCLUDED </p>
                                     <OfferIncludeList includeOffering={includeOffering} />
                                 </div>
                             </div>

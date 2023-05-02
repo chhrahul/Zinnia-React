@@ -216,7 +216,7 @@ const TermAndConditionModal = () => {
     return (
         <>
 
-            <a href="javascript:void(0)" onClick={handleShow}>terms and conditions</a>
+            <a href="javascript:void(0)" class="text-cyan-color" onClick={handleShow}>terms and conditions</a>
             <Modal
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"

@@ -98,31 +98,31 @@ function CheckoutAvailability() {
                         <button type="button" class="btn btn-warning btn-lg mt-2 pay-custom text-blue-50">Buy with <img src="/images/icons/paypal.png" alt="pay" /></button>
                     </div>
                     <div className="row">
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Subtotal</p>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Subtotal</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$9,650.00</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Booking fee (3%)</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$289.50</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Tax (IL tax 6.25%)</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$603.13</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0 text-black">Total</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0 text-black">$10,542.63</p>
+                            </div>
                         </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Booking fee (3%)</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Tax (IL tax 6.25%)</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0 text-black">Total</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="text-black float-right m-0">$9,650.00</p>
-                        </div>
-                    </div>
                     <div className="row">
                         <div className="p-0">
                             <p className="p-0">

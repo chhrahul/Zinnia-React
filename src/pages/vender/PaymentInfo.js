@@ -13,12 +13,13 @@ function PaymentInfo() {
                     <p className="d-flex invoice-top-custom mb-0">
                         <p class="color-cyan" >About you</p> <p> &gt;  Payments</p>
                     </p>
-                    <p className='mb-3 mt-3 padding-lr-0 text-uppercase'>Your payment information </p>
+                    <h5>Payment</h5>
+                    <p className='mb-3 mt-3 padding-lr-0 text-uppercase font-10'>Your payment information </p>
                     <div className='row row-p-0 padding-lr-0'>
                         <div className='col-lg-8'>
                             <div className='row mb-2'>
                                 <div className='col-md-4'>
-                                    <p className='bold-p mb-0'>Routing number</p>
+                                    <p className='bold-p mb-0 fw-bold'>Routing number</p>
                                 </div>
 
                                 <div className='col-md-4 '>
@@ -26,7 +27,7 @@ function PaymentInfo() {
                                 </div>
 
                                 <div className='col-md-2'>
-                                    <p className='bold-p mb-0'><BsEyeSlash size="20" /></p>
+                                    <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267"/></p>
                                 </div>
 
                                 <div className='col-md-2'>
@@ -41,7 +42,7 @@ function PaymentInfo() {
 
                             <div className='row mb-2'>
                                 <div className='col-md-4'>
-                                    <p className='bold-p mb-0'>Account number</p>
+                                    <p className='bold-p mb-0 fw-bold'>Account number</p>
                                 </div>
 
                                 <div className='col-md-4 '>
@@ -49,7 +50,7 @@ function PaymentInfo() {
                                 </div>
 
                                 <div className='col-md-2'>
-                                    <p className='bold-p mb-0'><BsEyeSlash size="20" /></p>
+                                    <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267" /></p>
                                 </div>
 
                                 <div className='col-md-2'>

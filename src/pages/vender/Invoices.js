@@ -17,7 +17,7 @@ function Invoices() {
 
                 </div>
                 <div className="row paddin-lr">
-                    <div className="col-lg-9 table-responsive">
+                    <div className="col-lg-8 table-responsive">
                         <table class="table invoice-custom">
                             <thead>
                                 <tr>

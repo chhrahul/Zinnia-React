@@ -10,7 +10,8 @@ function PaymentDetail() {
                         <p className="d-flex invoice-top-custom mb-0">
                             <p class="color-cyan" >About you</p> <p> &gt;  Business info</p>
                         </p>
-                        <p className='mb-3 mt-3 padding-lr-0 fs-3 mb-3'>Payments </p>
+                        <p className='fs-3 p-0'>Payments </p>
+                        <p className="font-10 text-uppercase">Your payment information</p>
                         <div className='row-p-0 padding-lr-0'>
                             <div className='rrow-p-0 padding-lr-0 mb-2'>
                                 <div className='col-md-8'>

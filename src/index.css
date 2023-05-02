@@ -51,9 +51,10 @@ code {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
     0px 1px 5px rgba(0, 0, 0, 0.2);
 }
-.footer-custom{
-  padding-right:0px !important;
-  padding-left:0px !important;
+
+.footer-custom {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
   background: rgba(120, 122, 143, 0.04) !important;
 }
 
@@ -93,7 +94,7 @@ ul.footer-ul.mb-0 {
 /* createAccount page */
 button#next-btn[disabled] {
   background-color: #BAB8B8 !important;
-  border:1px solid  #BAB8B8;
+  border: 1px solid #BAB8B8;
   color: white !important;
 }
 
@@ -107,14 +108,22 @@ button#next-btn[disabled] {
   padding: 0 !important;
 }
 
-.container-.position-absolute-.h-100- {
-  /* min-height: 100vh; */
+.checkout-custom-btn {
+  background-color: #BAB8B8 !important;;
+  border: 1px solid #BAB8B8 !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px !important;
 }
 
 .custom-75 {
   margin-right: 13%;
 }
-
+.font-10{
+  font-size:10px !important;
+}
+.font-12{
+  font-size:12px !important;
+}
 .select-account {
   /* width: 40px; */
   /* height: 20px; */
@@ -192,8 +201,9 @@ button#next-btn[disabled] {
 .input-group-text {
   cursor: pointer;
 }
-.search-btn-main-custom{
-  width:100% !important;
+
+.search-btn-main-custom {
+  width: 100% !important;
 }
 
 label {
@@ -237,6 +247,18 @@ input[type="checkbox"] {
 
 button.btn.btn-secondary {
   background: #505267;
+}
+
+.added-cart-btn img {
+  margin-right: 10px !important;
+}
+
+.check-label-custom {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #000000 !important;
 }
 
 .navigate-btn {
@@ -576,35 +598,42 @@ p {
 .listing-page .input-group.col {
   padding: 0px !important;
 }
-.listing-custom-para{
+
+.listing-custom-para {
   line-height: 16px !important;
   letter-spacing: 1.5px !important;
   font-size: 10px !important;
   text-transform: uppercase !important;
 }
-.depend-listing-custom-para{
+
+.depend-listing-custom-para {
   font-size: 12px !important;
 }
-.social-media-custom-para{
-  font-size:14px !important;
+
+.social-media-custom-para {
+  font-size: 14px !important;
   line-height: 20px !important;
 }
-.dot-custom{
+
+.dot-custom {
   color: #505267 !important;
 }
 
 .quantity-add-box {
   margin-left: 1px;
 }
-.right-footer-custom{
-  padding-right:56px !important;
+
+.right-footer-custom {
+  padding-right: 56px !important;
 }
+
 .listing-page .input-group,
 .include-custom .input-group {
   border: 1px solid #00767c !important;
   border-radius: 8px;
   color: #00767c !important;
 }
+
 .listing-page .slick-list {
   margin-right: 0.5rem !important;
   margin-left: 0.5rem !important;
@@ -703,13 +732,14 @@ p {
 
 @media screen and (max-width: 409px) {
 
-  .search-btn-main-custom{
-    width:100% !important;
+  .search-btn-main-custom {
+    width: 100% !important;
   }
 
   .img-bg {
-    background-image:none; 
-}
+    background-image: none;
+  }
+
   .navbar-brand img {
     width: 106px;
   }
@@ -721,9 +751,10 @@ p {
 
 @media screen and (max-width: 540px) {
 
-  .search-btn-main-custom{
-    width:100% !important;
+  .search-btn-main-custom {
+    width: 100% !important;
   }
+
   .col-md-6.align-items-center {
     width: 100%;
   }
@@ -808,10 +839,11 @@ p {
 }
 
 /* Couple Dashboard CSS*/
-.custom-ptext{
-  font-size:10px !important;
-  line-height:16px !important;
+.custom-ptext {
+  font-size: 10px !important;
+  line-height: 16px !important;
 }
+
 .card-save-custom {
   padding: 12px 16px !important;
   border-radius: 4px !important;
@@ -820,6 +852,7 @@ p {
   font-weight: 400 !important;
   line-height: 16px !important;
 }
+
 .modal-custom.modal-footer.card-detail {
   align-items: center !important;
   justify-content: center !important;
@@ -828,12 +861,14 @@ p {
 .border-custom {
   border-right: none !important;
 }
-.couple-card-custom h5{
-  font-size:14px !important;
-  font-weight:700 !important;
-  font-style:normal;
-  letter-spacing:0.1px !important;
+
+.couple-card-custom h5 {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  font-style: normal;
+  letter-spacing: 0.1px !important;
 }
+
 .couple-card-custom {
   padding-top: 10px !important;
   border: 1px solid #00767C !important;
@@ -882,20 +917,28 @@ span#basic-addon6 {
   border-top-left-radius: unset !important;
   border-bottom-left-radius: unset !important;
 }
-span.d-flex.wedding-day-custom-top img{
+
+span.d-flex.wedding-day-custom-top img {
   margin-top: 30px !important;
   margin-left: 10px !important;
 }
+
 /* Couple Dashboard CSS*/
 /* Invoices CSS*/
-.wedding-day-custom{
-  margin-top:50px !important;
+.wedding-day-custom {
+  margin-top: 50px !important;
 }
+
 .upper-part-custom h3 {
   margin-top: 50px !important;
   margin-bottom: 14px !important;
 }
-
+.upper-part-custom h6{
+  font-size:24px !important;
+}
+.font-24{
+  font-size:24px !important;
+}
 .download-btn {
   color: #BAB8B8 !important;
   background-color: white !important;
@@ -1131,7 +1174,7 @@ button.btn.btn-secondary.btn-lg.mt-2.pay-custom-checkout {
   line-height: 20px !important;
   letter-spacing: 1.5px !important;
   font-size: 16px !important;
-  font-style: normal;
+  font-style: normal !important;
 }
 
 .checkout-box-border {
@@ -1505,8 +1548,8 @@ select {
 }
 
 @media screen and (max-width: 320px) {
-  .below-card-size{
-    margin-top:10px !important;
+  .below-card-size {
+    margin-top: 10px !important;
   }
 
   .custom-payment-below {
@@ -1565,15 +1608,16 @@ select {
 
 @media screen and (max-width: 640px) {
 
-  .search-btn-main-custom{
-    width:100% !important;
+  .search-btn-main-custom {
+    width: 100% !important;
   }
 
   .img-bg {
-    background-image:none; 
-}
-  .below-card-size{
-    margin-top:10px !important;
+    background-image: none;
+  }
+
+  .below-card-size {
+    margin-top: 10px !important;
   }
 
   .delete-custom img {
@@ -1607,13 +1651,14 @@ select {
 
 @media screen and (max-width: 778px) {
 
-  .search-btn-main-custom{
-    width:100% !important;
+  .search-btn-main-custom {
+    width: 100% !important;
   }
 
   .img-bg {
-    background-image:none; 
-}
+    background-image: none;
+  }
+
   .slick-prev {
     left: 0px !important;
     z-index: 99 !important;
@@ -1654,12 +1699,10 @@ select {
 } */
 @media screen and (max-width: 768px) {
 
-
-  
-
-  .below-card-size{
-    margin-top:10px !important;
+  .below-card-size {
+    margin-top: 10px !important;
   }
+
   input#Business-name {
     width: 100% !important;
   }
@@ -1721,22 +1764,22 @@ select {
     display: none;
   }
 }
+@media only screen and (max-width: 1115px) and (min-width: 992px)  {
+  button.btn.btn-secondary.h-100.p-1.search-btn-main-custom.d-flex.align-items-center{
+    font-size:smaller !important;
+  }
+
+}
 
 @media screen and (min-width: 768px) {
 
- 
-  .navbar-expand-md .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto !important;;
-    font-size: 12px !important;
-}
-
   ul.footer-ul.mb-0.first.px-md-5.mt-3 {
-    padding-left: 3rem!important;
+    padding-left: 3rem !important;
     padding-right: 0px !important;
   }
-  ul.footer-ul.mb-0.footer-ul-2.px-md-5.mt-3{
-    padding-left: 3rem!important;
+
+  ul.footer-ul.mb-0.footer-ul-2.px-md-5.mt-3 {
+    padding-left: 3rem !important;
     padding-right: 0px !important;
   }
 
@@ -1859,8 +1902,9 @@ select {
 
 @media screen and (max-width: 320px) {
   .img-bg {
-    background-image:none; 
-}
+    background-image: none;
+  }
+
   .heading_first {
     line-height: 40px;
     letter-spacing: -0.25px;
@@ -1917,13 +1961,14 @@ select {
 
 @media screen and (max-width: 640px) {
 
-  .search-btn-main-custom{
-    width:auto !important;
+  .search-btn-main-custom {
+    width: auto !important;
   }
-  
+
   .img-bg {
-    background-image:none; 
-}
+    background-image: none;
+  }
+
   .slick-prev {
     left: 10px !important;
     z-index: 99 !important;
@@ -1984,13 +2029,20 @@ select {
 
 @media screen and (max-width: 991px) {
 
-  .search-btn-main-custom{
-    width:auto !important;
+  .col-lg-4.col-md-12.col-sm-12.p-0.text-end.list-button-custom {
+    text-align: left !important;
   }
-  
+
+
+
+  .search-btn-main-custom {
+    width: auto !important;
+  }
+
   .img-bg {
-    background-image:none; 
-}
+    background-image: none;
+  }
+
   input#Business-name {
     width: 100% !important;
   }
@@ -2162,10 +2214,10 @@ input[type="time"]:hover:before {
 #changedateForm input#myDatePicker {
   width: 100% !important;
   padding: 4px 4px;
- border: 1px solid hsla(240,7%,62%,1);
+  border: 1px solid hsla(240, 7%, 62%, 1);
   border-radius: 4px !important;
   outline: none !important;
-  
+
 }
 
 .outer-datepick input#myDatePicker {
@@ -2252,29 +2304,31 @@ span.color-cyan {
 
 #navbarScroll .dropdown-menu[data-bs-popper] {
 
-    right: 0px !important;
-    left: unset !important;
-  
+  right: 0px !important;
+  left: unset !important;
+
 }
 
-.MuiInput-underline-7:after{
+.MuiInput-underline-7:after {
   border: none !important;
 }
+
 input.MuiInput-input-11 {
-    font-size: 18px !important;
-    margin-top: 7px !important;
-        font-family: 'Libre Baskerville' !important;
+  font-size: 18px !important;
+  margin-top: 7px !important;
+  font-family: 'Libre Baskerville' !important;
 }
-.TimeInput-body-2 div div div:nth-child(1){
+
+.TimeInput-body-2 div div div:nth-child(1) {
   background-color: #00767C !important;
 
 
-} 
+}
 
-.TimeInput-body-2 div div div:nth-child(2){
+.TimeInput-body-2 div div div:nth-child(2) {
   background-color: #00767C !important;
-    border: 16px solid #00767C;
-} 
+  border: 16px solid #00767C;
+}
 
 
 

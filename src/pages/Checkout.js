@@ -31,8 +31,8 @@ function Checkout() {
                                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
                                         </svg>CHICAGO,IL
                                     </p>
-                                    <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                    <p className="mb-2 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
+                                    <p className="mb-0 venue-address-custom text-black">$3,000 for 5 hours</p>
+                                    <p className="mb-2 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
                                 </div>
 
                                 <div className="col-6 delete-custom">
@@ -57,8 +57,8 @@ function Checkout() {
                                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
                                         </svg>CHICAGO,IL
                                     </p>
-                                    <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                    <p className="mb-0 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
+                                    <p className="mb-0 venue-address-custom text-black">$3,000 for 5 hours</p>
+                                    <p className="mb-0 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
                                 </div>
 
                                 <div className="col-6 delete-custom">
@@ -82,8 +82,8 @@ function Checkout() {
                                             <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
                                         </svg>CHICAGO,IL
                                     </p>
-                                    <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                    <p className="mb-0 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
+                                    <p className="mb-0 venue-address-custom text-black">$3,000 for 5 hours</p>
+                                    <p className="mb-0 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
                                 </div>
 
                                 <div className="col-6 delete-custom">
@@ -101,33 +101,32 @@ function Checkout() {
                         <button type="button" class="btn btn-warning btn-lg mt-2 pay-custom text-blue-50">Buy with <img src="/images/icons/paypal.png" alt="pay" /></button>
                     </div>
                     <div className="row">
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Subtotal</p>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Subtotal</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$9,650.00</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Booking fee (3%)</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$289.50</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0">Tax (IL tax 6.25%)</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0">$603.13</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p class="m-0 text-black">Total</p>
+                            </div>
+                            <div className="col-md-6 p-0 mt-2">
+                                <p className="float-right m-0 text-black">$10,542.63</p>
+                            </div>
                         </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Booking fee (3%)</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Tax (IL tax 6.25%)</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-2">
-                            <p class="m-0">Total</p>
-                        </div>
-                        <div className="col-md-6 p-0 mt-1">
-                            <p className="float-right m-0">$9,650.00</p>
-                        </div>
-                    </div>
-                    <div className="row">
-
+                    <div className="row mt-2">
                         <div className="p-0">
                             <p className="p-0">
                                 Or 4 payments of $2520.70 with <img src="/images/icons/afterpay.png" alt="payafter" />
@@ -136,11 +135,11 @@ function Checkout() {
                         </div>
                         <div className="row p-0">
 
-                            <Button className="btn btn-secondary btn-lg mt-2 pay-custom-checkout-" href='billing-detail'>Checkout</Button>
+                            <Button className="btn btn-secondary btn-lg mt-2 pay-custom-checkout text-white checkout-custom-btn" href='billing-detail'>Checkout</Button>
                         </div>
                         <div class="form-check py-4">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <label class="form-check-label check-label-custom" for="flexCheckDefault">
                                 By booking vendors on Zinnia, I am agreeing to <TermAndConditionModal />
                             </label>
                         </div>

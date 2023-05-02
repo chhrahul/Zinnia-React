@@ -14,11 +14,11 @@ function VenderBusinessDetail() {
                         <p>Business info</p>
                     </div>
                         <div class="mb-3">
-                            <label for="Business-name" class="form-label">Business Name</label>
+                            <label for="Business-name" class="form-label text-secondary">Business Name</label>
                             <input type="text" class="form-control w-50" id="Business-name" placeholder="Flowers and Friends" />
                         </div>
                         <div class="mb-3">
-                            <label for="Ein-number" class="form-label">EIN Number</label>
+                            <label for="Ein-number" class="form-label text-secondary">EIN Number</label>
                             <input type="number" class="form-control w-50 mb-3" id="Ein-number" placeholder="282572945" />
                         </div>
                         <div className="row paddin-lr email-border-custom mt-3">
@@ -27,14 +27,14 @@ function VenderBusinessDetail() {
                     
                         <div class="form-check  mb-3">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                                <label class="form-check-label fw-normal fs-6" for="flexCheckDefault">
+                                <label class="form-check-label fw-normal fs-6 text-secondary" for="flexCheckDefault">
                                 Email me when someone requests a booking
                                 </label>
                         </div>
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-                                <label class="form-check-label fw-normal fs-6" for="flexCheckChecked">
-                                Email me when I get a new ratingx
+                                <label class="form-check-label fw-normal fs-6 text-secondary" for="flexCheckChecked">
+                                Email me when I get a new rating
                                 </label>
                         </div>
 

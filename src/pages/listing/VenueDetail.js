@@ -74,7 +74,7 @@ function VenueDetail(props) {
                         <p className='p-bottom-margin depend-listing-custom-para'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                        <ContactDetail contactFields={contactFields} />
+                    < ContactDetail contactFields={contactFields} size={24}  />
                     </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />

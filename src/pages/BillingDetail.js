@@ -47,7 +47,7 @@ function BillingDetail() {
                                 <div class="col-6 p-0 ">
                                     <div class="mb-3">
                                         <label for="Zipcode" class="form-label">Zipcode</label>
-                                        <input type="text" class="form-control" id="Zipcode" placeholder="60076" />
+                                        <input type="number" class="form-control" id="Zipcode" placeholder="60076" />
                                     </div>
                                 </div>
                             </div>
@@ -189,19 +189,19 @@ function BillingDetail() {
                                 <p class="m-0">Booking fee (3%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$9,650.00</p>
+                                <p className="float-right m-0">$289.50</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0">Tax (IL tax 6.25%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$9,650.00</p>
+                                <p className="float-right m-0">$603.13</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0 text-black">Total</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0 text-black">$9,650.00</p>
+                                <p className="float-right m-0 text-black">$10,542.63</p>
                             </div>
                         </div>
                         <div className="row mt-3">
