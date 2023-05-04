@@ -130,11 +130,11 @@ function SetAvailability() {
             <div className="row next-btn-bg position-absolute- w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
                 <div className="col-md-12 d-flex justify-content-end">
 
-                    <Button className="btn btn-light navigate-btn" href="payment-info">Cancel
+                    <Button className="btn btn-light navigate-btn" href="calendar">Cancel
                     </Button >
-                    <button type="submit" className="btn btn-secondary navigate-btn" id="next-btn" form="form-data">
+                    <Button type="submit" className="btn btn-secondary navigate-btn" id="next-btn" form="form-data" href="calendar">
                         Save
-                    </button>
+                    </Button>
                 </div>
             </div>
         </>

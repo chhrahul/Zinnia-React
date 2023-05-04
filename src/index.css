@@ -2453,11 +2453,72 @@ height: unset !important;
 }
 .calendar-view ul{
   float: right !important;
+  margin: 0 !important;
 }
 .calendar-view .row{
 padding: 0 !important;
+margin: 0 !important;
 }
 
 .calendar-view .venue-top svg{
-all: initial;
+/* all: initial; */
+height: 28px !important;
+width: 28px !important;
+margin-right: 5px !important;
 }
+
+.calendar-view .venue-top {
+margin: 0 !important;
+}
+
+.calendar-view .list_info {
+margin: 0 !important;
+}
+.fc .fc-button-primary {
+    background-color: white;
+    border-color: #00767C;
+    color: #000000;
+}
+.booking-tab .nav button{
+  color: inherit !important;
+}
+
+.booking-tab .nav-item.active{
+ padding-bottom: 4px;
+    border-bottom: 1px solid #00767c;
+    color: #00767c;
+}
+
+.booking-heading{
+
+font-weight: 700 !important;
+font-size: 16px !important;
+line-height: 24px !important;
+align-items: center !important;
+letter-spacing: 0.15px !important;
+color:#000 !important;
+}
+.hr-devider{
+
+  border:1px solid #505267;
+}
+
+.set-av-btn{
+  width: fit-content !important;
+  --bs-btn-color: #00767c !important;
+    --bs-btn-border-color: #00767c !important;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #00767c !important;
+    --bs-btn-hover-border-color: #00767c !important;
+    --bs-btn-focus-shadow-rgb: 13,202,240;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #00767c !important;
+    --bs-btn-active-border-color: #00767c !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #00767c !important;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #00767c !important;
+    --bs-gradient: none;
+}
+
+

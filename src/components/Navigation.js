@@ -26,7 +26,7 @@ const Navigation = (props) => {
             <div className="container-fluid main-nav position-relative "  >
                 <div className="row">
                     <Navbar expand="md">
-                        <Container fluid className='mx-md-5 p-md-0 paddin-lr'>
+                        <Container fluid className='mx-md-5 p-md-0 paddin-lr  position-sticky '>
                             <Navbar.Brand href="#"><img src="images/Logo.png" alt="" className="nav-bar-img" /></Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll" >

@@ -9,6 +9,7 @@ export { default as SocialMediaHandle } from './Listing/SocialMediaHandle'
 export { default as OfferIncludeList } from './Listing/OfferIncludeList'
 export { default as AddQuantity } from './Listing/AddQuantity'
 export { default as CustomSlider } from './CustomSlider'
+export { default as CancelModal } from './Common/CancelModal'
 
 
 
