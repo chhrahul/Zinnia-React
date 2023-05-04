@@ -13,7 +13,7 @@ function VenderAccountDetail() {
                             <div class="card-body">
                                 <img src="/images/icons/User.jpg" alt="user" />
                                 <h6 class="card-subtitle mb-2 text-muted mt-2">Business Info</h6>
-                                <a href="/vender-business-detail" class="card-link account-link-custom">Tell us about your business</a>
+                                <a href="/vender-business-detail" class="card-link account-link-custom font-14">Tell us about your business</a>
                             </div>
                         </div>
                     </a>
@@ -24,7 +24,7 @@ function VenderAccountDetail() {
                             <div class="card-body">
                                 <img src="/images/icons/business.jpg" alt="business" />
                                 <h6 class="card-subtitle mb-2 text-muted mt-2">Payments</h6>
-                                <a href="/payment-info" class="card-link account-link-custom">Update your payment information</a>
+                                <a href="/payment-info" class="card-link account-link-custom font-14">Update your payment information</a>
                             </div>
                         </div>
                     </a>

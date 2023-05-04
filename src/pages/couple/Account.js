@@ -12,7 +12,7 @@ function Account() {
                         <div class="card-body">
                             <img src="/images/icons/Login.jpg" alt="login" />
                             <h6 class="card-subtitle mb-2 text-muted mt-2">Login</h6>
-                            <a href="#" class="card-link account-link-custom">Update your password and username. </a>
+                            <a href="#" class="card-link account-link-custom font-14">Update your password and username. </a>
                         </div>
                     </div>
                     </a>
@@ -22,8 +22,8 @@ function Account() {
                     <div class="card">
                         <div class="card-body">
                             <img src="/images/icons/business.jpg" alt="business" />
-                            <h6 class="card-subtitle mb-2 text-muted mt-2">Payments</h6>
-                            <a href="#" class="card-link account-link-custom">Update your payment information</a>
+                            <h6 class="card-subtitle mb-2 text-muted mt-2 ">Payments</h6>
+                            <a href="#" class="card-link account-link-custom  font-14">Update your payment information</a>
                         </div>
                     </div>
                     </a>
@@ -36,7 +36,7 @@ function Account() {
                         <div class="card-body">
                             <img src="/images/icons/User.jpg" alt="user" />
                             <h6 class="card-subtitle mb-2 text-muted mt-2">Personal Info</h6>
-                            <a href="#" class="card-link account-link-custom">Tell wedding vendors who you are and update your photo. </a>
+                            <a href="#" class="card-link account-link-custom  font-14">Tell wedding vendors who you are and update your photo. </a>
                         </div>
                     </div>
                     </a>
@@ -47,7 +47,7 @@ function Account() {
                         <div class="card-body">
                             <img src="/images/icons/mywedding.jpg" alt="wedding" />
                             <h6 class="card-subtitle mb-2 text-muted mt-2">Wedding info</h6>
-                            <a href="#" class="card-link account-link-custom">Tell wedding vendors who you are and update your photo. </a>
+                            <a href="#" class="card-link account-link-custom  font-14">Tell wedding vendors who you are and update your photo. </a>
                         </div>
                     </div>
                     </a>

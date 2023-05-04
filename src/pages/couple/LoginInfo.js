@@ -8,10 +8,10 @@ function LoginInfo() {
                         <p class="color-cyan" >Account</p>
                         <p> Personal information</p>
                     </p>
-                    <h5 className="text-dark">Login</h5>
+                    <h4 className="text-dark">Login</h4>
                     <div className="mb-3">
-                        <label for="First-name" class="form-label">First Name</label>
-                        <input type="text" class="form-control custom-payment w-50" id="First-name" placeholder="Calli" />
+                        <label for="email" class="form-label fw-normal">Email</label>
+                        <input type="email" class="form-control custom-payment w-50" id="email" placeholder="callybennet12@gmail.com" />
                     </div>
                     <div className="row paddin-lr p-0">
                         <p className="p-0 fs-6">Login details <a href="#" className="text-cyan-color fs-6 text-decoration-none">update</a> </p>

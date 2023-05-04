@@ -9,7 +9,7 @@ function BillingConfirmation() {
                         <p className="upper-text-custom mt-3">
                         Your order is BOOKED. That’s one more thing off your wedding to <br></br> do list. Queue your happy dance!
                         </p>
-                        <p className="upper-text-custom mt-3">
+                        <p className="upper-text-custom mt-3 fw-bold">
                         Your booking Number: 15039502958206
                         </p>
                         <p  className="upper-text-custom">
@@ -113,19 +113,19 @@ function BillingConfirmation() {
                                 <p class="m-0">Booking fee (3%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$9,650.00</p>
+                                <p className="float-right m-0">$289.50</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0">Tax (IL tax 6.25%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$9,650.00</p>
+                                <p className="float-right m-0">$603.13</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0 text-black">Total</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0 text-black">$9,650.00</p>
+                                <p className="float-right m-0 text-black">$10,542.63</p>
                             </div>
                         </div>
                         <div className="row mt-3">
