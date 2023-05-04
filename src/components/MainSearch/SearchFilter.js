@@ -10,7 +10,7 @@ import MainSearchResult from '../../pages/MainSearchResult.js';
 import 'react-time-picker/dist/TimePicker.css'
 import 'react-clock/dist/Clock.css'
 import 'react-clock/dist/Clock.css'
-// import TimeInput from 'material-ui-time-picker/lib/TimeInput.js';
+import TimeInput from 'material-ui-time-picker/lib/TimeInput.js';
 
 const SearchFilter = (props) => {
 
@@ -83,10 +83,10 @@ const SearchFilter = (props) => {
                                 <span className='d-flex'>
                                     <span class="resposive-hide hide_symbol custom-space partition-symbol">|</span>
                                     <img src="/images/icons/Access_time.svg" alt="time" style={{ 'margin-right': 10 }} />
-                                    {/* <TimeInput mode='12h' colors={
+                                    <TimeInput mode='12h' colors={
                                         { primary: 'red' }
-                                    } theme={'light'} /> */}
-                                    <DatePicker />
+                                    } theme={'light'} />
+
                                 </span>
                             </div>
                             {type === 'venue' &&
