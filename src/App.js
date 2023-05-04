@@ -18,7 +18,7 @@ function App() {
     <Layout {...gettingCartProps}>
       <div className="">
         <Routes>
-          <Route exact path="/" element={< Signup />} />
+          <Route exact path="/main-search" element={< Signup />} />
           <Route exact path="/sign-up" element={< Signup />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/florist" element={<FloristDetail {...gettingCartProps} />} />

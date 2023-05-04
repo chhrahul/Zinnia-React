@@ -13,6 +13,15 @@ function Calendar(props) {
         'second': 'Bookings',
     }
 
+    const [viewType, setViewType] = React.useState();
+
+    const getViewProps = {
+        'resultType': viewType,
+        'setResultType': setViewType,
+        'first': <BsCalendarFill size='30' className="mr-4 icon-canlender" />,
+        'second': <BsCardList size='38' className=" icon-canlender" />,
+    }
+
     return (
         <>
             <ResultTab {...getOfferProps} type="booking" />
@@ -35,7 +44,12 @@ function Calendar(props) {
 
                         </div>
                         <div className="col-6 text-end">
-                            <p className="p-2 m-0"><BsCalendarFill size='30' className="mr-4 icon-canlender" /> <BsCardList size='38' className=" icon-canlender" /></p>
+
+                            <p className="p-2 m-0 calendar-view">
+                                {/* <BsCalendarFill size='30' className="mr-4 icon-canlender" /> */}
+                                {/* <BsCardList size='38' className=" icon-canlender" /> */}
+                                <ResultTab {...getViewProps} type="booking" className="p-0" />
+                            </p>
                         </div>
                     </div>
                 </div>

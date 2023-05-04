@@ -2310,11 +2310,11 @@ span.color-cyan {
 
 }
 
-.MuiInput-underline-7:after {
+.MuiInput-underline-7:after,.jss7:after {
   border: none !important;
 }
 
-input.MuiInput-input-11 {
+input.MuiInput-input-11,.jss11 {
   font-size: 18px !important;
   margin-top: 7px !important;
   font-family: 'Libre Baskerville' !important;
@@ -2450,4 +2450,14 @@ height: unset !important;
 }
 .delete-icon-fc{
       vertical-align: -webkit-baseline-middle;
+}
+.calendar-view ul{
+  float: right !important;
+}
+.calendar-view .row{
+padding: 0 !important;
+}
+
+.calendar-view .venue-top svg{
+all: initial;
 }
