@@ -123,7 +123,7 @@ const SearchFilter = (props) => {
                                 <button type="button" class="btn btn-outline-secondary">Cancel</button>
                             </span>
                             <span className='col  p-0 mx-auto'>
-                                <button type="submit" className="btn btn-secondary h-100 p-1 search-btn-main-custom d-flex align-items-center"><img src="/images/icons/search.png" alt="search" />Search</button>
+                                <button type="submit" className="btn btn-secondary h-100 p-1 search-btn-main-custom d-flex align-items-center"><img src={`/images/icons/search.png`} alt="search" />Search</button>
                             </span>
                         </div>
                     </div>
