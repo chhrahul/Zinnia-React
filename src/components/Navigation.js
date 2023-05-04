@@ -38,7 +38,7 @@ const Navigation = (props) => {
                                         <>
                                             <Nav.Link href="/booking-request" onClick={() => handleClickNav('dashboard')} className={activeNav === 'dashboard' || splitLocation[1] === "booking-request" ? 'text-cyan-color' : ""}> Dashboard </Nav.Link>
                                             <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Listing </Nav.Link>
-                                            <Nav.Link href="/calender" onClick={() => handleClickNav('calender')} className={activeNav === 'calender' || splitLocation[1] === "calender" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Calender </Nav.Link>
+                                            <Nav.Link href="/calendar" onClick={() => handleClickNav('calendar')} className={activeNav === 'calendar' || splitLocation[1] === "calendar" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Calendar </Nav.Link>
                                             <Nav.Link href="/invoices" onClick={() => handleClickNav('invoices')} className={activeNav === 'invoices' || splitLocation[1] === "invoices" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Invoices </Nav.Link>
                                             <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages </Nav.Link>
                                         </>
