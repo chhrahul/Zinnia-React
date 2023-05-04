@@ -2310,7 +2310,7 @@ span.color-cyan {
 
 }
 
-.MuiInput-underline-7:after,.jss7:after {
+.MuiInput-underline-7:after,.jss7:after,.jss7:before {
   border: none !important;
 }
 
