@@ -2320,13 +2320,13 @@ input.MuiInput-input-11 {
   font-family: 'Libre Baskerville' !important;
 }
 
-.TimeInput-body-2 div div div:nth-child(1) {
+.TimeInput-body-2 div div div:nth-child(1),.jss2 div div div:nth-child(1) {
   background-color: #00767C !important;
 
 
 }
 
-.TimeInput-body-2 div div div:nth-child(2) {
+.TimeInput-body-2 div div div:nth-child(2),.jss2 div div div:nth-child(2) {
   background-color: #00767C !important;
   border: 16px solid #00767C;
 }
