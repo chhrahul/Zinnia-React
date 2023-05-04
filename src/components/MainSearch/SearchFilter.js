@@ -83,9 +83,7 @@ const SearchFilter = (props) => {
                                 <span className='d-flex'>
                                     <span class="resposive-hide hide_symbol custom-space partition-symbol">|</span>
                                     <img src="/images/icons/Access_time.svg" alt="time" style={{ 'margin-right': 10 }} />
-                                    <TimeInput mode='12h' colors={
-                                        { primary: 'red' }
-                                    } theme={'light'} />
+                                    <TimeInput mode='12h' theme='red' />
 
                                 </span>
                             </div>
