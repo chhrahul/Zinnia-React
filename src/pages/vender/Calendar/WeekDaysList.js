@@ -8,14 +8,12 @@ function Calendar(props) {
 
     return (
         <>
-            <div className="col-8">
+            <div className="col-md-8">
                 <p className="tz-fc-label m-0 p-0"  >Your weekly hours</p>
                 <div className="row p-4 hr-row">
                     <div className="col-3  p-0">
-
                         <input type="checkbox" className="avialability-checkbox m-0 align-middle" />
                         <span className="pl-2 day-name align-middle"> Mon</span>
-
                     </div>
                     <div className="col-6  p-0 unavilable-text">
                         <span className="m-0 align-middle">Unavailable</span>
@@ -27,13 +25,10 @@ function Calendar(props) {
                         </span>
                     </div>
                 </div>
-
                 <div className="row p-4 hr-row">
                     <div className="col-3  p-0">
-
                         <input type="checkbox" className="avialability-checkbox m-0 align-middle" />
                         <span className="pl-2 day-name align-middle"> Tue</span>
-
                     </div>
                     <div className="col-6  p-0 unavilable-text">
                         <span className="m-0 align-middle">Unavailable</span>
@@ -47,10 +42,8 @@ function Calendar(props) {
                 </div>
                 <div className="row p-4 hr-row">
                     <div className="col-3  p-0">
-
                         <input type="checkbox" className="avialability-checkbox m-0 align-middle" />
                         <span className="pl-2 day-name align-middle"> Wed</span>
-
                     </div>
                     <div className="col-6  p-0 unavilable-text">
                         <span className="m-0 align-middle">Unavailable</span>
@@ -63,23 +56,23 @@ function Calendar(props) {
                     </div>
                 </div>
                 <div className="row p-4 hr-row">
-                    <div className="col-3  p-0">
+                    <div className="col-md-3  p-0">
 
                         <input type="checkbox" className="avialability-checkbox m-0 align-middle" />
                         <span className="pl-2 day-name align-middle"> Thu</span>
 
                     </div>
-                    <div className="col-6  p-0 unavilable-text">
+                    <div className="col-md-6  p-0 unavilable-text">
                         <div className="row">
-                            <div className="col-5 p-0">
-                                <select className="form-select " aria-label="Default select example"
+                            <div className="col-md-5 ">
+                                <select className="form-select  " aria-label="Default select example"
                                 >
                                     <option
                                         value="florist"
                                     >11:00 am</option>
                                 </select>
                             </div>
-                            <div className="col-5 ">
+                            <div className="col-md-5  ">
                                 <select className="form-select    " aria-label="Default select example"
                                 >
                                     <option
@@ -89,7 +82,7 @@ function Calendar(props) {
                             <div className="col-2"><MdDelete size="25" className="delete-icon-fc" /></div>
                         </div>
                     </div>
-                    <div className="col-3  p-0 ">
+                    <div className="col-md-3  p-0 ">
                         <span className="float-md-end icons-action">
                             <BsPlusLg size='25' color='black' className="mr-4  plus-icon" />
                             <MdContentCopy size='30' color='black' className="mr-4  " />
@@ -145,7 +138,7 @@ function Calendar(props) {
                     </div>
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4">
                 <div className="row">
                     <p className="tz-fc-label "  >Add date overides</p>
                     <div className="col-md-12 ">

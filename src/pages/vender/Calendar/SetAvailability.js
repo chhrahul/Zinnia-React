@@ -81,7 +81,6 @@ function SetAvailability() {
                                     </div>
                                     Tuesday
                                 </div>
-
                                 <div className='col-md col-sm-12 pl-0'>
                                     <div className="">
                                         <div className="form-check text-center p-0">
@@ -91,7 +90,6 @@ function SetAvailability() {
                                     </div>
                                     Wednesday
                                 </div>
-
                                 <div className='col-md col-sm-12 pl-0'>
                                     <div className="">
                                         <div className="form-check text-center p-0">
@@ -115,7 +113,6 @@ function SetAvailability() {
                                         <div className="form-check text-center p-0">
                                             <input type="checkbox" className="avialability-checkbox pl-0" />
                                         </div>
-
                                     </div>
                                     Saturday
                                 </div>
@@ -124,12 +121,10 @@ function SetAvailability() {
                     </div>
                     <p className="mt-2"><BsInfoCircle size="18" className="m-1" />You’ll be able to further customize your schedule later on! </p>
                 </div>
-
             </div >
 
             <div className="row next-btn-bg position-absolute- w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
                 <div className="col-md-12 d-flex justify-content-end">
-
                     <Button className="btn btn-light navigate-btn" href="calendar">Cancel
                     </Button >
                     <Button type="submit" className="btn btn-secondary navigate-btn" id="next-btn" form="form-data" href="calendar">

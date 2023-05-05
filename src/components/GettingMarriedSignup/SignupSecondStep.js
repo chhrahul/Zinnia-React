@@ -17,10 +17,10 @@ function SignupSecondStep(props) {
         validationSchema: Yup.object(
             {
                 // date: Yup.string().required('This field is required'),
-                stime: Yup.string().required('This field is required'),
-                etime: Yup.string().required('This field is required'),
-                location: Yup.string().required('This field is required'),
-                budget: Yup.string().required('This field is required'),
+                // stime: Yup.string().required('This field is required'),
+                // etime: Yup.string().required('This field is required'),
+                // location: Yup.string().required('This field is required'),
+                budget: Yup.number(),
             }),
         onSubmit: values => {
 
