@@ -1,6 +1,10 @@
 import React from 'react';
 const CartCount = (props) => {
-  const cartCount = JSON.parse(localStorage.getItem("cart")).length
+  let cartCount = 0
+  if (JSON.parse(localStorage.getItem("cart"))) {
+    cartCount = JSON.parse(localStorage.getItem("cart")).length
+  }
+
   return (
     <>
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

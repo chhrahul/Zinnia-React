@@ -2655,15 +2655,7 @@ line-height: 20px !important;
 letter-spacing: 0.1px !important;
 color: #787A8F !important;
 }
-/* .{
-  font-weight: 400;
-font-size: 10px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: #000000;
-} */
+
 .cart-price-text{
   font-weight: 400 !important;
 font-size: 10px !important;

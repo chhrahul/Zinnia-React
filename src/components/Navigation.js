@@ -124,7 +124,7 @@ const CartModal = (props) => {
     return (
         <>
 
-            <Nav.Link onClick={handleShow} className='cartCoutBadge'>
+            <Nav.Link onClick={handleShow}>
                 <CartCount {...props} />
             </Nav.Link>
             <Modal
@@ -143,11 +143,8 @@ const CartModal = (props) => {
                 <Modal.Body className='pb-0'>
                     {cartCount &&
                         cartCount.map((item, index) => {
-
                             return <>
-
                                 {cartCount.length > 0 ?
-
                                     <div className="row paddin-lr-0 checkout-box-border mb-3">
                                         <div className="col-md-4 p-0">
                                             <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
@@ -166,8 +163,7 @@ const CartModal = (props) => {
                                         </div>
                                     </div>
                                     :
-                                    'No item added'
-                                }
+                                    'No item added'}
                             </>
 
                         })}
