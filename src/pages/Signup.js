@@ -126,15 +126,11 @@ function Listings() {
         localStorage.setItem("selectedSignupType", selectedSignupType);
         localStorage.setItem("auth", 'auth');
         if (selectedSignupType === 'vendor') {
-
-            console.log(gettingVenderSignupDetails);
             window.location.href = '/booking-request';
         } else {
             console.log(gettingMarriedSignupDetails);
             window.location.href = '/couple-dashboard';
         }
-
-
         setStep(step + 1)
     }
 

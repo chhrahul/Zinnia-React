@@ -3,19 +3,14 @@ import React, { useState } from 'react';
 import {
     CustomSlider, SocialMediaHandle, ContactDetail, OfferIncludeList,
 } from "../../components";
+import AddToCart from '../../components/Common/AddToCart';
 
 
 function PhotographerDetail(props) {
-    const { addToCart, cart, setCart, type } = props
-    console.log('type', type)
+    const { cart, setCart, type } = props
 
-    const prodid = 2
-    var added = ''
-    // var added = cart.filter(item => item.id === prodid)
-    // React.useEffect(() => {
-    //     localStorage.setItem('items', JSON.stringify(cart));
 
-    // }, [cart]);
+    const prodid = 3
 
 
     const handles = [
@@ -90,7 +85,7 @@ function PhotographerDetail(props) {
                         <p className='p-bottom-margin depend-listing-custom-para'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                    < ContactDetail contactFields={contactFields} size={24}  />
+                        < ContactDetail contactFields={contactFields} size={24} />
                     </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />
@@ -109,11 +104,7 @@ function PhotographerDetail(props) {
                         <div className='row paddin-lr mt-5'>
                             <div className='col-md-3 pl-0'>
 
-                                {added.length > 0 ?
-                                    <button className='added-to-cart-btn btn' > <img src="/images/icons/selected.svg" alt="plus" />Added to cart</button>
-                                    :
-                                    <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
-                                }
+                                <AddToCart />
 
                             </div>
                         </div>

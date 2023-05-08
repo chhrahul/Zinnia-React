@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { Nav, Navbar, Form, Container, NavDropdown } from 'react-bootstrap/';
-import { useLocation, useNavigate } from "react-router-dom";
-import { RxAvatar } from "react-icons/rx";
+import { Nav, Navbar, Form, Container, NavDropdown, Modal, Button } from 'react-bootstrap/';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { RxAvatar, RxCross1 } from "react-icons/rx";
+import CartCount from './Common/CartCount';
 const Navigation = (props) => {
     const [activeNav, setActiveNav] = React.useState('')
     const location = useLocation();
     const { pathname } = location;
     const splitLocation = pathname.split("/");
-    const { cart } = props
     const handleClickNav = (name) => {
         setActiveNav(name)
     }
@@ -18,8 +18,11 @@ const Navigation = (props) => {
         window.location.href = '/sign-up';
     }
 
+
     const userType = localStorage.getItem("selectedSignupType")
     const auth = localStorage.getItem("auth");
+    // localStorage.setItem("cart", '[]');
+
 
     return (
         < >
@@ -57,11 +60,7 @@ const Navigation = (props) => {
 
                                     {auth !== 'auth' ?
                                         <>
-                                            <Nav.Link href="/checkout" className='cart-icon'>
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path className="cart-icon-fill" d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z" fill="#505267" />
-                                                </svg>
-                                            </Nav.Link>
+                                            <CartModal {...props} />
                                             <Nav.Link href="/sign-up" className="btn btn-outline-secondary signup-item ">
                                                 Sign up
                                             </Nav.Link>
@@ -102,3 +101,81 @@ const Navigation = (props) => {
 }
 
 export default Navigation
+
+const CartModal = (props) => {
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const cartCount = JSON.parse(localStorage.getItem("cart"))
+
+
+    const handleOnclickRemove = (e, index) => {
+        const cartData = JSON.parse(localStorage.getItem("cart"))
+        const newVal = cartData.splice(index, 1)
+        if (index !== 0) {
+            localStorage.setItem("cart", JSON.stringify(newVal));
+        } else {
+            localStorage.setItem("cart", '[]');
+            handleClose()
+        }
+    }
+
+
+    return (
+        <>
+
+            <Nav.Link onClick={handleShow} className='cartCoutBadge'>
+                <CartCount {...props} />
+            </Nav.Link>
+            <Modal
+                size="md"
+                aria-labelledby=""
+
+                show={show}
+                onHide={handleClose}
+                className="float-right cart-modal"
+            >
+
+                <Modal.Title id="" className='cart-modal-head p-3'>
+                    Your cart <span onClick={handleClose} className='float-right mx-2 '><RxCross1 /></span>
+                </Modal.Title>
+
+                <Modal.Body className='pb-0'>
+                    {cartCount &&
+                        cartCount.map((item, index) => {
+
+                            return <>
+
+                                {cartCount.length > 0 ?
+
+                                    <div className="row paddin-lr-0 checkout-box-border mb-3">
+                                        <div className="col-md-4 p-0">
+                                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
+                                        </div>
+                                        <div className="col-md-8">
+                                            <div class="row">
+                                                <p className="heading-cart">Best Photography</p>
+                                                <div class="">
+                                                    <p className=" venue-address-custom cart-price-text text-black">$3,000 for 5 hours</p>
+                                                    <Link className="mb-0 remove-item-btn" onClick={(e) => handleOnclickRemove(e, index)} >Remove</Link>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    :
+                                    'No item added'
+                                }
+                            </>
+
+                        })}
+
+
+                    <Button href="/checkout-availability" variant="secondary" className='m-3 float-right ml-5'>Check out</Button>
+                </Modal.Body>
+            </Modal>
+        </>
+    )
+}

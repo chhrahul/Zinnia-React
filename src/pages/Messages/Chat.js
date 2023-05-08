@@ -2,6 +2,7 @@ import * as React from 'react'
 import { LetterCircle } from "../../components"
 
 function Chat() {
+    const [sendMessage, setSendMessage] = React.useState()
     const [activeContact, setActiveContact] = React.useState({
         'id': '1', 'name': 'Cally Bennett', 'lastMsgTime': '7:43 pm', 'lastMessage': 'Hi. Excited to work with you.',
         'messages': [{ 'userId': '5', 'message': 'Hi. Excited to work with you.' }, { 'userId': '1', 'message': 'Me too!' }]
@@ -28,17 +29,21 @@ function Chat() {
     ]
     const contactProps = {
         activeContact,
-        setActiveContact
+        setActiveContact,
+        sendMessage,
+        setSendMessage
     }
+
+
 
     return (
         <>
-            <div className="container-fluid px-md-5   chat-container" id="1">
+            <div className="container-fluid px-md-5   chat-container p-0 m-0" id="1">
                 <div className="row paddin-lr">
-                    <div className="col-md-5 mt-3 ">
+                    <div className="col-sm-5 mt-3 ">
                         <ChatLeft contacts={contacts} {...contactProps} />
                     </div>
-                    <div className="col-md-7  d-none- d-md-block d-xl-block d-lg-block p-0 main-chat ">
+                    <div className="col-sm-7  d-none d-sm-block d-md-block d-xl-block d-lg-block p-0 main-chat ">
                         <ChatRight contacts={contacts} {...contactProps} />
                     </div>
                 </div>
@@ -89,8 +94,19 @@ function ChatLeft(props) {
 
 
 function ChatRight(props) {
-    const { contacts, activeContact, setActiveContact } = props
+    const [showMessage, setshowMessage] = React.useState()
+    const { contacts, activeContact, setActiveContact, sendMessage,
+        setSendMessage } = props
     const currentUserId = '1';
+    const handleOnChange = (e) => {
+        setSendMessage(e.target.value)
+        // send data to backend
+
+    }
+
+    const handleOnClick = (e) => {
+        setshowMessage(sendMessage)
+    }
     return (
         <>
             <div className="row chat-head-bg text-center mb-5">
@@ -106,25 +122,37 @@ function ChatRight(props) {
                                     <div className="col-md-12">
                                         <p className="message-left message-content ">
                                             <span >{message.message} </span>
+
                                         </p>
                                     </div>
                                     :
-                                    <div className="col-md-12">
-                                        <p className="message-right message-content float-right">
-                                            <span >{message.message} </span>
-                                        </p>
-                                    </div>
+                                    <>
+                                        <div className="col-md-12">
+                                            <p className="message-right message-content float-right">
+                                                <span >{message.message} </span>
+                                            </p>
+                                        </div>
+
+                                    </>
                                 }
+
+
                             </>
                         })
                     }
 
-
+                    {showMessage &&
+                        <div className="col-md-12">
+                            <p className="message-right message-content float-right">
+                                <span >{showMessage} </span>
+                            </p>
+                        </div>
+                    }
                 </div>
                 <div className="row position-absolute send-row w-100">
                     <div className="input-group mb-3 p-md-2">
-                        <input type="text" className="form-control chat-input" placeholder="Message" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                        <button className="btn btn-outline-secondary send-btn" type="button" id="button-addon2">Send</button>
+                        <input type="text" className="form-control chat-input" placeholder="Message" aria-label="Recipient's username" aria-describedby="button-addon2" onChange={handleOnChange} />
+                        <button className="btn btn-outline-secondary send-btn" type="button" id="button-addon2" onClick={handleOnClick}>Send</button>
                     </div>
                 </div>
             </div>

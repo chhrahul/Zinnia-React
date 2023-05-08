@@ -1,11 +1,14 @@
 
 import React from 'react';
 import { SocialMediaHandle, ContactDetail, OfferIncludeList } from '../../components';
+import AddToCart from '../../components/Common/AddToCart';
 
 function VenueDetail(props) {
-    const { addToCart, cart, setCart } = props
-    const prodid = 2
-    var added = cart.filter(item => item.id === prodid)
+
+    const [activeNav, setActiveNav] = React.useState('dashboard')
+
+
+
     const includeOffering = [
         {
             'title': 'Ceremony'
@@ -50,7 +53,9 @@ function VenueDetail(props) {
         },
 
     ]
-
+    const prodid = 2
+    const cart = JSON.parse(localStorage.getItem("cart"))
+    const added = cart.filter(item => item.id === prodid)
 
 
     return (
@@ -72,7 +77,7 @@ function VenueDetail(props) {
                         <p className='p-bottom-margin depend-listing-custom-para'>Depends on selections</p>
                     </div>
                     <div className='col-md-3 pl-0'>
-                    < ContactDetail contactFields={contactFields} size={24}  />
+                        < ContactDetail contactFields={contactFields} size={24} />
                     </div>
                     <div className='col pl-0'>
                         <SocialMediaHandle handles={handles} />
@@ -88,11 +93,7 @@ function VenueDetail(props) {
                 </div>
                 <div className='row paddin-lr mt-5'>
                     <div className='col-md-3 pl-0'>
-                        {added.length > 0 ?
-                            <button className='added-to-cart-btn btn' ><img src="/images/icons/selected.svg" alt="plus" /> Added to cart</button>
-                            :
-                            <button className='add-to-cart-btn btn' onClick={() => addToCart(prodid, { 'id': 'id', 'qty': 'qty', 'name': 'name' })}>Add to cart</button>
-                        }
+                        <AddToCart prodid={prodid} added={added} />
                     </div>
                 </div>
                 <div className='row paddin-lr mt-5'>

@@ -2,6 +2,7 @@ import React from 'react';
 import ResultTab from './ResultTab';
 import AddQuantity from '../Listing/AddQuantity';
 import ContactDetail from '../../components/Listing/ContactDetail';
+import AddToCart from '../Common/AddToCart';
 function SearchResultVenueMap(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
     const getOfferProps = {
@@ -61,6 +62,12 @@ function SearchResultVenueMap(props) {
         }
         setFloirstListing([...floirstListing])
     }
+    const prodid = 7
+    const cart = JSON.parse(localStorage.getItem("cart"))
+    let added = "";
+    if (cart.length > 0) {
+        added = cart.filter(item => item.id === prodid)
+    }
     return (
         <>
             <ResultTab {...getOfferProps} />
@@ -107,7 +114,7 @@ function SearchResultVenueMap(props) {
                                 </div>
                             </div>
                             <div className="added-cart-btn">
-                                <button type="button" class="btn btn-outline-secondary"><img src="/images/icons/Green-tick.svg" alt="phone" />Added to cart</button>
+                                <AddToCart prodid={prodid} added={added} />
                             </div>
                             <div className="site-link mt-2">
                                 <a href="/">View listing</a>

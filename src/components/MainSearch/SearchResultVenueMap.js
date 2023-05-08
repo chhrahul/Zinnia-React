@@ -3,6 +3,7 @@
 import React from 'react';
 import ResultTab from './ResultTab';
 import ContactDetail from '../../components/Listing/ContactDetail';
+import AddToCart from '../Common/AddToCart';
 
 function SearchResultVenueMap(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
@@ -32,6 +33,10 @@ function SearchResultVenueMap(props) {
         },
 
     ]
+    const prodid = 8
+    const cart = JSON.parse(localStorage.getItem("cart"))
+    const added = cart.filter(item => item.id === prodid)
+
     return (
         <>
             <ResultTab {...getOfferProps} />
@@ -81,9 +86,9 @@ function SearchResultVenueMap(props) {
 
                             </div>
                             <div className="location my-4">
-                            <ContactDetail contactFields={contactFields} size={20}  />
+                                <ContactDetail contactFields={contactFields} size={20} />
                             </div>
-                            <button type="button" class="btn btn-outline-secondary">Add to cart</button>
+                            < AddToCart prodid={prodid} added={added} />
                             <div className="site-link mt-2">
                                 <a href="#">Remove from cart</a>
                             </div>

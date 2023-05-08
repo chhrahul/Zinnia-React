@@ -4,6 +4,7 @@ import React from 'react';
 import SearchFilter from './SearchFilter';
 import ResultTab from './ResultTab';
 import ContactDetail from '../../components/Listing/ContactDetail';
+import AddToCart from '../Common/AddToCart';
 function SearchResultPhotographerMap(props) {
     const { activePage, setActivePage, searchType, setSearchType, resultType, setResultType } = props
     const getOfferProps = {
@@ -32,6 +33,11 @@ function SearchResultPhotographerMap(props) {
         },
 
     ]
+
+    const prodid = 8
+    const cart = JSON.parse(localStorage.getItem("cart"))
+    const added = cart.filter(item => item.id === prodid)
+
     return (
         <>
 
@@ -60,9 +66,9 @@ function SearchResultPhotographerMap(props) {
                             </ul>
                         </div>
                         <div className="price mb-4">
-                                <p className="price-below mb-0">PRICE</p>
-                                <p className="per-hour-price">$3,000 for 5 hours</p>
-                            </div>
+                            <p className="price-below mb-0">PRICE</p>
+                            <p className="per-hour-price">$3,000 for 5 hours</p>
+                        </div>
                         <div className="include-custom">
                             <p className="special-link">INCLUDED</p>
                             <ul className="p-0">
@@ -95,9 +101,9 @@ function SearchResultPhotographerMap(props) {
 
                         </div>
                         <div className="location my-4">
-                            <ContactDetail contactFields={contactFields} size={20}  />
-                            </div>
-                        <button type="button" class="btn btn-outline-secondary">Add to cart</button>
+                            <ContactDetail contactFields={contactFields} size={20} />
+                        </div>
+                        < AddToCart prodid={prodid} added={added} />
                         <div className="site-link mt-2">
                             <a href="#">View listing</a>
                         </div>
