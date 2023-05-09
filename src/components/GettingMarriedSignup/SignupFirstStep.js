@@ -45,15 +45,8 @@ function SignupFirstStep(props) {
                 'term_and_conditions': values.term_and_conditions
             }
             SetGettingMarriedSignupDetails({ ...gettingMarriedSignupDetails, ...newValue })
-            // if (selectedSignupType === 'gettingMarried') {
-
-            // } else {
-            //     if (step >= 8) return
-            //     setStep(step + 1)
-            // }
             if (step >= 5) return
             setStep(step + 1)
-
         },
 
     });
@@ -84,7 +77,7 @@ function SignupFirstStep(props) {
                 </select>
                 <span className='couple-form' id="couple-form">
                     <div className="mb-3  couple-filed">
-                        <label htmlFor="fname" className={formik.touched.firstName && formik.errors.firstName ? 'error-form-label form-label ' : 'form-label'} > First name</label>
+                        <label htmlFor="fname" className={formik.touched.firstName && formik.errors.firstName ? 'error-form-label form-label error' : 'form-label'} > First name</label>
                         <input type="text" className={formik.touched.firstName && formik.errors.firstName ? 'error-input form-control ' : 'form-control'} id="fname" placeholder='Jane'
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}

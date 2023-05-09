@@ -30,7 +30,7 @@ const Navigation = (props) => {
                 <div className="row">
                     <Navbar expand="md">
                         <Container fluid className='mx-md-5 p-md-0 paddin-lr  position-sticky '>
-                            <Navbar.Brand href="#"><img src="images/Logo.png" alt="" className="nav-bar-img" /></Navbar.Brand>
+                            <Navbar.Brand href="/main-search"><img src="images/Logo.png" alt="" className="nav-bar-img" /></Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll" >
                                 <Nav
@@ -43,14 +43,15 @@ const Navigation = (props) => {
                                             <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Listing </Nav.Link>
                                             <Nav.Link href="/calendar" onClick={() => handleClickNav('calendar')} className={activeNav === 'calendar' || splitLocation[1] === "calendar" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Calendar </Nav.Link>
                                             <Nav.Link href="/invoices" onClick={() => handleClickNav('invoices')} className={activeNav === 'invoices' || splitLocation[1] === "invoices" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Invoices </Nav.Link>
-                                            <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages </Nav.Link>
+                                            <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages <span class="badge custom-badge">2</span></Nav.Link>
                                         </>
                                         :
                                         <>
                                             {userType === 'gettingMarried' ?
                                                 <>
+                                                    <CartModal {...props} />
                                                     <Nav.Link href="/couple-dashboard" onClick={() => handleClickNav('couple-dashboard')} className={activeNav === 'couple-dashboard' || splitLocation[1] === "couple-dashboard" ? 'text-cyan-color' : ""}> My Day </Nav.Link>
-                                                    <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages </Nav.Link>
+                                                    <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages <span class="badge custom-badge">1</span> </Nav.Link>
                                                 </>
                                                 :
                                                 ''
@@ -60,7 +61,9 @@ const Navigation = (props) => {
 
                                     {auth !== 'auth' ?
                                         <>
-                                            <CartModal {...props} />
+                                            {userType !== 'gettingMarried' &&
+                                                <CartModal {...props} />
+                                            }
                                             <Nav.Link href="/sign-up" className="btn btn-outline-secondary signup-item ">
                                                 Sign up
                                             </Nav.Link>
@@ -106,20 +109,24 @@ const CartModal = (props) => {
     const [show, setShow] = React.useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const cartCount = JSON.parse(localStorage.getItem("cart"))
-
 
     const handleOnclickRemove = (e, index) => {
+
+
         const cartData = JSON.parse(localStorage.getItem("cart"))
         console.log(cartData.length)
+        localStorage.setItem("cart", JSON.stringify([
+            ...cartData.slice(0, index),
+            ...cartData.slice(index + 1)
+        ]));
 
-        if (cartData.length > 1) {
-            const newVal = cartData.splice(index, 1)
-            localStorage.setItem("cart", JSON.stringify(newVal));
-        } else {
-            localStorage.setItem("cart", '[]');
-            handleClose()
-        }
+    }
+    const cartCount = JSON.parse(localStorage.getItem("cart"))
+    let subtotal = 0
+    if (cartCount) {
+        cartCount.map((item, index) => {
+            subtotal += item.price
+        })
     }
 
 
@@ -143,34 +150,40 @@ const CartModal = (props) => {
                 </Modal.Title>
 
                 <Modal.Body className='pb-0'>
-                    {cartCount &&
-                        cartCount.map((item, index) => {
-                            return <>
-                                {cartCount.length > 0 ?
-                                    <div className="row paddin-lr-0 checkout-box-border mb-3">
-                                        <div className="col-md-4 p-0">
-                                            <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
-                                        </div>
-                                        <div className="col-md-8">
-                                            <div class="row">
-                                                <p className="heading-cart">Best Photography</p>
-                                                <div class="">
-                                                    <p className=" venue-address-custom cart-price-text text-black">$3,000 for 5 hours</p>
-                                                    <Link className="mb-0 remove-item-btn" onClick={(e) => handleOnclickRemove(e, index)} >Remove</Link>
-                                                </div>
+                    {cartCount && cartCount.length > 0 ?
+                        <>
+                            {cartCount &&
+                                cartCount.map((item, index) => {
+                                    return <>
 
-
+                                        <div className="row paddin-lr-0 checkout-box-border mb-3">
+                                            <div className="col-md-4 p-0">
+                                                <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
                                             </div>
-
+                                            <div className="col-md-8">
+                                                <div class="row">
+                                                    <p className="heading-cart">{item.name}</p>
+                                                    <div class="">
+                                                        <p className=" venue-address-custom cart-price-text text-black">${item.price} for 5 hours</p>
+                                                        <Link className="mb-0 remove-item-btn" onClick={(e) => handleOnclickRemove(e, index)} >Remove</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    :
-                                    'No item added'}
-                            </>
+                                    </>
 
-                        })}
-
-
+                                })}</>
+                        :
+                        'No item added'}
+                    <div className='row'>
+                        <div className='col-6'>
+                            <p className='subtotal-text'>Subtotal*</p>
+                        </div>
+                        <div className='col-6 '>
+                            <p className='float-right subtotal-price'>${subtotal}.00</p>
+                        </div>
+                    </div>
+                    <p>*Taxes and fees calculated at check out</p>
                     <Button href="/checkout-availability" variant="secondary" className='m-3 float-right ml-5'>Check out</Button>
                 </Modal.Body>
             </Modal>

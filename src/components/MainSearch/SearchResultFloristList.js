@@ -62,10 +62,19 @@ function SearchResultFloristList(props) {
     }
 
     const prodid = 6
+    const price = 650.00
+
     const cart = JSON.parse(localStorage.getItem("cart"))
     let added = null
     if (cart) {
         added = cart.filter(item => item.id === prodid)
+    }
+
+    const getcartProps = {
+        price,
+        prodid,
+        added,
+        name: 'Big Day Florists'
     }
 
 
@@ -114,7 +123,7 @@ function SearchResultFloristList(props) {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 p-0 text-end list-button-custom" >
-                                < AddToCart prodid={prodid} added={added} />
+                                < AddToCart {...getcartProps} />
                                 <div className="site-link mt-2">
                                     <a href="#">View Listingg</a>
                                 </div>

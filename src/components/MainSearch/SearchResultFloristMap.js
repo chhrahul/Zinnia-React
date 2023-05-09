@@ -63,10 +63,17 @@ function SearchResultVenueMap(props) {
         setFloirstListing([...floirstListing])
     }
     const prodid = 7
+    const price = 650
     const cart = JSON.parse(localStorage.getItem("cart"))
     let added = null
     if (cart) {
         added = cart.filter(item => item.id === prodid)
+    }
+    const getcartProps = {
+        price,
+        prodid,
+        added,
+        name: 'Florists'
     }
     return (
         <>
@@ -114,7 +121,7 @@ function SearchResultVenueMap(props) {
                                 </div>
                             </div>
                             <div className="added-cart-btn">
-                                <AddToCart prodid={prodid} added={added} />
+                                <AddToCart {...getcartProps} />
                             </div>
                             <div className="site-link mt-2">
                                 <a href="/">View listing</a>

@@ -29,7 +29,7 @@ function Listings() {
     const [clickedApart, setClickedApart] = React.useState('hidden')
     const [selectedSignupType, SetSelectedSignupType] = React.useState("")
     const [gettingMarriedSignupDetails, SetGettingMarriedSignupDetails] = React.useState({
-        "firstName": "",
+        "firstName": null,
         "lastName": "",
         "email": "",
         "password": "",
@@ -220,9 +220,9 @@ function Listings() {
                             <>
                                 {selectedSignupType === 'gettingMarried' ?
                                     step !== 5 &&
-                                    <div className="row next-btn-bg position-absolute- w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
+                                    <div className="row next-btn-bg position-sticky w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
                                         <div className="col-md-12 d-flex justify-content-end">
-                                            {step !== 1 && <BackButton handleClickBack={handleClickBack} />}
+                                            {step > 2 && <BackButton handleClickBack={handleClickBack} />}
                                             {step === 4 ?
                                                 <SubmitButton handleClickSubmit={handleClickSubmit} />
                                                 :
@@ -232,9 +232,9 @@ function Listings() {
                                     </div>
                                     :
                                     step !== 7 &&
-                                    <div className="row next-btn-bg position-absolute- w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
+                                    <div className="row next-btn-bg position-sticky w-100 btn-grp" style={{ left: 0, bottom: 0 }}>
                                         <div className="col-md-12 d-flex justify-content-end">
-                                            {step !== 1 && <BackButton handleClickBack={handleClickBack} />}
+                                            {step > 2 && <BackButton handleClickBack={handleClickBack} />}
                                             {step === 6 ?
                                                 <SubmitButton handleClickSubmit={handleClickSubmit} />
                                                 :
@@ -257,9 +257,9 @@ function Listings() {
                     <>
                         {selectedSignupType === 'gettingMarried' ?
                             step !== 5 &&
-                            <div className="row next-btn-bg position-absolute- w-100" style={{ left: 0, bottom: 0 }}>
+                            <div className="row next-btn-bg position-sticky w-100" style={{ left: 0, bottom: 0 }}>
                                 <div className="col-md-12 d-flex justify-content-end">
-                                    {step !== 1 && <BackButton handleClickBack={handleClickBack} />}
+                                    {step > 2 && <BackButton handleClickBack={handleClickBack} />}
                                     {step === 4 ?
                                         <SubmitButton handleClickSubmit={handleClickSubmit} />
                                         :
@@ -269,9 +269,9 @@ function Listings() {
                             </div>
                             :
                             step !== 7 &&
-                            <div className="row next-btn-bg position-absolute- w-100" style={{ left: 0, bottom: 0 }}>
+                            <div className="row next-btn-bg position-sticky w-100" style={{ left: 0, bottom: 0 }}>
                                 <div className="col-md-12 d-flex justify-content-end">
-                                    {step !== 1 && <BackButton handleClickBack={handleClickBack} />}
+                                    {step > 2 && <BackButton handleClickBack={handleClickBack} />}
                                     {step === 6 ?
                                         <SubmitButton handleClickSubmit={handleClickSubmit} />
                                         :

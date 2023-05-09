@@ -13,9 +13,9 @@ function MainSearch() {
                         <h1 className='pl-0 col-12  padding-lr-0'>Good evening, Flowers and Friends!  </h1>
                         <p className='mb-1 mt-3 padding-lr-0 font-10'>BOOKING REQUESTS </p>
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by
                                 1/1/2023 4PM </p>
-                            <p className='text-danger font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
+                            <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic font-14'>You have no bookings this day.  </p>
@@ -24,9 +24,9 @@ function MainSearch() {
                         </div>
 
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by
                                 1/1/2023 4PM </p>
-                            <p className='text-danger font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
+                            <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic font-14'>You have no bookings this day.  </p>
@@ -35,9 +35,9 @@ function MainSearch() {
                         </div>
 
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by
                                 1/1/2023 4PM </p>
-                            <p className='text-danger font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
+                            <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
                             <p className='bold-p font-14'>May 11th 12-9 pm </p>
                             <p className='text-muted fst-italic font-14'>You have no bookings this day.  </p>
@@ -52,7 +52,7 @@ function MainSearch() {
                         </div> */}
                         {/* if no bookings */}
 
-                        <p className='mb-3 mt-3 padding-lr-0 font-10 text-uppercase'>Your payment information </p>
+                        <p className='padding-lr-0 font-10 text-uppercase my-payment-info'>Your payment information </p>
                         <div className='row row-p-0 padding-lr-0'>
                             <div className='col-6'>
                                 <div className='row mb-2'>
@@ -83,7 +83,7 @@ function MainSearch() {
                                     </div>
 
                                     <div className='col-md-2'>
-                                        <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267"/></p>
+                                        <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267" /></p>
                                     </div>
 
                                     <div className='col-md-2'>

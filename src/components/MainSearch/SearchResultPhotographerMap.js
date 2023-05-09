@@ -34,10 +34,19 @@ function SearchResultPhotographerMap(props) {
 
     ]
 
-    const prodid = 8
+    const prodid = 3
     const cart = JSON.parse(localStorage.getItem("cart"))
-    const added = cart.filter(item => item.id === prodid)
-
+    let added = null
+    if (cart) {
+        added = cart.filter(item => item.id === prodid)
+    }
+    const price = 3000
+    const getcartProps = {
+        price,
+        prodid,
+        added,
+        name: 'Best Photography'
+    }
     return (
         <>
 
@@ -103,7 +112,7 @@ function SearchResultPhotographerMap(props) {
                         <div className="location my-4">
                             <ContactDetail contactFields={contactFields} size={20} />
                         </div>
-                        < AddToCart prodid={prodid} added={added} />
+                        < AddToCart {...getcartProps} />
                         <div className="site-link mt-2">
                             <a href="#">View listing</a>
                         </div>

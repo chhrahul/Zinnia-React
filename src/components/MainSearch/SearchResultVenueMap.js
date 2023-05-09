@@ -39,7 +39,13 @@ function SearchResultVenueMap(props) {
     if (cart) {
         added = cart.filter(item => item.id === prodid)
     }
-
+    const price = 3000
+    const getcartProps = {
+        price,
+        prodid,
+        added,
+        name: 'Lakeside Hotel'
+    }
     return (
         <>
             <ResultTab {...getOfferProps} />
@@ -91,7 +97,7 @@ function SearchResultVenueMap(props) {
                             <div className="location my-4">
                                 <ContactDetail contactFields={contactFields} size={20} />
                             </div>
-                            < AddToCart prodid={prodid} added={added} />
+                            < AddToCart {...getcartProps} />
                             <div className="site-link mt-2">
                                 <a href="#">Remove from cart</a>
                             </div>

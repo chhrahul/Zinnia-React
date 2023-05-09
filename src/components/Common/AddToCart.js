@@ -1,9 +1,10 @@
+import { NamedTimeZoneImpl } from '@fullcalendar/core/internal';
 import React from 'react';
 const AddToCart = (props) => {
   const [cart, setCart] = React.useState([])
   const [tempAdded, setTempAdded] = React.useState(0)
 
-  const { prodid, added } = props
+  const { prodid, added, name, price } = props
   const addToCart = (data) => {
     let newVal
     if (localStorage.getItem("cart")) {
@@ -23,9 +24,9 @@ const AddToCart = (props) => {
     <>
 
       {added && added.length > 0 || tempAdded > 0 ?
-        <button className='added-to-cart-btn btn' ><img src="/images/icons/selected.svg" alt="plus" /> Added to cart</button>
+        <button className='added-to-cart-btn btn ' ><img src="/images/icons/selected.svg" alt="plus" /> Added to cart</button>
         :
-        <button className='add-to-cart-btn btn' onClick={() => addToCart({ 'id': prodid, 'qty': '10', 'name': 'name' })}>Add to cart</button>
+        <button className='add-to-cart-btn btn btn-secondary' onClick={() => addToCart({ 'id': prodid, 'qty': '10', 'name': name, 'price': price })}>Add to cart</button>
       }
     </>
   )

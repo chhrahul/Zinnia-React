@@ -33,8 +33,19 @@ function SearchResultPhotographerList(props) {
 
     ]
     const prodid = 3
+
     const cart = JSON.parse(localStorage.getItem("cart"))
-    const added = cart.filter(item => item.id === prodid)
+    let added = null
+    if (cart) {
+        added = cart.filter(item => item.id === prodid)
+    }
+    const price = 3000
+    const getcartProps = {
+        price,
+        prodid,
+        added,
+        name: 'Best Photography'
+    }
     return (
         <>
 
@@ -113,7 +124,7 @@ function SearchResultPhotographerList(props) {
                             </div>
                             <div className="col-lg-4 col-md-12 col-sm-12 p-0 text-end list-button-custom" >
 
-                                <AddToCart prodid={prodid} added={added} />
+                                <AddToCart {...getcartProps} />
                                 <div className="site-link mt-2">
                                     <a href="#">View Listing</a>
                                 </div>

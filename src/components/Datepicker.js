@@ -28,9 +28,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <label htmlFor="myDatePicker">
-          <img src="/images/icons/calendar_today.svg" alt="date" style={{ 'margin-right': 10 }} />
-        </label>
+        {/* <label htmlFor="myDatePicker">
+          <img src="/images/icons/calendar_today.svg" alt="date" />
+        </label> */}
+        <img src="/images/icons/calendar_today.svg" alt="date" />
         <DatePicker
           selected={this.state.startDate}
           onChange={this.handleChange}
