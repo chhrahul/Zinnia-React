@@ -64,8 +64,8 @@ function SearchResultVenueMap(props) {
     }
     const prodid = 7
     const cart = JSON.parse(localStorage.getItem("cart"))
-    let added = "";
-    if (cart.length > 0) {
+    let added = null
+    if (cart) {
         added = cart.filter(item => item.id === prodid)
     }
     return (

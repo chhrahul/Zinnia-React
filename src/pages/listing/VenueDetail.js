@@ -55,7 +55,10 @@ function VenueDetail(props) {
     ]
     const prodid = 2
     const cart = JSON.parse(localStorage.getItem("cart"))
-    const added = cart.filter(item => item.id === prodid)
+    let added = null
+    if (cart) {
+        added = cart.filter(item => item.id === prodid)
+    }
 
 
     return (

@@ -6,7 +6,10 @@ import { SocialMediaHandle, ContactDetail, CustomSlider, AddQuantity } from '../
 function FloristDetail(props) {
     const { addToCart, cart } = props
     const prodid = 1
-    var added = cart.filter(item => item.id === prodid)
+    let added = null
+    if (cart) {
+        added = cart.filter(item => item.id === prodid)
+    }
     const [floirstListing, setFloirstListing] = React.useState([
         { 'title': 'Bridal bouquet', 'price': '300.00', 'quantity': 0 },
         { 'title': 'Flower crown', 'price': '150.00', 'quantity': 0 },

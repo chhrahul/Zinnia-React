@@ -35,7 +35,10 @@ function SearchResultVenueMap(props) {
     ]
     const prodid = 8
     const cart = JSON.parse(localStorage.getItem("cart"))
-    const added = cart.filter(item => item.id === prodid)
+    let added = [{ 'id': 0 }]
+    if (cart) {
+        added = cart.filter(item => item.id === prodid)
+    }
 
     return (
         <>

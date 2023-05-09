@@ -111,8 +111,10 @@ const CartModal = (props) => {
 
     const handleOnclickRemove = (e, index) => {
         const cartData = JSON.parse(localStorage.getItem("cart"))
-        const newVal = cartData.splice(index, 1)
-        if (index !== 0) {
+        console.log(cartData.length)
+
+        if (cartData.length > 1) {
+            const newVal = cartData.splice(index, 1)
             localStorage.setItem("cart", JSON.stringify(newVal));
         } else {
             localStorage.setItem("cart", '[]');
@@ -124,7 +126,7 @@ const CartModal = (props) => {
     return (
         <>
 
-            <Nav.Link onClick={handleShow}>
+            <Nav.Link onClick={handleShow} className='cartCoutBadge'>
                 <CartCount {...props} />
             </Nav.Link>
             <Modal
