@@ -1,21 +1,22 @@
 import {
-    BsClock,BsFillGeoAltFill,BsFillTelephoneFill
+    BsClock, BsFillGeoAltFill, BsFillTelephoneFill
 } from "react-icons/bs";
 import { GiEarthAsiaOceania } from "react-icons/gi";
 import { IoLocationSharp } from "react-icons/io5";
+import { FaGlobeAsia } from "react-icons/fa";
 function ContactDetail(props) {
     const { contactFields, size } = props
 
     const FieldsIcon = ({ type }) => {
         if (type === "streetAddress") {
-     
-            return <IoLocationSharp size={size+10} className='contact-icon color-cyan' />
+
+            return <IoLocationSharp size={size + 10} className='contact-icon color-cyan' />
         }
         else if (type === "timing") {
             return <BsClock size={size} className='contact-icon color-cyan' />
         }
         else if (type === "website") {
-            return <GiEarthAsiaOceania size={size} className='contact-icon color-cyan' />
+            return <FaGlobeAsia size={size} className='contact-icon color-cyan' />
         } else if (type === "phone") {
             return <BsFillTelephoneFill size={size} className='contact-icon color-cyan' />
         }

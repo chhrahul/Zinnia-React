@@ -15,7 +15,7 @@ function SearchResultFloristList(props) {
         resultType,
         setResultType,
         'first': 'Map',
-        'second': 'Listing',
+        'second': 'List View',
     }
     const contactFields = [
         {
@@ -44,7 +44,6 @@ function SearchResultFloristList(props) {
     ])
     const increaseDecreaseQuantity = (listing, isAdd) => () => {
         const tmpLisiting = floirstListing.find((item) => item.title == listing.title)
-        console.log(tmpLisiting)
         if (!tmpLisiting) return
         const { quantity } = tmpLisiting
         if (quantity === 0 && !isAdd) return

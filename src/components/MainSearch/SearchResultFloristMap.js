@@ -13,7 +13,7 @@ function SearchResultVenueMap(props) {
         resultType,
         setResultType,
         'first': 'Map',
-        'second': 'Listing',
+        'second': 'List View',
     }
     const contactFields = [
         {
@@ -90,7 +90,7 @@ function SearchResultVenueMap(props) {
 
                             <p class="card-text photo-below mt-3 mb-2">Florist</p>
                             <div className="review">
-                                <ul className="d-flex p-0">
+                                <ul className="d-flex p-0 m-0">
                                     <li>
                                         <img src="/images/icons/star.svg" alt="star" />
                                     </li>
@@ -129,7 +129,7 @@ function SearchResultVenueMap(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-8 col-md-12 col-sm-12 ">
+                <div className="col-lg-8 col-md-12 col-sm-12 map-outer ">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.5577198195256!2d-87.69167392271156!3d41.966833996289225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd21ab75c2d73%3A0xc77f3bbadef7b3a8!2s4701%20N%20Lincoln%20Ave%2C%20Chicago%2C%20IL%2060625%2C%20USA!5e0!3m2!1sen!2sin!4v1681993856968!5m2!1sen!2sin" width="100%" height="700px" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
                 </div>
 

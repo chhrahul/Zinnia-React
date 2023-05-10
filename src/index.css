@@ -681,7 +681,15 @@ p {
 }
 
 .custom-border {
-  border: 2px solid #00767C !important;
+  border: 1px solid gray !important;
+  border-radius: 8px;
+}
+.custom-border:hover {
+  border: 1px solid #00767C !important;
+  border-radius: 8px;
+}
+.custom-border.active {
+  border: 1px solid #00767C !important;
   border-radius: 8px;
 }
 
@@ -2782,7 +2790,20 @@ line-height: 28px !important;
 letter-spacing: 0.15px !important;
 color: #000000 !important;
 }
+p.price-below {
+    margin-bottom: 8px !important;
+}
 
+.custom-search .include-link{
+  color: #00767c !important;
+}
 
+.list_info,.form-select,input{
+  cursor: pointer;
+}
+
+.map-outer iframe {
+    border-radius: 8px !important;
+}
 
 

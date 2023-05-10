@@ -14,7 +14,7 @@ function SearchResultPhotographerList(props) {
         resultType,
         setResultType,
         'first': 'Map',
-        'second': 'Listing',
+        'second': 'List View',
     }
     const contactFields = [
         {

@@ -180,7 +180,7 @@ const CartModal = (props) => {
                             <p className='subtotal-text'>Subtotal*</p>
                         </div>
                         <div className='col-6 '>
-                            <p className='float-right subtotal-price'>${subtotal}.00</p>
+                            <p className='float-right subtotal-price'>${subtotal.toLocaleString()}.00</p>
                         </div>
                     </div>
                     <p>*Taxes and fees calculated at check out</p>
