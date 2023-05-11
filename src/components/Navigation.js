@@ -74,7 +74,7 @@ const Navigation = (props) => {
                                                     <CartModal {...props} />
                                                 </span>
                                             }
-                                            <Link href="/sign-up" className="btn btn-outline-secondary signup-item ">
+                                            <Link to="/sign-up" className="btn btn-outline-secondary signup-item ">
                                                 Sign up
                                             </Link>
                                         </>
