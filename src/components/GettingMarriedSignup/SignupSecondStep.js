@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import GeoAutoComplete from '../GeoAutoComplete';
+import { BsCalendar, BsClock } from 'react-icons/bs';
 
 function SignupSecondStep(props) {
     const { handleInputGettingMarried, gettingMarriedSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingMarriedSignupDetails } = props
@@ -39,7 +40,7 @@ function SignupSecondStep(props) {
     });
     return (
         <span className='px-0- '>
-            <form onSubmit={formik.handleSubmit} id="form-data">
+            <form onSubmit={formik.handleSubmit} id="form-data" className='secondFormCouple'>
                 <p>
                     <span className="text-danger"> 1 of 2 </span> Tell us about your big day!
                 </p>
@@ -47,9 +48,19 @@ function SignupSecondStep(props) {
                     Your Wedding info
                 </h1>
                 <div className="">
-                    <div className="mt-3 mb-3">
-                        <label htmlFor="lname" className={formik.touched.date && formik.errors.date ? 'error-form-label form-label ' : 'form-label'}>Wedding date</label>
-                        <input type="date" className={formik.touched.date && formik.errors.date ? 'error-input form-control ' : 'form-control'} id="lname"
+                    <div className="form-check mt-1">
+                        <input type="checkbox" className="form-check-input" id="exampleCheck1"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.askDate}
+                            name="askDate"
+                            checked={formik.values.askDate ? true : false}
+                        />
+                        <p className="form-check-label" htmlFor="exampleCheck1">I don’t have anything planned yet, I’m just here to look. </p>
+                    </div>
+                    <div className={formik.values.askDate ? 'mt-3 mb-3 disbled-date-wedding' : 'mt-3 mb-3'}>
+                        <label htmlFor="wedding-date " className={formik.touched.date && formik.errors.date ? 'error-form-label form-label ' : 'form-label'}>Wedding date</label>
+                        <input type="date" className={formik.touched.date && formik.errors.date ? 'error-input form-control ' : 'form-control'} id="wedding-date"
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.date}
@@ -57,19 +68,13 @@ function SignupSecondStep(props) {
                             min={new Date().toISOString().split('T')[0]}
                             disabled={formik.values.askDate ? true : false}
                         />
+                        <label className='input-calendar'>
+                            <BsCalendar size="14" htmlFor="wedding-date" />
+                        </label>
                         {formik.touched.date && formik.errors.date ? (
                             <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.date}</div>
                         ) : null}
-                        <div className="form-check mt-1">
-                            <input type="checkbox" className="form-check-input" id="exampleCheck1"
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                value={formik.values.askDate}
-                                name="askDate"
-                                checked={formik.values.askDate ? true : false}
-                            />
-                            <p className="form-check-label" htmlFor="exampleCheck1">I don’t have a date yet</p>
-                        </div>
+
                     </div>
                 </div>
                 <div className="row second-step">
@@ -81,6 +86,9 @@ function SignupSecondStep(props) {
                             value={formik.values.stime}
                             name="stime"
                         />
+                        <label className='input-clock'>
+                            <BsClock size="14" />
+                        </label>
                         {formik.touched.stime && formik.errors.stime ? (
                             <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.stime}</div>
                         ) : null}
@@ -93,6 +101,9 @@ function SignupSecondStep(props) {
                             value={formik.values.etime}
                             name="etime"
                         />
+                        <label className='input-clock'>
+                            <BsClock size="14" />
+                        </label>
                         {formik.touched.stime && formik.errors.stime ? (
                             <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.stime}</div>
                         ) : null}

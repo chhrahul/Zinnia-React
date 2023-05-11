@@ -4,6 +4,7 @@ import {
 import { GiEarthAsiaOceania } from "react-icons/gi";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaGlobeAsia } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function ContactDetail(props) {
     const { contactFields, size } = props
 
@@ -24,7 +25,7 @@ function ContactDetail(props) {
     const Fields = ({ type, fieldVal }) => {
         return (
             <>
-                {type === "timing" ? <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> Open <span className="dot-custom">&bull;</span></span> Closes 10 PM</span></p> : type === "website" ? <p className='d-flex'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> Bigdayflorists.com </span> </span></p> : <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span>{fieldVal}</span></p>}
+                {type === "timing" ? <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> Open <span className="dot-custom">&bull;</span></span> Closes 10 PM</span></p> : type === "website" ? <p className='d-flex'><FieldsIcon type={type} /> <span><span className='color-cyan  ml-5 social-media-custom-para'> <a href="http://Bigdayflorists.com" target="_blank">Bigdayflorists.com</a> </span> </span></p> : <p className='d-flex social-media-custom-para'><FieldsIcon type={type} /> <span>{fieldVal}</span></p>}
             </>
         )
     }

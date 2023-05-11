@@ -40,10 +40,14 @@ const Navigation = (props) => {
                                     {userType === 'vendor' ?
                                         <>
                                             <Nav.Link href="/booking-request" onClick={() => handleClickNav('dashboard')} className={activeNav === 'dashboard' || splitLocation[1] === "booking-request" ? 'text-cyan-color' : ""}> Dashboard </Nav.Link>
-                                            <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Listing </Nav.Link>
-                                            <Nav.Link href="/calendar" onClick={() => handleClickNav('calendar')} className={activeNav === 'calendar' || splitLocation[1] === "calendar" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Calendar </Nav.Link>
-                                            <Nav.Link href="/invoices" onClick={() => handleClickNav('invoices')} className={activeNav === 'invoices' || splitLocation[1] === "invoices" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Invoices </Nav.Link>
-                                            <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages <span class="badge custom-badge">2</span></Nav.Link>
+                                            <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
+                                            <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}> Listing </Nav.Link>
+                                            <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
+                                            <Nav.Link href="/calendar" onClick={() => handleClickNav('calendar')} className={activeNav === 'calendar' || splitLocation[1] === "calendar" ? 'text-cyan-color' : ""}> Calendar </Nav.Link>
+                                            <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
+                                            <Nav.Link href="/invoices" onClick={() => handleClickNav('invoices')} className={activeNav === 'invoices' || splitLocation[1] === "invoices" ? 'text-cyan-color' : ""}> Invoices </Nav.Link>
+                                            <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
+                                            <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color d-flex message-nav' : " d-flex message-nav"}> Messages <span class="badge custom-badge">2</span></Nav.Link>
                                         </>
                                         :
                                         <>
@@ -51,7 +55,8 @@ const Navigation = (props) => {
                                                 <>
                                                     <CartModal {...props} />
                                                     <Nav.Link href="/couple-dashboard" onClick={() => handleClickNav('couple-dashboard')} className={activeNav === 'couple-dashboard' || splitLocation[1] === "couple-dashboard" ? 'text-cyan-color' : ""}> My Day </Nav.Link>
-                                                    <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color' : ""}><span className='d-none d-lg-inline '>/</span> Messages <span class="badge custom-badge">1</span> </Nav.Link>
+                                                    <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
+                                                    <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color d-flex message-nav' : " d-flex message-nav"} > Messages <span class="badge custom-badge">1</span> </Nav.Link>
                                                 </>
                                                 :
                                                 ''

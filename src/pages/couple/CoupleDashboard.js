@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { CancelModal } from '../../components';
+import { BsPencilFill } from 'react-icons/bs';
 
 
 function CoupleDashboard() {
@@ -10,8 +11,8 @@ function CoupleDashboard() {
             <div className="container-fluid px-md-5  mt-3 custom-search">
                 <div className="row paddin-lr upper-part-custom">
                     <div className="col-lg-8 col-md-6 col-sm-12">
-                        <span className="d-flex wedding-day-custom-top"><p class="wedding-day-custom font-14">Wedding day 6/4/23, 3:30pm, 6 hours</p>
-                            <img src="/images/icons/Edit.svg" alt="edit" /></span>
+                        <span className="d-flex wedding-day-custom-top"><p class="wedding-day-custom ">Wedding day <span className='wedding-date-time'>6/4/23, 3:30pm, 6 hours</span>  <BsPencilFill color='' className="edit-icon" /></p>
+                        </span>
                         <h2>20 days to go!</h2>
                     </div>
                     <div className="row paddin-lr">

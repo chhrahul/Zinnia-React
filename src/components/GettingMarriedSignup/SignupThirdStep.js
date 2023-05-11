@@ -71,7 +71,10 @@ function Photographer(props) {
             onMouseOut={() => setOver(false)}
             onClick={toggleClass}
         >
-            <img src={isActive ? '/images/icons/camera-clicked.png' : over ? '/images/icons/camera-2.png' : '/images/icons/camera-1.png'} alt='' />
+            <span>
+                <img src={isActive ? '/images/icons/camera-clicked.png' : over ? '/images/icons/camera-2.png' : '/images/icons/camera-1.png'} alt='' className="vender-icon" />
+                Photographer
+            </span>
             <img
                 src={isActive ? '/images/icons/Vector-clicked.png' : over ? '/images/icons/Vector2.png' : '/images/icons/Vector.png'}
                 alt="plus"
@@ -97,7 +100,10 @@ function Florist(props) {
             onMouseOut={() => setOver(false)}
             onClick={toggleClass}
         >
-            <img src={isActive ? '/images/icons/florist-clicked.png' : over ? '/images/icons/florist-2.png' : '/images/icons/florist-1.png'} alt='' />
+            <span>
+                <img src={isActive ? '/images/icons/florist-clicked.png' : over ? '/images/icons/florist-2.png' : '/images/icons/florist-1.png'} alt='' className="vender-icon" />
+                Florist
+            </span>
             <img
                 src={isActive ? '/images/icons/Vector-clicked.png' : over ? '/images/icons/Vector2.png' : '/images/icons/Vector.png'}
                 alt="plus"
@@ -122,7 +128,10 @@ function Venue(props) {
             onMouseOut={() => setOver(false)}
             onClick={toggleClass}
         >
-            <img src={isActive ? '/images/icons/vanue-clicked.png' : over ? '/images/icons/vanue-2.png' : '/images/icons/vanue-1.png'} alt='' />
+            <sapn>
+                <img src={isActive ? '/images/icons/vanue-clicked.png' : over ? '/images/icons/vanue-2.png' : '/images/icons/vanue-1.png'} alt='' className="vender-icon" />
+                Venue
+            </sapn>
             <img
                 src={isActive ? '/images/icons/Vector-clicked.png' : over ? '/images/icons/Vector2.png' : '/images/icons/Vector.png'}
                 alt="plus"

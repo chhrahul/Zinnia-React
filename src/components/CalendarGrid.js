@@ -2,11 +2,17 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 
 const events = [
-
-    { daysOfWeek: ['3'], startTime: '5:30', endTime: '16:30' },
+    { daysOfWeek: ['3', '4'], startTime: '5:30', endTime: '16:30' },
+    { daysOfWeek: ['3'], startTime: '6:30', endTime: '17:30' },
+    { daysOfWeek: ['3'], startTime: '7:30', endTime: '17:30' },
+    { daysOfWeek: ['3'], startTime: '8:30', endTime: '17:30' },
+    { daysOfWeek: ['3'], startTime: '9:30', endTime: '17:30' },
+    { daysOfWeek: ['3'], startTime: '10:30', endTime: '17:30' },
+    { daysOfWeek: ['3'], startTime: '11:30', endTime: '17:30' },
     { start: new Date(), title: 'Unavailable' },
     { start: new Date().setDate(new Date().getDate() + 7), title: 'Unavailable' },
     { start: new Date().setDate(new Date().getDate() + 28), title: 'Unavailable' },
+
 
 ]
 
@@ -27,21 +33,32 @@ export function CalendarGrid() {
 
 // a custom render function
 function renderEventContent(eventInfo) {
+    const dayNo = eventInfo.event._instance.range.start.getDay()
+    let count = 0
+    events.map((day) => {
+        if (day.daysOfWeek != undefined) {
+            if (day.daysOfWeek.includes(dayNo.toString())) {
+                count = count + 1
+            }
+        }
+    })
+
     const start = new Date(eventInfo.event._instance.range.start).toLocaleTimeString(navigator.language, {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true
     });
+
     const end = new Date(eventInfo.event._instance.range.end).toLocaleTimeString(navigator.language, {
         hour: '2-digit',
         minute: '2-digit',
         hour12: true
 
     });
-    console.log(eventInfo)
     return (
         <>
             {!eventInfo.event.title ?
+                // (<p className=' text-fc mt-md-2'>{count > 3 ? 'more' : { start } - { end }}</p>)
                 <p className=' text-fc mt-md-2'>{start} - {end}</p>
                 :
                 <p>{eventInfo.event.title}</p>

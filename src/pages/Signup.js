@@ -165,7 +165,7 @@ function Listings() {
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>
                 <div className='row'>
 
-                    <div className={step === 5 || step === 7 ? 'col-md-12 order-md-0 order-1 position-relative- p-0-' : 'col-md-6 order-md-0 order-1 position-relative- p-0-'} >
+                    <div className={step === 5 || step === 7 ? 'col-md-12 order-md-0 order-1 position-relative- p-0-' : step === 4 ? 'col-md-8 order-md-0 order-1 position-relative- p-0-' : 'col-md-6 order-md-0 order-1 position-relative- p-0-'} >
                         <div className="container- position-absolute- h-100-">
                             <div className='row px-md-5 mt-5'>
                                 {step === 1 &&
