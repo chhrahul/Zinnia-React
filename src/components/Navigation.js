@@ -53,8 +53,11 @@ const Navigation = (props) => {
                                         <>
                                             {userType === 'gettingMarried' ?
                                                 <>
-                                                    <CartModal {...props} />
-                                                    <Nav.Link href="/couple-dashboard" onClick={() => handleClickNav('couple-dashboard')} className={activeNav === 'couple-dashboard' || splitLocation[1] === "couple-dashboard" ? 'text-cyan-color' : ""}> My Day </Nav.Link>
+                                                    <span className='cart-couple'>
+                                                        <CartModal {...props} />
+                                                    </span>
+
+                                                    <Nav.Link href="/couple-dashboard" onClick={() => handleClickNav('couple-dashboard')} className={activeNav === 'couple-dashboard' || splitLocation[1] === "couple-dashboard" ? 'text-cyan-color my-day-nav' : "my-day-nav"}> My Day </Nav.Link>
                                                     <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
                                                     <Nav.Link href="/messages" onClick={() => handleClickNav('messages')} className={activeNav === 'messages' || splitLocation[1] === "messages" ? 'text-cyan-color d-flex message-nav' : " d-flex message-nav"} > Messages <span class="badge custom-badge">1</span> </Nav.Link>
                                                 </>
@@ -67,11 +70,13 @@ const Navigation = (props) => {
                                     {auth !== 'auth' ?
                                         <>
                                             {userType !== 'gettingMarried' &&
-                                                <CartModal {...props} />
+                                                <span className='cart-couple'>
+                                                    <CartModal {...props} />
+                                                </span>
                                             }
-                                            <Nav.Link href="/sign-up" className="btn btn-outline-secondary signup-item ">
+                                            <Link href="/sign-up" className="btn btn-outline-secondary signup-item ">
                                                 Sign up
-                                            </Nav.Link>
+                                            </Link>
                                         </>
                                         :
                                         <>
