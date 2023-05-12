@@ -25,16 +25,16 @@ function PaymentInfo() {
                                 </div>
 
                                 <div className='col-md-2'>
-                                    <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267"/></p>
+                                    <p className='bold-p mb-0'><BsEyeSlash size="20" color="#505267" /></p>
                                 </div>
 
                                 <div className='col-md-2'>
                                     {auth !== 'auth' ?
                                         <UpDateModal title={'Update'} />
                                         :
-                                        <Button variant="btn text-cyan-color btn-lg mb-0 p-0 fs-6" href='payment-detail'>
+                                        <a className="update-info-btn" href='payment-detail'>
                                             Update
-                                        </Button>}
+                                        </a>}
                                 </div>
                             </div>
 
@@ -55,9 +55,9 @@ function PaymentInfo() {
                                     {auth !== 'auth' ?
                                         <UpDateModal title={'Update'} />
                                         :
-                                        <Button variant="btn text-cyan-color btn-lg mb-0 p-0 fs-6" href='payment-detail'>
+                                        <a className="update-info-btn" href='payment-detail'>
                                             Update
-                                        </Button>}
+                                        </a>}
                                 </div>
                             </div>
                         </div>
@@ -80,9 +80,9 @@ const UpDateModal = (props) => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <Button variant="btn text-cyan-color btn-lg mb-0 p-0 fs-6" onClick={handleShow}>
+            <a className="update-info-btn" onClick={handleShow}>
                 {title}
-            </Button>
+            </a>
             <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
                 <Modal.Header closeButton className='modal-custom'>
                     <Modal.Title></Modal.Title>

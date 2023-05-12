@@ -2,8 +2,31 @@
 import { Collapse } from 'react-bootstrap';
 import MyModal from '../components/MyModal.js'
 import * as React from 'react'
+import { Link } from 'react-router-dom';
+import { MdDelete } from 'react-icons/md';
 
 function BillingDetail() {
+    const handleOnclickRemove = (e, index) => {
+
+
+        const cartData = JSON.parse(localStorage.getItem("cart"))
+        console.log(cartData.length)
+        localStorage.setItem("cart", JSON.stringify([
+            ...cartData.slice(0, index),
+            ...cartData.slice(index + 1)
+        ]));
+        window.location.reload(false);
+    }
+    const cartCount = JSON.parse(localStorage.getItem("cart"))
+    let subtotal = 0
+
+    if (cartCount) {
+        cartCount.map((item, index) => {
+            subtotal += item.price
+        })
+    }
+    let bookingFee = subtotal * 3 / 100
+    let tax = subtotal * 25 / 100
 
     return (
         <>
@@ -11,9 +34,7 @@ function BillingDetail() {
                 <div className="row paddin-lr">
                     <div className="col-lg-7 col-md-6 col-sm-12 ">
                         <h1 className="mt-4">Billing address</h1>
-                        <p className="upper-text-custom">
-                            Where would you like services delivered? Typically this is  your <br></br> venue’s address.
-                        </p>
+
                         <form>
                             <div class="mb-3">
                                 <label for="First-name" class="form-label">First Name</label>
@@ -51,7 +72,7 @@ function BillingDetail() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <h4>Payment Method</h4>
 
                                 <div class="form-check mb-2 check-custom">
@@ -74,20 +95,7 @@ function BillingDetail() {
                                     <MyCollapse id={'flexRadioDefault4'} label={'Pay with Credit/debit card'} />
                                 </div>
 
-                                <div class="form-check mb-2 check-custom">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" />
-                                    <label class="form-check-label fs-6 fw-normal" for="flexRadioDefault5">
-                                        Use my delivery address <br></br>128 Kildare Dr.
-                                        Skokie, Illinois 60076
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2 check-custom">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" />
-                                    <label class="form-check-label fs-6 fw-normal" for="flexRadioDefault6">
-                                        Use different address
-                                    </label>
-                                </div>
-                                <div className="row p-0">
+                                <div className="row p-0 mt-4">
                                     <MyModal title={'Continue to Afterpay'} />
                                 </div>
 
@@ -101,114 +109,72 @@ function BillingDetail() {
                         <p className="upper-text-custom">
                             All services selected are for Saturday June 4th, 2023. Double check and make sure that your selected date/time is correct.
                         </p>
-                        <div className="row paddin-lr-0 checkout-box-border">
-                            <div className="col-md-4 p-0">
-                                <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
-                            </div>
-                            <div className="col-md-8">
-                                <div class="row">
-                                    <p className="checkout-heading">Best Photography</p>
-                                    <div class="col-6">
+                        {cartCount && cartCount.length > 0 ?
+                            <>
+                                {cartCount &&
+                                    cartCount.map((item, index) => {
+                                        return <>
+                                            <div className="row paddin-lr-0 checkout-box-border mb-3">
+                                                <div className="col-md-4 p-0">
+                                                    <img src="/images/listing/photographer-2.jpg" alt="photo" className='w-100 h-100' />
+                                                </div>
+                                                <div className="col-md-8">
+                                                    <div class="row">
+                                                        <p className="checkout-heading">{item.name}</p>
+                                                        <div class="col-6">
 
-                                        <p className="mb-0 venue-address-custom">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
-                                                <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
-                                            </svg>CHICAGO,IL
-                                        </p>
-                                        <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                        <p className="mb-2 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    </div>
+                                                            <p className="mb-0 venue-address-custom">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
+                                                                    <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
+                                                                </svg>CHICAGO,IL
+                                                            </p>
+                                                            <p className="mb-0 venue-address-custom text-black-50">${item.price} for 5 hours</p>
+                                                            <p className="mb-0 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
+                                                        </div>
 
-                                    <div className="col-6 delete-custom">
-                                        <img src="/images/icons/delete.jpg" alt="delete-icon" />
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="row paddin-lr-0 mt-2 checkout-box-border">
-                            <div className="col-md-4 p-0">
-                                <img src="/images/beach-photo.jpg" alt="beach-photo" className='w-100 h-100' />
-                            </div>
-                            <div className="col-md-8">
-                                <div class="row">
-                                    <p className="checkout-heading">Lakeside Hotel</p>
-                                    <div class="col-6">
-
-                                        <p className="mb-0 venue-address-custom">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
-                                                <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
-                                            </svg>CHICAGO,IL
-                                        </p>
-                                        <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                        <p className="mb-0 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    </div>
-
-                                    <div className="col-6 delete-custom">
-                                        <img src="/images/icons/delete.jpg" alt="delete-icon" />
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row mt-2 paddin-lr-0 checkout-box-border">
-                            <div className="col-md-4 p-0">
-                                <img src="/images/florist-cutting.jpg" alt="flower-cutting" className='w-100 h-100' />
-                            </div>
-                            <div className="col-md-8">
-                                <div class="row">
-                                    <p className="checkout-heading">Florist</p>
-                                    <div class="col-6">
-
-                                        <p className="mb-0 venue-address-custom">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 20" fill="none">
-                                                <path d="M7.5 0C3.63 0 0.5 3.13 0.5 7C0.5 12.25 7.5 20 7.5 20C7.5 20 14.5 12.25 14.5 7C14.5 3.13 11.37 0 7.5 0ZM7.5 9.5C6.12 9.5 5 8.38 5 7C5 5.62 6.12 4.5 7.5 4.5C8.88 4.5 10 5.62 10 7C10 8.38 8.88 9.5 7.5 9.5Z" fill="#31A7AD" />
-                                            </svg>CHICAGO,IL
-                                        </p>
-                                        <p className="mb-0 venue-address-custom text-black-50">$3,000 for 5 hours</p>
-                                        <p className="mb-0 venue-address-custom text-black-50"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    </div>
-
-                                    <div className="col-6 delete-custom">
-                                        <img src="/images/icons/delete.jpg" alt="delete-icon" />
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
+                                                        <div className="col-6 delete-custom">
+                                                            <Link onClick={(e) => handleOnclickRemove(e, index)} className='delete-icon'>
+                                                                <MdDelete size="24" />
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    })}</>
+                            :
+                            'No item added'}
                         <div className="row">
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0">Subtotal</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$9,650.00</p>
+                                <p className="float-right m-0">${subtotal.toFixed(2)}</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0">Booking fee (3%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$289.50</p>
+                                <p className="float-right m-0">${bookingFee.toFixed(2)}</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0">Tax (IL tax 6.25%)</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0">$603.13</p>
+                                <p className="float-right m-0">${tax.toFixed(2)}</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
                                 <p class="m-0 text-black">Total</p>
                             </div>
                             <div className="col-md-6 p-0 mt-2">
-                                <p className="float-right m-0 text-black">$10,542.63</p>
+                                <p className="float-right m-0 text-black">${(subtotal + bookingFee + tax).toFixed(2)}</p>
                             </div>
                         </div>
                         <div className="row mt-3">
-                            <div className="p-0">
-                                <p className="p-0">
-                                    Or 4 payments of $2520.70 with <img src="/images/icons/afterpay.png" alt="payafter" />
-                                    <span class="px-2"><img src="/images/icons/Info-Outline.png" alt="icon" /></span>
+                            <div className="p-0 mb-2 ">
+                                <p className="p-0 m-0">
+                                    Or 4 payments of ${((subtotal + bookingFee + tax) / 4).toFixed(2)} with <img src="/images/icons/afterpay.png" alt="payafter" />
+                                    {/* <span class="px-2"><img src="/images/icons/Info-Outline.png" alt="icon" /></span> */}
                                 </p>
                             </div>
                         </div>

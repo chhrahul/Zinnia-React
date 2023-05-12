@@ -1,7 +1,15 @@
-import { Link } from "react-router-dom"
+import * as React from 'react'
+import { Modal, Button } from 'react-bootstrap';
+import DatePicker from '../components/Datepicker.js'
+import { Link } from 'react-router-dom';
+import { RxCross1 } from 'react-icons/rx';
+import { MdDelete } from 'react-icons/md';
 
 function CheckoutAvailability() {
-
+    const [isChecked, setIsChecked] = React.useState(false);
+    const handleOnChange = () => {
+        setIsChecked(!isChecked);
+    };
     const handleOnclickRemove = (e, index) => {
 
 
@@ -21,13 +29,15 @@ function CheckoutAvailability() {
             subtotal += item.price
         })
     }
+    let bookingFee = subtotal * 3 / 100
+    let tax = subtotal * 25 / 100
     return (
         <div className="container-fluid px-md-5  mt-3 custom-search">
             <div className="row paddin-lr">
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <h1 className="mt-4">Woohoo, booking time!</h1>
                     <p>
-                        All services selected are for Saturday, January 4th 2024. Double check and make sure that your selected date/time is correct.<a class="" href="#">Change the date.</a>
+                        All services selected are for Saturday, January 4th 2024. Double check and make sure that your selected date/time is correct.  <ChangeDateModal title={'Checkout'} />
                     </p>
                     {/* <p class="checkout-text-custom">No longer available</p> */}
                     <p class="text-danger custom-availabilty">
@@ -62,8 +72,8 @@ function CheckoutAvailability() {
                                                     </div>
 
                                                     <div className="col-6 delete-custom">
-                                                        <Link onClick={(e) => handleOnclickRemove(e, index)}>
-                                                            <img src="/images/icons/delete.jpg" alt="delete-icon" />
+                                                        <Link onClick={(e) => handleOnclickRemove(e, index)} className='delete-icon'>
+                                                            <MdDelete size="24" />
                                                         </Link>
                                                     </div>
 
@@ -91,52 +101,123 @@ function CheckoutAvailability() {
                             <p class="m-0">Subtotal</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
-                            <p className="float-right m-0">${subtotal}.00</p>
+                            <p className="float-right m-0">${subtotal.toFixed(2)}</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
                             <p class="m-0">Booking fee (3%)</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
-                            <p className="float-right m-0">$289.50</p>
+                            <p className="float-right m-0">${bookingFee.toFixed(2)}</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
                             <p class="m-0">Tax (IL tax 6.25%)</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
-                            <p className="float-right m-0">$603.13</p>
+                            <p className="float-right m-0">${tax.toFixed(2)}</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
                             <p class="m-0 text-black">Total</p>
                         </div>
                         <div className="col-md-6 p-0 mt-2">
-                            <p className="float-right m-0 text-black">${subtotal + 289.50 + 603.13}</p>
+                            <p className="float-right m-0 text-black">${(subtotal + bookingFee + tax).toFixed(2)}</p>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="p-0">
-                            <p className="p-0">
-                                Or 4 payments of $2520.70 with <img src="/images/icons/afterpay.png" alt="payafter" />
-                                <span class="px-2"><img src="/images/icons/Info-Outline.png" alt="icon" /></span>
+                        <div className="p-0 mb-2 ">
+                            <p className="p-0 m-0">
+                                Or 4 payments of ${((subtotal + bookingFee + tax) / 4).toFixed(2)} with <img src="/images/icons/afterpay.png" alt="payafter" />
+                                {/* <span class="px-2"><img src="/images/icons/Info-Outline.png" alt="icon" /></span> */}
                             </p>
                         </div>
-                        <div className="row p-0">
-                            <button type="button" class="btn btn-secondary btn-lg mt-2 pay-custom-checkout">Checkout</button>
-                        </div>
-                        <div class="form-check py-4">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <div class="form-check py-2">
+
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" checked={isChecked}
+                                onChange={handleOnChange} />
                             <label class="form-check-label" for="flexCheckDefault">
-                                By booking vendors on Zinnia, I am agreeing to <a class="" href="#">terms and services.</a>
+                                By booking vendors on Zinnia, I am agreeing to <TermAndConditionModal />
                             </label>
                         </div>
+                        <div className="row p-0">
+                            <Button href='billing-detail' class="btn btn-secondary btn-lg mt-2 " disabled={!isChecked}>Checkout</Button>
+                        </div>
+
 
                     </div>
                 </div>
-
-
-
             </div>
-
         </div>
     )
 }
 export default CheckoutAvailability
+const ChangeDateModal = (props) => {
+
+    const { title } = props
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <>
+            <Link onClick={handleShow} >Change the date.</Link>
+            <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Header closeButton className='modal-custom'>
+                    <Modal.Title></Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='mx-5'>
+                    <h5>Change the date? </h5>
+                    <p className="upper-text-custom">By changing the date you might lose some vendors, based on availability. We’ll do the best we can to see if all vendors are available on your new date. </p>
+                    <form id="changedateForm">
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <DatePicker />
+                        </div>
+                    </form></Modal.Body>
+                <Modal.Footer className='modal-custom mx-5'>
+                    <Button variant="btn btn-outline-secondary" type="submit" form="changedateForm">
+                        Cancel
+                    </Button>
+                    <Button variant="secondary" type="submit" form="changedateForm">
+                        Change Date
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    )
+}
+
+const TermAndConditionModal = () => {
+    const [show, setShow] = React.useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <>
+
+            <a href="javascript:void(0)" onClick={handleShow}>terms and services</a>
+            <Modal
+                size="lg"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered
+                show={show}
+                onHide={handleClose}
+            >
+
+                <Modal.Title id="contained-modal-title-vcenter" className='text-center p-3'>
+                    Terms and conditions <span onClick={handleClose} className='float-right mx-2'><RxCross1 /></span>
+                </Modal.Title>
+
+                <Modal.Body>
+                    <p >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut enim ultricies, sagittis lacus in, dictum dolor. In egestas neque sed mi tempus feugiat. Ut vestibulum orci ut ante bibendum, eu elementum elit interdum. Pellentesque ultricies, ante vitae vulputate accumsan, diam risus accumsan magna, eget ullamcorper tortor nunc vitae metus. Duis ut porttitor nisi. Vivamus scelerisque arcu eget eros feugiat, vel facilisis mi faucibus. Ut porta gravida turpis eu pharetra. Vivamus quis sagittis neque, at ultricies tortor. Sed sed purus vitae velit dignissim posuere. Vestibulum ullamcorper neque volutpat, pellentesque tellus vitae, venenatis metus. Integer erat nibh, dignissim nec ultricies ac, sollicitudin vitae metus.
+                    </p>
+                    <p>
+                        Praesent at consectetur urna. Nam et lobortis justo. Curabitur fermentum mi nec cursus maximus. Sed tempor sit amet urna et pharetra. Praesent tempor elit sed commodo maximus. Phasellus ac diam nec arcu tempus sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ligula libero, interdum non augue vel, consequat ultricies magna. Pellentesque non purus malesuada, semper arcu non, sodales dui. Fusce vitae sem eu magna fermentum aliquam nec ut orci. Curabitur vestibulum tempus arcu, viverra blandit lacus sodales quis. Nunc non faucibus orci. Praesent in efficitur nisl. Vestibulum elementum accumsan tellus eget vulputate. Donec lobortis, lectus non molestie condimentum, lorem eros tempus nulla, et maximus nibh quam non leo.
+                    </p>
+                    <p>
+                        Quisque nibh magna, pretium id odio gravida, pellentesque porta ante. Sed suscipit consectetur euismod. Integer consectetur urna a eros facilisis, non porttitor turpis faucibus. In blandit, dui eu accumsan pharetra, augue metus posuere elit, id pellentesque nisi lorem quis quam. Nam ut lorem ut erat mattis sagittis sed lobortis ex. Cras ipsum dolor, pulvinar ut justo eget, accumsan sodales leo. Fusce eu magna nunc. Etiam viverra orci in erat finibus mollis. Sed ut ante facilisis, facilisis est non, fringilla est. Sed sed lorem eleifend, pellentesque nisl eu, venenatis sapien. Donec tincidunt ex convallis orci tincidunt, tempus imperdiet ligula interdum. Curabitur vel felis nec neque varius suscipit. Suspendisse potenti. Curabitur lobortis et arcu eget eleifend. Aliquam sed metus a nunc porttitor tempor.
+                    </p>
+                </Modal.Body>
+                <Button onClick={handleClose} variant="outline-secondary" className='m-3 text-center mx-auto'>Close</Button>
+            </Modal>
+        </>
+    )
+}

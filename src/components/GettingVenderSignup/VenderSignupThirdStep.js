@@ -84,7 +84,7 @@ function Florist(props) {
                     </p>
                 </>}
                 <div className="mb-3">
-                    <label htmlFor="select-opt-type" className={formik.touched.offering && formik.errors.offering ? 'error-form-label form-label select-account' : 'form-label select-account'} >How far are you willing to travel from your business address?</label>
+                    <label htmlFor="select-opt-type" className={formik.touched.offering && formik.errors.offering ? 'error-form-label form-label select-account' : 'form-label select-account'} >What are you offering?</label>
                     <select className={formik.touched.offering && formik.errors.offering ? 'error-input form-select mb-4 ' : 'form-select mb-4'} aria-label="Default select example" id="select-opt-type" onfocus='this.size=10;' onblur='this.size=0;'
                         onChange={formik.handleChange}
                         name="offering"
@@ -101,7 +101,7 @@ function Florist(props) {
                     </select>
                 </div>
                 <div className="row mb-3">
-                    <p className="offering-box">
+                    <p className="offering-box m-0">
                         What’s included?
                     </p>
                     <div className="col-md-6">
@@ -193,17 +193,23 @@ function Florist(props) {
                     </div>
                 </div>
 
-                <div className="mb-3  ">
-                    <label htmlFor="price" className={formik.touched.price && formik.errors.price ? 'error-form-label form-label' : 'form-label'}>Price per piece</label>
-                    <input type="number" className={formik.touched.price && formik.errors.price ? 'error-input form-control ' : 'form-control'} id="price" aria-describedby="emailHelp" placeholder=''
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        value={formik.values.price}
-                        name="price"
-                    />
+
+                <div className="mb-3">
+                    <label htmlFor="budget" className={formik.touched.price && formik.errors.price ? 'error-form-label form-label ' : 'form-label'}>price</label>
+                    <div class="input-group">
+                        <span class="input-group-text budget-icon text-muted" id="basic-addon1">$</span>
+                        <input type="number" className={formik.touched.price && formik.errors.price ? 'error-input form-control ' : 'form-control'} id="budget" placeholder=''
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.price}
+                            name="price"
+                        />
+                    </div>
                     {formik.touched.price && formik.errors.price ? (
                         <div className="text-danger form-error"><img src="/images/icons/error.svg" alt="" />{formik.errors.price}</div>
                     ) : null}
+
+
                 </div>
 
                 <div className="mb-3  ">
@@ -315,7 +321,7 @@ function Venue(props) {
                     </select>
                 </div>
                 <div className="row mb-3">
-                    <p className="offering-box">
+                    <p className="offering-box m-0">
                         What’s included?
                     </p>
                     <div className="col-md-6">
@@ -477,7 +483,7 @@ function Photographer(props) {
                     </select>
                 </div>
                 <div className="row mb-3">
-                    <p className="offering-box">
+                    <p className="offering-box m-0">
                         What’s included?
                     </p>
                     <div className="col-md-6">
@@ -565,7 +571,7 @@ function Photographer(props) {
                     </select>
                 </div>
                 <div className="row mb-3">
-                    <p className="offering-box">
+                    <p className="offering-box m-0">
                         What do you deliver?
                     </p>
                     <div className="col-md-6">

@@ -28,7 +28,7 @@ function CoupleDashboard() {
                                     </p>
                                     <p className="mb-0 venue-address-custom text-black">$6,000.00</p>
                                     <p className="mb-0 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    <button type="button" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</button>
+                                    <a href="/messages" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</a>
                                     <div>
                                         <CancelModal title={'Cancel'} />
                                     </div>
@@ -48,7 +48,7 @@ function CoupleDashboard() {
                                     </p>
                                     <p className="mb-0 venue-address-custom text-black">$6,000.00</p>
                                     <p className="mb-0 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    <button type="button" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</button>
+                                    <a href="/messages" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</a>
                                     <div>
                                         <CancelModal title={'Cancel'} />
                                     </div>
@@ -68,7 +68,7 @@ function CoupleDashboard() {
                                     </p>
                                     <p className="mb-0 venue-address-custom text-black">$6,000.00</p>
                                     <p className="mb-0 venue-address-custom text-black"><img src="/images/icons/star.svg" alt="star" />4.8</p>
-                                    <button type="button" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</button>
+                                    <a href="/messages" class="btn btn-outline-secondary fs-6 fw-bold">Message Vendor</a>
                                     <div>
                                         <CancelModal title={'Cancel'} />
                                     </div>

@@ -46,7 +46,7 @@ function VenderSignupFourthStep(props) {
                 {type !== 'edit' &&
                     <>
                         <p>
-                            <span className="text-danger"> 3 of 4 </span> Show customers your work!
+                            <span className="text-danger"> 3 of 4 </span> Show customers your work
                         </p>
                         <h1>
                             Let’s add some photos!
@@ -144,8 +144,9 @@ function MyDropzone(props) {
             },
             onDrop: async (acceptedFiles) => {
 
-                await Promise.all(acceptedFiles.map(async (file) => {
+                await Promise.all(acceptedFiles.map(async (file, index) => {
                     const newFile = [await encodeImageFileAsURL(file)]
+
                     filesArray = [...filesArray, newFile]
                 }))
                 setFiles([...filesArray])
@@ -200,7 +201,7 @@ function MyDropzone(props) {
             <div {...getRootProps({ className: 'dropzone', style })} >
                 <input {...getInputProps()} />
                 <img src="/images/icons/img-place.svg" alt="" className="mb-3" />
-                <img src="/images/icons/button.svg" alt="" className="mb-3" />
+                <button className='btn btn-outline-secondary mb-3'>Add  photos</button>
                 <p className="drag mb-5" >Or drag and Drop</p>
                 <p>JPG, PNG, or TIFF. 2:3 ratio recommended</p>
 

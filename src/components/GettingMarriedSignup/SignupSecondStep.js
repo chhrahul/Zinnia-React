@@ -42,7 +42,7 @@ function SignupSecondStep(props) {
         <span className='px-0- '>
             <form onSubmit={formik.handleSubmit} id="form-data" className='secondFormCouple'>
                 <p>
-                    <span className="text-danger"> 1 of 2 </span> Tell us about your big day!
+                    <span className="text-danger"> 1 of 2 </span> Tell us about your big day
                 </p>
                 <h1>
                     Your Wedding info

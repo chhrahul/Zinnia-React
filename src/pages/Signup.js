@@ -161,6 +161,7 @@ function Listings() {
     }
 
     return (
+
         <div className="container-fluid-" >
             <div className="container-fluid" style={{ 'paddingRight': 0, 'paddingLeft': 0 }}>
                 <div className='row'>

@@ -1,8 +1,10 @@
 
 import React from 'react';
+import { Button, Modal } from 'react-bootstrap';
 import { BsInfoCircle, BsEyeSlash, BsCalendar } from 'react-icons/bs';
 
 function MainSearch() {
+    const auth = localStorage.getItem("auth");
 
     return (
         <div className="container-fluid padding-lr-0 mh-100"  >
@@ -10,10 +12,10 @@ function MainSearch() {
                 <div className="col ">
 
                     <div className="row  px-md-5 mt-4 ">
-                        <h1 className='pl-0 col-12  padding-lr-0'>Good evening, Flowers and Friends!  </h1>
+                        <h1 className='pl-0 col-12  padding-lr-0'>Good evening, Flowers and Friends  </h1>
                         <p className='mb-1 mt-3 padding-lr-0 font-10'>BOOKING REQUESTS </p>
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12 m-0" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by <br />
                                 1/1/2023 4PM </p>
                             <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
@@ -24,7 +26,7 @@ function MainSearch() {
                         </div>
 
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12 m-0" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by<br />
                                 1/1/2023 4PM </p>
                             <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
@@ -35,7 +37,7 @@ function MainSearch() {
                         </div>
 
                         <div className="col-md-3 col-sm mt-3 bordered-box p-3 m-1">
-                            <p className="font-12 m-0" >Confirmation needed by
+                            <p className="font-12 m-0" >Confirmation needed by <br />
                                 1/1/2023 4PM </p>
                             <p className='text-danger time-left font-12'><BsInfoCircle /> <span>21 hours 31 mins left</span></p>
                             <p className='bold-p mb-0 fs-6'>Calli Smith’s wedding</p>
@@ -69,7 +71,14 @@ function MainSearch() {
                                     </div>
 
                                     <div className='col-md-2'>
-                                        <p className='mb-0 text-cyan-color'>Update</p>
+                                        {
+                                            auth !== 'auth' ?
+                                                <UpDateModal title={'Update'} />
+                                                :
+                                                <a className="update-info-btn" href='payment-detail'>
+                                                    Update
+                                                </a>
+                                        }
                                     </div>
                                 </div>
 
@@ -87,7 +96,14 @@ function MainSearch() {
                                     </div>
 
                                     <div className='col-md-2'>
-                                        <p className='mb-0 text-cyan-color'>Update</p>
+                                        {
+                                            auth !== 'auth' ?
+                                                <UpDateModal title={'Update'} />
+                                                :
+                                                <a className="update-info-btn" href='payment-detail'>
+                                                    Update
+                                                </a>
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -101,4 +117,44 @@ function MainSearch() {
     )
 }
 export default MainSearch
+
+const UpDateModal = (props) => {
+
+    const { title } = props
+    const [show, setShow] = React.useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <>
+            <a className="update-info-btn" onClick={handleShow}>
+                {title}
+            </a>
+            <Modal show={show} onHide={handleClose} aria-labelledby="contained-modal-title-vcenter" centered>
+                <Modal.Header closeButton className='modal-custom'>
+                    <Modal.Title></Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='mx-5'>
+                    <h5>Sign in to update</h5>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Csmith@gmail.com" />
+                        </div>
+                        <div>
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="******" />
+                        </div>
+                    </form></Modal.Body>
+                <Modal.Footer className='modal-custom mx-5'>
+                    <Button variant="secondary" type="submit" form="loginForm">
+                        Sign in
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+        </>
+    )
+}
+
+
 

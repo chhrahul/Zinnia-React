@@ -60,6 +60,7 @@ function VenderSignupSecondStep(props) {
 
 
             }),
+
         onSubmit: values => {
             const newValue = {
                 'businessName': values.businessName,
@@ -102,7 +103,7 @@ function VenderSignupSecondStep(props) {
                         <span className="text-danger"> 1 of 4 </span> Tell us about your business
                     </p>
                     <h1>
-                        We want to know more about you!
+                        We want to know more about you
                     </h1>
                     <p>Add your information to get started. </p>
                 </>}

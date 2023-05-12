@@ -18,6 +18,11 @@ const Navigation = (props) => {
         window.location.href = '/sign-up';
     }
 
+    if (splitLocation[1] === "sign-up") {
+
+        localStorage.setItem("auth", '')
+        localStorage.setItem("selectedSignupType", '');
+    }
 
     const userType = localStorage.getItem("selectedSignupType")
     const auth = localStorage.getItem("auth");
@@ -41,7 +46,7 @@ const Navigation = (props) => {
                                         <>
                                             <Nav.Link href="/booking-request" onClick={() => handleClickNav('dashboard')} className={activeNav === 'dashboard' || splitLocation[1] === "booking-request" ? 'text-cyan-color' : ""}> Dashboard </Nav.Link>
                                             <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
-                                            <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}> Listing </Nav.Link>
+                                            <Nav.Link href="/listing" onClick={() => handleClickNav('listing')} className={activeNav === 'listing' || splitLocation[1] === "listing" ? 'text-cyan-color' : ""}> Listings </Nav.Link>
                                             <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
                                             <Nav.Link href="/calendar" onClick={() => handleClickNav('calendar')} className={activeNav === 'calendar' || splitLocation[1] === "calendar" ? 'text-cyan-color' : ""}> Calendar </Nav.Link>
                                             <Nav.Link className='d-none d-md-inline nav-seperator'>/</Nav.Link>
@@ -80,7 +85,7 @@ const Navigation = (props) => {
                                         </>
                                         :
                                         <>
-                                            <NavDropdown title={<RxAvatar size={28} />} id="navbarScrollingDropdown" className={activeNav === 'venue' || splitLocation[1] === "venue" || splitLocation[1] === "photographer" || splitLocation[1] === "florist" ? 'text-cyan-color' : ""} >
+                                            <NavDropdown onClick={() => handleClickNav('avatar')} title={<img src='images/icons/avatar.png' alt='' width={28} height={28} className={activeNav === 'avatar' || splitLocation[1] === "account" || splitLocation[1] === "login-info" || splitLocation[1] === "wedding-payment" || splitLocation[1] === "personal-info" || splitLocation[1] === "wedding-info" || splitLocation[1] === "about" || splitLocation[1] === "vender-business-detail" || splitLocation[1] === "payment-info" || splitLocation[1] === "payment-detail" ? 'active auth-avatar' : "auth-avatar"} />} id="navbarScrollingDropdown" className={activeNav === 'venue' || splitLocation[1] === "venue" || splitLocation[1] === "photographer" || splitLocation[1] === "florist" ? 'text-cyan-color' : ""} >
                                                 {userType === 'gettingMarried' ?
                                                     <NavDropdown.Item href="/account">
                                                         About

@@ -98,8 +98,8 @@ function Listing(props) {
     const tabs = {
         resultType,
         setResultType,
-        'first': 'Offering',
-        'second': 'Listing',
+        'first': 'Offerings',
+        'second': 'Listings',
 
     }
 
@@ -123,7 +123,7 @@ function Listing(props) {
                         <>
                             <div className='row padding-lr-0 px-md-5 mh-100'>
 
-                                <div className='col-md-6 pl-0 '>
+                                <div className='col-md-6 pl-0 offering-list'>
                                     <h1 >Your offerings</h1>
                                     <p className='p-bottom-margin'>These are your current offerings.</p>
                                     <p className='theme-color font-14'>PHOTOGRAPHER</p>
