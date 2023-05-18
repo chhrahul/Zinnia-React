@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 
 function VenderSignupThirdStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, type } = props
@@ -223,7 +224,7 @@ function Florist(props) {
                 </div>
                 <div className="row ">
                     <div className="mt-3">
-                        <p className="aprtment-p">+ Add another offering</p>
+                        <p className="aprtment-p"><Link>+ Add another offering</Link></p>
                     </div>
                 </div>
             </form>
@@ -385,7 +386,7 @@ function Venue(props) {
 
                 <div className="row ">
                     <div className="mt-3">
-                        <p className="aprtment-p">+ Add another offering</p>
+                        <p className="aprtment-p"><Link>+ Add another offering</Link></p>
                     </div>
                 </div>
             </form>
@@ -677,7 +678,7 @@ function Photographer(props) {
 
                 <div className="row ">
                     <div className="mt-3">
-                        <p className="aprtment-p">+ Add another offering</p>
+                        <p className="aprtment-p"><Link>+ Add another offering</Link></p>
                     </div>
                 </div>
             </form>

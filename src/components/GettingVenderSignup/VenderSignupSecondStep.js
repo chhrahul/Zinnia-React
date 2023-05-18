@@ -95,6 +95,27 @@ function VenderSignupSecondStep(props) {
         setClickedApart('active-apartment')
     }
 
+    // handleChangePhone = (e) => {
+    //     if (e.target.name === 'phone') {
+    //         formik.values.phone = validatePhoneNumber(e.target.value)
+    //         const newValue = {
+
+    //             'phone': validatePhoneNumber(e.target.value),
+
+
+    //         }
+    //         SetGettingVenderSignupDetails({ ...gettingVenderSignupDetails, ...newValue })
+    //     }
+
+
+    // }
+
+
+    // const validatePhoneNumber = (input_str) => {
+    //     const re = input_str.replace(/^(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')
+    //     return re;
+    // }
+
     return (
         <span className='px-0-'>
             <form onSubmit={formik.handleSubmit} id="form-data">

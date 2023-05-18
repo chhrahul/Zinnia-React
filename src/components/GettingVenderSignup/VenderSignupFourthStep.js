@@ -8,6 +8,7 @@ function VenderSignupFourthStep(props) {
     const { handleInputGettingVender, gettingVenderSignupDetails, selectedSignupType, handleSelectSignupType, step, setStep, SetGettingVenderSignupDetails, files,
         setFiles, type } = props
     const [fileCheck, setFileCheck] = React.useState(0)
+    const [main, setMain] = React.useState(false)
     const gettingVenderProps = {
         handleInputGettingVender,
         gettingVenderSignupDetails,
@@ -37,7 +38,9 @@ function VenderSignupFourthStep(props) {
         files,
         setFiles,
         fileCheck,
-        setFileCheck
+        setFileCheck,
+        main,
+        setMain
     }
 
     return (
@@ -66,7 +69,7 @@ function VenderSignupFourthStep(props) {
 export default VenderSignupFourthStep
 
 function MyDropzone(props) {
-    const { files, setFiles, fileCheck, setFileCheck } = props
+    const { files, setFiles, fileCheck, setFileCheck, main, setMain } = props
     const img = {
         width: '100%',
         height: '100%'
@@ -118,6 +121,10 @@ function MyDropzone(props) {
             ...files.slice(0, index),
             ...files.slice(index + 1)
         ]);
+
+        if (files[index]['checked']) {
+            setMain(false)
+        }
     };
 
     const setMainImage = (index, value) => {
@@ -132,6 +139,7 @@ function MyDropzone(props) {
         )
         // Call `changeHandler` with the new array and `dataArray` gets updated
         setFiles(newArray)
+        setMain(true)
 
     };
     const { getRootProps,
@@ -152,11 +160,13 @@ function MyDropzone(props) {
                 setFiles([...filesArray])
                 setFileCheck(0)
 
+
+
             }
         });
 
     const thumbs = files.map((file, index) => (
-        <div className="col-md-3 px-0 mt-2 file-box">
+        <div div className="col-md-3 px-0 mt-2 file-box" >
             <div className="m-2 card radio-custom-parant h-100">
                 <span className="cutBtn float-right" onClick={() => removeImage(index)}>x</span>
                 <img
@@ -168,9 +178,10 @@ function MyDropzone(props) {
                     alt="" />
                 <div className="radio-custom-parant mt-1">
                     <div class="form-check m-2">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={file['checked']} checked={file['checked'] ? true : null} onChange={() => setMainImage(index, file['checked'])} />
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={file['checked']} checked={file['checked'] ? true : (!main && index === 0) ? true : null} onChange={() => setMainImage(index, file['checked'])} />
                         <label class="form-check-label radio-custom-img" for="exampleRadios1">
-                            {file['checked'] ? 'Main photo' : 'Mark as main photo'}
+                            {file['checked'] ? 'Main photo' : (!main && index === 0) ? 'Main photo' : 'Mark as main photo'}
+
                         </label>
                     </div>
                 </div>

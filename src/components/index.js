@@ -3,6 +3,7 @@ export { default as MainSearchPhotographer } from './MainSearch/MainSearchPhotog
 export { default as MainSearchVenue } from './MainSearch/MainSearchVenue'
 export { default as SearchFilter } from './MainSearch/SearchFilter'
 export { default as Datepicker } from './Datepicker'
+export { default as Timepicker } from './Timepicker'
 export { default as GeoAutoComplete } from './GeoAutoComplete'
 export { default as ContactDetail } from './Listing/ContactDetail'
 export { default as SocialMediaHandle } from './Listing/SocialMediaHandle'

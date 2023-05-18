@@ -7,6 +7,7 @@ class App extends Component {
 
   constructor(props) {
     super(props)
+
     this.state = {
       startDate: null
     };
@@ -28,25 +29,22 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <label htmlFor="myDatePicker">
-          <img src="/images/icons/calendar_today.svg" alt="date" />
-        </label> */}
-        <img src="/images/icons/calendar_today.svg" alt="date" />
+
+
+        <img src="/images/icons/Access_time.svg" alt="time" />
         <DatePicker
           selected={this.state.startDate}
           onChange={this.handleChange}
-          name="startDate"
-          dateFormat="MM/dd/yyyy"
-          className='my-date-picker'
-          id="myDatePicker"
-          placeholderText={'Any date'}
-          minDate={new Date()}
-          autoComplete='off'
+          name="startTime"
+          showTimeSelect
+          showTimeSelectOnly
+          timeIntervals={15}
+          placeholderText={this.props.vender}
+autoComplete='off'
+          timeCaption="Time"
+          dateFormat="h:mm aa"
 
         />
-
-
-
       </>
 
     );
